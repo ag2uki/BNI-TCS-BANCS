@@ -1,0 +1,77 @@
+<?xml version="1.0" standalone="yes"?>
+<GROUP ID="020017" Name="G/L: Swift Trf. From Cash">
+  <TX comment="WARNING: AMOUNT CURRCODE FIELDS SWITCHED FOR MULTI-CURRRENCY CALC">
+    <FIELD Format="9(14)V999S" ID="txnAmount1" Offset="34" />
+    <FIELD Format="X" ID="TSInd1" />
+    <FIELD Format="XX" ID="promono1" Offset="8" />
+    <FIELD Format="9(5)" ID="DefInteger5" />
+    <FIELD Format="X(35)" ID="DefaultString7" Offset="22" />
+    <FIELD Format="X" ID="yesno1" />
+    <FIELD Format="XXX" ID="txnCurrCode1" Offset="24" />
+    <FIELD Format="9(14)V999S" ID="Amount1" />
+    <FIELD Format="XXX" ID="accCurrCode1" />
+    <FIELD Format="9(14)V999S" ID="baseAmount1" />
+    <FIELD Format="9(14)V999S" ID="Commission1" />
+    <FIELD Format="9(14)V999S" ID="Change1" />
+    <FIELD Format="99" ID="RateType1" />
+    <FIELD Format="X(4)" ID="CurrVersion1" />
+    <FIELD Format="X(18)" ID="DefaultString43" Offset="6" />
+    <FIELD Format="X(35)" ID="DefaultString8" />
+    <FIELD Format="X(35)" ID="DefaultString9" />
+    <FIELD Format="X(35)" ID="DefaultString10" />
+    <FIELD Format="X(35)" ID="DefaultString2" Offset="20" />
+    <FIELD Format="X(35)" ID="DefaultString3" />
+    <FIELD Format="X(35)" ID="DefaultString4" />
+    <FIELD Format="X(35)" ID="DefaultString5" />
+    <FIELD Format="99" ID="DefInteger1" Offset="21" />
+    <FIELD Format="X(50)" ID="DefaultString12" Offset="60" />
+    <FIELD Format="ddMMyyyy" ID="date1" />
+    <FIELD Format="XX" ID="DefaultString1" />
+    <FIELD Format="X(34)" ID="DefaultString6" />
+    <FIELD Format="X(12)" ID="DefaultString13" />
+    <FIELD Format="X(7)" ID="DefaultString18" Offset="133" />
+    <FIELD Format="99" ID="DefInteger3" />
+    <FIELD Format="X(14)" ID="DefaultString16" />
+    <FIELD Format="X(12)" ID="DefaultString17" />
+    <FIELD Format="9(18)" ID="DefInteger2" Offset="56" />
+    <FIELD Format="X(5)" ID="DefaultString15" />
+    <FIELD Format="X" ID="DefaultString14" />
+  </TX>
+  <RX>
+    <FIELD Format="9(14)V999S" ID="txnAmount1" Offset="34" />
+    <FIELD Format="X" ID="TSInd1" />
+    <FIELD Format="XX" ID="promono1" Offset="8" />
+    <FIELD Format="9(5)" ID="DefInteger5" />
+    <FIELD Format="X(35)" ID="DefaultString7" Offset="22" />
+    <FIELD Format="X" ID="yesno1" />
+    <FIELD Format="XXX" ID="txnCurrCode1" Offset="24" />
+    <FIELD Format="9(14)V999S" ID="Amount1" />
+    <FIELD Format="XXX" ID="accCurrCode1" />
+    <FIELD Format="9(14)V999S" ID="baseAmount1" />
+    <FIELD Format="9(14)V999S" ID="Commission1" />
+    <FIELD Format="9(14)V999S" ID="Change1" />
+    <FIELD Format="99" ID="RateType1" />
+    <FIELD Format="X(4)" ID="CurrVersion1" />
+    <FIELD Format="X(18)" ID="DefaultString43" Offset="6" />
+    <FIELD Format="X(35)" ID="DefaultString8" />
+    <FIELD Format="X(35)" ID="DefaultString9" />
+    <FIELD Format="X(35)" ID="DefaultString10" />
+    <FIELD Format="X(35)" ID="DefaultString2" Offset="20" />
+    <FIELD Format="X(35)" ID="DefaultString3" />
+    <FIELD Format="X(35)" ID="DefaultString4" />
+    <FIELD Format="X(35)" ID="DefaultString5" />
+    <FIELD Format="99" ID="DefInteger1" Offset="21" />
+    <FIELD Format="X(50)" ID="DefaultString12" Offset="60" />
+    <FIELD Format="ddMMyyyy" ID="date1" />
+    <FIELD Format="XX" ID="DefaultString1" />
+    <FIELD Format="X(34)" ID="DefaultString6" />
+    <FIELD Format="X(12)" ID="DefaultString13" />
+    <FIELD Format="X(7)" ID="DefaultString18" Offset="133" />
+    <FIELD Format="99" ID="DefInteger3" />
+    <FIELD Format="X(14)" ID="DefaultString16" />
+    <FIELD Format="X(12)" ID="DefaultString17" />
+    <FIELD Format="9(18)" ID="DefInteger2" Offset="56" />
+    <FIELD Format="X(5)" ID="DefaultString15" />
+    <FIELD Format="X" ID="DefaultString14" />
+  </RX>
+</GROUP>
