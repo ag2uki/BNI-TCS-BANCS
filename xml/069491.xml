@@ -1,7 +1,127 @@
-<?xml version="1.0" standalone="yes"?>
-<GROUP ID="069490" Name="Customer Inquiry">
-  <TX>
-    <FIELD Format="9(17)" ID="accntNumber1" />
-    <FIELD Format="9" ID="chargeDropdwn" />
-  </TX>
+<?xml version="1.0" standalone="yes" ?>
+<GROUP ID="069491" Name="CIF: BNI Enquiry">
+  <RX>
+     <SELECT switch="Flag2">
+        <CASE ID="4">
+           <FIELD Format="X(2)" ID="flag" />
+           <FIELD Format="X(2)" ID="jenis_nasabah" />
+           <FIELD Format="X(60)" ID="nama" />
+           <FIELD Format="X(8)" ID="gelar" />
+           <FIELD Format="X(2)" ID="title_code" />
+           <FIELD Format="X(3)" ID="acct_curr" />
+           <FIELD Format="X(30)" ID="tempat_lahir" />
+           <FIELD Format="ddMMyyyy" ID="tgl_lahir" />
+           <FIELD Format="X(40)" ID="jalan" />
+           <FIELD Format="XXX" ID="RT" />
+           <FIELD Format="XXX" ID="RW" />
+           <FIELD Format="X(34)" ID="perum" />
+           <FIELD Format="X(20)" ID="kelurahan" />
+           <FIELD Format="X(20)" ID="kecamatan" />
+           <FIELD Format="X(8)" ID="kodepos" />
+           <FIELD Format="X(40)" ID="jalan2" />
+           <FIELD Format="XXX" ID="RT2" />
+           <FIELD Format="XXX" ID="RW2" />
+           <FIELD Format="X(34)" ID="perum2" />
+           <FIELD Format="X(20)" ID="kelurahan2" />
+           <FIELD Format="X(20)" ID="kecamatan2" />
+           <FIELD Format="X(8)" ID="kodepos2" />
+           <FIELD Format="X(12)" ID="telp_rumah" />
+           <FIELD Format="X(12)" ID="telp_kantor" />
+           <FIELD Format="X(12)" ID="handphone" />
+           <FIELD Format="X(12)" ID="fax" />
+           <!--FIELD Format="X(60)" ID="email" /-->
+             <FIELD Format="XX" ID="cdhobby" />
+             <FIELD Format="X(43)" ID="email"/>
+             <!-- reserved for hobby -->             
+               <!--CR16908A-START-->
+               <!--<FIELD Format="9(16)" ID="npwp" />-->
+               <FIELD Format="X(16)" ID="npwp" />
+               <!--CR16908A-END-->
+               <FIELD Format="X(2)" ID="warga_code" />
+               <FIELD Format="X(4)" ID="ID" />
+               <FIELD Format="X(30)" ID="tempat_ID" />
+               <FIELD Format="X(20)" ID="no_ID" />
+               <FIELD Format="ddMMyyyy" ID="terbit_ID" />
+               <FIELD Format="ddMMyyyy" ID="habis_ID" />
+               <FIELD Format="X" ID="infobni_code" />
+               <FIELD Format="X(40)" ID="maiden" />
+               <FIELD Format="X" ID="marital_indikator" />
+               <FIELD Format="9(2)" ID="jml_anak" />
+               <FIELD Format="X" ID="religi_code" />
+               <FIELD Format="X(2)" ID="edu_code" />
+               <FIELD Format="X(2)" ID="job_code" />
+               <FIELD Format="X(60)" ID="nama_perush" />
+               <FIELD Format="X(60)" ID="alamat_perush" />
+               <FIELD Format="X(8)" ID="postcode_perush" />
+               <FIELD Format="ddMMyyyy" ID="startjob_date" />
+               <FIELD Format="X(2)" ID="gaji" />
+               <FIELD Format="X(17)" ID="nama_alias" />
+               <FIELD Format="X" ID="frekgaji_code" />
+               <FIELD Format="X(19)" ID="gajilain" />
+               <FIELD Format="X(6)" ID="job_desc" /> <!-- Added By Bayu 26/02/13 -->
+               <SELECT switch="flag">
+                 <CASE ID="A1">
+                   <!--FIELD Format="9(17)" ID="no_rek" Offset="8" /--> <!-- Modified By Bayu 26/02/13 -->
+                   <FIELD Format="9(17)" ID="no_rek" Offset="2" />
+                   <FIELD Format="X(28)" ID="deposito_code" />
+                   <FIELD Format="X(19)" ID="nominal_setoran" />
+                   <FIELD Format="9(4)" ID="jk_waktu" />
+                   <FIELD Format="X" ID="bunga_code" />
+                   <FIELD Format="9(1)" ID="dana_code" />
+                   <FIELD Format="X(1)" ID="buk_rek_code" />
+                   <FIELD Format="X(19)" ID="trx_bulan" />
+                   <FIELD Format="X" ID="RC_terbit_code" />
+                   <FIELD Format="X" ID="kirimRC_code" />
+                   <FIELD Format="9(17)" ID="card_acct" />            
+                   <FIELD Format="X" ID="term_code" />
+                   <FIELD Format="X(60)" ID="ben_owner" />
+<!--        START CR14636 -->
+                   <FIELD Format="9(17)" ID="cif" />
+                   <FIELD Format="X(4)" ID="depcode1" />
+                   <FIELD Format="X(4)" ID="depcode2" />
+<!--        END CR14636 -->
+                 </CASE>
+                 <CASE ID="A2">
+                   <!--FIELD Format="9(17)" ID="no_rek_tapenas" Offset="8" /--> <!-- Modified By Bayu 26/02/13 -->
+                   <FIELD Format="9(17)" ID="no_rek_tapenas" Offset="2" />
+                   <FIELD Format="X(2)" ID="asuransi_tambahan_cd" />
+                   <FIELD Format="ddMMyyyy" ID="tgl_buka_rekening" />
+                   <FIELD Format="ddMMyyyy" ID="tgl_jth_tempo" />
+                   <FIELD Format="9(4)" ID="tapenas_term" />
+                   <FIELD Format="9(10)V99" ID="setoran_tapenas" />
+                   <FIELD Format="X(30)" ID="benefit_name" />
+                   <FIELD Format="X(15)" ID="birthplace_benefit" />
+                   <FIELD Format="ddMMyyyy" ID="dob_benefit" />
+                   <FIELD Format="X(70)" ID="addr_benefit" />
+                   <FIELD Format="X(4)" ID="relation_cd" />
+                   <FIELD Format="9" ID="dana_code" />
+                   <FIELD Format="X" ID="buk_rek_code" />
+                   <FIELD Format="X" ID="RC_terbit_code" />
+                   <FIELD Format="X" ID="kirimRC_code" />
+                   <FIELD Format="9(17)" ID="no_rek_affil" />
+                 </CASE>
+                 <CASE ID="A3">
+                   <!--FIELD Format="9(17)" ID="no_rek_hajj" Offset="8" /--> <!-- Modified By Bayu 26/02/13 -->
+                   <FIELD Format="9(17)" ID="no_rek_hajj" Offset="2" />
+                   <FIELD Format="X(28)" ID="desc_hajj" />
+                   <FIELD Format="X" ID="debet_cd" />
+                   <FIELD Format="ddMMyyyy" ID="buka_rek_hajj" />
+                   <FIELD Format="ddMMyyyy" ID="matur_hajj" />
+                   <FIELD Format="X(4)" ID="term_hajj" />
+                   <FIELD Format="9(14)V99" ID="nominal_debet" />
+                   <FIELD Format="9(1)" ID="dana_code" />
+                   <FIELD Format="X(1)" ID="buk_rek_code" />
+                   <FIELD Format="X(19)" ID="trx_bulan" />
+                   <FIELD Format="X" ID="RC_terbit_code" />
+                   <FIELD Format="X" ID="kirimRC_code" />
+                   <FIELD Format="9(17)" ID="no_rek_affil" />
+                 </CASE>
+               </SELECT>
+          </CASE>
+          <CASEELSE>
+             <FIELD Format="X(20)" ID="noHPprimary" />
+             <FIELD Format="X(20)" ID="noHPsecondary" />
+         </CASEELSE>
+      </SELECT>
+  </RX>
 </GROUP>
