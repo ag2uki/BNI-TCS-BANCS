@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="yes"?>
+<GROUP ID="031700" Name="Pfm:  Currency Exchange Rates">
+  <TX>
+    <FIELD Format="X" ID="DefaultString1" />
+    <FIELD Format="XXX" ID="DefaultString2" />
+  </TX>
+  <RX>
+    <FIELD Format="X" ID="DefaultString1" />
+    <FIELD Format="XXX" ID="DefaultString2" />
+  </RX>
+</GROUP>

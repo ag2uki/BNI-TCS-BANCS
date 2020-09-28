@@ -1,0 +1,6 @@
+<?xml version="1.0" standalone="yes"?>
+<GROUP ID="010455" Name="Loans: BNI Loan Enquiry Prompt">
+  <TX>
+    <FIELD Format="9(17)" ID="accntNumber1" />
+  </TX>
+</GROUP>
