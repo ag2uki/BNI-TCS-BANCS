@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<GROUP ID="009599" Name="Currency Exchange Rate Request">
+  <TX>
+    <FIELD Format="X(4)" ID="DefaultString1" />
+  </TX>
+  <RX>
+    <FIELD Format="X(4)" ID="CurrVersion1" />
+    <FIELD Format="XX" ID="CurrItemTotal1" />
+    <COLLECTION ID="Collection1" NumSubParts="10">
+      <FIELD Format="XXX" ID="CurrCode1" />
+      <FIELD Format="X(4)" ID="CurrUnits1" />
+      <FIELD Format="9(5)V9999S" ID="CurrMidRate1" />
+      <COLLECTION ID="Collection2" NumSubParts="5">
+        <FIELD Format="XX" ID="RateType1" />
+        <FIELD Format="9(5)V9999S" ID="BuyRate1" />
+        <FIELD Format="9(5)V9999S" ID="SellRate1" />
+      </COLLECTION>
+      <FIELD Format="X" ID="UnitIndicator1" />
+    </COLLECTION>
+  </RX>
+</GROUP>
