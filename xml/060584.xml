@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="yes"?>
+<GROUP ID="060584" Name="CIF: CLS Detail Customer">
+  <TX>
+    <FIELD Format="9(17)" ID="CustNo" />
+  </TX>
+  <RX>
+    <SELECT switch="Flag2">
+      <CASE ID="4" ID2="6" ID3="7">
+		<FIELD Format="9(17)" ID="CustNo" />
+      </CASE>
+      <CASEELSE>
+        <COLLECTION ID="Collection1" NumSubParts="5">
+          	<FIELD Format="9(17)" ID="accntNumber1" />
+			<FIELD Format="X(4)" ID="Status" />
+			<FIELD Format="X" ID="Type" />
+			<FIELD Format="X(30)" ID="Desc" />
+			<FIELD Format="XXX" ID="Curr" />
+			<FIELD Format="X(5)" ID="Link" />
+			<FIELD Format="X(20)" ID="Balance" />
+			<FIELD Format="X(20)" ID="Limit" />
+			<FIELD Format="X(4)" ID="Acctyp" /> <!--CR12952-->
+			<FIELD Format="X(4)" ID="Cat" />	<!--CR12952-->
+			<FIELD Format="X(20)" ID="Eff" />	<!--CR12952-->
+			<FIELD Format="X(20)" ID="Adv" />	<!--CR12952-->
+			<FIELD Format="X(4)" ID="Brch" />	<!--CR12952-->
+			<FIELD Format="X(1)" ID="Ibflag" />	<!--CR12952-->
+        </COLLECTION>
+      </CASEELSE>
+    </SELECT>
+  </RX>
+</GROUP>

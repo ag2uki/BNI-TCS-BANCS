@@ -1,0 +1,42 @@
+<?xml version="1.0" standalone="yes"?>
+<GROUP ID="060587" Name="CIF: CLS Cust Fac Profile">
+  <TX>
+	<FIELD Format="9(17)" ID="CustNo" />
+	<FIELD Format="X(60)" ID="CustName" />
+	<FIELD Format="X(60)" ID="KeyPerson" />
+	<FIELD Format="X(20)" ID="NoDIN" />
+	<FIELD Format="X(12)" ID="NoHP" />
+	<FIELD Format="X(20)" ID="noHPprimary" />
+  </TX>
+  <RX>
+    <SELECT switch="Flag2">
+      <CASE ID="4" ID2="6" ID3="7">
+		<FIELD Format="9(17)" ID="CustNo" />
+		<FIELD Format="X(60)" ID="CustName" />
+		<FIELD Format="X(60)" ID="KeyPerson" />
+		<FIELD Format="X(20)" ID="NoDIN" />
+		<FIELD Format="X(12)" ID="NoHP" />
+		<FIELD Format="X(20)" ID="noHPprimary" />
+      </CASE>
+	  <CASE ID="2">
+		<FIELD Format="XXX" ID="Curr1" />
+		<FIELD Format="X(20)" ID="TotBalance" />
+      </CASE>
+      <CASEELSE>
+        <COLLECTION ID="Collection1" NumSubParts="10">
+          	<FIELD Format="9(17)" ID="accntNumber1" />
+			<FIELD Format="X(30)" ID="Desc" />
+			<FIELD Format="XXX" ID="Curr" />
+			<FIELD Format="X(20)" ID="Balance" />
+			<FIELD Format="ddMMyyyy" ID="MatDate" />
+			<FIELD Format="X(4)" ID="Acctyp" />	<!--CR12952-->
+			<FIELD Format="X(4)" ID="Cat" />	<!--CR12952-->
+			<FIELD Format="X(20)" ID="Eff" />	<!--CR12952-->
+			<FIELD Format="X(4)" ID="Brch" />	<!--CR12952-->
+			<FIELD Format="X(1)" ID="Ibflag" />	<!--CR12952-->
+			<FIELD Format="X(20)" ID="noHPprimary" />
+        </COLLECTION>
+      </CASEELSE>
+    </SELECT>
+  </RX>
+</GROUP>
