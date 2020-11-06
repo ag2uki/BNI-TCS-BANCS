@@ -1,0 +1,61 @@
+<?xml version="1.0" standalone="yes"?>
+<GROUP ID="069447" Name="Online Statement">
+	<TX>
+		<FIELD Format="9(17)" ID="accntNumber1" />
+		<FIELD Format="ddMMyyyy" ID="frDate" />
+		<FIELD Format="ddMMyyyy" ID="toDate" />
+		<!--FIELD Format="9(6)" ID="fromtrxnum" /-->
+		<FIELD Format="999" ID="page" />
+	    <FIELD Format="X(16)" ID="txtsearch" /> 
+	</TX>
+	<RX>
+		<SELECT switch="Flag2">
+			<CASE ID="4">
+				<FIELD Format="9(17)" ID="accntNumber1" Offset="6" />
+				<FIELD Format="X(30)" ID="custName" />
+				<FIELD Format="X(30)" ID="produk" />
+				<FIELD Format="X(40)" ID="address1" />
+				<FIELD Format="X(40)" ID="address2" />
+				<FIELD Format="X(40)" ID="address3" />
+				<FIELD Format="X(40)" ID="address4" />
+				<FIELD Format="X(8)" ID="zipCode" />
+				<FIELD Format="XXX" ID="ccy" />
+				<FIELD Format="ddMMyyyy" ID="frDate" />
+				<FIELD Format="ddMMyyyy" ID="toDate" />
+				<!--FIELD Format="9(6)" ID="lasttrxnum" /-->
+				<!--CR18248 START-->
+				<!--FIELD Format="999" ID="page" /-->
+				<!--CR18248 END-->
+				<!--FIELD Format="X(16)" ID="txtsearch" /-->>
+			</CASE>
+			<CASE ID="2">
+				<FIELD Format="9(6)" ID="seqtr" />
+				<FIELD Format="X(18)" ID="beginBal" />
+				<FIELD Format="X(17)" ID="crTot" />
+				<FIELD Format="X(17)" ID="dbTot" />
+				<FIELD Format="X(18)" ID="endBal" />
+			</CASE>
+			<CASEELSE>
+				<COLLECTION ID="Collection1" NumSubParts="10">
+					<FIELD Format="9(6)" ID="seqNum" />
+					<FIELD Format="ddMMyyyy" ID="date" />
+					<FIELD Format="X(47)" ID="desc" />
+					<FIELD Format="X(200)" ID="narasi" />
+					<FIELD Format="XXX" ID="branch" />
+					<FIELD Format="X(6)" ID="tracer" />
+					<FIELD Format="XX" ID="txcode" />
+					<FIELD Format="X" ID="dbcr" />
+					<FIELD Format="X(17)" ID="mutasi" />
+					<FIELD Format="X(18)" ID="saldo" />
+					<FIELD Format="9(17)" ID="tofracct" />
+					<FIELD Format="X(37)" ID="nar36" />
+					<FIELD Format="X(61)" ID="nar02" />
+					<FIELD Format="X(40)" ID="nar03" />
+					<FIELD Format="X(53)" ID="nar38" />
+					<FIELD Format="X(53)" ID="nar39" />
+					<FIELD Format="X(8)" ID="pstime" />
+				</COLLECTION>
+			</CASEELSE>
+		</SELECT>
+	</RX>
+</GROUP>

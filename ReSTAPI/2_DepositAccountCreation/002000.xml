@@ -1,0 +1,151 @@
+<?xml version="1.0" standalone="yes"?>
+<GROUP ID="002000" Name="Deposits: Create Deposit Account">
+	<TX>
+		<FIELD Format="9(17)" ID="accntNumber1"/>
+		<FIELD Format="9(17)" ID="accntNumber4"/>
+		<FIELD Format="X(24)" ID="IDNumber"/>
+		<FIELD Format="9(4)" ID="id_type1"/>
+		<FIELD Format="X(60)" ID="DefaultString2"/>
+		<FIELD Format="X(40)" ID="DefaultString3"/>
+		<FIELD Format="X(40)" ID="DefaultString4"/>
+		<FIELD Format="X" ID="DefaultString26"/>
+		<FIELD Format="X(40)" ID="DefaultString5"/>
+		<FIELD Format="XXX" ID="DefaultString6"/>
+		<FIELD Format="X(40)" ID="DefaultString7"/>
+		<FIELD Format="X(8)" ID="DefaultString8"/>
+		<FIELD Format="9(4)" ID="dacctype1"/>
+		<FIELD Format="9(4)" ID="dintcat1"/>
+		<FIELD Format="X" ID="intpcode1" Offset="3"/>
+		<FIELD Format="9(17)" ID="accntNumber2" Offset="3"/>
+		<FIELD Format="9(4)" ID="DefInteger9"/>
+		<FIELD Format="99" ID="languagecode1"/>
+		<FIELD Format="X" ID="DefaultString17"/>
+		<FIELD Format="X" ID="DefaultString22"/>
+		<FIELD Format="9" ID="DefInteger1"/>
+		<FIELD Format="X" ID="mailind1"/>
+		<FIELD Format="X" ID="noteind1"/>
+		<FIELD Format="9(17)" ID="accntNumber3"/>
+		<FIELD Format="99V9999" ID="Unsigned41"/>
+		<FIELD Format="X(4)" ID="freq_n1" Offset="2"/>
+		<FIELD Format="99" ID="DefInteger4"/>
+		<FIELD Format="99" ID="DefInteger5"/>
+		<FIELD Format="9(4)" ID="DefInteger10"/>
+		<FIELD Format="9(4)" ID="DefInteger11"/>
+		<FIELD Format="9(4)" ID="DefInteger12"/>
+		<FIELD Format="9" ID="DefInteger2" Offset="7"/>
+		<FIELD Format="9(17)" ID="accntNumber5"/>
+		<FIELD Format="XX" ID="DefaultString12"/>
+		<FIELD Format="X" ID="DefaultString19" Offset="15"/>
+		<FIELD Format="X(5)" ID="DefaultString20"/>
+		<FIELD Format="9(15)" ID="DefInteger7"/>
+		<FIELD Format="9(4)" ID="DefInteger13" Offset="17"/>
+		<FIELD Format="X" ID="DefaultString21"/>
+		<FIELD Format="9(14)V9(3)S" ID="Unsigned08"/>
+		<FIELD Format="X(4)" ID="DefaultString15" Offset="8"/>
+		<FIELD Format="XX" ID="DefaultString10"/>
+		<FIELD Format="XX" ID="DefaultString11"/>
+		<FIELD Format="XX" ID="DefaultString28"/>
+		<FIELD Format="X" ID="DefaultString27"/>
+		<FIELD Format="XX" ID="DefaultString25"/>
+		<FIELD Format="X(12)" ID="DefaultString18"/>
+		<FIELD Format="X(25)" ID="DefaultString9"/>
+		<FIELD Format="ddMMyyyy" ID="date1"/>
+		<FIELD Format="99" ID="DefInteger6"/>
+		<FIELD Format="X" ID="notipros1"/>
+		<FIELD Format="X" ID="DefaultString14"/>
+		<FIELD Format="999V9999S" ID="Signed42"/>
+		<FIELD Format="9" ID="DefInteger3"/>
+		<FIELD Format="XXX" ID="DefaultString16"/>
+		<FIELD Format="X" ID="DefaultString13"/>
+		<FIELD Format="X" ID="DefaultString23"/>
+		<FIELD Format="9(17)" ID="BrokerNo1"/>
+		<FIELD Format="9(6)" ID="DefInteger8" Offset="19"/>
+		<FIELD Format="99V9(4)" ID="TPR_rate"/>
+		<FIELD Format="X(10)" ID="CertNo1"/>
+		<FIELD Format="9(2)" ID="NoIns"/>
+		<FIELD Format="9(2)" ID="Insurance"/>
+		<FIELD Format="X(4)" ID="OpenAcctRes"/>
+		<FIELD Format="X(20)" ID="OpenAcctRes1"/>
+		<FIELD Format="X(4)" ID="SrcOfFrund"/>
+		<FIELD Format="X(30)" ID="SrcOfFrund1"/>
+		<FIELD Format="9(17)" ID="ProjDep"/>
+		<FIELD Format="9(17)" ID="ProjWdl"/>
+		<FIELD Format="9(2)V99" ID="AcctRatio"/>
+		<FIELD Format="9(16)" ID="BICNo"/>
+		<FIELD Format="9(14)V9(3)" ID="BICLimit"/>
+	</TX>
+	<RX>
+		<FIELD Format="9(17)" ID="accntNumber1"/>
+		<FIELD Format="9(17)" ID="accntNumber4"/>
+		<FIELD Format="X(24)" ID="IDNumber"/>
+		<FIELD Format="9(4)" ID="id_type1"/>
+		<FIELD Format="X(60)" ID="DefaultString2"/>
+		<FIELD Format="X(40)" ID="DefaultString3"/>
+		<FIELD Format="X(40)" ID="DefaultString4"/>
+		<FIELD Format="X" ID="DefaultString26"/>
+		<FIELD Format="X(40)" ID="DefaultString5"/>
+		<FIELD Format="XXX" ID="DefaultString6"/>
+		<FIELD Format="X(40)" ID="DefaultString7"/>
+		<FIELD Format="X(8)" ID="DefaultString8"/>
+		<FIELD Format="9(4)" ID="dacctype1"/>
+		<FIELD Format="9(4)" ID="dintcat1"/>
+		<FIELD Format="X" ID="intpcode1" Offset="3"/>
+		<FIELD Format="9(17)" ID="accntNumber2" Offset="3"/>
+		<FIELD Format="9(4)" ID="DefInteger9"/>
+		<FIELD Format="99" ID="languagecode1"/>
+		<FIELD Format="X" ID="DefaultString17"/>
+		<FIELD Format="X" ID="DefaultString22"/>
+		<FIELD Format="9" ID="DefInteger1"/>
+		<FIELD Format="X" ID="mailind1"/>
+		<FIELD Format="X" ID="noteind1"/>
+		<FIELD Format="9(17)" ID="accntNumber3"/>
+		<FIELD Format="99V9999" ID="Unsigned41"/>
+		<FIELD Format="X(4)" ID="freq_n1" Offset="2"/>
+		<FIELD Format="99" ID="DefInteger4"/>
+		<FIELD Format="99" ID="DefInteger5"/>
+		<FIELD Format="9(4)" ID="DefInteger10"/>
+		<FIELD Format="9(4)" ID="DefInteger11"/>
+		<FIELD Format="9(4)" ID="DefInteger12"/>
+		<FIELD Format="9" ID="DefInteger2" Offset="7"/>
+		<FIELD Format="9(17)" ID="accntNumber5"/>
+		<FIELD Format="XX" ID="DefaultString12"/>
+		<FIELD Format="X" ID="DefaultString19" Offset="15"/>
+		<FIELD Format="X(5)" ID="DefaultString20"/>
+		<FIELD Format="9(15)" ID="DefInteger7"/>
+		<FIELD Format="9(4)" ID="DefInteger13" Offset="17"/>
+		<FIELD Format="X" ID="DefaultString21"/>
+		<FIELD Format="9(14)V9(3)S" ID="Unsigned08"/>
+		<FIELD Format="X(4)" ID="DefaultString15" Offset="8"/>
+		<FIELD Format="XX" ID="DefaultString10"/>
+		<FIELD Format="XX" ID="DefaultString11"/>
+		<FIELD Format="XX" ID="DefaultString28"/>
+		<FIELD Format="X" ID="DefaultString27"/>
+		<FIELD Format="XX" ID="DefaultString25"/>
+		<FIELD Format="X(12)" ID="DefaultString18"/>
+		<FIELD Format="X(25)" ID="DefaultString9"/>
+		<FIELD Format="ddMMyyyy" ID="date1"/>
+		<FIELD Format="99" ID="DefInteger6"/>
+		<FIELD Format="X" ID="notipros1"/>
+		<FIELD Format="X" ID="DefaultString14"/>
+		<FIELD Format="999V9999S" ID="Signed42"/>
+		<FIELD Format="9" ID="DefInteger3"/>
+		<FIELD Format="XXX" ID="DefaultString16"/>
+		<FIELD Format="X" ID="DefaultString13"/>
+		<FIELD Format="X" ID="DefaultString23"/>
+		<FIELD Format="9(17)" ID="BrokerNo1"/>
+		<FIELD Format="9(6)" ID="DefInteger8" Offset="19"/>
+		<FIELD Format="99V9(4)" ID="TPR_rate"/>
+		<FIELD Format="X(10)" ID="CertNo1"/>
+		<FIELD Format="9(2)" ID="NoIns"/>
+		<FIELD Format="9(2)" ID="Insurance"/>
+		<FIELD Format="X(4)" ID="OpenAcctRes"/>
+		<FIELD Format="X(20)" ID="OpenAcctRes1"/>
+		<FIELD Format="X(4)" ID="SrcOfFrund"/>
+		<FIELD Format="X(30)" ID="SrcOfFrund1"/>
+		<FIELD Format="9(17)" ID="ProjDep"/>
+		<FIELD Format="9(17)" ID="ProjWdl"/>
+		<FIELD Format="9(2)V99" ID="AcctRatio"/>
+		<FIELD Format="9(16)" ID="BICNo"/>
+		<FIELD Format="9(14)V9(3)" ID="BICLimit"/>
+	</RX>
+</GROUP>

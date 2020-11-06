@@ -1,0 +1,7 @@
+<?xml version="1.0" standalone="yes"?>
+<GROUP ID="069400" Name="CIF: Generic Short Enquiry">
+  <TX>
+    <FIELD Format="9(17)" ID="accntNumber1" />
+    <FIELD Format="X" ID="enquiryoptn1" />
+  </TX>
+</GROUP>
