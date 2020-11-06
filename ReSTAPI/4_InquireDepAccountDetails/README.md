@@ -70,3 +70,21 @@ SOAP Response:
 	</soapenv:Body>
 </soapenv:Envelope>
 ```
+
+Bancs format message:
+
+```
+[ 0100                    **
+         003099600100001069400000000     0  I  0 000000  000000001152104198]
+		 
+[ 1067    0983            0000    000000003099600100001000400000000000040320600 000000  0300000000115210419IDRBUKA              BNI TAPLUS                    025900000009100131831Sdr ARIEL PETERCORN
+
+                       38.823.880,00      38.823.880,00 31052010JL. PEUYEUM  BANDUNG NO. 666                                                    Kenyot                                  BOJONG
+  10320                           JL. PEUYEUM  BANDUNG NO. 666
+                                        Kenyot
+      BOJONG                                  10320
+    D20000001              0,00               0,00               0,00  2,0000
+
+
+                          00                        ]
+```

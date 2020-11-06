@@ -1959,3 +1959,8 @@ Sample SOAP request:
 </soapenv:Envelope>
 ```
 
+Bancs Format message:
+```
+[ 0134                    **
+           003099100100001069447000000     0  I  0 000000  000000001147397142810202004112020000                ]
+```

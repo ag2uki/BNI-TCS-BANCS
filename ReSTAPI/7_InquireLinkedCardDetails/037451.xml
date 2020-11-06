@@ -1,0 +1,61 @@
+<?xml version="1.0" standalone="yes"?>
+<GROUP ID="037451" Name="Tp: Account Details">
+  <TX>
+    <FIELD Format="9(17)" ID="accntNumber1" />
+    <FIELD Format="X(30)" ID="DefaultString1" Offset="2" />
+    <FIELD Format="X(8)" ID="DefaultString2" />
+    <FIELD Format="X(10)" ID="DefaultString3" Offset="32" />
+    <FIELD Format="X(19)" ID="DefaultString4" />
+    <FIELD Format="X" ID="DefaultString5" Offset="1" />
+    <FIELD Format="X(18)" ID="DefaultString6" Offset="9" />
+    <FIELD Format="X(26)" ID="DefaultString7" Offset="2" />
+    <FIELD Format="X(19)" ID="DefaultString8" Offset="24" />
+    <FIELD Format="X" ID="DefaultString9" Offset="1" />
+    <FIELD Format="X(18)" ID="DefaultString10" Offset="9" />
+    <FIELD Format="X(26)" ID="DefaultString11" Offset="2" />
+    <FIELD Format="X(19)" ID="DefaultString12" Offset="24" />
+    <FIELD Format="X" ID="DefaultString13" Offset="1" />
+    <FIELD Format="X(18)" ID="DefaultString14" Offset="9" />
+    <FIELD Format="X(26)" ID="DefaultString15" Offset="2" />
+    <FIELD Format="X(19)" ID="DefaultString16" Offset="24" />
+    <FIELD Format="X" ID="DefaultString17" Offset="1" />
+    <FIELD Format="X(18)" ID="DefaultString18" Offset="9" />
+    <FIELD Format="X(26)" ID="DefaultString19" Offset="2" />
+    <FIELD Format="9(14)V99S" ID="Signed221" Offset="24" />
+    <FIELD Format="ddMMyyyy" ID="date1" Offset="3" />
+    <FIELD Format="9(14)V99S" ID="Signed22" Offset="2" />
+    <FIELD Format="ddMMyyyy" ID="date2" Offset="3" />
+    <FIELD Format="9(14)V99S" ID="Signed23" Offset="2" />
+    <FIELD Format="ddMMyyyy" ID="date3" Offset="3" />
+    <FIELD Format="9(14)V99S" ID="Signed24" Offset="2" />
+  </TX>
+  <RX>
+    <FIELD Format="9(17)" ID="accntNumber1" />
+    <FIELD Format="X(30)" ID="DefaultString1" Offset="2" />
+    <FIELD Format="X(8)" ID="DefaultString2" />
+    <FIELD Format="X(10)" ID="DefaultString3" Offset="32" />
+    <FIELD Format="X(19)" ID="DefaultString4" />
+    <FIELD Format="X" ID="DefaultString5" Offset="1" />
+    <FIELD Format="X(18)" ID="DefaultString6" Offset="9" />
+    <FIELD Format="X(26)" ID="DefaultString7" Offset="2" />
+    <FIELD Format="X(19)" ID="DefaultString8" Offset="24" />
+    <FIELD Format="X" ID="DefaultString9" Offset="1" />
+    <FIELD Format="X(18)" ID="DefaultString10" Offset="9" />
+    <FIELD Format="X(26)" ID="DefaultString11" Offset="2" />
+    <FIELD Format="X(19)" ID="DefaultString12" Offset="24" />
+    <FIELD Format="X" ID="DefaultString13" Offset="1" />
+    <FIELD Format="X(18)" ID="DefaultString14" Offset="9" />
+    <FIELD Format="X(26)" ID="DefaultString15" Offset="2" />
+    <FIELD Format="X(19)" ID="DefaultString16" Offset="24" />
+    <FIELD Format="X" ID="DefaultString17" Offset="1" />
+    <FIELD Format="X(18)" ID="DefaultString18" Offset="9" />
+    <FIELD Format="X(26)" ID="DefaultString19" Offset="2" />
+    <FIELD Format="9(14)V99S" ID="Signed221" Offset="24" />
+    <FIELD Format="ddMMyyyy" ID="date1" Offset="3" />
+    <FIELD Format="9(14)V99S" ID="Signed22" Offset="2" />
+    <FIELD Format="ddMMyyyy" ID="date2" Offset="3" />
+    <FIELD Format="9(14)V99S" ID="Signed23" Offset="2" />
+    <FIELD Format="ddMMyyyy" ID="date3" Offset="3" />
+    <FIELD Format="9(14)V99S" ID="Signed24" Offset="2" />
+  </RX>
+</GROUP>

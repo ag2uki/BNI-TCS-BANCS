@@ -1,0 +1,9 @@
+<?xml version="1.0" standalone="yes"?>
+<GROUP ID="000400" Name="Deposits: Short Enquiry">
+  <TX>
+    <FIELD Format="9(17)" ID="accntNumber1" />
+    <FIELD Format="X" ID="enquiryoptn1" />
+    <FIELD Format="9" ID="DefInteger1" />
+    <FIELD Format="9" ID="DefInteger2" />
+  </TX>
+</GROUP>
