@@ -1,0 +1,7 @@
+<?xml version="1.0" standalone="yes"?>
+<GROUP ID="060583" Name="CIF: Summary CLS Information">
+  <TX>
+    <FIELD Format="9(17)" ID="accntNumber1" />
+    <FIELD Format="99" ID="Option" />
+  </TX>
+</GROUP>
