@@ -1,0 +1,74 @@
+<AccountShortInquiry>
+   <Req>
+       <content> 
+          <Field id="accountNum" length="17" padding="left" padString="0" />
+		  <Field  id="options"  length="1"  padding="left" padString="0" value="8" />
+       </content>
+   </Req>
+   <Res>
+		<RX000400>
+		 <content> 
+		   <Field id="accountProductType"  type="dummy" value="DEP"/> 
+           <Field id="d_accountNum"        padding="left" padString="0"  startIndex="90"  length="17" />
+           <Field id="d_currency"          padding="right" padString=" " startIndex="107" length="3" />
+		   <Field id="d_status"            padding="right" padString=" " startIndex="110" length="18" />	   
+           <Field id="d_product"           padding="right" padString=" " startIndex="128" length="30" />
+		   <Field id="d_homeBranch"        padding="right" padString=" " startIndex="158" length="4" />
+		   <Field id="d_cifNum"            padding="right" padString=" " startIndex="162" length="17" />
+           <Field id="d_name"              padding="right" padString=" " startIndex="179" length="60" />
+		   <Field id="d_nameRek"           padding="right" padString=" " startIndex="239" length="60" />
+		   <Field id="d_currentBalance"    padding="right" padString=" " startIndex="299" length="19" />
+           <Field id="d_availableBalance"  padding="right" padString=" " startIndex="318" length="19" />
+           <Field id="d_openDate"          type="date"	   startIndex="337" length="8" />
+           <Field id="d_address1"          padding="right" padString=" " startIndex="345" length="40" />
+           <Field id="d_address2"          padding="right" padString=" " startIndex="385" length="40" />
+		   <Field id="d_address3"          padding="right" padString=" " startIndex="425" length="40" />
+           <Field id="d_address4"          padding="right" padString=" " startIndex="465" length="40" />
+		   <Field id="d_postCode"          padding="right" padString=" " startIndex="505" length="8" />
+		   <Field id="d_homePhone"         padding="right" padString=" " startIndex="513" length="12" />
+		   <Field id="dummy"      		   padding="right" padString=" " startIndex="525" length="12" />
+           <Field id="d_address1AA"        padding="right" padString=" " startIndex="537" length="40" />
+           <Field id="d_address2AA"        padding="right" padString=" " startIndex="577" length="40" />
+		   <Field id="d_address3AA"        padding="right" padString=" " startIndex="617" length="40" />
+           <Field id="d_address4AA"        padding="right" padString=" " startIndex="657" length="40" />
+		   <Field id="d_postCodeAA"        padding="right" padString=" " startIndex="697" length="8" />
+           <Field id="d_homePhoneAA"       padding="right" padString=" " startIndex="707" length="12" />
+		   <Field id="d_mobilePhoneAA"     padding="right" padString=" " startIndex="719" length="12" />
+		   <Field id="d_mobilePhone"       padding="right" padString=" " startIndex="731" length="20" />
+		   <Field id="d_monthlyDebitingDate"     padding="right" padString=" " startIndex="751" length="2" />
+		 </content>
+		</RX000400>
+		<RX010400>
+		 <content> 
+		   <Field id="accountProductType"  type="dummy" value="LON"/> 
+           <Field id="l_accountNum"        padding="left" padString="0"  startIndex="90"  length="17" />
+           <Field id="l_currency"          padding="right" padString=" " startIndex="107" length="3" />
+		   <Field id="l_status"            padding="right" padString=" " startIndex="110" length="18" />	   
+           <Field id="l_product"           padding="right" padString=" " startIndex="128" length="30" />
+		   <Field id="l_homeBranch"        padding="right" padString=" " startIndex="158" length="4" />
+		   <Field id="l_cifNum"            padding="right" padString=" " startIndex="162" length="17" />
+           <Field id="l_name"              padding="right" padString=" " startIndex="179" length="60" />
+		   <Field id="l_nameRek"           padding="right" padString=" " startIndex="239" length="60" />
+		   <Field id="l_currentBalance"    padding="right" padString=" " startIndex="299" length="19" />
+           <Field id="l_availableBalance"  padding="right" padString=" " startIndex="318" length="19" />
+           <Field id="l_openDate"          type="date"	   startIndex="337" length="8" />
+           <Field id="l_address1"          padding="right" padString=" " startIndex="345" length="40" />
+           <Field id="l_address2"          padding="right" padString=" " startIndex="385" length="40" />
+		   <Field id="l_address3"          padding="right" padString=" " startIndex="425" length="40" />
+           <Field id="l_address4"          padding="right" padString=" " startIndex="465" length="40" />
+		   <Field id="l_postCode"          padding="right" padString=" " startIndex="505" length="8" />
+		   <Field id="l_homePhone"         padding="right" padString=" " startIndex="513" length="12" />
+		   <Field id="dummy"       		   padding="right" padString=" " startIndex="525" length="12" />
+           <Field id="l_address1AA"        padding="right" padString=" " startIndex="537" length="40" />
+           <Field id="l_address2AA"        padding="right" padString=" " startIndex="577" length="40" />
+		   <Field id="l_address3AA"        padding="right" padString=" " startIndex="617" length="40" />
+           <Field id="l_address4AA"        padding="right" padString=" " startIndex="657" length="40" />
+		   <Field id="l_postCodeAA"        padding="right" padString=" " startIndex="697" length="8" />
+           <Field id="l_homePhoneAA"       padding="right" padString=" " startIndex="705" length="12" />
+		   <Field id="l_mobilePhoneAA"       padding="right" padString=" " startIndex="717" length="12" />
+		   <Field id="l_nextInstallmentDueDate"       padding="right" padString=" " startIndex="808" length="2" />
+		   <Field id="l_mobilePhone"       padding="right" padString=" " startIndex="810" length="20" />
+		 </content>
+		</RX010400>
+   </Res>
+</AccountShortInquiry>

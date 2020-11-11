@@ -1,0 +1,29 @@
+<TermDepositRateInquiry>
+	<Req>
+		<content>
+			<Field id="amount" type="flatMoney" signLocation="after" intLength="14" decLength="3" padding="left" padString="0"/>
+			<Field id="accountType" padding="left" padString="0" length="4" />
+			<Field id="efektifDate" type="date" length="8" padding="left" padString="0"/>
+			<Field id="intMethod" padding="right" padString=" " length="1"/>
+			<Field id="frekuensi" padding="right" padString=" " length="3"/>
+			<Field id="period" padding="left" padString="0" length="3"/>
+			<Field id="termBasis" padding="right" padString=" " length="1"/>
+			<Field id="page" padding="left" padString="0" length="1"/>
+			<Field id="intRate" type="flatMoney" signLocation="after" intLength="3" decLength="4" padding="left" padString="0"/>
+		</content>
+	</Req>
+	<Res>
+		<content>
+			<Field id="account_1" padding="right" padString=" " startIndex="90" length="80" />
+			<Field id="account_2" padding="right" padString=" " startIndex="170" length="80" />
+			<Field id="account_3" padding="right" padString=" " startIndex="250" length="80" />
+			<Field id="account_4" padding="right" padString=" " startIndex="330" length="80" />
+			<Field id="account_5" padding="right" padString=" " startIndex="410" length="80" />
+			<Field id="account_6" padding="right" padString=" " startIndex="490" length="80" />
+			<Field id="account_7" padding="right" padString=" " startIndex="570" length="80" />
+			<Field id="account_8" padding="right" padString=" " startIndex="650" length="80" />
+			<Field id="account_9" padding="right" padString=" " startIndex="730" length="80" />
+			<Field id="account_10" padding="right" padString=" " startIndex="810" length="80" />
+		</content>
+	</Res>
+</TermDepositRateInquiry>

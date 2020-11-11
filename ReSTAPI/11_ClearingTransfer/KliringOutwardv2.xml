@@ -1,0 +1,53 @@
+<KliringOutwardv2>
+   <Req>
+     <content> 
+        <Field id="accountNum"				padding="left"	padString="0" length="17" />
+        <Field id="dummy" length="18" 		value="00000000000000000+"/> <!-- saldo buku -->
+        <Field id="nominalPenarikan" 		type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+        <Field id="dummy" length="9" 		value=" 00000000"/> <!-- transaction date -->
+        <Field id="dummy" length="2" 		value="  "/>    <!-- promo code -->
+        <Field id="dummy" length="53" 		value="                                                     "/>    <!--offset -->
+		<Field id="accountPenerima" 		padding="right" padString=" " length="34" /> <!-- accountPenerima -->
+        <Field id="dummy" length="3"		value="IDR"/>   <!-- penarikan currency -->
+        <Field id="nominalDikirim"			type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+        <Field id="dummy" length="3"		value="IDR"/> <!-- transaksi currency -->
+        <Field id="nominalDikirim"			type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />  <!-- base amount  -->
+        <Field id="dummy" length="18"		value="00000000000000000+"/> <!-- commision -->
+        <Field id="dummy" length="18"		value="00000000000000000+"/> <!-- change -->
+        <Field id="dummy" length="2"		value="02"/> <!-- rate type (default 02: reguler) -->
+        <Field id="pesan1Pengirim"			padding="right" padString=" " length="50" />
+        <Field id="pesan2Pengirim"			padding="right" padString=" " length="40" />
+        <Field id="dummy" 					length="50" value="                                                  "/>    <!-- bank penerima -->
+        <Field id="namaPenerima" 			padding="right" padString=" " length="80" />
+        <Field id="alamat1Penerima"			padding="right" padString=" " length="40" />
+        <Field id="alamat2Penerima"			padding="right" padString=" " length="40" />
+        <Field id="nomorTelponPenerima"		padding="right" padString=" " length="20" />
+        <Field id="kodePosPenerima"			padding="right" padString=" " length="8" />
+        <Field id="idPenerima"				padding="right" padString=" " length="24" />
+        <Field id="tipeIdPenerima"			padding="left" padString="0" length="4" />
+        <Field id="dummy"					length="26" value="                          "/>    <!-- offset -->
+        <Field id="namaPengirim"			padding="right" padString=" " length="80" />		<!--senderDtls1-->
+        <Field id="alamatPengirim"			padding="right" padString=" " length="40" />		<!--senderDtls2-->
+        <Field id="nomorTelponPengirim" 	padding="right" padString=" " length="20" /> 		<!--senderDtls3--> 
+		<Field id="tipeResidensiPengirim" 	padding="left" padString="0" length="1" />
+        <Field id="tipeResidensiPenerima"	padding="left" padString="0" length="1" />
+        <Field id="dummy" 					length="65" value="                                                                 "/>    <!-- keterangan -->
+		<Field id="dummy" 					length="12" value="            "/>  <!--sandiBankPenerima-->
+        <Field id="dummy" 					length="17" value="                 "/>  <!--offset-->
+        <Field id="intermediaryBranch" 		padding="left" padString="0" length="4" />
+        <Field id="biaya" type="flatMoney" 	intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+        <Field id="dummy" 					length="1" value="0" />	<!-- send option: 0 Kliring -->
+        <Field id="dummy" 					length="32" value="                                "/> <!-- pin -->
+        <Field id="dummy" 					length="8" value="        "/>					<!-- offset -->
+		<Field id="bankPenerimaAkhir" 		padding="right" padString=" " length="8"/>		<!--CR16712:nofinalReceiver-->
+        <Field id="sandiTransaksi" 			padding="left" padString="0" length="2"/>       <!-- kode tsa -->
+		<Field id="dummy" 					length="50" value ="                                                  "/>       <!-- CR16712: offset  -->
+		<Field id="jenisPenerima" 			padding="right" padString=" " length="1"/>  										<!-- CR16712: benCustype -->
+     </content>
+   </Req>
+   <Res>
+     <content>              
+          <Field id="message"  startIndex="99" length="69" padding="right" padString=" " />
+     </content>
+   </Res>
+</KliringOutwardv2>
