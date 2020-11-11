@@ -2,7 +2,8 @@
 
 Transaction code 69400 is known as `AccountShortInquiry` and `AccountShortDetails`
 
-1. AccountShortInquiry
+`1. AccountShortInquiry`
+
 Sample SOAP Request:
 ```xml
 <soapenv:Envelope
@@ -89,7 +90,7 @@ Bancs format message:
                           00                        ]
 ```
 
-2. AccountShortDetails
+`2. AccountShortDetails`
 Sample SOAP Request :
 ```xml
 <soapenv:Envelope xmlns:q0="http://service.bni.co.id/core" xmlns:bo="http://service.bni.co.id/core/bo" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
