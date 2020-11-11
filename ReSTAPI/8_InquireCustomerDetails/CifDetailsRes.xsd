@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://service.bni.co.id/core/bo">
+  <xsd:complexType name="CifDetailsRes">
+    <xsd:all>
+      <xsd:element minOccurs="0" name="cifNum" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="customerType" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="relManager" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="salutation" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="firstName" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="lastName" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="title" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="companyName" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="lawFirm" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="jalan" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="rt" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="rw" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="perumahan" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="kelurahan" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="kecamatan" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="postCode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="countryCode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="homePhoneNum1" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="homePhoneNum2" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="faxNum1" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="faxNum2" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="officePhoneNum1" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="officePhoneNum2" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="cellPhoneNum1" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="cellPhoneNum2" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="nationality" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="occupancy" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="languageCode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="idNum" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="idReleasedDate" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="idReleasedFrom" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="idType" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="domesticRisk" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="borderRisk" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="vipCode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="status" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="segmentCode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="hasNPWP" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="openingBranch" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="yesNo1" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="yesNo2" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="yesNo3" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="yesNo4" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="yesNo5" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="bisnisRiskCode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="countryOfRiskCode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="countryOfRiskCode2" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="centralBankOwnershipCode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="corporateGroupCode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="middleName" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="locationCode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="bebasPPH" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="ivrFlag" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="idExpiryDate" type="xsd:string"/>
+    </xsd:all>
+  </xsd:complexType>
+</xsd:schema>

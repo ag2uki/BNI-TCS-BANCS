@@ -1,0 +1,66 @@
+<CustomerDetailV2>
+	<Req>
+		<content>
+			<Field id="accountNum" padding="left" padString="0" startIndex="88" length="17" />
+		</content>
+	</Req>
+	<Res>
+		<content>
+			<Field id="flag" padding="right" padString=" " startIndex="90" length="2" />
+			<Field id="jenisNasabah" padding="right" padString=" " startIndex="92" length="2" />
+			<Field id="namaNasabah" padding="right" padString=" " startIndex="94" length="60" />
+			<Field id="gelar" padding="right" padString=" " startIndex="154" length="8" />
+			<Field id="titleCode" padding="right" padString=" " startIndex="162" length="2" />
+			<Field id="accountCurrency" padding="right" padString=" " startIndex="164" length="3" />
+			<Field id="tempatLahir" padding="right" padString=" " startIndex="167" length="30" />
+			<Field id="tglLahir" type="date" startIndex="197" length="8" />
+			<Field id="alamatId" padding="right" padString=" " startIndex="205" length="40" />
+			<Field id="rt" padding="right" padString=" " startIndex="245" length="3" />
+			<Field id="rw" padding="right" padString=" " startIndex="248" length="3" />
+			<Field id="perum" padding="right" padString=" " startIndex="251" length="34" />
+			<Field id="kelurahan" padding="right" padString=" " startIndex="285" length="20" />
+			<Field id="kecamatan" padding="right" padString=" " startIndex="305" length="20" />
+			<Field id="kodePos" padding="right" padString=" " startIndex="325" length="8" />
+			<Field id="jalan2" padding="right" padString=" " startIndex="333" length="40" />
+			<Field id="rt2" padding="right" padString=" " startIndex="373" length="3" />
+			<Field id="rw2" padding="right" padString=" " startIndex="376" length="3" />
+			<Field id="perum2" padding="right" padString=" " startIndex="379" length="34" />
+			<Field id="kelurahan2" padding="right" padString=" " startIndex="413" length="20" />
+			<Field id="kecamatan2" padding="right" padString=" " startIndex="433" length="20" />
+			<Field id="kodePos2" padding="right" padString=" " startIndex="453" length="8" />
+			<Field id="telpRumah" padding="right" padString=" " startIndex="461" length="12" />
+			<Field id="telpKantor" padding="right" padString=" " startIndex="473" length="12" />
+			<Field id="dummy" startIndex="485" length="12" value="            " /> <!-- field length hp lama -->
+			<Field id="fax" padding="right" padString=" " startIndex="497" length="12" />
+			<Field id="dummy" padding="right" padString=" " startIndex="509" length="2" />
+			<Field id="email" padding="right" padString=" " startIndex="511" length="43" />			
+			<Field id="npwp" padding="left" padString="0" startIndex="554" length="16" />
+			<Field id="wargaCode" padding="right" padString=" " startIndex="570" length="2" />
+			<Field id="jenisId" padding="right" padString=" " startIndex="572" length="4" />
+			<Field id="tempatId" padding="right" padString=" " startIndex="576" length="30" />
+			<Field id="noId" padding="right" padString=" " startIndex="606" length="20" />			
+			<Field id="tglTerbit" type="date" startIndex="626" length="8" />
+			<Field id="tglHabis" type="date" startIndex="634" length="8" />
+			<Field id="sumberInfo" padding="right" padString=" " startIndex="642" length="1" />
+			<Field id="maidenName" padding="right" padString=" " startIndex="643" length="40" />
+			<Field id="maritalIndikator" padding="right" padString=" " startIndex="683" length="1" />
+			<Field id="jumlahAnak" padding="left" padString="0" startIndex="684" length="2" />
+			<Field id="religiCode" padding="right" padString=" " startIndex="686" length="1" />
+			<Field id="educationCode" padding="right" padString=" " startIndex="687" length="2" />
+			<Field id="jobCode" padding="right" padString=" " startIndex="689" length="2" />
+			<Field id="namaPerusahaan" padding="right" padString=" " startIndex="691" length="60" />
+			<Field id="alamatPerusahaan" padding="right" padString=" " startIndex="751" length="60" />
+			<Field id="postCodePerusahaan" padding="right" padString=" " startIndex="811" length="8" />
+			<Field id="startJobDate" padding="right" padString=" " startIndex="819" length="8" />
+			<Field id="gaji" padding="left" padString="0" startIndex="827" length="2" />
+			<Field id="namaAlias" padding="right" padString=" " startIndex="829" length="17" />
+			<Field id="frekuensiGaji" padding="right" padString=" " startIndex="846" length="1" />
+			<Field id="gajiLain" padding="right" padString=" " startIndex="847" length="19" />			
+			<Field id="depositoCode" padding="right" padString=" " startIndex="891" length="28" />			
+			<Field id="depcode1" padding="right" padString=" " startIndex="1061" length="4" />			
+			<Field id="depcode2" padding="right" padString=" " startIndex="1065" length="4" />
+			<Field id="handPhone" padding="right" padString=" " startIndex="1069" length="20" />
+			<Field id="dummy" startIndex="1089" length="20" value="                    " />
+		</content>
+	</Res>
+</CustomerDetailV2>

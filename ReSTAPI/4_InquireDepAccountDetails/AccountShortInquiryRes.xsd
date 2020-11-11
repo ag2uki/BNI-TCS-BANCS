@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://service.bni.co.id/core/bo">
+  <xsd:complexType name="AccountShortInquiryRes">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="d_accountNum" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="info" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="accountProductType" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_currency" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_status" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_product" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_homeBranch" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_cifNum" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_name" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_nameRek" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_currentBalance" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_availableBalance" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_openDate" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_address1" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_address2" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_address3" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_address4" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_postCode" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_homePhone" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_mobilePhone" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_address1AA" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_address2AA" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_address3AA" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_address4AA" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_postCodeAA" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_homePhoneAA" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_mobilePhoneAA" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_accType" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_subCat" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_availableInterest" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_lienBalance" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_unclearBalance" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_interestRate" type="xsd:string"></xsd:element>
+	  
+      <xsd:element minOccurs="0" name="d_term" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_termFlag" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_investmentType" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_affiliateAccount" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_maturityDate" type="xsd:string"></xsd:element>
+	  
+      <xsd:element minOccurs="0" name="d_topupAmount" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_additionalInsurance" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_nomineeName" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_birthdate" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_nomineeAddress" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="d_familyRelationship" type="xsd:string"></xsd:element>	 
+	  <xsd:element minOccurs="0" name="d_monthlyDebitingDate" type="xsd:string"></xsd:element>
+	  
+      <xsd:element minOccurs="0" name="l_accountNum" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_currency" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_status" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_product" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_homeBranch" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_cifNum" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_name" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_nameRek" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_currentBalance" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_balance" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_openDate" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_address1" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_address2" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_address3" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_address4" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_postCode" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_homePhone" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_mobilePhone" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_address1AA" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_address2AA" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_address3AA" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_address4AA" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_postCodeAA" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_homePhoneAA" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_mobilePhoneAA" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_accType" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_subCat" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_interestRate" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_term" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_affiliateAccount" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_maturityDate" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_approvedDate" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_approved" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_advanced" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_installmentAmount" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_overdueAmount" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_availableBalance" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_principalOverdue" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_remRepayment" type="xsd:string"></xsd:element>
+      <xsd:element minOccurs="0" name="l_nextInstallmentDueDate" type="xsd:string"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

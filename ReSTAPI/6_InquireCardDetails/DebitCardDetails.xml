@@ -1,0 +1,85 @@
+<DebitCardDetails>
+	<Req>
+		<content>
+			<Field id="cardNum" padding="left" padString="0" startIndex="88" length="20" />
+		</content>
+	</Req>
+	<Res>
+		<content>
+			<Field id="cardNum" padding="right" padString=" " startIndex="90" length="20" />
+			<Field id="cardName1" padding="right" padString=" " startIndex="110" length="26" />
+			<Field id="dummy" padding="right" padString=" " startIndex="136" length="4" />
+			<Field id="cardName2" padding="right" padString=" " startIndex="140" length="26" />
+			<Field id="dummy" padding="right" padString=" " startIndex="166" length="4" />
+			<Field id="dummy" padding="right" padString=" " startIndex="170" length="8" />
+			<Field id="dummy" padding="right" padString=" " startIndex="178" length="2" />
+			<Field id="accountNum1" padding="right" padString=" " startIndex="180" length="17" />
+			<Field id="dummy" padding="right" padString=" " startIndex="197" length="3" />
+			<Field id="cardDescription" padding="right" padString=" " startIndex="200" length="30" />
+			<Field id="dummy" padding="right" padString=" " startIndex="230" length="8" />
+			<Field id="dummy" padding="right" padString=" " startIndex="238" length="2" />
+			<Field id="accountNum2" padding="right" padString=" " startIndex="240" length="17" />
+			<Field id="dummy" padding="right" padString=" " startIndex="257" length="33" />
+			<Field id="dummy" padding="right" padString=" " startIndex="290" length="8" />
+			<Field id="dummy" padding="right" padString=" " startIndex="298" length="2" />
+			<Field id="accountNum3" padding="right" padString=" " startIndex="300" length="17" />
+			<Field id="dummy" padding="right" padString=" " startIndex="317" length="3" />
+			<Field id="cardStatus1" padding="right" padString=" " startIndex="320" length="10" />
+			<Field id="cardStatus2" padding="right" padString=" " startIndex="330" length="30" />
+			<Field id="maidenName" padding="right" padString=" " startIndex="360" length="40" />
+			<Field id="cifNum" padding="left" padString="0" startIndex="400" length="17" />
+			<Field id="dummy" padding="right" padString=" " startIndex="417" length="3" />
+			<Field id="namaNasabah" padding="right" padString=" " startIndex="420" length="40" />
+			<Field id="validFrom" type="date" startIndex="460" length="8" />
+			<Field id="dummy" padding="right" padString=" " startIndex="468" length="2" />
+			<Field id="alamatNasabah" padding="right" padString=" " startIndex="470" length="40" />
+			<Field id="validTo" type="date" startIndex="510" length="8" />
+			<Field id="dummy" padding="right" padString=" " startIndex="518" length="2" />
+			<Field id="alamatNasabah2" padding="right" padString=" " startIndex="520" length="40" />
+			<Field id="kelurahan" padding="right" padString=" " startIndex="560" length="40" />
+			<Field id="tglDibuat" type="date" startIndex="600" length="8" />
+			<Field id="dummy" padding="right" padString=" " startIndex="608" length="2" />
+			<Field id="kecamatan" padding="right" padString=" " startIndex="610" length="40" />
+			<Field id="tglDiemboss" type="date" startIndex="650" length="8" />
+			<Field id="dummy" padding="right" padString=" " startIndex="658" length="2" />
+			<Field id="kodePos" padding="right" padString=" " startIndex="660" length="8" />
+			<Field id="dummy" padding="right" padString=" " startIndex="668" length="2" />
+			<Field id="pickupBranch" padding="left" padString="0" startIndex="670" length="4" />
+			<Field id="dummy" padding="right" padString=" " startIndex="674" length="6" />
+			<Field id="telpRumah" padding="right" padString=" " startIndex="680" length="12" />
+			<Field id="dummy" padding="right" padString=" " startIndex="692" length="8" />
+			<Field id="tglTerbit" type="date" startIndex="700" length="8" />
+			<Field id="dummy" padding="right" padString=" " startIndex="708" length="2" />
+			<Field id="telpKantor" padding="right" padString=" " startIndex="710" length="12" />
+			<Field id="dummy" padding="right" padString=" " startIndex="722" length="2" />
+			<Field id="nomorTerbit" padding="left" padString="0" startIndex="724" length="4" />
+			<Field id="dummy" padding="right" padString=" " startIndex="728" length="2" />
+			<Field id="limitHarian" type="flatMoney" signLocation="after" intLength="15" decLength="2" startIndex="730" length="18" />
+			<Field id="dummy" padding="right" padString=" " startIndex="748" length="2" />
+			<Field id="sisaLimitHarian" type="flatMoney" signLocation="after" intLength="15" decLength="2" startIndex="750" length="18" />
+			<Field id="dummy" padding="right" padString=" " startIndex="768" length="9" />
+			<Field id="dummy" padding="right" padString=" " startIndex="777" length="8" />
+			<Field id="dummy" padding="right" padString=" " startIndex="785" length="2" />
+			<Field id="limitMingguan" type="flatMoney" signLocation="after" intLength="15" decLength="2" startIndex="787" length="18" />
+			<Field id="dummy" padding="right" padString=" " startIndex="805" length="2" />
+			<Field id="sisaLimitMingguan" type="flatMoney" signLocation="after" intLength="15" decLength="2" startIndex="807" length="18" />
+			<Field id="dummy" padding="right" padString=" " startIndex="825" length="9" />
+			<Field id="dummy" padding="right" padString=" " startIndex="834" length="8" />
+			<Field id="dummy" padding="right" padString=" " startIndex="842" length="12" />
+			<Field id="dummy" padding="right" padString=" " startIndex="854" length="8" />
+			<Field id="dummy" padding="right" padString=" " startIndex="862" length="2" />
+			<Field id="dummy" padding="right" padString=" " startIndex="864" length="4" />
+			<Field id="dummy" padding="right" padString=" " startIndex="868" length="4" />
+			<Field id="dummy" padding="right" padString=" " startIndex="872" length="2" />
+			<Field id="dummy" padding="right" padString=" " startIndex="874" length="5" />
+			<Field id="dummy" padding="right" padString=" " startIndex="879" length="5" />
+			<Field id="stopDeskripsi" padding="right" padString=" " startIndex="884" length="30" />
+			<Field id="dummy" padding="right" padString=" " startIndex="914" length="11" />
+			<Field id="foto" padding="right" padString=" " startIndex="925" length="1" />
+			<Field id="tglLahir" type="date" startIndex="926" length="8" />
+			<Field id="handPhone" padding="right" padString=" " startIndex="934" length="12" />
+			<Field id="cardType" padding="right" padString=" " startIndex="946" length="30" />
+			<Field id="subBranch" padding="left" padString="0" startIndex="976" length="4" />
+		</content>
+	</Res>
+</DebitCardDetails>

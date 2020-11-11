@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="AccountShortInquiryReq">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="accountNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element  minOccurs="0"  name="options" >
+				<xsd:simpleType>
+					<xsd:restriction  base="xsd:string" >
+						<xsd:enumeration  value="8" />
+					 </xsd:restriction>
+				 </xsd:simpleType>
+			 </xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

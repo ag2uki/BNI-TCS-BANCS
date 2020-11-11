@@ -1,0 +1,38 @@
+<GetCardByAccount>
+   <Req>
+       <content> 
+          <Field id="accountNum" length="17" padding="left" padString="0" />
+       </content>
+   </Req>
+   <Res>
+		<content>
+	    <Field id="accountNum" padding="left" padString="0" startIndex="90" length="17" />
+		<Field id="description" padding="right" padString=" " startIndex="107" length="32" />
+        <Field id="accountType" padding="right" padString=" " startIndex="139" length="8" />
+        <Field id="status" padding="right" padString=" " startIndex="147" length="42" />
+        <Field id="cardNum" padding="right" padString=" " startIndex="189" length="19" />
+        <Field id="num" padding="right" padString=" " startIndex="208" length="2" />
+        <Field id="cardStatus" padding="right" padString=" " startIndex="210" length="27" />
+        <Field id="cardName" padding="right" padString=" " startIndex="237" length="28" />
+		<Field id="cardNum2" padding="right" padString=" " startIndex="265" length="43" />
+        <Field id="num2" padding="right" padString=" " startIndex="308" length="2" />
+        <Field id="cardStatus2" padding="right" padString=" " startIndex="310" length="27" />
+        <Field id="cardName2" padding="right" padString=" " startIndex="337" length="28" />
+        <Field id="cardNum3" padding="right" padString=" " startIndex="365" length="43" />
+        <Field id="num3" padding="right" padString=" " startIndex="408" length="2" />
+        <Field id="cardStatus3" padding="right" padString=" " startIndex="410" length="27" />
+        <Field id="cardName3" padding="right" padString=" " startIndex="437" length="28" />
+        <Field id="cardNum4" padding="right" padString=" " startIndex="465" length="43" />
+        <Field id="num4" padding="right" padString=" " startIndex="508" length="2" />
+        <Field id="cardStatus4" padding="right" padString=" " startIndex="510" length="27" />
+        <Field id="cardName4" padding="right" padString=" " startIndex="537" length="28" />
+        <Field id="balance" padding="right" padString=" " startIndex="587" length="19" />
+		<Field id="lastWithdrawal" type="date" startIndex="609" length="8" />
+        <Field id="uneffectiveBalance" padding="right" padString=" " startIndex="617" length="19" />
+        <Field id="lastTransaction" type="date" startIndex="639" length="8"/>
+        <Field id="minimumBalance" padding="right" padString=" " startIndex="647" length="19" />
+        <Field id="lastRefreshBalance" type="date" startIndex="669" length="8" />
+        <Field id="availableBalance" padding="right" padString=" " startIndex="677" length="19" />
+		</content>
+   </Res>
+</GetCardByAccount>
