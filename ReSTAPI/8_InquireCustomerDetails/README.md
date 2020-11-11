@@ -8,7 +8,7 @@ Transaction code 067050 is being used by 2 services
 
 `GetPersonalInfo` is 067050 with option set to `09`. The response is `067108.xml`
 
-request :
+Sample SOAP request :
 ```xml
 <soapenv:Envelope xmlns:q0="http://service.bni.co.id/core" xmlns:bo="http://service.bni.co.id/core/bo" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <soapenv:Body>
@@ -24,7 +24,7 @@ request :
 </soapenv:Envelope>
 ```
 
-response :
+Sample SOAP response :
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dpss0="bons">
    <soapenv:Header/>
@@ -78,6 +78,7 @@ response :
 </soapenv:Envelope>
 ```
 
+Bancs format message:
 ```
 [ 0101                    **
            003099600100001067050000000     0  I  0 000000  0000000910085331409]
@@ -101,15 +102,15 @@ SOAP request sample:
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<soapenv:Body> 
-<q0:transaction>
-  <request>
-    <systemId>NEWIBANK-CORE</systemId>
-  <content xsi:type="bo:CifDetailsReq">
-    <cifNum>9100130666</cifNum>
-  </content>
-  </request>
-</q0:transaction>
-</soapenv:Body>
+		<q0:transaction>
+			<request>
+				<systemId>NEWIBANK-CORE</systemId>
+				<content xsi:type="bo:CifDetailsReq">
+					<cifNum>9100130666</cifNum>
+				</content>
+			</request>
+		</q0:transaction>
+	</soapenv:Body>
 </soapenv:Envelope>
 ```
 

@@ -63,6 +63,7 @@ Sample SOAP response:
 </soapenv:Envelope>
 ```
 
+Bancs format message:
 ```
 [ 0099                    **            003099299901001037450000000     0  I  0 000000  00000000115471119]
 

@@ -11,15 +11,15 @@ Sample SOAP request:
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<soapenv:Body>
-<q0:transaction>
-  <request>
-    <systemId>BCC_IVR</systemId>
-  <content xsi:type="bo:DebitCardDetailsReq">
-    <cardNum>1946900600000125</cardNum>
-  </content>
-  </request>
-</q0:transaction>
-</soapenv:Body>
+		<q0:transaction>
+			<request>
+				<systemId>BCC_IVR</systemId>
+				<content xsi:type="bo:DebitCardDetailsReq">
+					<cardNum>1946900600000125</cardNum>
+				</content>
+			</request>
+		</q0:transaction>
+	</soapenv:Body>
 </soapenv:Envelope>
 ```
 
@@ -89,3 +89,4 @@ Bancs formated message:
                            03042016  Brebes             /Brebes
              52216     0259      021 82428320        03042016
    0001  00000000000000000+  00000000000000000+                   00000000000000000+  00000000000000000+         04112020                      00000000  00001     Arrears                       0000000000+N01041991081297212753Kartu Debit BNI Indonesia Seja0000]
+```
