@@ -1,6 +1,7 @@
 WSDL Filename : WSDLInterBankPayment.wsdl
 
 `1. Inquiry`
+
 Sample SOAP Request:
 ```
 <soapenv:Envelope xmlns:q0="http://service.bni.co.id/switcher_v2/atmbersama"
@@ -53,6 +54,7 @@ Sample SOAP Response:
 ```
 
 `2. Payment`
+
 Sample SOAP Request:
 ```
 <soapenv:Envelope xmlns:q0="http://service.bni.co.id/atmbersama" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">

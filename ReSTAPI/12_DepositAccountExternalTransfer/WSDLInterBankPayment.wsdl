@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="InterBankPayment_Export_IFInterBankPaymentHttp_Service" targetNamespace="http://service.bni.co.id/atmbersama" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:this="http://service.bni.co.id/atmbersama" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import location="IFInterBankPayment.wsdl" namespace="http://service.bni.co.id/atmbersama"/>
+  <wsdl:binding name="InterBankPayment_Export_IFInterBankPaymentHttpBinding" type="this:IFInterBankPayment">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="inquiryTransaction">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="inquiryTransactionRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="inquiryTransactionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap:fault name="fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="transaction">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="transactionRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="transactionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap:fault name="fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InterBankPayment_Export_IFInterBankPaymentHttpService">
+    <wsdl:port binding="this:InterBankPayment_Export_IFInterBankPaymentHttpBinding" name="InterBankPayment_Export_IFInterBankPaymentHttpPort">
+      <soap:address location="http://192.168.143.61:57007/ChannelService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
