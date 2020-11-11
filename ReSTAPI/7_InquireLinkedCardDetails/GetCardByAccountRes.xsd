@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="GetCardByAccountRes">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="accountNum"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="description"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="accountType"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="status" type="xsd:string" />
+			<xsd:element minOccurs="0" name="cardNum" type="xsd:string" />
+			<xsd:element minOccurs="0" name="num" type="xsd:string" />
+			<xsd:element minOccurs="0" name="cardStatus"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="cardName"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="cardNum2"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="num2" type="xsd:string" />
+			<xsd:element minOccurs="0" name="cardStatus2"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="cardName2"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="cardNum3"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="num3" type="xsd:string" />
+			<xsd:element minOccurs="0" name="cardStatus3"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="cardName3"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="cardNum4"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="num4" type="xsd:string" />
+			<xsd:element minOccurs="0" name="cardStatus4"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="cardName4"
+				type="xsd:string" />			<xsd:element minOccurs="0" name="balance"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="lastWithdrawal"
+				type="xsd:date">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="uneffectiveBalance"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="lastTransaction"
+				type="xsd:date">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="minimumBalance"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="lastRefreshBalance"
+				type="xsd:date">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="availableBalance"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

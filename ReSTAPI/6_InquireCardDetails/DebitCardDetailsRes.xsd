@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="DebitCardDetailsRes">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="cardNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="cardType"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="cardName1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="cardName2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="cardDescription"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="accountNum1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="accountNum2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="accountNum3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="cardStatus1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="cardStatus2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="maidenName"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="cifNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="namaNasabah"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tglLahir"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="alamatNasabah"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="kelurahan"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="kecamatan"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="kodePos"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="telpRumah"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="telpKantor"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="handPhone"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tglTerbit"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="nomorTerbit"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tglDibuat"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tglDiemboss"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="pickupBranch"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="subBranch"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="limitHarian"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="limitMingguan"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="sisaLimitHarian"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="sisaLimitMingguan"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="alamatNasabah2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="stopDeskripsi"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="foto" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="validFrom"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="validTo"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

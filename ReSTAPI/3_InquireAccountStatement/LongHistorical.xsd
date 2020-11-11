@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/list">
+	<xsd:complexType name="LongHistorical">
+		<xsd:all>
+			<xsd:element minOccurs="0" name="sequenceNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="date" type="xsd:date">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="description"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="narative"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="branchNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tracer"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="txcode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="debit_credit"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="amount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="balance"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tofrAccount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="narative36"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="narative02"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="narative03"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="narative38"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="narative39"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="transactionTime"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

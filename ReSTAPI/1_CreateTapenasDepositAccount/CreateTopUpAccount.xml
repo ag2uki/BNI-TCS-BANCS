@@ -1,0 +1,105 @@
+<CreateTopUpAccount>
+	<Req>
+		<content>
+			<Field id="accountNumber" padding="left" padString="0" length="17"/>
+			<Field id="cifNum" padding="left" padString="0" length="17"/>
+			<Field id="idNumber" padding="right" padString=" " length="24"/>
+			<Field id="idType" padding="left" padString="0" length="4"/>
+			<Field id="customerName" padding="right" padString=" " length="60"/>
+			<Field id="address1" padding="right" padString=" " length="40"/>
+			<Field id="address2" padding="right" padString=" " length="40"/>
+			<Field id="npwp" padding="right" padString="N" length="1"/>
+			<Field id="address3" padding="right" padString=" " length="40"/>
+			<Field id="nationality" padding="right" padString=" " length="3"/>
+			<Field id="address4" padding="right" padString=" " length="40"/>
+			<Field id="postalCode" padding="right" padString=" " length="8"/>
+			<Field id="accountType" padding="left" padString="0" length="4"/>
+			<Field id="subCategory" padding="left" padString="0" length="4"/>
+			<Field id="filler" padding="right" padString=" " length="3"/>
+			<Field id="interestPayMethod" padding="right" padString="R" length="1"/>
+			<Field id="filler" padding="right" padString=" " length="3"/>
+			<Field id="interestAffAccount" padding="left" padString="0" length="17"/>
+			<Field id="freeFeeProfile" padding="left" padString="0" length="4"/>
+			<Field id="languageCode" padding="left" padString="04" length="2"/>
+			<Field id="accFrekuensi" padding="right" padString=" " length="1"/>
+			<Field id="accConsolidate" padding="right" padString=" " length="1"/>
+			<Field id="investmentType" padding="left" padString="0" length="1"/>
+			<Field id="correspondentInd" padding="right" padString="1" length="1"/>
+			<Field id="notificationInd" padding="right" padString="0" length="1"/>
+			<Field id="customerNotification" padding="left" padString="0" length="17"/>
+			<Field id="interestRateVar" type="flatMoney" signLocation="none" intLength="2" decLength="4" padding="left" padString="0" />
+			<Field id="filler" padding="right" padString=" " length="2"/>
+			<Field id="interestFrequency" padding="right" padString=" " length="4"/>
+			<Field id="siklus" padding="left" padString="0" length="2"/>
+			<Field id="day" padding="left" padString="0" length="2"/>
+			<Field id="agentCode" padding="left" padString="0" length="4"/>
+			<Field id="investmentType" padding="left" padString="0" length="4"/>
+			<Field id="address5" padding="left" padString="0" length="4"/>
+			<Field id="filler" padding="right" padString=" " length="7"/>
+			<Field id="indGroup" padding="left" padString="0" length="1"/>
+			<Field id="accntNumber5" padding="left" padString="0" length="17"/>
+			<Field id="applicationID" padding="right" padString=" " length="2"/>
+			<Field id="filler" padding="right" padString=" " length="15"/>
+			<Field id="defaultString19" padding="right" padString=" " length="1"/>
+			<Field id="defaultString20" padding="right" padString=" " length="5"/>
+			<Field id="defInteger7" padding="left" padString="0" length="15"/>
+			<Field id="filler" padding="right" padString=" " length="17"/>
+			<Field id="defInteger13" padding="left" padString="0" length="4"/>
+			<Field id="defaultString21" padding="right" padString=" " length="1"/>
+			<Field id="unsigned08" type="flatMoney" signLocation="after" intLength="14" decLength="3" padding="left" padString="0"/>
+			<Field id="filler" padding="right" padString=" " length="8"/>
+			<Field id="groupTierID" padding="right" padString=" " length="4"/>
+			<Field id="domesticRisk" padding="right" padString=" " length="2"/>
+			<Field id="crossRisk" padding="right" padString=" " length="2"/>
+			<Field id="crossBorderRisk" padding="right" padString="ZZ" length="2"/>
+			<Field id="guarantieInd" padding="right" padString="B" length="1"/>
+			<Field id="termLimit" padding="right" padString="ZZ" length="2"/>
+			<Field id="defaultString18" padding="right" padString=" " length="12"/>
+			<Field id="glClassfication" padding="right" padString=" " length="25"/>
+			<Field id="openDate" type="date" length="8"/>
+			<Field id="copySummary" padding="left" padString="0" length="2"/>
+			<Field id="notipros" padding="right" padString="0" length="1"/>
+			<Field id="extractionInd" padding="right" padString=" " length="1"/>
+			<Field id="appropriateRate" type="flatMoney" signLocation="after" intLength="3" decLength="4" padding="left" padString="0"/>
+			<Field id="valasClausul" padding="left" padString="0" length="1"/>
+			<Field id="valuta" padding="right" padString=" " length="3"/>
+			<Field id="interestChangeInd" padding="right" padString=" " length="1"/>
+			<Field id="herTaksasiInd" padding="right" padString=" " length="1"/>
+			<Field id="brokerNo1" padding="left" padString="0" length="17"/>
+			<Field id="filler" padding="right" padString=" " length="19"/>
+			<Field id="defInteger8" padding="left" padString="0" length="6"/>
+			<Field id="tprRate" type="flatMoney" signLocation="none" intLength="2" decLength="4" padding="left" padString="0"/>
+			<Field id="certNo1" padding="right" padString=" " length="10"/>
+			<Field id="noIns" padding="left" padString="0" length="2"/>
+			<Field id="insuranceAccNo" padding="left" padString="0" length="2"/>
+			<Field id="openAcctRes" padding="left" padString="0" length="4"/>
+			<Field id="openAcctRes1" padding="right" padString=" " length="20"/>
+			<Field id="srcOfFund" padding="left" padString="0" length="4"/>
+			<Field id="srcOfFund1" padding="right" padString=" " length="30"/>
+			<Field id="projDep" type="flatMoney" signLocation="none" intLength="14" decLength="3" padding="left" padString="0"/>
+			<Field id="projWdl" type="flatMoney" signLocation="none" intLength="14" decLength="3" padding="left" padString="0"/>
+			<Field id="acctRatio" type="flatMoney" signLocation="none" intLength="2" decLength="2" padding="left" padString="0"/>
+			<Field id="bicNo" padding="left" padString="0" length="16"/>
+			<Field id="bicLimit" type="flatMoney" signLocation="none" intLength="14" decLength="3" padding="left" padString="0"/>
+			<Field id="insuTerm" padding="left" padString="0" length="4"/>
+			<Field id="autoClose" padding="right" padString="Y" length="1"/>
+			<Field id="autoPremium" padding="right" padString="Y" length="1"/>
+			<Field id="monthPay" type="flatMoney" signLocation="after" intLength="14" decLength="3" padding="left" padString="0"/>
+			<Field id="addCover" padding="left" padString="0" length="2"/>
+			<Field id="affiAcctNo" padding="left" padString="0" length="17"/>
+			<Field id="insuAcctNo" padding="left" padString="0" length="17"/>
+			<Field id="princArrears" type="flatMoney" signLocation="after" intLength="14" decLength="3" padding="left" padString="0"/>
+			<Field id="premcArrears" type="flatMoney" signLocation="after" intLength="14" decLength="3" padding="left" padString="0"/>
+			<Field id="addSkim" padding="right" padString=" " length="1"/>
+			<Field  id="filler"  padding="right"  padString=" "  length="18" />
+			<Field  id="monthlyDebitingDate"  padding="left"  padString="0"  length="2" />
+			<Field  id="filler"  padding="right"  padString=" "  length="79" />
+			<Field id="sourceAccount" padding="left" padString="0" length="17"/>
+		</content>
+	</Req>
+	<Res>
+		<content>
+			<Field  id="message"  startIndex="94"  length="69"  padding="right"  padString=" " />
+		</content>
+	</Res>
+</CreateTopUpAccount>

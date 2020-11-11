@@ -4,21 +4,20 @@ Transaction code 69447 is known as `HistoricalTransactions` in SOA.
 
 Sample SOAP request:
 ```xml
-<soapenv:Envelope xmlns:q0="http://service.bni.co.id/core" xmlns:bo="http://service.bni.co.id/core/bo" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<soapenv:Envelope xmlns:q0="http://service.bni.co.id/core" 
+xmlns:bo="http://service.bni.co.id/core/bo" 
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <soapenv:Body>
       <q0:transaction>
          <request>
             <systemId>BNIDIRECT</systemId>
-            <customHeader>
-               <teller>200</teller>
-               <branch>259</branch>
-               <overrideFlag>I</overrideFlag>
-            </customHeader>
             <content xsi:type="bo:HistoricalTransactionsReq">
-               <accountNum>114479721</accountNum>
-               <fromDate>2010/05/31</fromDate>
-               <toDate>2010/05/31</toDate>
-               <pageNum>0</pageNum>
+				<accountNum>116913895</accountNum>
+				<fromDate>2010/05/31</fromDate>
+				<toDate>2010/05/31</toDate>
+				<pageNum>13</pageNum>
             </content>
          </request>
       </q0:transaction>
@@ -26,6 +25,7 @@ Sample SOAP request:
 </soapenv:Envelope>
 ```
 
+Sample SOAP response:
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dpss0="bons">
    <soapenv:Header/>
@@ -33,1925 +33,1830 @@ Sample SOAP request:
       <core:transactionResponse xmlns:bo="http://service.bni.co.id/core/bo" xmlns:core="http://service.bni.co.id/core">
          <response>
             <header>
-               <coreJournal>422114</coreJournal>
+               <coreJournal>396496</coreJournal>
             </header>
             <content xsi:type="bo:CompiledHistoricalTransactionsRes">
-               <accountNum>114479721</accountNum>
-               <accountName>Bpk FAJAR NURCAHYO</accountName>
-               <productName>TAPLUS BISNIS PERORANGAN</productName>
-               <address1>JALAN EBONY NO. 99</address1>
-               <address2>9999. KOMPLEK BUDIMAN SENTOSA</address2>
-               <address3>Tanah Sareal</address3>
-               <address4>Tanah Sereal</address4>
-               <postCode>16161</postCode>
+               <accountNum>116913895</accountNum>
+               <accountName>Bpk MUHAMAD JUHARDI</accountName>
+               <productName>EMERALD SAVING</productName>
+               <address1>JL. SETIABUDI</address1>
+               <address2>35</address2>
+               <address3>Setiabudi</address3>
+               <address4>Setia Budi         /Jakarta Selatan</address4>
+               <postCode>12910</postCode>
                <accountCurrency>IDR</accountCurrency>
                <fromDate>2010-05-31</fromDate>
                <toDate>2010-05-31</toDate>
                <longHistoricals>
-                  <sequenceNum>000001</sequenceNum>
+                  <sequenceNum>001301</sequenceNum>
                   <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (H2H BNP2TKI ) NO :12345678901234567</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421871</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>6500.00</amount>
-                  <balance>6006120789247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>09:16:20</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000002</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>H2H BNP2TKI 1234567890123456</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421871</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>540000.00</amount>
-                  <balance>6006120795747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>09:16:20</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000003</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (H2H BNP2TKI ) NO :12345678901234567</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421861</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>6500.00</amount>
-                  <balance>6006121335747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>09:13:33</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000004</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>H2H BNP2TKI 1234567890123456</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421861</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>540000.00</amount>
-                  <balance>6006121342247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>09:13:33</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000005</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (H2H BNP2TKI ) NO :12345678901234567</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421620</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>6500.00</amount>
-                  <balance>6006121882247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>17:07:27</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000006</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>H2H BNP2TKI 1234567890123456</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421620</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>540000.00</amount>
-                  <balance>6006121888747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>17:07:27</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000007</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (H2H BNP2TKI ) NO :12345678901234567</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421617</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>6500.00</amount>
-                  <balance>6006122428747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>17:06:24</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000008</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>H2H BNP2TKI 1234567890123456</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421617</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>540000.00</amount>
-                  <balance>6006122435247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>17:06:24</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000009</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (H2H BNP2TKI ) NO :12345678901234567</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421424</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>6500.00</amount>
-                  <balance>6006122975247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>16:15:43</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000010</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>H2H BNP2TKI 1234567890123456</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421424</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>540000.00</amount>
-                  <balance>6006122981747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>16:15:43</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000011</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (H2H BNP2TKI ) NO :12345678901234567</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421395</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>6500.00</amount>
-                  <balance>6006123521747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>15:59:59</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000012</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>H2H BNP2TKI 1234567890123456</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421395</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>540000.00</amount>
-                  <balance>6006123528247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>15:59:59</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000013</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (H2H BNP2TKI ) NO :12345678901234567</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421393</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>6500.00</amount>
-                  <balance>6006124068247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>15:59:03</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000014</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>H2H BNP2TKI 1234567890123456</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421393</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>540000.00</amount>
-                  <balance>6006124074747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>15:59:03</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000015</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (H2H BNP2TKI ) NO :12345678901234567</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421392</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>6500.00</amount>
-                  <balance>6006124614747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>15:59:01</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000016</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>H2H BNP2TKI 1234567890123456</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421392</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>540000.00</amount>
-                  <balance>6006124621247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>15:59:01</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000017</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (H2H BNP2TKI ) NO :12345678901234567</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421273</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>6500.00</amount>
-                  <balance>6006125161247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>14:45:25</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000018</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>H2H BNP2TKI 1234567890123456</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421273</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>540000.00</amount>
-                  <balance>6006125167747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>14:45:25</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000019</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (H2H BNP2TKI ) NO :12345678901234567</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421265</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>6500.00</amount>
-                  <balance>6006125707747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>14:41:56</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000020</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>H2H BNP2TKI 1234567890123456</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421265</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>540000.00</amount>
-                  <balance>6006125714247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>14:41:56</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000021</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (H2H BNP2TKI ) NO :12345678901234567</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421188</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>6500.00</amount>
-                  <balance>6006126254247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>14:15:19</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000022</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>H2H BNP2TKI 1234567890123456</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421188</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>540000.00</amount>
-                  <balance>6006126260747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>14:15:19</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000023</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (H2H BNP2TKI ) NO :12345678901234567</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421171</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>6500.00</amount>
-                  <balance>6006126800747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>14:03:33</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000024</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>H2H BNP2TKI 1234567890123456</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421171</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>540000.00</amount>
-                  <balance>6006126807247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>14:03:33</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000025</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (H2H BNP2TKI ) NO :12345678901234567</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421145</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>6500.00</amount>
-                  <balance>6006127347247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>13:56:46</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000026</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>H2H BNP2TKI 1234567890123456</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>421145</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>540000.00</amount>
-                  <balance>6006127353747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>13:56:46</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000027</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (H2H BNP2TKI ) NO :12345678901234567</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>420667</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>6500.00</amount>
-                  <balance>6006127893747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>10:04:28</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000028</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>H2H BNP2TKI 1234567890123456</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>420667</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>540000.00</amount>
-                  <balance>6006127900247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>10:04:28</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000029</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (H2H BNP2TKI ) NO :12345678901234567</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>420427</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>6500.00</amount>
-                  <balance>6006128440247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>09:25:59</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000030</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>H2H BNP2TKI 1234567890123456</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>420427</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>540000.00</amount>
-                  <balance>6006128446747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>09:25:59</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000031</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (H2H BNP2TKI ) NO :12345678901234567</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>419550</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>6500.00</amount>
-                  <balance>6006128986747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>15:45:34</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000032</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>H2H BNP2TKI 1234567890123456</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>419550</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>540000.00</amount>
-                  <balance>6006128993247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>15:45:34</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000033</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>VA KELUARGA E098CF4618BB556C</narative>
-                  <branchNum>986</branchNum>
-                  <tracer>417893</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>306000.00</amount>
-                  <balance>6006129533247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>18:08:16</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000034</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>VA KELUARGA E098CF4618BB556C</narative>
-                  <branchNum>986</branchNum>
-                  <tracer>415266</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>306000.00</amount>
-                  <balance>6006129839247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>09:49:45</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000035</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (H2H BNP2TKI ) NO :12345678901234567</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>415018</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>6500.00</amount>
-                  <balance>6006130145247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>08:46:15</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000036</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>H2H BNP2TKI 1234567890123456</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>415018</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>540000.00</amount>
-                  <balance>6006130151747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>08:46:15</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000037</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (H2H BNP2TKI ) NO :12345678901234567</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>414943</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>6500.00</amount>
-                  <balance>6006130691747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>17:33:42</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000038</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>H2H BNP2TKI 1234567890123456</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>414943</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>540000.00</amount>
-                  <balance>6006130698247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>17:33:42</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000039</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (H2H BNP2TKI ) NO :12345678901234567</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>414805</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>6500.00</amount>
-                  <balance>6006131238247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>16:52:53</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000040</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>H2H BNP2TKI 1234567890123456</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>414805</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>540000.00</amount>
-                  <balance>6006131244747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>16:52:53</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000041</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (H2H BNP2TKI ) NO :12345678901234567</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>414709</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>6500.00</amount>
-                  <balance>6006131784747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>16:11:44</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000042</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>H2H BNP2TKI 1234567890123456</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>414709</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>540000.00</amount>
-                  <balance>6006131791247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>16:11:44</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000043</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (H2H BNP2TKI ) NO :12345678901234567</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>414348</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>6500.00</amount>
-                  <balance>6006132331247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>14:20:15</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000044</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>H2H BNP2TKI 1234567890123456</narative>
-                  <branchNum>985</branchNum>
-                  <tracer>414348</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>540000.00</amount>
-                  <balance>6006132337747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>14:20:15</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000045</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (H2H BNP2TKI ) NO :12345678901234567</narative>
-                  <branchNum>265</branchNum>
-                  <tracer>414345</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>6500.00</amount>
-                  <balance>6006132877747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>14:19:26</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000046</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>H2H BNP2TKI 1234567890123456</narative>
-                  <branchNum>265</branchNum>
-                  <tracer>414345</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>540000.00</amount>
-                  <balance>6006132884247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>14:19:26</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000047</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (H2H BNP2TKI ) NO :12345678901234567</narative>
-                  <branchNum>265</branchNum>
-                  <tracer>414300</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>6500.00</amount>
-                  <balance>6006133424247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>14:09:21</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000048</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>H2H BNP2TKI 1234567890123456</narative>
-                  <branchNum>265</branchNum>
-                  <tracer>414300</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>540000.00</amount>
-                  <balance>6006133430747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>14:09:21</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000049</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>elit. Aenean tempor accumsan turpis, quis luctus qIBS Pelindo 2019082815191966</narative>
-                  <branchNum>986</branchNum>
-                  <tracer>900716</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>5000000.00</amount>
-                  <balance>6006133970747.00</balance>
-                  <tofrAccount>00000000114580775</tofrAccount>
-                  <narative36>DEKOETJING LTD.</narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>15:20:29</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000050</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>elit. Aenean tempor accumsan turpis, quis luctus qIBS Pelindo 2019082815191966</narative>
-                  <branchNum>986</branchNum>
-                  <tracer>900684</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>5000000.00</amount>
-                  <balance>6006138970747.00</balance>
-                  <tofrAccount>00000000114580775</tofrAccount>
-                  <narative36>DEKOETJING LTD.</narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>11:01:24</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000051</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>VA KELUARGA E098CF4618BB556C</narative>
-                  <branchNum>986</branchNum>
-                  <tracer>412177</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>306000.00</amount>
-                  <balance>6006143970747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>09:23:38</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000052</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>VA KELUARGA E098CF4618BB556C</narative>
-                  <branchNum>986</branchNum>
-                  <tracer>411992</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>306000.00</amount>
-                  <balance>6006144276747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>16:50:28</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000053</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>BIAYA ATM LINK TUNAI</description>
+                  <description>KOR TRF/PAY/TOP-UP ECHANNEL</description>
                   <narative></narative>
                   <branchNum>997</branchNum>
-                  <tracer>411918</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>6500.00</amount>
-                  <balance>6006144582747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>16:23:53</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000054</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
-                  <narative></narative>
-                  <branchNum>997</branchNum>
-                  <tracer>411918</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>500000.00</amount>
-                  <balance>6006144589247.00</balance>
-                  <tofrAccount>0000003333333333</tofrAccount>
-                  <narative36></narative36>
-                  <narative02>KARTU 6010047891234561 AGENT461234           JAK ARTA      JK</narative02>
-                  <narative03>BNI DIRECT       100000000071</narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>16:23:53</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000055</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>VA KELUARGA E098CF4618BB556C</narative>
-                  <branchNum>986</branchNum>
-                  <tracer>411862</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>306000.00</amount>
-                  <balance>6006145089247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>15:24:22</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000056</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>VA KELUARGA E098CF4618BB556C</narative>
-                  <branchNum>265</branchNum>
-                  <tracer>411861</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>307000.00</amount>
-                  <balance>6006145395247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>15:21:53</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000057</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>VA KELUARGA E098CF4618BB556C</narative>
-                  <branchNum>986</branchNum>
-                  <tracer>411859</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>306000.00</amount>
-                  <balance>6006145702247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>15:21:03</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000058</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>VA KELUARGA E098CF4618BB556C</narative>
-                  <branchNum>986</branchNum>
-                  <tracer>411858</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>306000.00</amount>
-                  <balance>6006146008247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>15:20:05</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000059</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>VA KELUARGA E098CF4618BB556C</narative>
-                  <branchNum>986</branchNum>
-                  <tracer>411857</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>306000.00</amount>
-                  <balance>6006146314247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>15:19:53</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000060</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>VA KELUARGA E098CF4618BB556C</narative>
-                  <branchNum>265</branchNum>
-                  <tracer>411800</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>307000.00</amount>
-                  <balance>6006146620247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>14:31:53</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000061</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>VA KELUARGA E098CF4618BB556C</narative>
-                  <branchNum>265</branchNum>
-                  <tracer>411796</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>306000.00</amount>
-                  <balance>6006146927247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>14:31:33</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000062</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>MPN G2 IDR  916011003876169</narative>
-                  <branchNum>997</branchNum>
-                  <tracer>410986</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>1000000.00</amount>
-                  <balance>6006147233247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>18:44:50</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000063</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>MPN G2 IDR  916011003876169</narative>
-                  <branchNum>997</branchNum>
-                  <tracer>410985</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>1000000.00</amount>
-                  <balance>6006148233247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>18:44:40</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000064</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>MPN G2 IDR  916011003876169</narative>
-                  <branchNum>997</branchNum>
-                  <tracer>410984</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>1000000.00</amount>
-                  <balance>6006149233247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>18:44:29</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000065</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>MPN G2 IDR  916011003876169</narative>
-                  <branchNum>997</branchNum>
-                  <tracer>410949</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>1000000.00</amount>
-                  <balance>6006150233247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>17:56:30</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000066</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (KTMT        ) NO :5 19080113540185</narative>
-                  <branchNum>265</branchNum>
-                  <tracer>410935</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>2500.00</amount>
-                  <balance>6006151233247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>17:50:50</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000067</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>KTMT        5</narative>
-                  <branchNum>265</branchNum>
-                  <tracer>410935</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>100000.00</amount>
-                  <balance>6006151235747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>17:50:50</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000068</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>MPN G2 IDR  916011003876169</narative>
-                  <branchNum>997</branchNum>
-                  <tracer>410930</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>1000000.00</amount>
-                  <balance>6006151335747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>17:49:55</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000069</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>MPN G2 IDR  916011003876169</narative>
-                  <branchNum>997</branchNum>
-                  <tracer>410922</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>1000000.00</amount>
-                  <balance>6006152335747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>17:48:09</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000070</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>MPN G2 IDR  916011003876169</narative>
-                  <branchNum>997</branchNum>
-                  <tracer>410917</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>1000000.00</amount>
-                  <balance>6006153335747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>17:47:40</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000071</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>MPN G2 IDR  916011003876169</narative>
-                  <branchNum>997</branchNum>
-                  <tracer>410779</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>1000000.00</amount>
-                  <balance>6006154335747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>16:56:16</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000072</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>MPN G2 IDR  916011003876169</narative>
-                  <branchNum>997</branchNum>
-                  <tracer>410484</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>1000000.00</amount>
-                  <balance>6006155335747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>15:23:18</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000073</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>MPN G2 IDR  916011003876169</narative>
-                  <branchNum>997</branchNum>
-                  <tracer>410482</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>1000000.00</amount>
-                  <balance>6006156335747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>15:22:42</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000074</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>MPN G2 IDR  916011003876169</narative>
-                  <branchNum>997</branchNum>
-                  <tracer>410481</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>1000000.00</amount>
-                  <balance>6006157335747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>15:22:15</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000075</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>MPN G2 IDR  916011003876169</narative>
-                  <branchNum>997</branchNum>
-                  <tracer>410480</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>1000000.00</amount>
-                  <balance>6006158335747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>15:22:13</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000076</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>MPN G2 IDR  916011003876169</narative>
-                  <branchNum>997</branchNum>
-                  <tracer>410479</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>1000000.00</amount>
-                  <balance>6006159335747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>15:22:11</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000077</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>MPN G2 IDR  916011003876169</narative>
-                  <branchNum>997</branchNum>
-                  <tracer>410477</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>1000000.00</amount>
-                  <balance>6006160335747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>15:21:57</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000078</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>MPN G2 IDR  916011003876169</narative>
-                  <branchNum>997</branchNum>
-                  <tracer>410474</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>1000000.00</amount>
-                  <balance>6006161335747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>15:21:41</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000079</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>MPN G2 IDR  916011003876169</narative>
-                  <branchNum>997</branchNum>
-                  <tracer>410470</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>1000000.00</amount>
-                  <balance>6006162335747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>15:21:30</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000080</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>MPN G2 IDR  916011003876169</narative>
-                  <branchNum>997</branchNum>
-                  <tracer>410468</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>1000000.00</amount>
-                  <balance>6006163335747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>15:21:14</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000081</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>MPN G2 IDR  916011003876169</narative>
-                  <branchNum>997</branchNum>
-                  <tracer>410465</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>1000000.00</amount>
-                  <balance>6006164335747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>15:20:20</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000082</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (KTMT        ) NO :32423443 3540183</narative>
-                  <branchNum>265</branchNum>
-                  <tracer>390577</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>2500.00</amount>
-                  <balance>6006165335747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>16:04:07</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000083</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>KTMT        32423443</narative>
-                  <branchNum>265</branchNum>
-                  <tracer>390577</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>100000.00</amount>
-                  <balance>6006165338247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>16:04:07</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000084</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (KTMT        ) NO :0100000416 6 183</narative>
-                  <branchNum>028</branchNum>
-                  <tracer>380156</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>2500.00</amount>
-                  <balance>6006165438247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>11:11:18</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000085</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>KTMT        0100000416</narative>
-                  <branchNum>028</branchNum>
-                  <tracer>380156</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>33270000.00</amount>
-                  <balance>6006165440747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>11:11:18</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000086</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BIAYA ADMIN (KTMT        ) NO :0100000416 2 183</narative>
-                  <branchNum>028</branchNum>
-                  <tracer>380141</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>2500.00</amount>
-                  <balance>6006198710747.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>11:05:12</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000087</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>KTMT        0100000416</narative>
-                  <branchNum>028</branchNum>
-                  <tracer>380141</tracer>
-                  <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>33270000.00</amount>
-                  <balance>6006198713247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
-                  <narative38></narative38>
-                  <narative39></narative39>
-                  <transactionTime>11:05:12</transactionTime>
-               </longHistoricals>
-               <longHistoricals>
-                  <sequenceNum>000088</sequenceNum>
-                  <date>2010-05-31</date>
-                  <description>SETOR TUNAI</description>
-                  <narative></narative>
-                  <branchNum>992</branchNum>
-                  <tracer>380067</tracer>
+                  <tracer>558063</tracer>
                   <txcode>00</txcode>
                   <debit_credit>K</debit_credit>
+                  <amount>2500.00</amount>
+                  <balance>465099173.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000014 558062</narative02>
+                  <narative03>AUTODEBET        901390018</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>10:11:49</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001302</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>KOR TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative></narative>
+                  <branchNum>997</branchNum>
+                  <tracer>558063</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>K</debit_credit>
+                  <amount>65000.00</amount>
+                  <balance>465096673.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000014 558062</narative02>
+                  <narative03>AUTODEBET        901390018</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>10:11:49</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001303</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BIAYA ADMIN (TLKM JAKTIM ) NO :0021014576982</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>558062</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>2500.00</amount>
+                  <balance>465031673.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000014</narative02>
+                  <narative03>AUTODEBET        901390018</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>10:11:46</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001304</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>AUTODEBET BILL PAYMENT (TLKM JAKTIM ) NO :00210145</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>558062</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>65000.00</amount>
+                  <balance>465034173.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000014</narative02>
+                  <narative03>AUTODEBET        901390018</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>10:11:46</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001305</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRANSFER DARI</description>
+                  <narative></narative>
+                  <branchNum>265</branchNum>
+                  <tracer>550021</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>K</debit_credit>
+                  <amount>6.00</amount>
+                  <balance>465099173.00</balance>
+                  <tofrAccount>00000000116913862</tofrAccount>
+                  <narative36>Sdr NUR'AINI</narative36>
+                  <narative02></narative02>
+                  <narative03></narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>09:20:33</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001306</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>REND 005034</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>793270</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>10000.00</amount>
+                  <balance>465099167.00</balance>
+                  <tofrAccount>00000000116905919</tofrAccount>
+                  <narative36>ARIES  FIRDANSYAH</narative36>
+                  <narative02>KARTU 1946900600000083 MINIHP 000100012000014ANC OL, JAKARTRE</narative02>
+                  <narative03>12001402         36</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>18:24:30</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001307</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>REND 005034</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>755558</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>10000.00</amount>
+                  <balance>465109167.00</balance>
+                  <tofrAccount>00000000116905919</tofrAccount>
+                  <narative36>ARIES  FIRDANSYAH</narative36>
+                  <narative02>KARTU 6010043330000013 MINIHP 000100012000014ANC OL, JAKART</narative02>
+                  <narative03>12001411         100105</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>17:49:08</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001308</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>REND 005034</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>754521</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>10000.00</amount>
+                  <balance>465119167.00</balance>
+                  <tofrAccount>00000000116910555</tofrAccount>
+                  <narative36>Sdr STEVEN RAMA  SI RAMAI RAMAI</narative36>
+                  <narative02>KARTU 6010043330000013 MINIHP 000100012000014ANC OL, JAKART</narative02>
+                  <narative03>12001401         200079</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>11:47:21</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001309</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>REND 005034</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>714519</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>100.00</amount>
+                  <balance>465129167.00</balance>
+                  <tofrAccount>00000000116905919</tofrAccount>
+                  <narative36>ARIES  FIRDANSYAH</narative36>
+                  <narative02>KARTU 6010043330000013 MINIHP 000100012000014ANC OL, JAKART</narative02>
+                  <narative03>12001411         100034</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:18:32</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001310</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>REND 005034</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>713949</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>1500.00</amount>
+                  <balance>465129267.00</balance>
+                  <tofrAccount>00000000116905919</tofrAccount>
+                  <narative36>ARIES  FIRDANSYAH</narative36>
+                  <narative02>KARTU 6010043330000013 MINIHP 000100012000014ANC OL, JAKART</narative02>
+                  <narative03>12001411         100011</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>08:56:55</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001311</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>REND 005034</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>713946</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
                   <amount>1000.00</amount>
-                  <balance>6006231983247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02>KARTU 0000000000000000 Tanah Sareal</narative02>
-                  <narative03>00000000         9999KOMPLEK BUDIMAN SEN</narative03>
+                  <balance>465130767.00</balance>
+                  <tofrAccount>00000000116905919</tofrAccount>
+                  <narative36>ARIES  FIRDANSYAH</narative36>
+                  <narative02>KARTU 6010043330000013 MINIHP 000100012000014ANC OL, JAKART</narative02>
+                  <narative03>12001411         100008</narative03>
                   <narative38></narative38>
                   <narative39></narative39>
-                  <transactionTime></transactionTime>
+                  <transactionTime>08:50:08</transactionTime>
                </longHistoricals>
                <longHistoricals>
-                  <sequenceNum>000089</sequenceNum>
+                  <sequenceNum>001312</sequenceNum>
                   <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BPJS TK     5</narative>
-                  <branchNum>265</branchNum>
-                  <tracer>968003</tracer>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>REND 005034</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>713313</tracer>
                   <txcode>00</txcode>
                   <debit_credit>D</debit_credit>
+                  <amount>125000.00</amount>
+                  <balance>465131767.00</balance>
+                  <tofrAccount>00000000116905919</tofrAccount>
+                  <narative36>ARIES  FIRDANSYAH</narative36>
+                  <narative02>KARTU 6010043330000013 MINIHP 000100012000014ANC OL, JAKART</narative02>
+                  <narative03>12001411         100087</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>11:55:17</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001313</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>REND 005034</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>713287</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>150000.00</amount>
+                  <balance>465256767.00</balance>
+                  <tofrAccount>00000000116905919</tofrAccount>
+                  <narative36>ARIES  FIRDANSYAH</narative36>
+                  <narative02>KARTU 6010043330000013 MINIHP 000100012000014ANC OL, JAKART</narative02>
+                  <narative03>12001411         100083</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>11:36:47</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001314</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRANSFER DARI</description>
+                  <narative></narative>
+                  <branchNum>243</branchNum>
+                  <tracer>713277</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>K</debit_credit>
                   <amount>5000000.00</amount>
-                  <balance>6006231982247.00</balance>
-                  <tofrAccount></tofrAccount>
+                  <balance>465406767.00</balance>
+                  <tofrAccount>00000000201120138</tofrAccount>
                   <narative36></narative36>
                   <narative02></narative02>
                   <narative03></narative03>
                   <narative38></narative38>
                   <narative39></narative39>
-                  <transactionTime>09:44:38</transactionTime>
+                  <transactionTime>11:26:27</transactionTime>
                </longHistoricals>
                <longHistoricals>
-                  <sequenceNum>000090</sequenceNum>
+                  <sequenceNum>001315</sequenceNum>
                   <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>BPJS TK     8260018022864000</narative>
-                  <branchNum>265</branchNum>
-                  <tracer>962202</tracer>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>REND 005034</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>712745</tracer>
                   <txcode>00</txcode>
                   <debit_credit>D</debit_credit>
-                  <amount>5000000.00</amount>
-                  <balance>6006236982247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
+                  <amount>150000.00</amount>
+                  <balance>460406767.00</balance>
+                  <tofrAccount>00000000116905919</tofrAccount>
+                  <narative36>ARIES  FIRDANSYAH</narative36>
+                  <narative02>KARTU 6010043330000013 MINIHP 000100012000014ANC OL, JAKART</narative02>
+                  <narative03>12001411         100076</narative03>
                   <narative38></narative38>
                   <narative39></narative39>
-                  <transactionTime>09:43:39</transactionTime>
+                  <transactionTime>19:20:01</transactionTime>
                </longHistoricals>
                <longHistoricals>
-                  <sequenceNum>000091</sequenceNum>
+                  <sequenceNum>001316</sequenceNum>
                   <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>I-SAKU      088884444222</narative>
-                  <branchNum>996</branchNum>
-                  <tracer>350550</tracer>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>REND 005034</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>712601</tracer>
                   <txcode>00</txcode>
                   <debit_credit>D</debit_credit>
-                  <amount>25000.00</amount>
-                  <balance>6006241982247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
+                  <amount>100000.00</amount>
+                  <balance>460556767.00</balance>
+                  <tofrAccount>00000000116905919</tofrAccount>
+                  <narative36>ARIES  FIRDANSYAH</narative36>
+                  <narative02>KARTU 6010043330000013 MINIHP 000100012000014ANC OL, JAKART</narative02>
+                  <narative03>12001411         100045</narative03>
                   <narative38></narative38>
                   <narative39></narative39>
-                  <transactionTime>21:28:51</transactionTime>
+                  <transactionTime>16:12:47</transactionTime>
                </longHistoricals>
                <longHistoricals>
-                  <sequenceNum>000092</sequenceNum>
+                  <sequenceNum>001317</sequenceNum>
                   <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>I-SAKU      088884444222</narative>
-                  <branchNum>996</branchNum>
-                  <tracer>350549</tracer>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BANT2060001</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>712600</tracer>
                   <txcode>00</txcode>
                   <debit_credit>D</debit_credit>
-                  <amount>25000.00</amount>
-                  <balance>6006242007247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
+                  <amount>30000.00</amount>
+                  <balance>460656767.00</balance>
+                  <tofrAccount>00000000116905919</tofrAccount>
+                  <narative36>ARIES  FIRDANSYAH</narative36>
+                  <narative02>KARTU 6010043330000013 MINIHP 000100012000014ANC OL, JAKART</narative02>
+                  <narative03>12001416         101461</narative03>
                   <narative38></narative38>
                   <narative39></narative39>
-                  <transactionTime>21:28:51</transactionTime>
+                  <transactionTime>16:11:10</transactionTime>
                </longHistoricals>
                <longHistoricals>
-                  <sequenceNum>000093</sequenceNum>
+                  <sequenceNum>001318</sequenceNum>
                   <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>I-SAKU      088884444222</narative>
-                  <branchNum>996</branchNum>
-                  <tracer>350548</tracer>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BANT2500000</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>712595</tracer>
                   <txcode>00</txcode>
                   <debit_credit>D</debit_credit>
-                  <amount>25000.00</amount>
-                  <balance>6006242032247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
+                  <amount>30000.00</amount>
+                  <balance>460686767.00</balance>
+                  <tofrAccount>00000000005000460</tofrAccount>
+                  <narative36>Sdri  TEST AMALIA</narative36>
+                  <narative02>KARTU 6010043330000013 MINIHP 000100012000014ANC OL, JAKART</narative02>
+                  <narative03>12001416         101459</narative03>
                   <narative38></narative38>
                   <narative39></narative39>
-                  <transactionTime>21:28:40</transactionTime>
+                  <transactionTime>16:05:24</transactionTime>
                </longHistoricals>
                <longHistoricals>
-                  <sequenceNum>000094</sequenceNum>
+                  <sequenceNum>001319</sequenceNum>
                   <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>I-SAKU      088884444222</narative>
-                  <branchNum>996</branchNum>
-                  <tracer>350547</tracer>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BANT2066666</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>712592</tracer>
                   <txcode>00</txcode>
                   <debit_credit>D</debit_credit>
-                  <amount>25000.00</amount>
-                  <balance>6006242057247.00</balance>
-                  <tofrAccount></tofrAccount>
-                  <narative36></narative36>
-                  <narative02></narative02>
-                  <narative03></narative03>
+                  <amount>30000.00</amount>
+                  <balance>460716767.00</balance>
+                  <tofrAccount>00000000005000460</tofrAccount>
+                  <narative36>Sdri  TEST AMALIA</narative36>
+                  <narative02>KARTU 6010043330000013 MINIHP 000100012000014ANC OL, JAKART</narative02>
+                  <narative03>12001416         101457</narative03>
                   <narative38></narative38>
                   <narative39></narative39>
-                  <transactionTime>21:27:53</transactionTime>
+                  <transactionTime>16:01:04</transactionTime>
                </longHistoricals>
                <longHistoricals>
-                  <sequenceNum>000095</sequenceNum>
+                  <sequenceNum>001320</sequenceNum>
                   <date>2010-05-31</date>
-                  <description>TRANSFER KE</description>
-                  <narative>I-SAKU      088884444222</narative>
-                  <branchNum>996</branchNum>
-                  <tracer>350544</tracer>
+                  <description>SETOR TUNAI</description>
+                  <narative>khhdrth</narative>
+                  <branchNum>259</branchNum>
+                  <tracer>712591</tracer>
                   <txcode>00</txcode>
-                  <debit_credit>D</debit_credit>
-                  <amount>25000.00</amount>
-                  <balance>6006242082247.00</balance>
+                  <debit_credit>K</debit_credit>
+                  <amount>10746767.00</amount>
+                  <balance>460746767.00</balance>
                   <tofrAccount></tofrAccount>
                   <narative36></narative36>
                   <narative02></narative02>
                   <narative03></narative03>
                   <narative38></narative38>
                   <narative39></narative39>
-                  <transactionTime>21:27:44</transactionTime>
+                  <transactionTime>15:59:18</transactionTime>
                </longHistoricals>
                <longHistoricals>
-                  <sequenceNum>000096</sequenceNum>
+                  <sequenceNum>001321</sequenceNum>
                   <date>2010-05-31</date>
                   <description>TRANSFER KE</description>
-                  <narative>I-SAKU      088884444222</narative>
-                  <branchNum>996</branchNum>
-                  <tracer>350543</tracer>
+                  <narative></narative>
+                  <branchNum>259</branchNum>
+                  <tracer>712537</tracer>
                   <txcode>00</txcode>
                   <debit_credit>D</debit_credit>
-                  <amount>25000.00</amount>
-                  <balance>6006242107247.00</balance>
-                  <tofrAccount></tofrAccount>
+                  <amount>900000000.00</amount>
+                  <balance>450000000.00</balance>
+                  <tofrAccount>00000000201120138</tofrAccount>
                   <narative36></narative36>
                   <narative02></narative02>
                   <narative03></narative03>
                   <narative38></narative38>
                   <narative39></narative39>
-                  <transactionTime>21:27:28</transactionTime>
+                  <transactionTime>14:52:28</transactionTime>
                </longHistoricals>
                <longHistoricals>
-                  <sequenceNum>000097</sequenceNum>
+                  <sequenceNum>001322</sequenceNum>
                   <date>2010-05-31</date>
                   <description>TRANSFER KE</description>
-                  <narative>I-SAKU      088884444222</narative>
-                  <branchNum>996</branchNum>
-                  <tracer>350542</tracer>
+                  <narative></narative>
+                  <branchNum>259</branchNum>
+                  <tracer>712533</tracer>
                   <txcode>00</txcode>
                   <debit_credit>D</debit_credit>
-                  <amount>25000.00</amount>
-                  <balance>6006242132247.00</balance>
-                  <tofrAccount></tofrAccount>
+                  <amount>2000000000.00</amount>
+                  <balance>1350000000.00</balance>
+                  <tofrAccount>00000000201120138</tofrAccount>
                   <narative36></narative36>
                   <narative02></narative02>
                   <narative03></narative03>
                   <narative38></narative38>
                   <narative39></narative39>
-                  <transactionTime>21:26:41</transactionTime>
+                  <transactionTime>14:51:42</transactionTime>
                </longHistoricals>
                <longHistoricals>
-                  <sequenceNum>000098</sequenceNum>
+                  <sequenceNum>001323</sequenceNum>
                   <date>2010-05-31</date>
                   <description>TRANSFER KE</description>
-                  <narative>I-SAKU      088884444222</narative>
-                  <branchNum>996</branchNum>
-                  <tracer>350541</tracer>
+                  <narative></narative>
+                  <branchNum>259</branchNum>
+                  <tracer>712532</tracer>
                   <txcode>00</txcode>
                   <debit_credit>D</debit_credit>
-                  <amount>25000.00</amount>
-                  <balance>6006242157247.00</balance>
-                  <tofrAccount></tofrAccount>
+                  <amount>5000000000.00</amount>
+                  <balance>3350000000.00</balance>
+                  <tofrAccount>00000000201120138</tofrAccount>
                   <narative36></narative36>
                   <narative02></narative02>
                   <narative03></narative03>
                   <narative38></narative38>
                   <narative39></narative39>
-                  <transactionTime>21:26:40</transactionTime>
+                  <transactionTime>14:50:45</transactionTime>
                </longHistoricals>
                <longHistoricals>
-                  <sequenceNum>000099</sequenceNum>
+                  <sequenceNum>001324</sequenceNum>
                   <date>2010-05-31</date>
                   <description>TRANSFER KE</description>
-                  <narative>I-SAKU      088884444222</narative>
-                  <branchNum>996</branchNum>
-                  <tracer>350540</tracer>
+                  <narative></narative>
+                  <branchNum>259</branchNum>
+                  <tracer>712531</tracer>
                   <txcode>00</txcode>
                   <debit_credit>D</debit_credit>
-                  <amount>25000.00</amount>
-                  <balance>6006242182247.00</balance>
-                  <tofrAccount></tofrAccount>
+                  <amount>30000000000.00</amount>
+                  <balance>8350000000.00</balance>
+                  <tofrAccount>00000000201120138</tofrAccount>
                   <narative36></narative36>
                   <narative02></narative02>
                   <narative03></narative03>
                   <narative38></narative38>
                   <narative39></narative39>
-                  <transactionTime>21:26:40</transactionTime>
+                  <transactionTime>14:50:34</transactionTime>
                </longHistoricals>
                <longHistoricals>
-                  <sequenceNum>000100</sequenceNum>
+                  <sequenceNum>001325</sequenceNum>
                   <date>2010-05-31</date>
                   <description>TRANSFER KE</description>
-                  <narative>I-SAKU      088884444222</narative>
-                  <branchNum>996</branchNum>
-                  <tracer>350539</tracer>
+                  <narative>KURANGIN SALDO</narative>
+                  <branchNum>259</branchNum>
+                  <tracer>712528</tracer>
                   <txcode>00</txcode>
                   <debit_credit>D</debit_credit>
-                  <amount>25000.00</amount>
-                  <balance>6006242207247.00</balance>
+                  <amount>400930148.00</amount>
+                  <balance>38350000000.00</balance>
+                  <tofrAccount>00000000201120138</tofrAccount>
+                  <narative36></narative36>
+                  <narative02></narative02>
+                  <narative03></narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>14:49:33</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001326</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>BY KU KE SIMPANAN</description>
+                  <narative></narative>
+                  <branchNum>259</branchNum>
+                  <tracer>712519</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>4000000.00</amount>
+                  <balance>38750930148.00</balance>
                   <tofrAccount></tofrAccount>
                   <narative36></narative36>
                   <narative02></narative02>
                   <narative03></narative03>
                   <narative38></narative38>
                   <narative39></narative39>
-                  <transactionTime>21:26:37</transactionTime>
+                  <transactionTime>00:00:00</transactionTime>
                </longHistoricals>
-               <beginingBalance>6006242207247.00</beginingBalance>
-               <creditsTotal>1000.00</creditsTotal>
-               <debitsTotal>121444000.00</debitsTotal>
-               <endingBalance>6006120789247.00</endingBalance>
-               <totalRecords>000100</totalRecords>
+               <longHistoricals>
+                  <sequenceNum>001327</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRANSFER KE</description>
+                  <narative></narative>
+                  <branchNum>259</branchNum>
+                  <tracer>712519</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>4300000000.00</amount>
+                  <balance>38754930148.00</balance>
+                  <tofrAccount>00000000116929146</tofrAccount>
+                  <narative36>Sdri ABHIRAMA  BOSSEGALABOS</narative36>
+                  <narative02></narative02>
+                  <narative03></narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>14:45:15</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001328</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>BY KU KE SIMPANAN</description>
+                  <narative></narative>
+                  <branchNum>259</branchNum>
+                  <tracer>712518</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>100000000000.00</amount>
+                  <balance>43054930148.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02></narative02>
+                  <narative03></narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>00:00:00</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001329</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRANSFER KE</description>
+                  <narative></narative>
+                  <branchNum>259</branchNum>
+                  <tracer>712518</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>350000000000.00</amount>
+                  <balance>143054930148.00</balance>
+                  <tofrAccount>00000000116929146</tofrAccount>
+                  <narative36>Sdri ABHIRAMA  BOSSEGALABOS</narative36>
+                  <narative02></narative02>
+                  <narative03></narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>14:44:15</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001330</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TARIK TUNAI</description>
+                  <narative></narative>
+                  <branchNum>259</branchNum>
+                  <tracer>712515</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>200000000.00</amount>
+                  <balance>493054930148.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02></narative02>
+                  <narative03></narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>14:43:09</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001331</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TARIK TUNAI</description>
+                  <narative></narative>
+                  <branchNum>259</branchNum>
+                  <tracer>712514</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>100000000.00</amount>
+                  <balance>493254930148.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02></narative02>
+                  <narative03></narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>14:43:03</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001332</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRANSFER KE</description>
+                  <narative>MBAHMU</narative>
+                  <branchNum>259</branchNum>
+                  <tracer>712508</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>470000000.00</amount>
+                  <balance>493354930148.00</balance>
+                  <tofrAccount>00000000116940002</tofrAccount>
+                  <narative36>Sdri ABHIRAMA  BOSSEGALABOS</narative36>
+                  <narative02></narative02>
+                  <narative03></narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>14:40:53</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001333</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BANT2060001</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>712504</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>30000.00</amount>
+                  <balance>493824930148.00</balance>
+                  <tofrAccount>00000000005000460</tofrAccount>
+                  <narative36>Sdri  TEST AMALIA</narative36>
+                  <narative02>KARTU 6010043330000013 MINIHP 000100012000014ANC OL, JAKART</narative02>
+                  <narative03>12001416         101455</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>14:37:25</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001334</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>KOR TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BANT2060000</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>712493</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>K</debit_credit>
+                  <amount>30000.00</amount>
+                  <balance>493824960148.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 5371762590000118                       ANC OL, JAKART</narative02>
+                  <narative03>12001416         101453</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>14:34:41</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001335</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BANT2060000</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>712487</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>30000.00</amount>
+                  <balance>493824930148.00</balance>
+                  <tofrAccount>00000000005000460</tofrAccount>
+                  <narative36>Sdri  TEST AMALIA</narative36>
+                  <narative02>KARTU 6010043330000013 MINIHP 000100012000014ANC OL, JAKART</narative02>
+                  <narative03>12001416         101453</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>14:30:18</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001336</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BANT2060000</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>712481</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>30000.00</amount>
+                  <balance>493824960148.00</balance>
+                  <tofrAccount>00000000005000460</tofrAccount>
+                  <narative36>Sdri  TEST AMALIA</narative36>
+                  <narative02>KARTU 6010043330000013 MINIHP 000100012000014ANC OL, JAKART</narative02>
+                  <narative03>12001416         101451</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>14:25:29</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001337</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BANT2060001</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>712477</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>30000.00</amount>
+                  <balance>493824990148.00</balance>
+                  <tofrAccount>00000000005000460</tofrAccount>
+                  <narative36>Sdri  TEST AMALIA</narative36>
+                  <narative02>KARTU 6010043330000013 MINIHP 000100012000014ANC OL, JAKART</narative02>
+                  <narative03>12001416         101449</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>14:24:36</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001338</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BANT2060001</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>712455</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>30000.00</amount>
+                  <balance>493825020148.00</balance>
+                  <tofrAccount>00000000005000460</tofrAccount>
+                  <narative36>Sdri  TEST AMALIA</narative36>
+                  <narative02>KARTU 6010043330000013 MINIHP 000100012000014ANC OL, JAKART</narative02>
+                  <narative03>12001416         101445</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>14:16:38</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001339</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BANT2060001</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>712425</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>30000.00</amount>
+                  <balance>493825050148.00</balance>
+                  <tofrAccount>00000000005000460</tofrAccount>
+                  <narative36>Sdri  TEST AMALIA</narative36>
+                  <narative02>KARTU 6010043330000013 MINIHP 000100012000014ANC OL, JAKART</narative02>
+                  <narative03>12001416         101441</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>13:56:20</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001340</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BANT2010005</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>712414</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>30000.00</amount>
+                  <balance>493825080148.00</balance>
+                  <tofrAccount>00000000005000460</tofrAccount>
+                  <narative36>Sdri  TEST AMALIA</narative36>
+                  <narative02>KARTU 6010043330000013 MINIHP 000100012000014ANC OL, JAKART</narative02>
+                  <narative03>12001416         101439</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>13:50:45</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001341</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BANT2500000</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>712402</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>30000.00</amount>
+                  <balance>493825110148.00</balance>
+                  <tofrAccount>00000000005000460</tofrAccount>
+                  <narative36>Sdri  TEST AMALIA</narative36>
+                  <narative02>KARTU 6010043330000013 MINIHP 000100012000014ANC OL, JAKART</narative02>
+                  <narative03>12001416         101433</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>13:43:15</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001342</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>SUBS1250000</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>712400</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>K</debit_credit>
+                  <amount>4000.00</amount>
+                  <balance>493825140148.00</balance>
+                  <tofrAccount>00000000115334831</tofrAccount>
+                  <narative36>Bpk   BAMBANG</narative36>
+                  <narative02>KARTU 5371762590000118 MINIHP 000100012000014ANC OL, JAKART</narative02>
+                  <narative03>12001416         101431</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>13:41:21</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001343</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>REND 005034</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>712363</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>1000.00</amount>
+                  <balance>493825136148.00</balance>
+                  <tofrAccount>00000000116905919</tofrAccount>
+                  <narative36>ARIES  FIRDANSYAH</narative36>
+                  <narative02>KARTU 6010043330000013 MINIHP 000100012000014ANC OL, JAKART</narative02>
+                  <narative03>12001411         100035</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>13:34:54</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001344</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRANSFER KE</description>
+                  <narative>E-COLLECTION8201234562013102</narative>
+                  <branchNum>259</branchNum>
+                  <tracer>630275</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>150700.00</amount>
+                  <balance>493825137148.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02></narative02>
+                  <narative03></narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>13:34:55</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001345</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRANSFER KE</description>
+                  <narative>E-COLLECTION8201234562013102</narative>
+                  <branchNum>259</branchNum>
+                  <tracer>626716</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>150700.00</amount>
+                  <balance>493825287848.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02></narative02>
+                  <narative03></narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>13:41:53</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001346</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BIAYA ADMIN (TLKM JAKTIM ) NO :0021998877441</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>583034</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>2500.00</amount>
+                  <balance>493825438548.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000014</narative02>
+                  <narative03>AUTODEBET        902070085</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>20:07:40</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001347</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>TLKM JAKTIM 0021998877441</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>583034</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>65000.00</amount>
+                  <balance>493825441048.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000014</narative02>
+                  <narative03>AUTODEBET        902070085</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>20:07:40</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001348</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BIAYA ADMIN (TLKM JAKTIM ) NO :0021998877441</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>583010</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>2500.00</amount>
+                  <balance>493825506048.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000014</narative02>
+                  <narative03>AUTODEBET        938020083</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>19:43:35</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001349</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>TLKM JAKTIM 0021998877441</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>583010</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>65000.00</amount>
+                  <balance>493825508548.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000014</narative02>
+                  <narative03>AUTODEBET        938020083</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>19:43:35</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001350</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BIAYA ADMIN (TLKM JAKTIM ) NO :0021998877441</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>582993</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>2500.00</amount>
+                  <balance>493825573548.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000014</narative02>
+                  <narative03>AUTODEBET        922330082</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>19:28:05</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001351</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>TLKM JAKTIM 0021998877441</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>582993</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>65000.00</amount>
+                  <balance>493825576048.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000014</narative02>
+                  <narative03>AUTODEBET        922330082</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>19:28:05</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001352</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BIAYA ADMIN (TLKM JAKTIM ) NO :0027000999334 01</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531147</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>2500.00</amount>
+                  <balance>493825641048.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 940440514</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:45:52</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001353</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>TLKM JAKTIM 0027000999334</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531147</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>250000.00</amount>
+                  <balance>493825643548.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 940440514</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:45:52</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001354</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>KOR TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative></narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531146</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>K</debit_credit>
+                  <amount>2500.00</amount>
+                  <balance>493825893548.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002 531145</narative02>
+                  <narative03>INTERNET BANKING 940410512</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:45:48</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001355</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>KOR TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative></narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531146</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>K</debit_credit>
+                  <amount>270000.00</amount>
+                  <balance>493825891048.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002 531145</narative02>
+                  <narative03>INTERNET BANKING 940410512</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:45:48</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001356</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BIAYA ADMIN (TLKM JAKTIM ) NO :0021000999222 01</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531145</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>2500.00</amount>
+                  <balance>493825621048.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 940410512</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:45:48</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001357</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>TLKM JAKTIM 0021000999222</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531145</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>270000.00</amount>
+                  <balance>493825623548.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 940410512</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:45:48</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001358</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BIAYA ADMIN (TLKM JAKTIM ) NO :0027000999334 01</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531144</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>2500.00</amount>
+                  <balance>493825893548.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 940290510</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:45:36</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001359</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>TLKM JAKTIM 0027000999334</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531144</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>250000.00</amount>
+                  <balance>493825896048.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 940290510</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:45:36</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001360</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>KOR TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative></narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531143</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>K</debit_credit>
+                  <amount>2500.00</amount>
+                  <balance>493826146048.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002 531142</narative02>
+                  <narative03>INTERNET BANKING 940260508</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:45:34</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001361</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>KOR TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative></narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531143</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>K</debit_credit>
+                  <amount>270000.00</amount>
+                  <balance>493826143548.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002 531142</narative02>
+                  <narative03>INTERNET BANKING 940260508</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:45:34</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001362</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BIAYA ADMIN (TLKM JAKTIM ) NO :0021000999222 01</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531142</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>2500.00</amount>
+                  <balance>493825873548.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 940260508</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:45:33</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001363</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>TLKM JAKTIM 0021000999222</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531142</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>270000.00</amount>
+                  <balance>493825876048.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 940260508</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:45:33</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001364</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BIAYA ADMIN (TLKM JAKTIM ) NO :0027000999334 01</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531137</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>2500.00</amount>
+                  <balance>493826146048.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 939180502</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:44:25</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001365</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>TLKM JAKTIM 0027000999334</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531137</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>250000.00</amount>
+                  <balance>493826148548.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 939180502</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:44:25</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001366</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>KOR TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative></narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531136</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>K</debit_credit>
+                  <amount>2500.00</amount>
+                  <balance>493826398548.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002 531135</narative02>
+                  <narative03>INTERNET BANKING 939150500</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:44:23</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001367</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>KOR TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative></narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531136</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>K</debit_credit>
+                  <amount>270000.00</amount>
+                  <balance>493826396048.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002 531135</narative02>
+                  <narative03>INTERNET BANKING 939150500</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:44:23</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001368</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BIAYA ADMIN (TLKM JAKTIM ) NO :0021000999222 01</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531135</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>2500.00</amount>
+                  <balance>493826126048.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 939150500</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:44:22</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001369</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>TLKM JAKTIM 0021000999222</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531135</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>270000.00</amount>
+                  <balance>493826128548.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 939150500</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:44:22</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001370</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BIAYA ADMIN (TLKM JAKTIM ) NO :0027000999334 01</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531127</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>2500.00</amount>
+                  <balance>493826398548.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 935530494</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:41:00</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001371</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>TLKM JAKTIM 0027000999334</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531127</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>250000.00</amount>
+                  <balance>493826401048.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 935530494</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:41:00</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001372</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>KOR TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative></narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531126</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>K</debit_credit>
+                  <amount>2500.00</amount>
+                  <balance>493826651048.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002 531125</narative02>
+                  <narative03>INTERNET BANKING 935500492</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:40:57</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001373</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>KOR TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative></narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531126</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>K</debit_credit>
+                  <amount>270000.00</amount>
+                  <balance>493826648548.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002 531125</narative02>
+                  <narative03>INTERNET BANKING 935500492</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:40:57</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001374</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BIAYA ADMIN (TLKM JAKTIM ) NO :0021000999222 01</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531125</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>2500.00</amount>
+                  <balance>493826378548.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 935500492</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:40:57</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001375</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>TLKM JAKTIM 0021000999222</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531125</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>270000.00</amount>
+                  <balance>493826381048.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 935500492</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:40:57</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001376</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>KOR TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative></narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531124</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>K</debit_credit>
+                  <amount>2500.00</amount>
+                  <balance>493826651048.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002 531123</narative02>
+                  <narative03>INTERNET BANKING 935390490</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:40:47</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001377</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>KOR TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative></narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531124</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>K</debit_credit>
+                  <amount>270000.00</amount>
+                  <balance>493826648548.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002 531123</narative02>
+                  <narative03>INTERNET BANKING 935390490</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:40:47</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001378</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BIAYA ADMIN (TLKM JAKTIM ) NO :0021000999222 01</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531123</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>2500.00</amount>
+                  <balance>493826378548.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 935390490</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:40:46</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001379</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>TLKM JAKTIM 0021000999222</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531123</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>270000.00</amount>
+                  <balance>493826381048.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 935390490</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:40:46</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001380</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BIAYA ADMIN (TLKM JAKTIM ) NO :0027000999334 01</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531106</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>2500.00</amount>
+                  <balance>493826651048.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 931510484</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:36:58</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001381</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>TLKM JAKTIM 0027000999334</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531106</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>250000.00</amount>
+                  <balance>493826653548.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 931510484</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:36:58</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001382</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>KOR TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative></narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531105</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>K</debit_credit>
+                  <amount>2500.00</amount>
+                  <balance>493826903548.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002 531104</narative02>
+                  <narative03>INTERNET BANKING 931480482</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:36:55</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001383</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>KOR TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative></narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531105</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>K</debit_credit>
+                  <amount>270000.00</amount>
+                  <balance>493826901048.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002 531104</narative02>
+                  <narative03>INTERNET BANKING 931480482</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:36:55</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001384</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BIAYA ADMIN (TLKM JAKTIM ) NO :0021000999222 01</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531104</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>2500.00</amount>
+                  <balance>493826631048.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 931480482</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:36:55</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001385</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>TLKM JAKTIM 0021000999222</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>531104</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>270000.00</amount>
+                  <balance>493826633548.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 931480482</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>16:36:55</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001386</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BIAYA ADMIN (TLKM JAKTIM ) NO :0027000999334 00 5</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>530321</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>2500.00</amount>
+                  <balance>493826903548.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 904040421</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>12:09:11</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001387</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>TLKM JAKTIM 0027000999334</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>530321</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>250000.00</amount>
+                  <balance>493826906048.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 904040421</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>12:09:11</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001388</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>KOR TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative></narative>
+                  <branchNum>997</branchNum>
+                  <tracer>530320</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>K</debit_credit>
+                  <amount>2500.00</amount>
+                  <balance>493827156048.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002 530319</narative02>
+                  <narative03>INTERNET BANKING 904010419</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>12:09:08</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001389</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>KOR TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative></narative>
+                  <branchNum>997</branchNum>
+                  <tracer>530320</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>K</debit_credit>
+                  <amount>270000.00</amount>
+                  <balance>493827153548.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002 530319</narative02>
+                  <narative03>INTERNET BANKING 904010419</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>12:09:08</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001390</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>BIAYA ADMIN (TLKM JAKTIM ) NO :0021000999222 00 5</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>530319</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>2500.00</amount>
+                  <balance>493826883548.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 904010419</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>12:09:08</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001391</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>TRF/PAY/TOP-UP ECHANNEL</description>
+                  <narative>TLKM JAKTIM 0021000999222</narative>
+                  <branchNum>997</branchNum>
+                  <tracer>530319</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>D</debit_credit>
+                  <amount>270000.00</amount>
+                  <balance>493826886048.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02>KARTU 6010043330000002</narative02>
+                  <narative03>INTERNET BANKING 904010419</narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>12:09:08</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001392</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>SETOR TUNAI</description>
+                  <narative>a</narative>
+                  <branchNum>718</branchNum>
+                  <tracer>511510</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>K</debit_credit>
+                  <amount>123456789012.00</amount>
+                  <balance>493827156048.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02></narative02>
+                  <narative03></narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>09:29:52</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001393</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>SETOR TUNAI</description>
+                  <narative>a</narative>
+                  <branchNum>718</branchNum>
+                  <tracer>511508</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>K</debit_credit>
+                  <amount>123456789012.00</amount>
+                  <balance>370370367036.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02></narative02>
+                  <narative03></narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>09:29:45</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001394</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>SETOR TUNAI</description>
+                  <narative>a</narative>
+                  <branchNum>718</branchNum>
+                  <tracer>511507</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>K</debit_credit>
+                  <amount>123456789012.00</amount>
+                  <balance>246913578024.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02></narative02>
+                  <narative03></narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>09:29:42</transactionTime>
+               </longHistoricals>
+               <longHistoricals>
+                  <sequenceNum>001395</sequenceNum>
+                  <date>2010-05-31</date>
+                  <description>SETOR TUNAI</description>
+                  <narative>a</narative>
+                  <branchNum>718</branchNum>
+                  <tracer>511506</tracer>
+                  <txcode>00</txcode>
+                  <debit_credit>K</debit_credit>
+                  <amount>123456789012.00</amount>
+                  <balance>123456789012.00</balance>
+                  <tofrAccount></tofrAccount>
+                  <narative36></narative36>
+                  <narative02></narative02>
+                  <narative03></narative03>
+                  <narative38></narative38>
+                  <narative39></narative39>
+                  <transactionTime>09:29:37</transactionTime>
+               </longHistoricals>
+               <beginingBalance>123456789012.00</beginingBalance>
+               <creditsTotal>493844911821.00</creditsTotal>
+               <debitsTotal>493379812648.00</debitsTotal>
+               <endingBalance>465099173.00</endingBalance>
+               <totalRecords>001395</totalRecords>
             </content>
          </response>
       </core:transactionResponse>
@@ -1959,8 +1864,16 @@ Sample SOAP request:
 </soapenv:Envelope>
 ```
 
-Bancs Format message:
+Bancs Format Sample Request Message:
 ```
-[ 0134                    **
-           003099100100001069447000000     0  I  0 000000  000000001147397142810202004112020000                ]
+[ 0134                    **            003098900100001069447000000     0  I  0 000000  000000001169138953105201031052010013                ]
+```
+
+Bancs Format Sample Response Message:
+```
+[ 0354    0270            0000    000000003098900100001069447396496000040320400 000000  0300000000000000116913895Bpk MUHAMAD JUHARDI           EMERALD SAVING                JL. SETIABUDI                           35                                      Setiabudi                               Setia Budi         /Jakarta Selatan     12910   IDR3105201031052010]
+[ 0685    0601            0000    000000003098900100001069447396496000040320000 000000  0300130131052010KOR TRF/PAY/TOP-UP ECHANNEL                                                                                                                                                                                                                            99755806300K          2500.00     465099173.00                                                       KARTU 6010043330000014 558062                                AUTODEBET        901390018                                                                                                                        10:11:49                        ]
+[ 0685    0601            0000    000000003098900100001069447396496000040320000 000000  0300130231052010KOR TRF/PAY/TOP-UP ECHANNEL                                                                                                                                                                                                                            99755806300K         65000.00     465096673.00                                                       KARTU 6010043330000014 558062                                AUTODEBET        901390018                                                                                                                        10:11:49                        ]
+[ 0685    0601            0000    000000003098900100001069447396503000040320000 000000  0300139531052010SETOR TUNAI                                    a                                                                                                                                                                                                       71851150600K  123456789012.00  123456789012.00                                                                                                                                                                                                                                                                      09:29:37                        ]
+[ 0166    0082            0000    000000003098900100001069447396503000040320200 000000  03000096  123456789012.00   493844911821.00  493379812648.00     465099173.00 001395]
 ```
