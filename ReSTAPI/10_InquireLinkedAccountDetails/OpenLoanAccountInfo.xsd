@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/list">
+	<xsd:complexType name="OpenLoanAccountInfo">
+		<xsd:all>
+			<xsd:element minOccurs="0" name="accountNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="accountStatus"
+				type="xsd:string">
+			</xsd:element>			
+			<xsd:element minOccurs="0" name="accountTypeCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="productName"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="currency"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ownership"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="approveAmount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="outsatndingAmount" 
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="collectability" 
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="maturityDate" 
+				type="xsd:date">
+			</xsd:element>	
+			<xsd:element minOccurs="0" name="arrear" 
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="arrDate" 
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="accType" 
+				type="xsd:string">
+			</xsd:element>				
+			<xsd:element minOccurs="0" name="subCat" 
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="effectiveBalance" 
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="disburseAmount" 
+				type="xsd:string">	
+			</xsd:element>		
+			<xsd:element minOccurs="0" name="branchCode" 
+				type="xsd:string">	
+			</xsd:element>
+			<xsd:element minOccurs="0" name="flagIbank" 
+				type="xsd:string">	
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

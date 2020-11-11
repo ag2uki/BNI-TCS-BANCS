@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo"
+	xmlns:bons0="http://service.bni.co.id/core/list">
+	<xsd:import schemaLocation="OpenAccountInfo.xsd"
+		namespace="http://service.bni.co.id/core/list">
+	</xsd:import>
+	<xsd:complexType name="CompiledOpenAccountListRes">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="cifNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="openAccountInfo"
+				type="bons0:OpenAccountInfo" maxOccurs="unbounded">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
