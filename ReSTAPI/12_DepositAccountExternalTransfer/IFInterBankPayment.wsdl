@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons0="http://service.bni.co.id/atmbersama/" xmlns:bons2="http://service.bni.co.id/switcher_v2" xmlns:bons3="http://service.bni.co.id/switcher_v2/atmbersama" xmlns:tns="http://service.bni.co.id/atmbersama" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="IFInterBankPayment" targetNamespace="http://service.bni.co.id/atmbersama">
+    <wsdl:types>
+    <xsd:schema xmlns:bons0="http://service.bni.co.id/atmbersama" xmlns:tns="http://LB_SwitcherService_v2/atmbersama/IFInterBankPayment" targetNamespace="http://service.bni.co.id/atmbersama" xmlns:bons2="http://service.bni.co.id/switcher_v2" xmlns:bons3="http://service.bni.co.id/switcher_v2/atmbersama" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://service.bni.co.id/switcher_v2/atmbersama" schemaLocation="ResponsePayInterBank.xsd"/>
+            <xsd:import namespace="http://service.bni.co.id/switcher_v2/atmbersama" schemaLocation="RequestPayInterBank.xsd"/>
+            <xsd:import namespace="http://service.bni.co.id/switcher_v2/atmbersama" schemaLocation="ResponseInquiryInterBank.xsd"/>
+            <xsd:import namespace="http://service.bni.co.id/switcher_v2/atmbersama" schemaLocation="RequestInquiryInterBank.xsd"/>
+      <xsd:import namespace="http://service.bni.co.id/switcher_v2" schemaLocation="Fault.xsd"/>
+      <xsd:element name="inquiryTransaction">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" nillable="true" type="bons3:RequestInquiryInterBank"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="inquiryTransactionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="response" nillable="true" type="bons3:ResponseInquiryInterBank"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="transaction">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" nillable="true" type="bons3:RequestPayInterBank"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="transactionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="response" nillable="true" type="bons3:ResponsePayInterBank"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Fault_element" nillable="true" type="bons2:Fault"/>
+      <xsd:element name="Fault_element2" nillable="true" type="bons2:Fault"/>
+    </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="inquiryTransactionRequestMsg">
+    <wsdl:part element="tns:inquiryTransaction" name="inquiryTransactionParameters"/>
+  </wsdl:message>
+    <wsdl:message name="inquiryTransactionResponseMsg">
+    <wsdl:part element="tns:inquiryTransactionResponse" name="inquiryTransactionResult"/>
+  </wsdl:message>
+    <wsdl:message name="transactionRequestMsg">
+    <wsdl:part element="tns:transaction" name="transactionParameters"/>
+  </wsdl:message>
+    <wsdl:message name="transactionResponseMsg">
+    <wsdl:part element="tns:transactionResponse" name="transactionResult"/>
+  </wsdl:message>
+    <wsdl:message name="inquiryTransaction_faultMsg">
+    <wsdl:part element="tns:Fault_element" name="fault"/>
+  </wsdl:message>
+    <wsdl:message name="transaction_faultMsg">
+    <wsdl:part element="tns:Fault_element2" name="fault"/>
+  </wsdl:message>
+    <wsdl:portType name="IFInterBankPayment">
+    <wsdl:operation name="inquiryTransaction">
+      <wsdl:input message="tns:inquiryTransactionRequestMsg" name="inquiryTransactionRequest"/>
+      <wsdl:output message="tns:inquiryTransactionResponseMsg" name="inquiryTransactionResponse"/>
+      <wsdl:fault message="tns:inquiryTransaction_faultMsg" name="fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="transaction">
+      <wsdl:input message="tns:transactionRequestMsg" name="transactionRequest"/>
+      <wsdl:output message="tns:transactionResponseMsg" name="transactionResponse"/>
+      <wsdl:fault message="tns:transaction_faultMsg" name="fault"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
