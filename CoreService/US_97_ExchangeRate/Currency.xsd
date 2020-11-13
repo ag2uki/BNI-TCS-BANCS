@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/list"
+	xmlns:bons0="http://service.bni.co.id/core/list">
+	<xsd:include schemaLocation="CurrencyRate.xsd"></xsd:include>
+	<xsd:complexType name="Currency">
+		<xsd:all>
+			<xsd:element minOccurs="0" name="code" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="units" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="midRate"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="currencyRate"
+				type="bons0:CurrencyRate" maxOccurs="unbounded">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="unitIndicator"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="RemittanceMasterInReq">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="transactionCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="refferenceNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="counterAdvis"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="transactionType"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="transactionDate"
+				type="xsd:date">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="transactionCurrency"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="transactionRate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="senderBank"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="toBank"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="bicCover"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="bicKIR"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="correspondentReff"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="beneficiaryAccount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="beneficiaryName"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="beneficiaryAddress1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="beneficiaryAddress2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="beneficiaryAddress3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="senderName"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="senderAddress1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="senderAddress2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="senderAddress3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="news1" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="news2" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="news3" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="news4" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="detailCharge"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="remittanceAmount"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="chargeAmount"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="refundChargeAmount"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="coverAccount"
+				type="xsd:string">
+			</xsd:element>			<xsd:element minOccurs="0" name="trxCcyRate"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="paidCcyRate"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="amdCharges"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="xtrCharges"
+				type="xsd:decimal">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

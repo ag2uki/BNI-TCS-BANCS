@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="LoanTransferReq">
+		<xsd:all>
+			<xsd:element minOccurs="0" name="fromAccount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="fromCurrency"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="fromAmount"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="toAccount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="toCurrency"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="toAmount"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="promoNumber"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="narative"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="baseAmount"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="rateType"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

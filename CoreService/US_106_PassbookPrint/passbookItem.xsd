@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://service.bni.co.id/core/list"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="passbookItem">
+		<xsd:all>
+			<xsd:element minOccurs="0" name="date"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="formatIndicator"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="branchNo1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tellerNo1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="wdlAmount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="depAmount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="cheqCredAmount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="cheqDebAmount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="balance"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="balanceEur"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="currCodeEur"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="mnemonic"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="fcaCurrCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="fcaCurrCodeNo"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="narative"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="txnAmount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="recType"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="fillerM1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="penRate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="typeRate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="rateMne"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="penDays"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="penType"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="fillerM2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="penMne"
+				type="xsd:string">
+			</xsd:element>
+			
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

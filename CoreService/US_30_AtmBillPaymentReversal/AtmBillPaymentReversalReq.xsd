@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="AtmBillPaymentReversalReq">
+	<xsd:all>
+			<xsd:element minOccurs="0" name="accountNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="amount"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="billerCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="regionCode"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="naration"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="invoiceNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="billCustomerName"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="billInvoiceNum1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="billAmount1"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="billInvoiceNum2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="billAmount2"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="billInvoiceNum3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="billAmount3"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="atmTrxDate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="atmTrxTime"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="atmRefference"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="atmCardNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="atmMerchant"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="atmTerminal"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="atmAddress"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="flag"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="amount1"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="amount2"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="amount3"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="amount4"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="amount5"
+				type="xsd:decimal">
+			</xsd:element>	
+			<xsd:element minOccurs="0" name="billId"
+				type="xsd:string">
+			</xsd:element>	
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

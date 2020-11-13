@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="CustomerDetailV2Res">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="flag" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="jenisNasabah"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="namaNasabah"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="gelar" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="titleCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="accountCurrency"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tempatLahir"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tglLahir"
+				type="xsd:date">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="alamatId"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="rt" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="rw" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="perum" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="kelurahan"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="kecamatan"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="kodePos"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="jalan2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="rt2" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="rw2" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="perum2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="kelurahan2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="kecamatan2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="kodePos2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="telpRumah"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="telpKantor"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="handPhone"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="fax" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="email" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="npwp" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="wargaCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="jenisId"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tempatId"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="noId" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="tglTerbit"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tglHabis"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="sumberInfo"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="maidenName"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="maritalIndikator"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="jumlahAnak"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="religiCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="educationCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="jobCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="namaPerusahaan"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="alamatPerusahaan"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="postCodePerusahaan"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="startJobDate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="gaji" 
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="namaAlias" 
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="frekuensiGaji"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="gajiLain" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="depositoCode" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="depcode1" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="depcode2" type="xsd:string"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

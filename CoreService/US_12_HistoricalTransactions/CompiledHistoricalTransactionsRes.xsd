@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo"
+	xmlns:bons0="http://service.bni.co.id/core/list">
+	<xsd:import schemaLocation="LongHistorical.xsd"
+		namespace="http://service.bni.co.id/core/list">
+	</xsd:import>
+	<xsd:complexType name="CompiledHistoricalTransactionsRes">
+		<xsd:all>
+			<xsd:element minOccurs="0" name="accountNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="accountName"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="productName"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="address1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="address2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="address3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="address4"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="postCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="accountCurrency"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="fromDate"
+				type="xsd:date">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="toDate" type="xsd:date">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="longHistoricals"
+				type="bons0:LongHistorical" maxOccurs="unbounded">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="beginingBalance"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="creditsTotal"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="debitsTotal"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="endingBalance"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="totalRecords"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

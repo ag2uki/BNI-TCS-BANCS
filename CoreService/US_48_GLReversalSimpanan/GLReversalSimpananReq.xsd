@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="GLReversalSimpananReq">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="fromAccount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="debitAmount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="toAccount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="currencyFromAccount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="creditAmount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="currencyToAccount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="kursType"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="coreJournal"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="narasi"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

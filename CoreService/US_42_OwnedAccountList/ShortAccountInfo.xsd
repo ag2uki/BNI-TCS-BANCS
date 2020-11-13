@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://service.bni.co.id/core/list">
+  <xsd:complexType name="ShortAccountInfo">
+    <xsd:all>
+			<xsd:element minOccurs="0" name="accountNum" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="status" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="accountSystem" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="productName" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="currency" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="ownership" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="balance" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="limit" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="accountTypeCode" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="subCatCode" type="xsd:string"/>			
+	</xsd:all>
+  </xsd:complexType>
+</xsd:schema>

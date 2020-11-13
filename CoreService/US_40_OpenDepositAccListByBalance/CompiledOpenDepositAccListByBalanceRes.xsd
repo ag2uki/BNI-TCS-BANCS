@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://service.bni.co.id/core/bo"
+	xmlns:bons0="http://service.bni.co.id/core/list"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:import namespace="http://service.bni.co.id/core/list"
+		schemaLocation="OpenDepositAccInfoByBalance.xsd" />
+	<xsd:complexType name="CompiledOpenDepositAccListByBalanceRes">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="cifNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="customerName"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="keyPerson"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="noDIN" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="noHP" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0"
+				name="OpenDepositAccInfoByBalance"
+				type="bons0:OpenDepositAccInfoByBalance">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="curr1" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="totBalance"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

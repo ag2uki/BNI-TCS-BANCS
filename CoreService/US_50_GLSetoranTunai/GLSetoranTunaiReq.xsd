@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="GLSetoranTunaiReq">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="accountNum" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="trxAmount" type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="additionalInformation" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="promoNum" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="currency" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="amountExchangeRate" type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="currencyExchangeRate" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="baseAmount" type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="kursType" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="narasi" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="DepTrxInquiryReq">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="accountNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="fromDate"
+				type="xsd:date">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="toDate" type="xsd:date" />
+			<xsd:element minOccurs="0" name="journalNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="branchNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="amount"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="starttime"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="endtime"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="1" name="transactionType">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+
+						<xsd:enumeration value="01"></xsd:enumeration>
+						<xsd:enumeration value="42"></xsd:enumeration>
+						<xsd:enumeration value="FI"></xsd:enumeration>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

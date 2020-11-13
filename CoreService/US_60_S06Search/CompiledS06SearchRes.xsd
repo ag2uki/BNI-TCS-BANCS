@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo"
+	xmlns:bons0="http://service.bni.co.id/core/list">
+	<xsd:import schemaLocation="S06Record.xsd"
+		namespace="http://service.bni.co.id/core/list">
+	</xsd:import>
+	<xsd:complexType name="CompiledS06SearchRes">
+		<xsd:all>			<xsd:element minOccurs="0" name="reffCorrespondent"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="bicCover"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="poType"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="status"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="page" type="xsd:integer"></xsd:element>
+			<xsd:element minOccurs="0" name="totalRecords"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="s06Record"
+				type="bons0:S06Record" maxOccurs="unbounded">
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

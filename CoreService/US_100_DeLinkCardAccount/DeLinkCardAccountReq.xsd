@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://service.bni.co.id/core/bo" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="DeLinkCardAccountReq">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="cardNum" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="cardDescription" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="nameInCard1" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="nameInCard2" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="cifNum" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="name" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="address1" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="address2" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="address3" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="address4" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="postCode" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="account1" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="accountNum1" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="account2" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="accountNum2" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="account3" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="accountNum3" type="xsd:string">
+			</xsd:element>						
+			<xsd:element minOccurs="0" name="deLinkCardAccount" type="xsd:string">
+			</xsd:element>			
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

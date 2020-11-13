@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://service.bni.co.id/core/bo"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="AtmCardlessDepositTransferRes">
+		<xsd:all>
+			<xsd:element minOccurs="0" name="accountNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="date" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="cif" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="ledgerBalance"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="availableBalance"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

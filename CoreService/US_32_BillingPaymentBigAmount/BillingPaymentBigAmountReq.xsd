@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="BillingPaymentBigAmountReq">
+		<xsd:all>
+			<xsd:element minOccurs="0" name="billerCode"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="regionCode"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="billerName"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="cardNum" type="xsd:string" />
+			<xsd:element minOccurs="0" name="cardName"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="paymentMethod"
+				type="xsd:integer" />
+			<xsd:element minOccurs="0" name="accountNum"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="trxAmount"
+				type="xsd:decimal" />
+			<xsd:element minOccurs="0" name="feeAmount"
+				type="xsd:decimal" />
+			<xsd:element minOccurs="0" name="naration"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="invoiceNum"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="journalNum"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="sign"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="refNo"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="flag"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="amount1"
+				type="xsd:decimal" />
+			<xsd:element minOccurs="0" name="amount2"
+				type="xsd:decimal" />
+			<xsd:element minOccurs="0" name="amount3"
+				type="xsd:decimal" />
+			<xsd:element minOccurs="0" name="amount4"
+				type="xsd:decimal" />
+			<xsd:element minOccurs="0" name="amount5"
+				type="xsd:decimal" />
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="CifAdditionalDetailsInqRes">
+		<xsd:all>
+			<xsd:element minOccurs="0" name="institutionNum" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="journalNum" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="trxAmount" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="currency" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="branch" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tranCode" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="trxDate" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BICode" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="beneficiaryStatus" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="beneficiaryCat" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="applStatus" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="applCat" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="recipientRelation" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="correspondentBank" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="purposeCode" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="nationality" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="sourceAccount" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="destAccount" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="flag" type="xsd:string">
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="ForeignExchangeTrxReq">
+		<xsd:all>
+			<xsd:element minOccurs="0" name="transactionAmount" type="xsd:string" />
+			<xsd:element minOccurs="0" name="promoCode" type="xsd:string" />
+			<xsd:element minOccurs="0" name="beneficiaryIdType" type="xsd:string" />
+			<xsd:element minOccurs="0" name="senderDetails" type="xsd:string" />
+			<xsd:element minOccurs="0" name="sellCurrency" type="xsd:string" />
+			<xsd:element minOccurs="0" name="buyAmount" type="xsd:string" />
+			<xsd:element minOccurs="0" name="buyCurrency" type="xsd:string" />
+			<xsd:element minOccurs="0" name="baseCcyAmount" type="xsd:string" />
+			<xsd:element minOccurs="0" name="commission" type="xsd:string" />
+			<xsd:element minOccurs="0" name="change" type="xsd:string" />
+			<xsd:element minOccurs="0" name="rateType" type="xsd:string" />
+			<xsd:element minOccurs="0" name="fundType" type="xsd:string" />
+			<xsd:element minOccurs="0" name="narration" type="xsd:string" />
+			<xsd:element minOccurs="0" name="bookingNumber" type="xsd:string" />
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://service.bni.co.id/core/bo"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="CreateUpdateSMSNotificationReq">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="action" 			type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="cifNumber" 		type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="accountNumber" 	type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="phoneNumber" 		type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="debitTreshold" 	type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="checkDebit" 		type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="creditTreshold"	type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="checkCredit" 		type="xsd:string"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

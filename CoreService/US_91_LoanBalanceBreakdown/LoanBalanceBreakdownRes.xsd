@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="LoanBalanceBreakdownRes">
+		<xsd:all>
+
+			<xsd:element minOccurs="0" name="accountNum"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="saldoPokok"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="saldoBunga"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="saldoBiaya"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="saldoDenda"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="saldoBiayaProvisi"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="saldoMarkup"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="saldoTotal"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="teoPokok"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="teoBunga"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="teoBiaya"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="teoDenda"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="teoBiayaProvisi"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="teoMarkup"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="teoTotal"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="tunggakanPokok"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tunggakanBunga"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tunggakanBiaya"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tunggakanDenda"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tunggakanBiayaProvisi"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tunggakanMarkup"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tunggakanTotal"
+				type="xsd:string">
+			</xsd:element>
+
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://service.bni.co.id/core/list" targetNamespace="http://service.bni.co.id/core/bo">
+    <xsd:import namespace="http://service.bni.co.id/core/list" schemaLocation="RolloverTransaction.xsd"/>
+	<xsd:import namespace="http://service.bni.co.id/core/list" schemaLocation="ShortHistorical.xsd">
+	</xsd:import>
+	<xsd:complexType name="CompiledDepTrxInquiryRes">
+		<xsd:all>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="shortHistorical" type="bons0:ShortHistorical">
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="rolloverTransaction" type="bons0:RolloverTransaction">
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

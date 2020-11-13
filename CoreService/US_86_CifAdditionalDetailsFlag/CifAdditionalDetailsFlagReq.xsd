@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="CifAdditionalDetailsFlagReq">
+		<xsd:all>
+			<xsd:element minOccurs="0" name="institutionNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="journalNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="trxAmount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="currency"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="branch"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tranCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="trxDate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BICode" type="xsd:string"
+				default="  ">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="beneficiaryStatus" type="xsd:string"
+				default="N1">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="beneficiaryCat"
+				type="xsd:string" default="N1">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="applStatus"
+				type="xsd:string" default="N1"> 
+			</xsd:element>
+			<xsd:element minOccurs="0" name="applCat" type="xsd:string"
+				default="N1">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="recipientRelation"
+				type="xsd:string" default="N" nillable="false">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="correspondentBank"
+				type="xsd:string" default="ID">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="purposeCode"
+				type="xsd:string" default="1000">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="nationality"
+				type="xsd:string" default="ID">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="trxPurpose"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="documentType"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="documentNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="sourceAccount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="destAccount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="flag"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

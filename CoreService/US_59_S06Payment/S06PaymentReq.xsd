@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="S06PaymentReq">
+		<xsd:sequence>
+
+
+
+			<xsd:element minOccurs="0" name="refferenceNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="counterAdvis"
+				type="xsd:string">
+			</xsd:element>			<xsd:element minOccurs="0" name="remmAmount"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="remmAmountCurrency"
+				type="xsd:string">
+			</xsd:element>			<xsd:element minOccurs="0" name="trxCharges"
+				type="xsd:decimal">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="refundCharge"
+				type="xsd:decimal">
+			</xsd:element>			<xsd:element minOccurs="0" name="creditAmount"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="creditAmountCurrency"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="baseAmount"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="creditAccountNum"
+				type="xsd:string">
+			</xsd:element>			<xsd:element minOccurs="0" name="rateType"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="debitRate"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="creditRate"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="chargeType"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="amdCharges"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="xtrCharges"
+				type="xsd:decimal">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

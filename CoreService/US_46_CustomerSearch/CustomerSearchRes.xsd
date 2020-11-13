@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="CustomerSearchRes">
+		<xsd:all>
+			<xsd:element minOccurs="0" name="fullName_1" type="xsd:string"></xsd:element>      
+			<xsd:element minOccurs="0" name="cifNum_1" type="xsd:string"></xsd:element>        
+			<xsd:element minOccurs="0" name="addressType_1" type="xsd:string"></xsd:element>   
+			<xsd:element minOccurs="0" name="address_1" type="xsd:string"></xsd:element>       
+			<xsd:element minOccurs="0" name="fullName_2" type="xsd:string"></xsd:element>      
+			<xsd:element minOccurs="0" name="cifNum_2" type="xsd:string"></xsd:element>        
+			<xsd:element minOccurs="0" name="addressType_2" type="xsd:string"></xsd:element>   
+			<xsd:element minOccurs="0" name="address_2" type="xsd:string"></xsd:element>       
+			<xsd:element minOccurs="0" name="fullName_3" type="xsd:string"></xsd:element>      
+			<xsd:element minOccurs="0" name="cifNum_3" type="xsd:string"></xsd:element>        
+			<xsd:element minOccurs="0" name="addressType_3" type="xsd:string"></xsd:element>   
+			<xsd:element minOccurs="0" name="address_3" type="xsd:string"></xsd:element>       
+			<xsd:element minOccurs="0" name="fullName_4" type="xsd:string"></xsd:element>      
+			<xsd:element minOccurs="0" name="cifNum_4" type="xsd:string"></xsd:element>        
+			<xsd:element minOccurs="0" name="addressType_4" type="xsd:string"></xsd:element>   
+			<xsd:element minOccurs="0" name="address_4" type="xsd:string"></xsd:element>       
+			<xsd:element minOccurs="0" name="fullName_5" type="xsd:string"></xsd:element>      
+			<xsd:element minOccurs="0" name="cifNum_5" type="xsd:string"></xsd:element>        
+			<xsd:element minOccurs="0" name="addressType_5" type="xsd:string"></xsd:element>   
+			<xsd:element minOccurs="0" name="address_5" type="xsd:string"></xsd:element>       
+			<xsd:element minOccurs="0" name="fullName_6" type="xsd:string"></xsd:element>      
+			<xsd:element minOccurs="0" name="cifNum_6" type="xsd:string"></xsd:element>        
+			<xsd:element minOccurs="0" name="addressType_6" type="xsd:string"></xsd:element>   
+			<xsd:element minOccurs="0" name="address_6" type="xsd:string"></xsd:element>       
+			<xsd:element minOccurs="0" name="fullName_7" type="xsd:string"></xsd:element>      
+			<xsd:element minOccurs="0" name="cifNum_7" type="xsd:string"></xsd:element>        
+			<xsd:element minOccurs="0" name="addressType_7" type="xsd:string"></xsd:element>   
+			<xsd:element minOccurs="0" name="address_7" type="xsd:string"></xsd:element>       
+			<xsd:element minOccurs="0" name="fullName_8" type="xsd:string"></xsd:element>      
+			<xsd:element minOccurs="0" name="cifNum_8" type="xsd:string"></xsd:element>        
+			<xsd:element minOccurs="0" name="addressType_8" type="xsd:string"></xsd:element>   
+			<xsd:element minOccurs="0" name="address_8" type="xsd:string"></xsd:element>       
+			<xsd:element minOccurs="0" name="fullName_9" type="xsd:string"></xsd:element>      
+			<xsd:element minOccurs="0" name="cifNum_9" type="xsd:string"></xsd:element>        
+			<xsd:element minOccurs="0" name="addressType_9" type="xsd:string"></xsd:element>   
+			<xsd:element minOccurs="0" name="address_9" type="xsd:string"></xsd:element>       
+			<xsd:element minOccurs="0" name="fullName_10" type="xsd:string"></xsd:element>     
+			<xsd:element minOccurs="0" name="cifNum_10" type="xsd:string"></xsd:element>       
+			<xsd:element minOccurs="0" name="addressType_10" type="xsd:string"></xsd:element>  
+			<xsd:element minOccurs="0" name="address_10" type="xsd:string"></xsd:element>      
+			<xsd:element minOccurs="0" name="fullName_11" type="xsd:string"></xsd:element>     
+			<xsd:element minOccurs="0" name="cifNum_11" type="xsd:string"></xsd:element>       
+			<xsd:element minOccurs="0" name="addressType_11" type="xsd:string"></xsd:element>  
+			<xsd:element minOccurs="0" name="address_11" type="xsd:string"></xsd:element>      
+			<xsd:element minOccurs="0" name="fullName_12" type="xsd:string"></xsd:element>     
+			<xsd:element minOccurs="0" name="cifNum_12" type="xsd:string"></xsd:element>       
+			<xsd:element minOccurs="0" name="addressType_12" type="xsd:string"></xsd:element>  
+			<xsd:element minOccurs="0" name="address_12" type="xsd:string"></xsd:element>      
+			<xsd:element minOccurs="0" name="fullName_13" type="xsd:string"></xsd:element>     
+			<xsd:element minOccurs="0" name="cifNum_13" type="xsd:string"></xsd:element>       
+			<xsd:element minOccurs="0" name="addressType_13" type="xsd:string"></xsd:element>  
+			<xsd:element minOccurs="0" name="address_13" type="xsd:string"></xsd:element>   
+
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

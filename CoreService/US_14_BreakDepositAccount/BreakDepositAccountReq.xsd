@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="BreakDepositAccountReq">
+		<xsd:all>
+			<xsd:element minOccurs="0" name="depositAccNumber"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="balance"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="promoNo"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="accNumber"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="nonValueDays"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tundaBunga"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="penalti"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ratePenalti"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="flagPenalty"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="fromCurrency"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="nominal"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="toCurrency"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="nominalBase"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="komisi"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="uangKembali"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="jenisKurs"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="currVersion"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="biayaLain"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="penaltiCabang"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="penaltiTresuri"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="description"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="noTransaksi"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

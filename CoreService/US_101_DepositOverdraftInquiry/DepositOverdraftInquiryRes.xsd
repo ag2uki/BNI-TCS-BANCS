@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="DepositOverdraftInquiryRes">
+		<xsd:all>
+			<xsd:element minOccurs="0" type="xsd:string" name="accountNumber"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="limitType"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="overDraftLimit1"/>
+			<xsd:element minOccurs="0" type="xsd:decimal" name="rate1"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="rateType1"/>
+			<xsd:element minOccurs="0" type="xsd:date" name="effectiveDate1"/>
+			<xsd:element minOccurs="0" type="xsd:date" name="dueDate1"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="type1"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="value1"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="overDraftLimit2"/>
+			<xsd:element minOccurs="0" type="xsd:decimal" name="rate2"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="rateType2"/>
+			<xsd:element minOccurs="0" type="xsd:date" name="effectiveDate2"/>
+			<xsd:element minOccurs="0" type="xsd:date" name="dueDate2"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="type2"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="value2"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="overDraftLimit3"/>
+			<xsd:element minOccurs="0" type="xsd:decimal" name="rate3"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="rateType3"/>
+			<xsd:element minOccurs="0" type="xsd:date" name="effectiveDate3"/>
+			<xsd:element minOccurs="0" type="xsd:date" name="dueDate3"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="type3"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="value3"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="overDraftLimit4"/>
+			<xsd:element minOccurs="0" type="xsd:decimal" name="rate4"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="rateType4"/>
+			<xsd:element minOccurs="0" type="xsd:date" name="effectiveDate4"/>
+			<xsd:element minOccurs="0" type="xsd:date" name="dueDate4"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="type4"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="value4"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="kelebihan"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="marginPengurang"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="kodeBungaDebit"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="debitPemindahan"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="kodeKomitmen"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="pemindahanKomitmen"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="jenisOverdraftExpiryRate"/>
+			<xsd:element minOccurs="0" type="xsd:decimal" name="overdraftExpiredRate"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="ratingPinjaman"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="fasilitas"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="jenisPembayaran"/>
+			<xsd:element minOccurs="0" type="xsd:decimal" name="nominalAngsuranTetap"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="hapusDetail"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="kodePromo"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="status1"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="status2"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="status3"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="status4"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="tujuan"/>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

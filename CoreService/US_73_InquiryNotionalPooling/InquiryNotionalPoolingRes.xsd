@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="InquiryNotionalPoolingRes">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="function"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="companyName"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="mainAccountNo"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="status"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="currentPage"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="totalPage"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="notPolID"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="notionalBalance"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="thresholdAmt"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="accNo1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="branchName1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="balance1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="limit1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="status1"
+				type="xsd:string">
+			</xsd:element>			
+			<xsd:element minOccurs="0" name="accNo2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="branchName2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="balance2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="limit2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="status2"
+				type="xsd:string">
+			</xsd:element>			
+			<xsd:element minOccurs="0" name="accNo3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="branchName3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="balance3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="limit3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="status3"
+				type="xsd:string">
+			</xsd:element>			
+			<xsd:element minOccurs="0" name="accNo4"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="branchName4"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="balance4"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="limit4"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="status4"
+				type="xsd:string">
+			</xsd:element>			
+			<xsd:element minOccurs="0" name="accNo5"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="branchName5"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="balance5"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="limit5"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="status5"
+				type="xsd:string">
+			</xsd:element>			
+			<xsd:element minOccurs="0" name="accNo6"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="branchName6"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="balance6"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="limit6"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="status6"
+				type="xsd:string">
+			</xsd:element>			
+			<xsd:element minOccurs="0" name="accNo7"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="branchName7"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="balance7"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="limit7"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="status7"
+				type="xsd:string">
+			</xsd:element>			
+			<xsd:element minOccurs="0" name="accNo8"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="branchName8"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="balance8"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="limit8"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="status8"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

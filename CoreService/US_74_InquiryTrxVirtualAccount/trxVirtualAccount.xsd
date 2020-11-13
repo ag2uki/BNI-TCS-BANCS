@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://service.bni.co.id/core/list"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="trxVirtualAccount">
+		<xsd:all>
+			<xsd:element minOccurs="0" name="colTxnType"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="colPostDate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="colTranDate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="colTranTime"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="colTranCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="colJournalNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="colUserID"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="colBranch"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="colAmount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="desc"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

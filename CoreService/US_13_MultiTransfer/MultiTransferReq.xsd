@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="MultiTransferReq">
+		<xsd:all>			<xsd:element minOccurs="0" name="EntriesType"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="RateType"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Narative1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Narative2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Narative3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HighestAmount">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>			<xsd:element minOccurs="0" name="TranType1_1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EntrySetNum_1"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CashFlag_1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountNum_1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TxnType_1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Amount_1">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="TranType1_2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EntrySetNum_2"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CashFlag_2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountNum_2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TxnType_2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Amount_2">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="TranType1_3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EntrySetNum_3"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CashFlag_3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountNum_3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TxnType_3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Amount_3">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="TranType1_4"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EntrySetNum_4"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CashFlag_4"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountNum_4"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TxnType_4"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Amount_4">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="TranType1_5"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EntrySetNum_5"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CashFlag_5"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountNum_5"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TxnType_5"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Amount_5">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="TranType1_6"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EntrySetNum_6"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CashFlag_6"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountNum_6"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TxnType_6"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Amount_6">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="TranType1_7"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EntrySetNum_7"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CashFlag_7"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountNum_7"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TxnType_7"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Amount_7">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="TranType1_8"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EntrySetNum_8"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CashFlag_8"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountNum_8"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TxnType_8"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Amount_8">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="TranType1_9"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EntrySetNum_9"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CashFlag_9"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountNum_9"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TxnType_9"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Amount_9">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="TranType1_10"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EntrySetNum_10"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CashFlag_10"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountNum_10"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TxnType_10"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Amount_10">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="TranType1_11"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EntrySetNum_11"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CashFlag_11"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountNum_11"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TxnType_11"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Amount_11">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="TranType1_12"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EntrySetNum_12"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CashFlag_12"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountNum_12"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TxnType_12"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Amount_12">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="TranType1_13"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EntrySetNum_13"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CashFlag_13"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountNum_13"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TxnType_13"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Amount_13">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="TranType1_14"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EntrySetNum_14"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CashFlag_14"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountNum_14"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TxnType_14"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Amount_14">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="TranType1_15"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EntrySetNum_15"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CashFlag_15"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountNum_15"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TxnType_15"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Amount_15">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="TranType1_16"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EntrySetNum_16"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CashFlag_16"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountNum_16"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TxnType_16"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Amount_16">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="TranType1_17"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EntrySetNum_17"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CashFlag_17"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountNum_17"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TxnType_17"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Amount_17">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="TranType1_18"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EntrySetNum_18"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CashFlag_18"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountNum_18"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TxnType_18"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Amount_18">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="TranType1_19"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EntrySetNum_19"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CashFlag_19"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountNum_19"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TxnType_19"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Amount_19">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="TranType1_20"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EntrySetNum_20"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CashFlag_20"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountNum_20"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TxnType_20"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Amount_20">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="TranType1_21"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EntrySetNum_21"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CashFlag_21"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountNum_21"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TxnType_21"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Amount_21">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="TranType1_22"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EntrySetNum_22"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CashFlag_22"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountNum_22"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TxnType_22"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Amount_22">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+
+
+
+
+			<xsd:element minOccurs="0" name="NetTotal">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CreditTotal">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="DebitTotal">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:maxInclusive value="99999999999999.99"></xsd:maxInclusive>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EntrySetControl"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="DetailRecordControl"
+				type="xsd:integer">
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

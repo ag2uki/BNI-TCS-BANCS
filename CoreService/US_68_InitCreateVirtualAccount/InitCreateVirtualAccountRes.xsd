@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType  name="InitCreateVirtualAccountRes" >
+		<xsd:all>
+			<xsd:element  minOccurs="0"  name="virtualAccountType"  type="xsd:string" />
+			<xsd:element  minOccurs="0"  name="companyCode"  type="xsd:string" />
+			<xsd:element  minOccurs="0"  name="virtualAccountNum"  type="xsd:string" />
+			<xsd:element  minOccurs="0"  name="accountNum"  type="xsd:string" />
+			<xsd:element  minOccurs="0"  name="companyName"  type="xsd:string" />
+			<xsd:element  minOccurs="0"  name="accountStatus"  type="xsd:string" />
+			<xsd:element  minOccurs="0"  name="virtualAccountName"  type="xsd:string" />
+			<xsd:element  minOccurs="0"  name="virtualAccountStatus"  type="xsd:string" />
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

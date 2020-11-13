@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo"
+	xmlns:bons0="http://service.bni.co.id/core/bo">
+	<xsd:include schemaLocation="rateDetails.xsd"></xsd:include>
+	<xsd:complexType name="CompiledTermDepositRateInquiryRes">
+		<xsd:all>
+			<xsd:element minOccurs="0" name="rateDetails"
+				type="bons0:rateDetails">
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

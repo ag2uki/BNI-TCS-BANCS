@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="DepositDetailsRes">
+		<xsd:all>
+
+
+			<xsd:element minOccurs="0" name="accountNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="cifNum"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="idNumber"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="idType"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="customerName"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="address1"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="address2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="hasNPWP"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="address3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="citizenCountryCode"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="address4"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="postCode"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="accountTypeCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="accountSubcatCode"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="interestPaymentMethodCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="affiliatedAccountNum"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="profilBebasBiaya"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="frekuensiRekeningKoran"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="konsolidasiRekeningKoran"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="calenderCode"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="indikatorSuratMenyurat"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="indikatorPemberitahuan"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="pemberitahunanKeNasabah"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="rateBungaVariabel"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="frekuensiBunga"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="siklusRekeningKoran"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="tanggalHariRekeningKoran"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="jenisInvestasi"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="nomorFasilitas"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="kreditRating"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="jangkaWaktu"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="termBasis"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="nominalDeposito"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="jenisTierRate"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="domesticRiskCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="crossBorderRiskCode"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="borderRiskCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="indikatorSekuriti"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="limitJangkaWaktu"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="vostroIdBank"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="glClasificationCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="jumlahCopyRekeningKoran"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0"
+				name="indikatorProsesPemberitahuan" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="indikatorEkstraksiRekening"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="rateSesuai"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0"
+				name="indikatorPerubahanRekeningKoran" type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="indikatorTaksasi"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="alasanBukaRekening"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="alasanBukaRekeningLainnya"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="sumberDana"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="sumberDanaLainnya"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="projectedDepositPerMonth"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0"
+				name="projectedWithdrawalPerMonth" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="accountRatio"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="bicNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="bicLimit"
+				type="xsd:string">
+			</xsd:element>
+
+
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

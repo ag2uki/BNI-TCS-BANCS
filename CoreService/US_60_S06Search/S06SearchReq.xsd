@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="S06SearchReq">
+		<xsd:all>
+			<xsd:element minOccurs="1" name="reffCorrespondent"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="bicCover"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="poType"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="poStatus"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="page" type="xsd:int"></xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

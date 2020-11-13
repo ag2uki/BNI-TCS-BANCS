@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo"
+	xmlns:bons0="http://service.bni.co.id/core/list">
+	<xsd:import schemaLocation="trxVirtualAccount.xsd"
+		namespace="http://service.bni.co.id/core/list">
+	</xsd:import>
+	<xsd:complexType name="CompiledInquiryTrxVirtualAccountRes">
+		<xsd:all>
+			
+			<xsd:element minOccurs="0" name="trxVirtualAccount" 
+				type="bons0:trxVirtualAccount" maxOccurs="unbounded">
+			</xsd:element>
+			
+			<xsd:element minOccurs="0" name="function"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="virtualAccountNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="companyName"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="status"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="companyAccountNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="virtualAccountType"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="companyCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="txnType"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="currentPage"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="fromDate"
+				type="xsd:date">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="toDate"
+				type="xsd:date">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="journalNum"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="virtualAccountName"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="virtualAccountStatus"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="virtualAccountBalance"
+				type="xsd:string">
+			</xsd:element>
+
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

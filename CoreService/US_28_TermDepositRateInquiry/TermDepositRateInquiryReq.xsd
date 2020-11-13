@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="TermDepositRateInquiryReq">
+		<xsd:all>
+			<xsd:element minOccurs="0" name="amount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="accountType"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="efektifDate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="intMethod"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="frekuensi"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="period"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="termBasis"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="page" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="intRate"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

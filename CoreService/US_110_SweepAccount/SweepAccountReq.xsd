@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType  name="SweepAccountReq" >
+		<xsd:all>
+			<xsd:element  minOccurs="0"  name="sweepType"  type="xsd:string" />			
+			<xsd:element  minOccurs="0"  name="accountPartnerNum"  type="xsd:string" />
+			<xsd:element  minOccurs="0"  name="startDate"  type="xsd:string" />
+			<xsd:element  minOccurs="0"  name="endDate"  type="xsd:string" />
+			<xsd:element  minOccurs="1"  name="cycle"  type="xsd:string" />
+			<xsd:element  minOccurs="1"  name="balanceSpecifiedAmount"  type="xsd:string" />
+			<xsd:element  minOccurs="1"  name="balanceResultsAmount"  type="xsd:string" />
+			<xsd:element  minOccurs="1"  name="maxLimitAmount"  type="xsd:string" />
+			<xsd:element  minOccurs="1"  name="accumulationLimitAmount"  type="xsd:string" />
+			<xsd:element  minOccurs="1"  name="priority"  type="xsd:string" />
+			<xsd:element  minOccurs="0"  name="individualCurrentAccNum"  type="xsd:string" />			
+
+		</xsd:all>
+	</xsd:complexType>
+ </xsd:schema>

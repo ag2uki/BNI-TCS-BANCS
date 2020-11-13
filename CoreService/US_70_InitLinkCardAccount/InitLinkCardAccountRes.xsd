@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://service.bni.co.id/core/bo"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="InitLinkCardAccountRes">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="cardNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="cardDescription"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="cardName1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="cardName2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="cifNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="name" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="address1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="address2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="address3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="address4"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="postCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="related1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="acctRel1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="related2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="acctRel2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="related3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="acctRel3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="seqAddRel"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="acctAddRel"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="acctAddRelDesc"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="confirmFlag"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

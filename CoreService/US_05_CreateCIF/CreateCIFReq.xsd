@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://service.bni.co.id/core/bo"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="CreateCIFReq">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="cifNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="customerType"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="relManager"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="title" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="firstName"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="lastName"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="gelar" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="companyName"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="legalEntity"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="adrress1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="address2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="address3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="address4"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="zipCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="countryCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="homePhone1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="homePhone2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="noFax1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="noFax2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="officePhone1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="officePhone2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="handPhone1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="handPhone2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="nationality"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="occupant"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="languageCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="idNumber"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="buildDate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="publisherCity"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="idType"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="jobCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BorderRisk1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="vipCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="status"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BISegmentCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="lockerHolder"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="optNPWP"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="branchOpening"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="optCustomer"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="optIdCustomer"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="optIndustry"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="optCountry"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="optSector"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="sectorCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="countryOfRisk"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="affiliationCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BIOwnerCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="companyGroup"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="middleName"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="locationCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="bebasPph"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="IVRFlag"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="idDueDate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="placeOfBirth"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="dateOfBirth"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="gender"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="isMaried"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="motherName"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="income"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="frekuensi"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="religion"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="education"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="email" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="NPWPNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="SIUPNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="SIUPDueDate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TDPNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TDPDueDate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="kitasNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="kitasDueDate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BNISegmentCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="RMCode"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

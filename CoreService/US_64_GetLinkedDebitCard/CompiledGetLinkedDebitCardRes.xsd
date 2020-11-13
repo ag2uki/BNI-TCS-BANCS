@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo"
+	xmlns:bons0="http://service.bni.co.id/core/list">
+	<xsd:import schemaLocation="DebitCard.xsd"
+		namespace="http://service.bni.co.id/core/list">
+	</xsd:import>
+	<xsd:complexType name="CompiledGetLinkedDebitCardRes">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="debitCard"
+				type="bons0:DebitCard" maxOccurs="unbounded">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

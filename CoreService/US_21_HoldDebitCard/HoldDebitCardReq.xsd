@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="HoldDebitCardReq">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="cardNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="description"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="cifNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="name" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="status1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="status2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="address1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="address2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="address3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="address4"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="postCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="cardName1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="cardName2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="registeredDate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="validTo"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="reason">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="Arrears"></xsd:enumeration>
+						<xsd:enumeration value="Restricted"></xsd:enumeration>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

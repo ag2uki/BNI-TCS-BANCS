@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="CreateVirtualAccountReq">
+		<xsd:all>
+			<xsd:element minOccurs="0" name="virtualAccountType"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="companyCode"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="virtualAccountNum"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="accountNum"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="companyName"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="accountStatus"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="virtualAccountName"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="virtualAccountStatus"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="virtualAccountTrxType"
+				type="xsd:integer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="billAmount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="handphoneNumber"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="chargesAmount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="var1Amount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="var2Amount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="date1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="exptime"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

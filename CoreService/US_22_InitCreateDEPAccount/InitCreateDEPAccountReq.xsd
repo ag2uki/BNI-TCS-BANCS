@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType  name="InitCreateDEPAccountReq" >
+		<xsd:all>
+			<xsd:element  minOccurs="0"  name="cif_or_accntNumber"  type="xsd:string" />
+			<xsd:element  minOccurs="0"  name="idNumber"  type="xsd:string" />
+			<xsd:element  minOccurs="0"  name="idType"  type="xsd:string" />
+			<xsd:element  minOccurs="0"  name="system"  type="xsd:string" />
+			<xsd:element  minOccurs="0"  name="optionType"  type="xsd:string" />
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

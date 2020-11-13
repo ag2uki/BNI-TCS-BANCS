@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="UpdatePersonalInfoReq">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="cifNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="name" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="nameAlias"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="berdasarPPH"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="cabangPbyrPajak"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="agama" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="lingkupPerusahaan"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="email1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="email2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="kreditur"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="kdPendidikan"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Channel1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Channel2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Channel3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Channel4"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Channel5"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Channel6"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Channel7"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Channel8"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Channel9"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Channel10"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Channel11"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Channel12"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Channel13"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Channel14"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Channel15"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Channel16"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Channel17"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Channel18"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Channel19"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Channel20"
+				type="xsd:string">
+			</xsd:element>			<xsd:element minOccurs="0" name="freq" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="siklus"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="hari" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="Mom_Maiden_Name"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="cdHobby"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="AccountDetailsRes">
+		<xsd:all>
+
+			<xsd:element minOccurs="0" name="accountProductType"
+				type="xsd:string">
+			</xsd:element>
+			
+			<!-- deposit -->
+			<xsd:element minOccurs="0" name="d_nomorRekening"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_currency"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_namaProduk"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_cabangPembuka"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_kodeUser"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_statusRekening"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_jenisInvestasi"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_kodeArea"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_kodeAgen"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_indNotifikasi"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_indSurat"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_namaRekening"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_namaNasabah"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_alamatNasabah_1"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_nominalBunga_1"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_alamatNasabah_2"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_nominalBunga_2"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_alamatNasabah_3"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_nominalBunga_3"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_alamatNasabah_4"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_kodePos"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_nominalBunga_4"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_tglBukaRekening"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_tktBungaKredit"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_tktBungaDebet"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_nominalBunga_5"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_saldoAkhir"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_tglJthTempoOverdraft"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_nominalBlokir"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_limitOverdraft"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_danaBelumEfektif"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_tambahanBunga"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_tglTrkhrKreditBunga"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_bungaSaatTutupRek"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_proyeksiBunga"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_tglKreditBungaYad"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_pajakSaatTutupRek"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_bungaTersedia"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_tglTrkhrUbahDetail"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_relationshipManager"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_kodeBM_CSM"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_rateSesuai"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_tglTrkhrUbahJenisRek"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_nilaiBungaOverdraft"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_saldoEfektif"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_profitTersedia"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_profitAkrual"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="d_numTeller"
+				type="xsd:string" />
+
+			<!--  loan -->
+			<xsd:element minOccurs="0" name="l_nomor_rekening"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_currency"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_nama_produk"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_nama_rekening"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_nama_nasabah"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_alamat_1"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_status_rek"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_alamat_2"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_ind_note"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_jenis_pinjaman"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_alamat_3"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_ind_surat"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_tk_suku_bunga"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_alamat_4"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_kode_pos"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_nominal_saldo"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_nominal_unclose"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_nominal_npb"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_nominal_saldo_eom"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_nominal_approved"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_nominal_adv"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_nominal_tunggakan"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_nominal_angsuran"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_tgl_pk"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_tgl_bayar_akhir"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_tgl_adv_akhir"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_tgl_mulai_jatuh_tempo"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_misc_dr_1"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_misc_dr_2"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_misc_dr_3"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_ind_redraw"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_jk_wkt_pinjaman"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_rem_repay"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_tgl_mulai_bunga"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_user_cds"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_prm_rek"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_rel_manager"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_kode_rm"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_basis_waktu"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_nominal_saldo_inf"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_nominal_adj_bunga"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_nominal_pokok"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_holi_repay"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_jenis_dana"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_chan_exec"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_jenis_sindikasi"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_jenis_kuk"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="l_tgl_review_berikut"
+				type="xsd:string" />
+				
+				
+
+			<xsd:element minOccurs="0" name="c_accountNum" type="xsd:string" />
+			<xsd:element minOccurs="0" name="c_customerNum" type="xsd:string" />
+			<xsd:element minOccurs="0" name="c_accountName" type="xsd:string" />
+			<xsd:element minOccurs="0" name="c_address1" type="xsd:string" />
+			<xsd:element minOccurs="0" name="c_address2" type="xsd:string" />
+			<xsd:element minOccurs="0" name="c_address3" type="xsd:string" />
+			<xsd:element minOccurs="0" name="c_address4" type="xsd:string" />
+			<xsd:element minOccurs="0" name="c_postCode" type="xsd:string" />
+			<xsd:element minOccurs="0" name="c_glClasificationCode" type="xsd:string" />
+			<xsd:element minOccurs="0" name="c_facilityNum" type="xsd:string" />
+			<xsd:element minOccurs="0" name="c_accountStatus" type="xsd:string" />
+			<xsd:element minOccurs="0" name="c_accountTypeCode" type="xsd:string" />
+			<xsd:element minOccurs="0" name="c_accountSubCatCode" type="xsd:string" />
+			<xsd:element minOccurs="0" name="c_currency" type="xsd:string" />
+			<xsd:element minOccurs="0" name="c_balance" type="xsd:string" />
+			<xsd:element minOccurs="0" name="c_tanggalTerakhirUbahJenisRekening" type="xsd:string" />
+			<xsd:element minOccurs="0" name="c_counterGuarantee" type="xsd:string" />
+			<xsd:element minOccurs="0" name="c_bankKoresponden" type="xsd:string" />
+			<xsd:element minOccurs="0" name="c_beneficiery" type="xsd:string" />
+							
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

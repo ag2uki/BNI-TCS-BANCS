@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType  name="InitCreateDEPAccountRes" >
+		<xsd:all>
+			<xsd:element minOccurs="0" type="xsd:string" name="accountNumber"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="cifNum"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="idNumber"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="idType"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="customerName"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="Address1"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="Address2"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="npwp"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="Address3"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="nasionality"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="Address4"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="postalCode"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="accountType"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="subCategory"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="interestPayMethod"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="affAccount"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="freeFeeProfile"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="languageCode"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="accFrekuensi"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="accConsolidate"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="calendar"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="mailInd"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="noteInd"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="customerNotification"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="interestRate"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="interestFrekuensi"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="siklus"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="day"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="agentCode"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="investType"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="address5"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="indGroup"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="fasilitationNo"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="applicationID"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="visaFlag"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="visaSecurityCode"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="visaCreditLimit"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="term"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="termBasis"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="nominal"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="tierRateType"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="domesticRisk"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="limitationRisk"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="crossBorderRisk"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="indGuarante"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="timeLimit"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="vostroAcc"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="GLCode"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="date"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="copySummary"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="indNote"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="indAccountExtract"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="rate"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="klausaValas"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="valuta"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="indInterestChange"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="indHerTaksasi"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="brokerNo"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="bookingNo"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="trfPricingRate"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="certificateNo"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="noIns"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="insurance"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="openAccReason"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="othersOpenAccReason"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="srcOfFund"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="othersSrcOfFund"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="projDep"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="projWdl"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="acctRatio"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="BICNo"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="BICLimit"/>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

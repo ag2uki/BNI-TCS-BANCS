@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="RemittanceMasterInRes">
+		<xsd:all>
+        <xsd:element minOccurs="0" name="responseResult"    type="xsd:string"></xsd:element>
+        <xsd:element minOccurs="0" name="journalNumber"     type="xsd:string"></xsd:element>
+        <xsd:element minOccurs="0" name="responseDateTime"  type="xsd:string"></xsd:element>
+        <xsd:element minOccurs="0" name="errorCode"         type="xsd:string"></xsd:element>
+        <xsd:element minOccurs="0" name="errorDesc"         type="xsd:string"></xsd:element>
+        <xsd:element minOccurs="0" name="stp"               type="xsd:string"></xsd:element>
+        <xsd:element minOccurs="0" name="nonstpDesc"        type="xsd:string"></xsd:element>
+        <xsd:element minOccurs="0" name="account"           type="xsd:string"></xsd:element>
+        <xsd:element minOccurs="0" name="accountName"       type="xsd:string"></xsd:element>
+        <xsd:element minOccurs="0" name="homeBranch"        type="xsd:string"></xsd:element>
+        <xsd:element minOccurs="0" name="currency"          type="xsd:string"></xsd:element>
+        <xsd:element minOccurs="0" name="remitAmount"       type="xsd:decimal"></xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

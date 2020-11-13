@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="DepositOverdraftLimitUpdateReq">
+		<xsd:all>
+			<xsd:element minOccurs="0" type="xsd:integer" name="accountNumber"/>
+			<xsd:element minOccurs="0" type="xsd:integer" name="overDraftLimit1"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="effectiveDate1"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="dueDate1"/>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

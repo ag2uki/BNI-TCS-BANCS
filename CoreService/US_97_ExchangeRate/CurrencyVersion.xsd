@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://service.bni.co.id/core/list" targetNamespace="http://service.bni.co.id/core/list">
+	<xsd:include schemaLocation="Currency.xsd"/>
+	<xsd:complexType name="CurrencyVersion">
+		<xsd:all>
+			<xsd:element minOccurs="0" name="currencyVersion" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="currencyItemTotal" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="currency" type="bons0:Currency">
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

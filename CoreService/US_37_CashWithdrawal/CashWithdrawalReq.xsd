@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://service.bni.co.id/core/bo"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="CashWithdrawalReq">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="accountNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="amount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="promoCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="currency"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="exchangeRateAmount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="exchangeRateCurrency"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="baseAmount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="commission"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="refund"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="rateType"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="narative"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

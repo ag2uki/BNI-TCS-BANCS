@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="XRateParamInquiryRes">
+		<xsd:all>
+		
+			<xsd:element minOccurs="0" name="fungsi" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="institusi" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="code" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="tanggal" type="xsd:date"></xsd:element>
+			<xsd:element minOccurs="0" name="waktu" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="satuanKurs" type="xsd:integer"></xsd:element>
+			<xsd:element minOccurs="0" name="kursValutaLain" type="xsd:decimal"></xsd:element>
+			<xsd:element minOccurs="0" name="midRate" type="xsd:decimal"></xsd:element>
+			<xsd:element minOccurs="0" name="initUpdate" type="xsd:string"></xsd:element>
+
+			<xsd:element minOccurs="0" name="rateType_1" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="rateDesc_1" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="rateVariant_1" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="rateMaxVariant_1" type="xsd:decimal"></xsd:element>
+			<xsd:element minOccurs="0" name="rateBuy_1" type="xsd:decimal"></xsd:element>
+			<xsd:element minOccurs="0" name="rateSell_1" type="xsd:decimal"></xsd:element>
+			<xsd:element minOccurs="0" name="rateTierFlag_1" type="xsd:string"></xsd:element>
+			
+			<xsd:element minOccurs="0" name="rateType_2" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="rateDesc_2" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="rateVariant_2" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="rateMaxVariant_2" type="xsd:decimal"></xsd:element>
+			<xsd:element minOccurs="0" name="rateBuy_2" type="xsd:decimal"></xsd:element>
+			<xsd:element minOccurs="0" name="rateSell_2" type="xsd:decimal"></xsd:element>
+			<xsd:element minOccurs="0" name="rateTierFlag_2" type="xsd:string"></xsd:element>
+
+			<xsd:element minOccurs="0" name="rateType_3" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="rateDesc_3" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="rateVariant_3" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="rateMaxVariant_3" type="xsd:decimal"></xsd:element>
+			<xsd:element minOccurs="0" name="rateBuy_3" type="xsd:decimal"></xsd:element>
+			<xsd:element minOccurs="0" name="rateSell_3" type="xsd:decimal"></xsd:element>
+			<xsd:element minOccurs="0" name="rateTierFlag_3" type="xsd:string"></xsd:element>
+			
+			<xsd:element minOccurs="0" name="rateType_4" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="rateDesc_4" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="rateVariant_4" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="rateMaxVariant_4" type="xsd:decimal"></xsd:element>
+			<xsd:element minOccurs="0" name="rateBuy_4" type="xsd:decimal"></xsd:element>
+			<xsd:element minOccurs="0" name="rateSell_4" type="xsd:decimal"></xsd:element>
+			<xsd:element minOccurs="0" name="rateTierFlag_4" type="xsd:string"></xsd:element>
+			
+			<xsd:element minOccurs="0" name="rateType_5" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="rateDesc_5" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="rateVariant_5" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="rateMaxVariant_5" type="xsd:decimal"></xsd:element>
+			<xsd:element minOccurs="0" name="rateBuy_5" type="xsd:decimal"></xsd:element>
+			<xsd:element minOccurs="0" name="rateSell_5" type="xsd:decimal"></xsd:element>
+			<xsd:element minOccurs="0" name="rateTierFlag_5" type="xsd:string"></xsd:element>
+			
+			<xsd:element minOccurs="0" name="versionFrom" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="versionFileFrom" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="indikatorSatuan" type="xsd:string"></xsd:element>
+
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

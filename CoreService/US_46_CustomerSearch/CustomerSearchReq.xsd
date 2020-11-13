@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="CustomerSearchReq">
+		<xsd:all>
+			<xsd:element minOccurs="0" name="firstName"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="middleName"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="lastName"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="branchNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="city" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="postCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="homePhoneNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="startFromRecordNum"
+				type="xsd:integer">
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

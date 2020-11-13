@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="LoanInterestRes">
+		<xsd:all>
+			
+			<xsd:element minOccurs="0" name="accountNum" type="xsd:string"></xsd:element>                
+<xsd:element minOccurs="0" name="collectibility" type="xsd:string"></xsd:element>            
+<xsd:element minOccurs="0" name="collectibilityMaintainedDate" type="xsd:string"></xsd:element>            
+<xsd:element minOccurs="0" name="writtenOffDate" type="xsd:string"></xsd:element>            
+<xsd:element minOccurs="0" name="outArrearsDate" type="xsd:string"></xsd:element>            
+<xsd:element minOccurs="0" name="industryCode" type="xsd:string"></xsd:element>              
+<xsd:element minOccurs="0" name="subSectorCode" type="xsd:string"></xsd:element>             
+<xsd:element minOccurs="0" name="seqmentCode" type="xsd:string"></xsd:element>               
+<xsd:element minOccurs="0" name="suspendedInterest" type="xsd:string"></xsd:element>         
+<xsd:element minOccurs="0" name="insuranceClaim" type="xsd:string"></xsd:element>            
+<xsd:element minOccurs="0" name="writtenOffInterest" type="xsd:string"></xsd:element>        
+<xsd:element minOccurs="0" name="principleInterestAmount" type="xsd:string"></xsd:element>   
+<xsd:element minOccurs="0" name="InterestInstallmentAmount" type="xsd:string"></xsd:element> 
+<xsd:element minOccurs="0" name="previousInterestAccrual" type="xsd:string"></xsd:element>   
+<xsd:element minOccurs="0" name="prevArrearsInterestAccrual" type="xsd:string"></xsd:element>
+<xsd:element minOccurs="0" name="holidayRepayment" type="xsd:string"></xsd:element>          
+<xsd:element minOccurs="0" name="holidayRepaymentTotal" type="xsd:string"></xsd:element>     
+<xsd:element minOccurs="0" name="fundType" type="xsd:string"></xsd:element>                  
+<xsd:element minOccurs="0" name="channelExecution" type="xsd:string"></xsd:element>          
+<xsd:element minOccurs="0" name="syndicateType" type="xsd:string"></xsd:element>             
+<xsd:element minOccurs="0" name="kukCode" type="xsd:string"></xsd:element>                   
+<xsd:element minOccurs="0" name="nextReviewDate" type="xsd:string"></xsd:element>            
+<xsd:element minOccurs="0" name="agreementNum" type="xsd:string"></xsd:element>              
+<xsd:element minOccurs="0" name="effectiveDate" type="xsd:string"></xsd:element>             
+<xsd:element minOccurs="0" name="approvedAmount" type="xsd:string"></xsd:element>            
+<xsd:element minOccurs="0" name="maturityPenalty" type="xsd:string"></xsd:element>           
+<xsd:element minOccurs="0" name="totalPPA" type="xsd:string"></xsd:element>                  
+<xsd:element minOccurs="0" name="afiliatedAccount" type="xsd:string"></xsd:element>          
+<xsd:element minOccurs="0" name="worstCollectibility" type="xsd:string"></xsd:element>       
+<xsd:element minOccurs="0" name="maintananceFee" type="xsd:string"></xsd:element>            
+<xsd:element minOccurs="0" name="penaltyRate" type="xsd:string"></xsd:element>               
+<xsd:element minOccurs="0" name="rahnAkum" type="xsd:string"></xsd:element>                  
+<xsd:element minOccurs="0" name="rahnHarian" type="xsd:string"></xsd:element>                
+<xsd:element minOccurs="0" name="pengurangPPA" type="xsd:string"></xsd:element>              
+<xsd:element minOccurs="0" name="talangan" type="xsd:string"></xsd:element>                  
+<xsd:element minOccurs="0" name="sisaPokokIjaroh" type="xsd:string"></xsd:element>           
+<xsd:element minOccurs="0" name="sisaFeeIjaroh" type="xsd:string"></xsd:element>             
+<xsd:element minOccurs="0" name="applicationNum" type="xsd:string"></xsd:element>            
+<xsd:element minOccurs="0" name="rmCode" type="xsd:string"></xsd:element>                    
+<xsd:element minOccurs="0" name="fixRateDate" type="xsd:string"></xsd:element>               
+<xsd:element minOccurs="0" name="subsidyRate" type="xsd:string"></xsd:element>               
+<xsd:element minOccurs="0" name="economicSectorCode" type="xsd:string"></xsd:element>        
+<xsd:element minOccurs="0" name="economicSectorQual" type="xsd:string"></xsd:element>        
+<xsd:element minOccurs="0" name="grecePeriodType" type="xsd:string"></xsd:element>           
+<xsd:element minOccurs="0" name="gracePeriodDate" type="xsd:string"></xsd:element>           
+<xsd:element minOccurs="0" name="gracePeriod" type="xsd:string"></xsd:element>               
+<xsd:element minOccurs="0" name="interestDayCap" type="xsd:string"></xsd:element>            
+<xsd:element minOccurs="0" name="multifinanceCode" type="xsd:string"></xsd:element>          
+<xsd:element minOccurs="0" name="purpCode" type="xsd:string"></xsd:element>                  
+
+			
+			
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

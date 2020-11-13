@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="UpdateUserDefinedCodeReq">
+		<xsd:all>
+		 <xsd:element minOccurs="0" name="accntNumber1" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="TahunHaji" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="tutupOtomatis" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="kodeBagAnggaran" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="handlingCode" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="defaultString1e" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="KodeDomain" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="KodeUser" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="defaultString2c" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="SalesCode" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="defaultString3b" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="defaultString4a" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="defaultString4b" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="defaultString4c" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="defaultString5a" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="defaultString5b" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="defaultString5c" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="defaultString6a" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="KodeKLN" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="defaultString6c" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="JenisGiro" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="tujuanSetoranJaminan" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="salesCodesGroup" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="CatInstKeuAkt" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="CatInstKeuPasv" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="Kualitas" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="CadKerugianTrnNilai" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="BundlingCode" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="SkimPembayaran" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="AutoCloseDormant" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="SatkerBankOps" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="AccRestriction" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="Burekol" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="KodePenawaran" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="DefaultString8e" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="DefaultString9a" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="DefaultString9b" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="DefaultString9c" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="DefaultString9d" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="KodeProgMarketing" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="DefaultString10a" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="DefaultString10b" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="DefaultString10c" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="DefaultString10d" type="xsd:string"/>
+         <xsd:element minOccurs="0" name="DefaultString10e" type="xsd:string"/>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

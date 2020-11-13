@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="KliringOutwardReq">
+		<xsd:all>
+
+			<xsd:element minOccurs="0" name="accountNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="nominalPenarikan"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="nominalDikirim"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="pesan1Pengirim"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="pesan2Pengirim"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="namaPenerima"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="alamat1Penerima"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="alamat2Penerima"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="nomorTelponPenerima"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="kodePosPenerima"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="idPenerima"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tipeIdPenerima"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="namaPengirim"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="alamatPengirim"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="nomorTelponPengirim"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tipeResidensiPengirim"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tipeResidensiPenerima"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="sandiBankPenerima"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="accountPenerima"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="intermediaryBranch"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="biaya"
+				type="xsd:decimal">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="sandiTransaksi"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

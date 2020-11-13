@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="MultiTransferRes">
+		<xsd:all>
+			<xsd:element minOccurs="0" name="Result"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="JournalNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ResponseDate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ResponseTime"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ErrorCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ErrorDescription"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Account_1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountName_1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HomeBranch_1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Account_2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountName_2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HomeBranch_2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Account_3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountName_3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HomeBranch_3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Account_4"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountName_4"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HomeBranch_4"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Account_5"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountName_5"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HomeBranch_5"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Account_6"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountName_6"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HomeBranch_6"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Account_7"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountName_7"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HomeBranch_7"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Account_8"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountName_8"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HomeBranch_8"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Account_9"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountName_9"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HomeBranch_9"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Account_10"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountName_10"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HomeBranch_10"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Account_11"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountName_11"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HomeBranch_11"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Account_12"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountName_12"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HomeBranch_12"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Account_13"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountName_13"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HomeBranch_13"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Account_14"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountName_14"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HomeBranch_14"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Account_15"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountName_15"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HomeBranch_15"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Account_16"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountName_16"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HomeBranch_16"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Account_17"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountName_17"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HomeBranch_17"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Account_18"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountName_18"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HomeBranch_18"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Account_19"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountName_19"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HomeBranch_19"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Account_20"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountName_20"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HomeBranch_20"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Account_21"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountName_21"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HomeBranch_21"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Account_22"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountName_22"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HomeBranch_22"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ResponseCount"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

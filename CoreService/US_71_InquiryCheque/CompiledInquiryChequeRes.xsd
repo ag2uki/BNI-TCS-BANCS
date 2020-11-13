@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://service.bni.co.id/core/bo"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:bons0="http://service.bni.co.id/core/bo">
+	<xsd:include schemaLocation="chequeInfo.xsd"></xsd:include>
+	<xsd:complexType name="CompiledInquiryChequeRes">
+		<xsd:sequence>
+
+			<xsd:element minOccurs="0" name="chequeInfo"
+				type="bons0:chequeInfo">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

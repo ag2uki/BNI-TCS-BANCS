@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://service.bni.co.id/core/bo"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="InquiryChequeDetailReq">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="accountNo"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="chequePrefix"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="chequeNo"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="status"
+				type="xsd:string">
+			</xsd:element>
+
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

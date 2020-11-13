@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://service.bni.co.id/core/bo"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="InquiryChequeDetailRes">
+		<xsd:sequence>
+
+			<xsd:element minOccurs="0" name="chequePrefix"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="chequeNo"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="chequeFirstNo"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="transactionDate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="transactionTime"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="status"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="amount"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tellerID"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="branchCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tranCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="journalNumber"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="reason"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="description"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

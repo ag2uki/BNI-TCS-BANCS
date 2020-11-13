@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="GLTransferDepositReq">
+		<xsd:all>
+			<xsd:element minOccurs="0" name="nonGLAccountNum" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="glAmount" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="glAcccountNum" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="extNarration" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="glCurrency" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="nonGlAmount" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="nonGlCurrency" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="baseAmount" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="exchangeRateType" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="narration" type="xsd:string"></xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

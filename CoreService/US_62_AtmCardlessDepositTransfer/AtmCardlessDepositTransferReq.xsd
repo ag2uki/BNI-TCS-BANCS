@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://service.bni.co.id/core/bo"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="AtmCardlessDepositTransferReq">
+		<xsd:all>
+			<xsd:element minOccurs="0" name="toAcctNo"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="balance"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="amount"
+				type="xsd:decimal">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="clearCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tranDate"
+				type="xsd:string">
+			</xsd:element>
+
+
+
+			<xsd:element minOccurs="0" name="baseCurrAmt"
+				type="xsd:decimal">
+			</xsd:element>
+
+
+
+
+			<xsd:element minOccurs="0" name="sysDate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="bin" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="refference"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="merchant"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="country"
+				type="xsd:string">
+			</xsd:element>
+
+
+			<xsd:element minOccurs="0" name="postTime"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="termId"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="termAddress"
+				type="xsd:string">
+			</xsd:element>
+
+
+
+
+
+
+
+
+
+
+			<xsd:element minOccurs="0" name="branch"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>
