@@ -1,0 +1,113 @@
+Sample SOAP Request
+```
+<soapenv:Envelope xmlns:q0="http://service.bni.co.id/core" xmlns:bo="http://service.bni.co.id/core/bo" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <soapenv:Body>
+      <q0:transaction>
+         <request>
+            <systemId>NEWIBANK-CORE</systemId>
+            <content xsi:type="bo:TermDepositRateInquiryReq">
+               <amount>10000000</amount>
+               <accountType>3901</accountType>
+               <efektifDate/>
+               <intMethod/>
+               <frekuensi/>
+               <period>12</period>
+               <termBasis/>
+               <page/>
+               <intRate/>
+            </content>
+         </request>
+      </q0:transaction>
+   </soapenv:Body>
+</soapenv:Envelope>
+```
+
+Sample SOAP Response
+```
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dpss0="bons">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <core:transactionResponse xmlns:bo="http://service.bni.co.id/core/bo" xmlns:core="http://service.bni.co.id/core">
+         <response>
+            <header>
+               <coreJournal>237980</coreJournal>
+            </header>
+            <content xsi:type="bo:CompiledTermDepositRateInquiryRes">
+               <rateDetails>
+                  <kodeRate>1001</kodeRate>
+                  <method>T</method>
+                  <freq>M</freq>
+                  <period>3</period>
+                  <frekuensi>30D</frekuensi>
+                  <termBasis></termBasis>
+                  <nominalRate>0,00</nominalRate>
+                  <termRate>1.0000</termRate>
+                  <tierVal2></tierVal2>
+                  <rate2></rate2>
+               </rateDetails>
+               <rateDetails>
+                  <kodeRate>1501</kodeRate>
+                  <method>T</method>
+                  <freq>1A</freq>
+                  <period>6</period>
+                  <frekuensi>12M</frekuensi>
+                  <termBasis></termBasis>
+                  <nominalRate>0,00</nominalRate>
+                  <termRate>1.0000</termRate>
+                  <tierVal2></tierVal2>
+                  <rate2></rate2>
+               </rateDetails>
+               <rateDetails>
+                  <kodeRate>1511</kodeRate>
+                  <method>R</method>
+                  <freq>1A</freq>
+                  <period>1</period>
+                  <frekuensi>12M</frekuensi>
+                  <termBasis></termBasis>
+                  <nominalRate>0,00</nominalRate>
+                  <termRate>1.0000</termRate>
+                  <tierVal2></tierVal2>
+                  <rate2></rate2>
+               </rateDetails>
+               <rateDetails>
+                  <kodeRate>1521</kodeRate>
+                  <method>T</method>
+                  <freq>1A</freq>
+                  <period>6</period>
+                  <frekuensi>12M</frekuensi>
+                  <termBasis></termBasis>
+                  <nominalRate>0,00</nominalRate>
+                  <termRate>1.0000</termRate>
+                  <tierVal2></tierVal2>
+                  <rate2></rate2>
+               </rateDetails>
+               <rateDetails>
+                  <kodeRate>2501</kodeRate>
+                  <method>A</method>
+                  <freq>1A</freq>
+                  <period>6</period>
+                  <frekuensi>12M</frekuensi>
+                  <termBasis></termBasis>
+                  <nominalRate>0,00</nominalRate>
+                  <termRate>1.0000</termRate>
+                  <tierVal2></tierVal2>
+                  <rate2></rate2>
+               </rateDetails>
+               <rateDetails>
+                  <kodeRate>2901</kodeRate>
+                  <method>A</method>
+                  <freq>1A</freq>
+                  <period>12</period>
+                  <frekuensi>24M</frekuensi>
+                  <termBasis></termBasis>
+                  <nominalRate>0,00</nominalRate>
+                  <termRate>1.0000</termRate>
+                  <tierVal2></tierVal2>
+                  <rate2></rate2>
+               </rateDetails>
+            </content>
+         </response>
+      </core:transactionResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+```
