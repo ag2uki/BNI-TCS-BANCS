@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ComIbmCompute.msgnode="ComIbmCompute.msgnode" xmlns:ComIbmLabel.msgnode="ComIbmLabel.msgnode" xmlns:ComIbmResetContentDescriptor.msgnode="ComIbmResetContentDescriptor.msgnode" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eflow="http://www.ibm.com/wbi/2005/eflow" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility" nsURI="id/co/bni/mf/core/handler/list/SF_OpenDepositAccountListByBalance.msgflow"
+    nsPrefix="id_co_bni_mf_core_handler_list_SF_OpenDepositAccountListByBalance.msgflow">
+  <eClassifiers xmi:type="eflow:FCMComposite" name="FCMComposite_1">
+    <eSuperTypes href="http://www.ibm.com/wbi/2005/eflow#//FCMBlock"/>
+    <translation xmi:type="utility:TranslatableString" key="SF_OpenDepositAccountListByBalance" bundleName="id/co/bni/mf/core/handler/list/SF_OpenDepositAccountListByBalance" pluginId="MF_CoreService"/>
+    <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/MF_CoreService/icons/full/obj16/SF_OpenDepositAccountListByBalance.gif"/>
+    <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/MF_CoreService/icons/full/obj30/SF_OpenDepositAccountListByBalance.gif"/>
+    <composition>
+      <nodes xmi:type="eflow:FCMSource" xmi:id="InTerminal.Input1" location="15,145">
+        <translation xmi:type="utility:TranslatableString" key="InTerminal.InputDataResponse" bundleName="id/co/bni/mf/core/handler/list/SF_OpenDepositAccountListByBalance" pluginId="MF_CoreService"/>
+      </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_7" location="162,145" computeExpression="esql://routine/id.co.bni.mf.core.handler.list#SF_OpenDepositAccountByBalance_CN_divideMessage.Main">
+        <translation xmi:type="utility:ConstantString" string="CN_divideMessage"/>
+      </nodes>
+      <nodes xmi:type="ComIbmLabel.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_8" location="299,79" labelName="HeaderOpenDepositByBalance">
+        <translation xmi:type="utility:ConstantString" string="LB_headerOpenDepositByBalance"/>
+      </nodes>
+      <nodes xmi:type="ComIbmLabel.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_9" location="301,147" labelName="ContentOpenDepositAccByBalance">
+        <translation xmi:type="utility:ConstantString" string="LB_contentOpenDepositAccByBalance"/>
+      </nodes>
+      <nodes xmi:type="ComIbmLabel.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_10" location="311,225" labelName="FooterOpenDepositAccByBalance">
+        <translation xmi:type="utility:ConstantString" string="LB_footerOpenDepositAccByBalance"/>
+      </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_14" location="739,151" computeExpression="esql://routine/id.co.bni.mf.core.handler.list#SF_OpenDepositAccountByBalance_CN_messageTransform.Main">
+        <translation xmi:type="utility:ConstantString" string="CN_messageTransform"/>
+      </nodes>
+      <nodes xmi:type="eflow:FCMSink" xmi:id="OutTerminal.Output1" location="916,152">
+        <translation xmi:type="utility:TranslatableString" key="OutTerminal.OutputDataResponse" bundleName="id/co/bni/mf/core/handler/list/SF_OpenDepositAccountListByBalance" pluginId="MF_CoreService"/>
+      </nodes>
+      <nodes xmi:type="ComIbmResetContentDescriptor.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="526,79" messageDomain="MRM" resetMessageDomain="true" messageSet="MS_CoreService" resetMessageSet="true" messageType="{http://mdef.core.esb.bni.co.id}:headerOpenDepositByBalance" resetMessageType="true" messageFormat="Binary1" resetMessageFormat="true">
+        <translation xmi:type="utility:ConstantString" string="RCD_headerOpenDeposit"/>
+      </nodes>
+      <nodes xmi:type="ComIbmResetContentDescriptor.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="513,147" messageDomain="MRM" resetMessageDomain="true" messageSet="MS_CoreService" resetMessageSet="true" messageType="{http://mdef.core.esb.bni.co.id}:contentOpenDepositAccByBalance" resetMessageType="true" messageFormat="Binary1" resetMessageFormat="true">
+        <translation xmi:type="utility:ConstantString" string="RCD_contentOpenDepositAcc"/>
+      </nodes>
+      <nodes xmi:type="ComIbmResetContentDescriptor.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="518,225" messageDomain="MRM" resetMessageDomain="true" messageSet="MS_CoreService" resetMessageSet="true" messageType="{http://mdef.core.esb.bni.co.id}:footerOpenDepositByBalance" resetMessageType="true" messageFormat="Binary1" resetMessageFormat="true">
+        <translation xmi:type="utility:ConstantString" string="RCD_footerOpenDepositAcc"/>
+      </nodes>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_7" targetNode="FCMComposite_1_7" sourceNode="InTerminal.Input1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_14" targetNode="OutTerminal.Output1" sourceNode="FCMComposite_1_14" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_1" sourceNode="FCMComposite_1_8" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_2" targetNode="FCMComposite_1_2" sourceNode="FCMComposite_1_9" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_3" targetNode="FCMComposite_1_3" sourceNode="FCMComposite_1_10" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_4" targetNode="FCMComposite_1_14" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_5" targetNode="FCMComposite_1_14" sourceNode="FCMComposite_1_2" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_6" targetNode="FCMComposite_1_14" sourceNode="FCMComposite_1_3" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+    </composition>
+    <propertyOrganizer/>
+    <stickyBoard/>
+  </eClassifiers>
+</ecore:EPackage>

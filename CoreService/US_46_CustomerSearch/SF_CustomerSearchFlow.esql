@@ -1,0 +1,115 @@
+BROKER SCHEMA id.co.bni.mf.core.handler.list
+
+/*
+ *
+ * File name: SF_CustomerSearchFlow.esql
+ *
+ * Purpose  : Transfrom Message Response customer search from ICONS (BANCS format) to XML format
+ *
+ * Authors  : Atrizal 
+ *			  
+ * Date     : March 2011
+ * Version  : 1.0
+ *
+ * @copyright  PT Bank Negara Indonesia. 2011.  All rights reserved.
+ *
+ */
+
+
+/*
+ * This module used to perpare response message for parsing
+ */
+CREATE COMPUTE MODULE SF_CustomerSearchFlow_perpareForParsing
+	
+	DECLARE LB_PARSE_RECORD CONSTANT CHAR 'parseRecord';
+	
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		CALL CopyMessageHeaders();
+		
+		DECLARE header, content 		ROW;
+		DECLARE i 						INTEGER 90;
+		DECLARE currentElement 			INTEGER 1;
+		DECLARE length1 				INTEGER 129;
+		DECLARE tempLength, threshold 	INTEGER;
+		DECLARE counter 				INTEGER 1;
+		
+		SET Environment.process.counter 	= 1;
+		SET Environment.process.threshold	= 1;
+
+		SET tempLength 						= LENGTH(InputRoot.BLOB.BLOB);
+		SET currentElement 				   	= ROUND(tempLength/length1,0 MODE ROUND_UP);
+		SET Environment.process.lastRecord 	= currentElement;
+		SET threshold 						= currentElement - 1; --this computation for number of records
+		SET Environment.process.threshold	= threshold;
+				
+		WHILE i < tempLength DO
+			IF currentElement=counter THEN -- IF LAST MESSAGE
+					PROPAGATE TO LABEL LB_PARSE_RECORD DELETE NONE;
+			ELSE
+					SET content 					= SUBSTRING(InputRoot.BLOB.BLOB FROM i FOR length1);
+					SET OutputRoot.BLOB.BLOB 		= content;
+					PROPAGATE TO LABEL LB_PARSE_RECORD DELETE NONE;
+			END IF;
+					SET i 							= i + length1;
+					SET counter 					= counter + 1; -- Counter to the last
+					SET Environment.process.counter = counter;
+		END WHILE;
+		
+		RETURN TRUE;
+		
+	END;
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+END MODULE;
+
+
+/*
+ * This module used to compose response message (XML format)
+ */
+CREATE COMPUTE MODULE SF_CustomerSearchFlow_setSoap
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		CALL CopyMessageHeaders();
+		
+		DECLARE xsi 				NAMESPACE 'http://www.w3.org/2001/XMLSchema-instance';
+		DECLARE bo 					NAMESPACE 'http://service.bni.co.id/core/bo';
+		DECLARE soapenv 			NAMESPACE 'http://schemas.xmlsoap.org/soap/envelope/';
+		DECLARE counter, lastRecord INTEGER;
+		DECLARE content 			REFERENCE TO InputRoot.MRM.Body2;
+		
+		SET counter 	= Environment.process.counter;
+		SET lastRecord 	= Environment.process.threshold;
+					
+		IF counter = Environment.process.lastRecord THEN
+			SET OutputRoot.XMLNSC.content.lastRecord						= Environment.response.temp.lastRecordNum;
+			SET OutputRoot.XMLNSC.content									= Environment.response.temp;
+			SET OutputRoot.XMLNSC.content.(XMLNSC.NamespaceDecl) xmlns:xsi 	= xsi;
+			SET OutputRoot.XMLNSC.content.(XMLNSC.NamespaceDecl) xmlns:b0 	= bo;
+			SET OutputRoot.XMLNSC.content.(XMLNSC.Attribute)xsi:type		= 'bo:CompiledCustomerSearchRes';
+		ELSE
+			SET Environment.response.temp.customerInfo[counter]				= content;
+			SET Environment.response.temp.lastRecordNum						= lastRecord;
+			RETURN FALSE;
+		END IF;
+	END;
+	
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+END MODULE;

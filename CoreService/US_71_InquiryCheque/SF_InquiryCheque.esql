@@ -1,0 +1,183 @@
+BROKER SCHEMA id.co.bni.mf.core.handler.list
+PATH id.co.bni.common,id.co.bni.mf.common.core;
+
+
+CREATE COMPUTE MODULE SF_InquiryCheque_CN_parseChequeRecord
+	DECLARE LB_PARSE_CHEQUE_DATA 		CONSTANT CHAR 'parseChequeInfo';
+	--DECLARE LB_PARSE_CHEQUE_LAST_RECORD CONSTANT CHAR 'parseLastRecord';
+
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		 CALL CopyMessageHeaders();
+		 
+		 DECLARE data,record1,midleString,message,pesan,midleSpace,midleCoba char;
+		 DECLARE mesCast, mConvert 					BLOB; 
+		 DECLARE lMessage 							integer;
+		 DECLARE lastRec 							BOOLEAN;
+		 DECLARE ICONS_HEADER 						INTEGER 89;
+		 DECLARE CHEQUE_RECORD_LENGTH 				INTEGER 35;
+		 DECLARE MIDDLE_STRING_START_POSITION 		INTEGER 1;
+		 DECLARE MIDDLE_STRING_LENGTH 				INTEGER 4;
+		 
+		 
+		 SET data = CAST(InputRoot.BLOB.BLOB AS CHAR CCSID InputRoot.Properties.CodedCharSetId);
+		 
+		 /* first 89 bit data of the icon message is ICONS HEADER, own account data start from bit 90 */ 
+		 SET message 	= SUBSTRING(data from ICONS_HEADER + 1);
+		 SET mConvert 	= CAST(data as BLOB CCSID InputRoot.Properties.CodedCharSetId);
+		 SET lMessage 	= LENGTH(message);
+		
+		 SET lastRec 	= false;	
+		 	 
+		 WHILE lastRec 	= false  DO
+		 
+				-- get 1 record from message
+		 		SET record1 = SUBSTRING(message from 1 for CHEQUE_RECORD_LENGTH);
+		 		
+		 		-- MiddleSting is last record indicator, if middleSting is numeric then it is last record
+		 		SET midleString 		= SUBSTRING(record1 from MIDDLE_STRING_START_POSITION for MIDDLE_STRING_LENGTH);
+		 		SET mesCast 			= CAST(record1 as BLOB CCSID InputRoot.Properties.CodedCharSetId);
+				
+		 		DECLARE SpecialMidleString  BOOLEAN;		 		
+		 		SET midleSpace 			= isNumericSpace(midleString);  
+		 		SET midleString 		= midleSpace;		
+		 		
+		 		-- Check whether the middlestring is numeric or not
+		 		SET SpecialMidleString 	= isNumeric(midleString); 
+		 				 		
+		 		IF SpecialMidleString = true THEN
+		 			-- Last record condition
+		 			SET OutputRoot.BLOB.BLOB 		= mesCast;
+		 			SET lastRec 					= true; 
+		 			SET Environment.procces.lastRec = lastRec;
+					PROPAGATE TO LABEL LB_PARSE_CHEQUE_DATA DELETE NONE;
+
+		 		ELSE
+		 			SET OutputRoot.BLOB.BLOB = mesCast; 
+					PROPAGATE TO LABEL LB_PARSE_CHEQUE_DATA DELETE NONE;					
+					SET message = SUBSTRING(message from CHEQUE_RECORD_LENGTH + 1 for lMessage - CHEQUE_RECORD_LENGTH);
+		 			SET lastRec = FALSE;
+		 		
+		 	END IF;
+		 END WHILE;	
+		RETURN FALSE;
+	END; 
+
+		
+	/*
+ 	* This funcrion used to validate middlestring numeric or not 
+ 	*/
+	CREATE FUNCTION  isNumeric(IN strMidle CHAR) RETURNS BOOLEAN BEGIN 
+		
+		DECLARE EXIT HANDLER FOR SQLSTATE LIKE '%'
+  		BEGIN
+  				DECLARE result BOOLEAN false;
+  				return result;
+  		END;
+  		
+		DECLARE 	midleString char;
+		SET midleString 					= strMidle;
+		SET Environment.procces.midleString = CAST(midleString as INTEGER);
+		
+		DECLARE result BOOLEAN true;
+		return result;
+	END;
+	
+	/*
+ 	* This function used to validate middlestring is space or not 
+ 	*/
+	CREATE FUNCTION isNumericSpace(IN midleString CHAR) RETURNS CHAR BEGIN
+		DECLARE 	result 	char;
+		DECLARE 	data 	char;
+		SET data 	= midleString;
+		SET result 	= REPLACE(midleString,' ','0');
+		return result;
+	END;			
+	
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+	
+	
+
+END MODULE;
+
+
+CREATE COMPUTE MODULE SF_InquiryCheque_CN_StoreToEnvVariable
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		CALL CopyMessageHeaders();
+		
+		DECLARE contentType CHAR 'Compiled'||Environment.request.contentType||'Res';
+		SET OutputRoot.XMLNSC.content 				= Environment.response.msg;
+		--SET OutputRoot.XMLNSC.content.cifName[<] 	= Environment.response.LastRecord.cifName;
+		--SET OutputRoot.XMLNSC.content.cifNum[<] 	= Environment.response.LastRecord.cifNum;
+		
+		DECLARE content REFERENCE TO OutputRoot.XMLNSC.content;
+	
+		CALL  addContentType(contentType, content);
+		
+--		SET OutputRoot.XMLNSC.soapenv:content.(XMLNSC.Attribute)xsi= 'bo:CompiledOwnedAccountListRes';
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+END MODULE;
+
+CREATE COMPUTE MODULE SF_InquiryCheque_CN_collectRecord
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+	
+--		CALL CopyMessageHeaders();
+		DECLARE valueBlob, checkLast, checkLastNum, test char;
+		SET 	valueBlob 	= CAST(InputRoot.BLOB.BLOB AS CHAR CCSID InputRoot.Properties.CodedCharSetId);
+		
+--		SET OutputRoot.XMLNSC.shorAccountInfo.accountNum = InputRoot.MRM.accountNum;
+		DECLARE responseNum INT COALESCE(Environment.response.responseNum, 0);
+		SET 	responseNum = responseNum + 1;
+		SET 	test		= Environment.procces.lastRec;
+		
+		IF test IS NULL then
+			SET Environment.response.msg.chequeInfo[responseNum].chequeNo 			= InputRoot.MRM.chequeNo;
+			SET Environment.response.msg.chequeInfo[responseNum].numberofCheques 	= InputRoot.MRM.numberofCheques;
+			SET Environment.response.msg.chequeInfo[responseNum].status 			= InputRoot.MRM.status;
+			SET Environment.response.msg.chequeInfo[responseNum].availableCheque 	= InputRoot.MRM.availableCheque;
+			SET Environment.response.msg.chequeInfo[responseNum].bookType 			= InputRoot.MRM.bookType;
+			SET Environment.response.msg.chequeInfo[responseNum].branchCode 		= InputRoot.MRM.branchCode;
+			SET Environment.response.msg.chequeInfo[responseNum].issuedDate 		= InputRoot.MRM.issuedDate;
+			SET Environment.response.responseNum = responseNum;
+			RETURN FALSE;
+		ELSE
+			--SET Environment.response.LastRecord.cifNum 		= InputRoot.MRM.cifNum;
+			--SET Environment.response.LastRecord.cifName 	= InputRoot.MRM.cifName;	
+			RETURN TRUE;
+		END IF;	
+
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+END MODULE;

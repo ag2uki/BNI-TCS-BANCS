@@ -1,0 +1,184 @@
+BROKER SCHEMA id.co.bni.mf.core.handler.list
+PATH id.co.bni.common,id.co.bni.mf.common.core;
+/*
+ *
+ * File name: SF_OpenAccountList.esql
+ *
+ * Purpose  : Transfrom Message Response OpenAccountList from ICONS (BANCS) to XML format
+ *
+ * Authors  : Elisabeth Sitanggang
+ *            
+ * Date     : September 2012
+ * Version  : 1.0
+ *
+ * @copyright  PT Bank Negara Indonesia. 2011.  All rights reserved.
+ *
+ */
+
+
+CREATE COMPUTE MODULE SF_OpenDepositAccountList_CN_divideMessage
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+	DECLARE totalLengthMsg,totalBodyLength,numberRecordData,cutRecordHeader,cutStartRecordData,cutEndRecordData INTEGER;
+		DECLARE MessageBody,RecordHeaderMsg,newRecord ROW;
+		DECLARE headerLength 				INTEGER 89;
+		--DECLARE headerOpenDepositLength 	INTEGER 169; --test add nomer hape 20 digit
+		DECLARE headerOpenDepositLength 	INTEGER 189;
+		DECLARE contentOpenDepositAccLength INTEGER 129; 
+		DECLARE footerOpenDepositAccLength 	INTEGER 22;
+		DECLARE index INTEGER 1;
+		DECLARE flag BOOLEAN FALSE;
+		
+		CALL CopyMessageHeaders();
+		SET totalLengthMsg			= LENGTH(InputRoot.BLOB.BLOB);
+		SET cutStartRecordData  	= headerLength + headerOpenDepositLength + 1;
+		SET totalBodyLength 		= totalLengthMsg - headerLength;
+		SET cutRecordHeader			= headerLength + 1;
+		SET Environment.Variables.IndexContentOpenDepositAcc = 1;
+		
+		--SET MessageBody      							= SUBSTRING(InputRoot.BLOB.BLOB FROM 0 FOR totalLengthMsg);
+		SET MessageBody      							= InputRoot.BLOB.BLOB;
+		SET numberRecordData 							= ((totalLengthMsg - (headerLength+headerOpenDepositLength+footerOpenDepositAccLength))/contentOpenDepositAccLength)+2;
+		SET Environment.Variables.IndexFooterOpenDepositAcc= numberRecordData; 
+		
+		WHILE index <= numberRecordData DO
+			IF index=1 THEN
+				SET newRecord 									= SUBSTRING(MessageBody FROM cutRecordHeader FOR headerOpenDepositLength);
+				SET OutputRoot.BLOB.BLOB 						= newRecord;
+				-- parse RecordHeader
+				PROPAGATE TO LABEL 'HeaderOpenDeposit' FINALIZE DEFAULT DELETE NONE;
+			ELSEIF index = numberRecordData THEN
+				SET Environment.Variables.IndexContentOpenDepositAcc= numberRecordData;
+				SET Environment.Variables.IndexFooterOpenDepositAcc = numberRecordData;
+				DECLARE numRecordData INTEGER;
+				SET numRecordData = numberRecordData - 2;
+				DECLARE cut INTEGER;
+				SET cut = headerLength + headerOpenDepositLength + 1 + (numRecordData*contentOpenDepositAccLength );
+				SET newRecord  									= SUBSTRING(MessageBody FROM cut FOR footerOpenDepositAccLength);
+				SET OutputRoot.BLOB.BLOB 						= newRecord;
+				SET flag										= TRUE;
+				SET Environment.Variables.flag 					= flag;
+				PROPAGATE TO LABEL 'FooterOpenDepositAcc' FINALIZE DEFAULT DELETE NONE;
+			ELSE
+				SET Environment.Variables.IndexContentOpenDepositAcc 		= index;
+				SET newRecord  									= SUBSTRING(MessageBody FROM cutStartRecordData FOR contentOpenDepositAccLength );
+				SET OutputRoot.BLOB.BLOB 						= newRecord;
+				SET cutEndRecordData 							= cutStartRecordData + contentOpenDepositAccLength;
+				SET cutStartRecordData							= cutEndRecordData;
+				PROPAGATE TO LABEL 'ContentOpenDepositAcc' FINALIZE DEFAULT DELETE NONE;
+			END IF;
+			SET index = index + 1;	
+		END WHILE;
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;
+
+
+CREATE COMPUTE MODULE SF_OpenDepositAccountList_CN_messageTransform
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE xsi NAMESPACE 'http://www.w3.org/2001/XMLSchema-instance';
+		DECLARE bo NAMESPACE 'http://service.bni.co.id/core/bo';
+		
+		DECLARE index 		REFERENCE TO Environment.Variables.IndexContentOpenDepositAcc;
+		DECLARE lastIndex	REFERENCE TO Environment.Variables.IndexFooterOpenDepositAcc;
+		DECLARE flag  		REFERENCE TO Environment.Variables.flag;
+
+		CALL CopyMessageHeaders();
+		IF index = 1 THEN
+			DECLARE reffHeaderOpenDeposit reference to InputRoot.MRM.headerOpenDepositAcc.*[1];
+			WHILE(LASTMOVE(reffHeaderOpenDeposit)) DO
+				DECLARE fieldName 		CHAR FIELDNAME(reffHeaderOpenDeposit);
+				IF NOT fieldName = 'dummy' THEN
+					SET Environment.Variables.content.{fieldName} 	= InputRoot.MRM.headerOpenDepositAcc.{fieldName};
+				END IF;
+				MOVE reffHeaderOpenDeposit NEXTSIBLING;
+			END WHILE;
+		 ELSEIF index < lastIndex THEN
+			DECLARE indexRecord INTEGER;
+			SET indexRecord = index - 1;
+			SET  Environment.Variables.content.openDepositAccountInfo[indexRecord]			= InputRoot.MRM.openDepositAccountInfo;
+			
+			IF Environment.Variables.content.openDepositAccountInfo[indexRecord].accountTypeCode 		= 'I' THEN
+				SET Environment.Variables.content.openDepositAccountInfo[indexRecord].accountTypeCode 	= 'DEP';
+			END IF;
+				
+			DECLARE matDateValue    REFERENCE TO Environment.Variables.content.openDepositAccountInfo[indexRecord].matDate;
+			IF SUBSTRING(matDateValue FROM 1 FOR 2) > 31 THEN	
+				SET Environment.Variables.content.openDepositAccountInfo[indexRecord].matDate = '';
+			ELSE
+				DECLARE date1 DATE CAST(InputRoot.MRM.openDepositAccountInfo.matDate AS DATE FORMAT 'ddMMyyyy');
+				DECLARE date2 CHARACTER CAST(date1 AS CHARACTER FORMAT 'yyyy-MM-dd');
+				SET Environment.Variables.content.openDepositAccountInfo[indexRecord].matDate = date2;
+			END IF;
+						
+			SET Environment.Variables.content.openDepositAccountInfo[indexRecord].balance =
+				TRIM(' ' FROM Environment.Variables.content.openDepositAccountInfo[indexRecord].balance);
+			SET Environment.Variables.content.openDepositAccountInfo[indexRecord].intRate =
+				TRIM(' ' FROM Environment.Variables.content.openDepositAccountInfo[indexRecord].intRate);
+			SET Environment.Variables.content.openDepositAccountInfo[indexRecord].effectiveBalance =
+				TRIM(' ' FROM Environment.Variables.content.openDepositAccountInfo[indexRecord].effectiveBalance);
+					
+			DECLARE reffDataBalance REFERENCE TO Environment.Variables.content.openDepositAccountInfo[indexRecord].balance;
+			CALL replaceMinus(reffDataBalance,reffDataBalance);
+			DECLARE reffDataIntRate REFERENCE TO Environment.Variables.content.openDepositAccountInfo[indexRecord].intRate;
+			CALL replaceMinus(reffDataIntRate,reffDataIntRate);
+			DECLARE reffDataIeffectiveBalance REFERENCE TO Environment.Variables.content.openDepositAccountInfo[indexRecord].effectiveBalance;
+			CALL replaceMinus(reffDataIeffectiveBalance,reffDataIeffectiveBalance);
+			
+		 ELSEIF index = lastIndex THEN
+			DECLARE refffooterOpenDepositAcc reference to InputRoot.MRM.footerOpenDepositAcc.*[1];
+			WHILE(LASTMOVE(refffooterOpenDepositAcc)) DO
+				DECLARE fieldName2 		CHAR FIELDNAME(refffooterOpenDepositAcc);
+				SET Environment.Variables.content.{fieldName2}							= InputRoot.MRM.footerOpenDepositAcc.{fieldName2};
+				
+				SET Environment.Variables.content.totBalance =
+					TRIM(' ' FROM Environment.Variables.content.totBalance);
+				
+				DECLARE reffDataTotBalance REFERENCE TO Environment.Variables.content.totBalance;
+				CALL replaceMinus(reffDataTotBalance,reffDataTotBalance);
+				
+				MOVE refffooterOpenDepositAcc NEXTSIBLING;
+			END WHILE;
+		END IF;
+		
+		IF flag = TRUE THEN	
+			CREATE LASTCHILD OF OutputRoot DOMAIN 'XMLNSC';
+			SET OutputRoot.XMLNSC.content 												= Environment.Variables.content;														
+			SET OutputRoot.XMLNSC.content.(XMLNSC.NamespaceDecl)xmlns:xsi 				= xsi;
+			SET OutputRoot.XMLNSC.content.(XMLNSC.Attribute)xsi:type 					= 'bo:CompiledOpenDepositAccountListRes'; 
+		ELSE
+			RETURN FALSE;
+		END IF;
+		
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;

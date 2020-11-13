@@ -1,0 +1,376 @@
+BROKER SCHEMA id.co.bni.mf.core.handler.list
+PATH id.co.bni.common,id.co.bni.mf.common.core;
+
+/*
+ *
+ * File name: SF_CustomerSearchFlow.esql
+ *
+ * Purpose  : Transfrom Message Response Deposit transaction Inquiry from ICONS (BANCS format) to XML format
+ *
+ * Authors  : Januardi Ismail 
+ *			  
+ * Date     : March 2011
+ * Version  : 1.0
+ *
+ * @copyright  PT Bank Negara Indonesia. 2011.  All rights reserved.
+ *
+ */
+
+
+/*
+ * This module used to devide response message and check type message(financtial or rollOver)
+ */
+ 
+CREATE COMPUTE MODULE DepTrxInquiryFlow_financialOrRollOver
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+
+		DECLARE responseMsg				REFERENCE TO InputRoot.BLOB.BLOB;
+				
+		DECLARE content     			ROW;
+		DECLARE contentEdit				ROW;
+		DECLARE record    				ROW;
+		DECLARE type 		    		ROW;
+		
+		DECLARE financialType   		CHARACTER '01,80,81,82,84,85';
+		DECLARE rollOverType			CHARACTER '42';
+		DECLARE status					CHARACTER;
+		DECLARE firstRecord				CHARACTER;
+		DECLARE firstRecordRO			CHARACTER;
+		DECLARE firstRecordFT			CHARACTER;
+
+		
+		DECLARE originalLength			INTEGER;
+		DECLARE contentLength 			INTEGER;
+		DECLARE contentLengthRemain	 	INTEGER;
+		DECLARE nilai					INTEGER 1;
+		DECLARE contentValue			INTEGER 0;
+		DECLARE contentValuePlus		INTEGER;
+		DECLARE arrayNumberRO			INTEGER;
+		DECLARE arrayNumberFT			INTEGER;
+		
+		CALL CopyMessageHeaders();
+		
+		SET originalLength 	= LENGTH(responseMsg);
+		SET contentLength 	= originalLength - 89;		
+		SET content 		= SUBSTRING(responseMsg from 90 for contentLength);	
+		SET Environment.Variables.responseContent	= content;
+							
+		SET Environment.Variables.Detail.contentLength = contentLength;
+		SET firstRecord 	= 'Y';
+		SET firstRecordFT 	= 'Y';
+		SET firstRecordRO 	= 'Y';
+		
+		
+		WHILE contentValue < contentLength DO
+			
+			IF firstRecord = 'Y' THEN			
+			--type 1st checking
+			 	SET type     = SUBSTRING(content from 1 for 2);		 	
+			ELSE
+				SET type     = SUBSTRING(contentEdit from 1 for 2);
+			END IF;
+								
+			--cast and replace			
+			SET Environment.Variables.Detail.finOrRoll 				= CAST(type AS CHARACTER CCSID 1208);
+			SET Environment.Variables.Detail.finOrRoll 				= REPLACE(Environment.Variables.Detail.finOrRoll,' 1','01');
+				
+			-- GOTO Roll Over type 			
+  			IF (CONTAINS(rollOverType,Environment.Variables.Detail.finOrRoll))THEN 
+  				IF firstRecordRO = 'Y' AND firstRecord = 'Y' THEN
+  					SET record   									= SUBSTRING(content from 1 for 80);
+  					SET contentLengthRemain							= contentLength - LENGTH(record); 
+  					SET contentEdit									= SUBSTRING(content from 81 for contentLengthRemain);
+  					SET arrayNumberRO								= 1;					
+  				ELSEIF firstRecordRO = 'Y' AND firstRecord = 'N' THEN
+  					SET record   									= SUBSTRING(contentEdit from 1 for 80);
+  					SET contentLengthRemain							= contentLengthRemain - LENGTH(record); 
+  					SET contentEdit									= SUBSTRING(contentEdit from 81 for contentLengthRemain);
+  					SET arrayNumberRO								= 1;									
+  				ELSE
+  					SET record   									= SUBSTRING(contentEdit from 1 for 80);
+  					SET contentLengthRemain							= contentLengthRemain - LENGTH(record);
+  					SET contentEdit									= SUBSTRING(contentEdit from 81 for contentLengthRemain); 					
+  					SET arrayNumberRO								= arrayNumberRO + 1;
+  				END IF;
+  				
+  				SET OutputRoot.BLOB.BLOB 							= record;
+  				
+  				SET contentValuePlus								= 80;
+  				SET firstRecord										= 'N';
+  				SET firstRecordRO									= 'N';
+  							
+  				SET Environment.Variables.Detail.contentValuePlus 	= contentValuePlus;
+  				SET Environment.Variables.Detail.type			 	= 'rollover';
+  				SET Environment.Variables.Detail.status 			= 'Y';
+  				SET Environment.Variables.Detail.arrayNumberRO		= arrayNumberRO;
+  				SET Environment.Variables.Detail.firstRecord		= firstRecord;
+  				
+  				IF contentLengthRemain = 0 THEN
+					SET Environment.Variables.Detail.lastRecord = 'Y';
+				ELSE
+					SET Environment.Variables.Detail.lastRecord = 'N';
+				END IF;
+  					
+  				PROPAGATE TO LABEL 'rollOver' FINALIZE DEFAULT DELETE NONE;			
+  			ELSEIF (CONTAINS(financialType,Environment.Variables.Detail.finOrRoll)) THEN
+  			-- GOTO financial type 
+  				IF firstRecordFT = 'Y' AND firstRecord = 'Y' THEN
+  					SET record   									= SUBSTRING(content from 1 for 160);
+  					SET contentLengthRemain							= contentLength - LENGTH(record); 
+  					SET contentEdit									= SUBSTRING(content from 161 for contentLengthRemain);
+  					SET arrayNumberFT								= 1;
+  					SET Environment.Variables.Detail.arrayNumberFT	= arrayNumberFT;
+  				ELSEIF firstRecordFT = 'Y' AND firstRecord = 'N' THEN
+  					SET record   									= SUBSTRING(contentEdit from 1 for 160);
+  					SET contentLengthRemain							= contentLengthRemain - LENGTH(record); 
+  					SET contentEdit									= SUBSTRING(contentEdit from 161 for contentLengthRemain);
+  					SET arrayNumberFT								= 1;
+  					SET Environment.Variables.Detail.arrayNumberFT	= arrayNumberFT;
+  				ELSE
+  					SET record   									= SUBSTRING(contentEdit from 1 for 160);
+  					SET contentLengthRemain							= contentLengthRemain - LENGTH(record);
+  					SET contentEdit									= SUBSTRING(contentEdit from 161 for contentLengthRemain); 					
+  					SET arrayNumberFT = arrayNumberFT + 1;
+  					SET Environment.Variables.Detail.arrayNumberFT	= arrayNumberFT;
+  				END IF;	
+
+  						
+  				SET OutputRoot.BLOB.BLOB 							= record;
+  				
+  				SET contentValuePlus								= 160;
+  				SET firstRecord										= 'N';
+  				SET firstRecordFT									= 'N';
+  				
+  				SET Environment.Variables.Detail.contentValuePlus	= contentValuePlus;
+  				SET Environment.Variables.Detail.type			 	= 'financial';
+  				SET Environment.Variables.Detail.firstRecord		= firstRecord;
+  								
+				IF contentLengthRemain = 0 THEN
+					SET Environment.Variables.Detail.lastRecord = 'Y';
+				ELSE
+					SET Environment.Variables.Detail.lastRecord = 'N';
+				END IF;
+  					
+  				PROPAGATE TO LABEL 'financial' FINALIZE DEFAULT DELETE NONE;
+  				
+  			ELSE
+  				PROPAGATE TO LABEL 'otherType' FINALIZE DEFAULT DELETE NONE;
+  			END IF; 						
+			SET contentValue = contentValue + contentValuePlus;			
+		END WHILE;	
+		RETURN FALSE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+END MODULE;
+
+
+/*
+ * This module used to collect response message with type financial after divide process
+ */
+CREATE COMPUTE MODULE DepTrxInquiryFlow_financial
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		DECLARE contentValue 	REFERENCE TO Environment.Variables.Detail.contentValue;
+		DECLARE content			REFERENCE TO InputRoot.BLOB.BLOB;
+		
+		DECLARE pairNumber 		INTEGER 1;
+		DECLARE cutStart		INTEGER 1;
+		DECLARE cutEnd			INTEGER 80;
+		
+		DECLARE financialRecord	ROW;
+		
+		DECLARE status			CHARACTER;
+		DECLARE label			CHARACTER;
+		
+		CALL CopyMessageHeaders();
+		
+		WHILE pairNumber <= 2 DO
+			IF pairNumber = 1 THEN
+				SET label = 'odd';
+				SET status = 'N'; -- odd record
+			ELSE
+				SET label = 'even';
+				SET status = 'Y'; -- even record
+			END IF;
+				
+			SET financialRecord 							= SUBSTRING(content from cutStart for 80);
+			SET OutputRoot.BLOB.BLOB	 					= financialRecord;
+			SET Environment.Variables.Detail.status			= status;
+				
+			PROPAGATE TO LABEL label FINALIZE DEFAULT DELETE NONE;	
+										
+			SET cutStart     = cutEnd + 1;
+			SET cutEnd       = cutEnd + 80;
+								
+		 	SET pairNumber = pairNumber + 1;
+		END WHILE;
+		
+		RETURN FALSE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+END MODULE;
+
+/*
+ * This module used to pupulate response message
+ */
+CREATE COMPUTE MODULE DepTrxInquiryFlow_populate
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		DECLARE xsi 					NAMESPACE 'http://www.w3.org/2001/XMLSchema-instance';
+		DECLARE bo 						NAMESPACE 'http://service.bni.co.id/core/bo';
+		
+		DECLARE status 					REFERENCE TO Environment.Variables.Detail.status;
+										-- N odd record, Y even record
+										 
+		DECLARE contentValue 			REFERENCE TO Environment.Variables.Detail.contentValue;
+		DECLARE contentLength  	    	REFERENCE TO Environment.Variables.Detail.contentLength;
+		DECLARE type 					REFERENCE TO Environment.Variables.Detail.type;
+		DECLARE firstRecord				REFERENCE TO Environment.Variables.Detail.firstRecord;
+		DECLARE shortHistorical			REFERENCE TO InputRoot.MRM.shortHistorical;
+		DECLARE shortHistorical2		REFERENCE TO InputRoot.MRM.shortHistorical2;
+		DECLARE rollOver				REFERENCE TO InputRoot.MRM.rollOverTrx;
+		DECLARE arrayNumberFT			REFERENCE TO Environment.Variables.Detail.arrayNumberFT;
+		DECLARE arrayNumberRO			REFERENCE TO Environment.Variables.Detail.arrayNumberRO;
+		DECLARE lastRecord				REFERENCE TO Environment.Variables.Detail.lastRecord;
+		
+		DECLARE c 						INTEGER;
+		DECLARE f						INTEGER 1;
+		DECLARE shortHistoricalCounter 	INTEGER 1;
+		
+		DECLARE amount1					CHARACTER;
+		DECLARE balance1				CHARACTER;
+			
+		
+		CALL CopyMessageHeaders();
+			
+		IF type = 'financial' AND status = 'N' THEN	
+			SET Environment.Variables.content.shortHistorical[arrayNumberFT] = shortHistorical;
+			
+			DECLARE transactionDateValue    REFERENCE TO Environment.Variables.content.shortHistorical[arrayNumberFT].transactionDate;
+			IF SUBSTRING(transactionDateValue FROM 1 FOR 2) > 31 THEN	
+				SET Environment.Variables.content.shortHistorical[arrayNumberFT].transactionDate = '';
+			ELSE
+				DECLARE date1 DATE CAST(InputRoot.MRM.shortHistorical.transactionDate AS DATE FORMAT 'ddMMyy');
+				DECLARE date2 CHARACTER CAST(date1 AS CHARACTER FORMAT 'yyyy-MM-dd');
+				SET Environment.Variables.content.shortHistorical[arrayNumberFT].transactionDate = date2;
+			END IF;
+			
+			DECLARE postDateTime 		TIMESTAMP;
+			DECLARE	postDateTimeLength 	INTEGER LENGTH(Environment.Variables.content.shortHistorical[arrayNumberFT].postDateTime);
+			IF postDateTimeLength > 6 THEN
+				SET postDateTime = CAST(Environment.Variables.content.shortHistorical[arrayNumberFT].postDateTime AS TIMESTAMP FORMAT 'ddMMyy HH:mm:ss');
+				SET Environment.Variables.content.shortHistorical[arrayNumberFT].postDateTime = CAST(postDateTime AS CHARACTER FORMAT 'yyyy-MM-ddHH:mm:ss');
+				DECLARE newFormatPostDateTime	CHARACTER	Environment.Variables.content.shortHistorical[arrayNumberFT].postDateTime;
+				SET Environment.Variables.content.shortHistorical[arrayNumberFT].postDateTime	= LEFT(newFormatPostDateTime,10)||'T'||RIGHT(newFormatPostDateTime,8)||'Z';
+			ELSE
+				SET postDateTime = CAST(Environment.Variables.content.shortHistorical[arrayNumberFT].postDateTime AS DATE FORMAT 'ddMMyy'); 
+				SET Environment.Variables.content.shortHistorical[arrayNumberFT].postDateTime = CAST(postDateTime AS CHARACTER FORMAT 'yyyy-MM-dd');
+				DECLARE newFormatPostDateTime	CHARACTER	Environment.Variables.content.shortHistorical[arrayNumberFT].postDateTime;
+				SET Environment.Variables.content.shortHistorical[arrayNumberFT].postDateTime	= newFormatPostDateTime||'T00:00:00Z';
+			END IF;		
+		ELSEIF type = 'financial' AND status = 'Y' THEN
+			DECLARE reffShortHistorical2 reference to shortHistorical2.*[1];
+				WHILE(LASTMOVE(reffShortHistorical2)) DO
+					CREATE LASTCHILD OF Environment.Variables.content.shortHistorical[arrayNumberFT] FROM  reffShortHistorical2;	
+					MOVE reffShortHistorical2 NEXTSIBLING;
+				END WHILE;
+			
+				SET amount1 	= REPLACE(InputRoot.MRM.shortHistorical2.amount,'.','');
+				SET amount1 	= REPLACE(amount1,',','.');
+				SET amount1 	= TRIM(' ' FROM amount1);
+				
+				SET balance1 	= REPLACE(InputRoot.MRM.shortHistorical2.balance,'.','');
+				SET balance1 	= REPLACE(balance1,',','.');
+				SET balance1 	= TRIM(' ' FROM balance1);
+				
+				SET Environment.Variables.content.shortHistorical[arrayNumberFT].amount  = amount1;
+				SET Environment.Variables.content.shortHistorical[arrayNumberFT].balance = balance1;
+				
+				DECLARE reffDatashortHistoricalAmount REFERENCE TO Environment.Variables.content.shortHistorical[arrayNumberFT].amount;
+				CALL replaceMinus(reffDatashortHistoricalAmount,reffDatashortHistoricalAmount);
+				
+				DECLARE reffDatashortHistoricalBalance REFERENCE TO Environment.Variables.content.shortHistorical[arrayNumberFT].balance;
+				CALL replaceMinus(reffDatashortHistoricalBalance,reffDatashortHistoricalBalance);
+			
+		ELSEIF type = 'rollover' THEN
+			SET Environment.Variables.content.rollOverTrx[arrayNumberRO] = rollOver;
+		ELSE
+				-- compose message response - no information
+			IF TRIM(CAST(Environment.Variables.responseContent AS CHAR CCSID 1208)) = 'AKHIR DARI TRX' THEN 
+				CREATE LASTCHILD OF OutputRoot DOMAIN 'XMLNSC';
+				CREATE FIELD OutputRoot.XMLNSC.content;
+				SET OutputRoot.XMLNSC.content.message = 'TIDAK ADA INFORMASI LAIN UNTUK DITAMPILKAN';
+				SET OutputRoot.XMLNSC.content.(XMLNSC.NamespaceDecl)xmlns:xsi = xsi;
+				SET OutputRoot.XMLNSC.content.(XMLNSC.Attribute)xsi:type = 'bo:Message';
+			ELSE
+				CREATE LASTCHILD OF OutputRoot DOMAIN 'XMLNSC';
+				CREATE FIELD OutputRoot.XMLNSC.content;
+				DECLARE content REFERENCE TO OutputRoot.XMLNSC.content;
+				DECLARE contentType CHAR 'CompiledDepTrxInquiryRes';
+				CALL  addContentType(contentType, content);
+			END IF;
+				RETURN TRUE;
+		END IF;
+		
+		IF lastRecord = 'Y' AND status = 'Y' THEN
+			CREATE LASTCHILD OF OutputRoot DOMAIN 'XMLNSC';
+			SET OutputRoot.XMLNSC.content = Environment.Variables.content;
+					
+				FOR shortHistorical AS OutputRoot.XMLNSC.content.shortHistorical[] DO
+					
+					DECLARE numberOfFiller INTEGER;
+					SET numberOfFiller = CARDINALITY(OutputRoot.XMLNSC.content.shortHistorical[shortHistoricalCounter].filler[]);
+					DECLARE fillerCounter INTEGER;
+					SET fillerCounter = 1;
+					LoopEachFiller : WHILE fillerCounter <= numberOfFiller DO
+  						SET OutputRoot.XMLNSC.content.shortHistorical[shortHistoricalCounter].filler = NULL;
+						--  SET OutputRoot.XMLNSC.content.rollOverTrx[shortHistoricalCounter].filler = NULL;
+  						SET OutputRoot.XMLNSC.content.shortHistorical[shortHistoricalCounter].financialType = NULL;
+  						SET fillerCounter = fillerCounter + 1;		
+					END WHILE LoopEachFiller;
+				SET shortHistoricalCounter = shortHistoricalCounter + 1;
+				END FOR;
+				
+				SET OutputRoot.XMLNSC.content.(XMLNSC.NamespaceDecl)xmlns:xsi = xsi;
+				SET OutputRoot.XMLNSC.content.(XMLNSC.Attribute)xsi:type = 'bo:CompiledDepTrxInquiryRes';
+		ELSE 
+			RETURN FALSE;
+		END IF;
+	END;
+	
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+END MODULE;
+
+

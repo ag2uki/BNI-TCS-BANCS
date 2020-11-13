@@ -1,0 +1,188 @@
+BROKER SCHEMA id.co.bni.mf.core.handler.list
+PATH id.co.bni.mf.common.core;
+
+
+/*
+ *
+ * File name: SF_S06Search.esql
+ *
+ * Purpose  : Transfrom Message Response S06_Search from ICONS (BANCS format) to XML format
+ *
+ * Authors  : Novi
+ *			  Zihan
+ *            
+ * Date     : March 2011
+ * Version  : 1.0
+ *
+ * @copyright  PT Bank Negara Indonesia. 2011.  All rights reserved.
+ *
+ */
+
+
+/*
+ * This module used to iterate response message S06_Search from ICONS 
+ */
+CREATE COMPUTE MODULE SF_S06Search_iterateResponse
+	
+	DECLARE LB_PARSE_S06_DATA 			CONSTANT CHAR 'parseS06Data';
+	DECLARE LB_PARSE_S06_LAST_RECORD 	CONSTANT CHAR 'parseS06LastRecord';
+	
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		 CALL CopyMessageHeaders();
+		 
+		 DECLARE data 				char;
+		 DECLARE message 			char;
+		 DECLARE mConvert			blob;
+		 DECLARE lMessage			char;
+		 DECLARE lastRec 			boolean;
+		 DECLARE record1 			char;
+		 DECLARE mesCast 			blob;
+		 DECLARE lRecord1 			char;
+		 DECLARE lCMessage 			char;
+		 DECLARE ICONS_HEADER 		INTEGER 89;
+		 DECLARE S06_RECORD_LENGTH 	INTEGER 155;
+		 
+		 SET data 		= CAST(InputRoot.BLOB.BLOB AS CHAR CCSID InputRoot.Properties.CodedCharSetId);
+		 SET message 	= SUBSTRING(data from ICONS_HEADER + 1);
+		 SET mConvert 	= CAST(data as BLOB CCSID InputRoot.Properties.CodedCharSetId);
+		 SET lMessage 	= LENGTH(message);
+		 
+		 SET lastRec 	= false;	
+		 	 
+		 WHILE lastRec 	= false  DO
+		 	-- get 1 record from message
+		 	SET record1 = SUBSTRING(message from 1 for S06_RECORD_LENGTH); 
+		 	SET lRecord1 = LENGTH(record1);
+		 	SET mesCast = CAST(record1 as BLOB CCSID InputRoot.Properties.CodedCharSetId);
+		 	
+		 	IF lRecord1 >= S06_RECORD_LENGTH THEN
+		 		SET OutputRoot.BLOB.BLOB 	= mesCast;
+		 		SET message 				= SUBSTRING(message from S06_RECORD_LENGTH + 1);
+				PROPAGATE TO LABEL LB_PARSE_S06_DATA DELETE NONE;
+		 	ELSE
+		 		SET OutputRoot.BLOB.BLOB 		= mesCast;
+		 		SET lastRec 					= true; 
+		 		SET Environment.procces.lastRec = lastRec;
+				PROPAGATE TO LABEL LB_PARSE_S06_LAST_RECORD DELETE NONE;	
+		 	END IF;
+		 END WHILE;	
+		RETURN FALSE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+END MODULE;
+
+/*
+ * This module used to collect record data response  
+ */
+CREATE COMPUTE MODULE SF_S06Search_CN_collectRecordData
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		CALL CopyMessageHeaders();
+		
+		DECLARE valueBlob 		char;
+		DECLARE checkLast 		char;
+		DECLARE checkLastNum 	char;
+		DECLARE test 			char;
+		
+		SET valueBlob 			= CAST(InputRoot.BLOB.BLOB AS CHAR CCSID InputRoot.Properties.CodedCharSetId);
+		
+		DECLARE responseNum 	INT COALESCE(Environment.response.responseNum, 0);
+
+		SET responseNum 		= responseNum + 1;
+		
+		SET test = Environment.procces.lastRec;
+		
+		IF test IS NULL then
+			SET Environment.response.msg.s06Record[responseNum].reffCorrespondent 	= InputRoot.MRM.reffCorrespondent;
+			SET Environment.response.msg.s06Record[responseNum].bicCover 			= InputRoot.MRM.bicCover;
+			SET Environment.response.msg.s06Record[responseNum].refferenceNum 		= InputRoot.MRM.refferenceNum;
+			SET Environment.response.msg.s06Record[responseNum].counterAdvis 		= InputRoot.MRM.counterAdvis;
+			SET Environment.response.msg.s06Record[responseNum].poType 				= InputRoot.MRM.poType;
+			
+			DECLARE poDateValue    REFERENCE TO InputRoot.MRM.poDate;
+			IF SUBSTRING(poDateValue FROM 1 FOR 2) > 31 THEN	
+				SET Environment.response.msg.s06Record[responseNum].poDate = '';
+			ELSE
+				DECLARE date1 DATE CAST(InputRoot.MRM.poDate AS DATE FORMAT 'ddMMyyyy');
+				DECLARE date2 CHARACTER CAST(date1 AS CHARACTER FORMAT 'yyyy-MM-dd');
+				SET Environment.response.msg.s06Record[responseNum].poDate = date2;
+			END IF;
+			
+			--SET Environment.response.msg.s06Record[responseNum].poDate 				= InputRoot.MRM.poDate;
+			SET Environment.response.msg.s06Record[responseNum].amountCurrency 		= InputRoot.MRM.amountCurrency;
+			SET Environment.response.msg.s06Record[responseNum].amount 				= InputRoot.MRM.amount;
+			SET Environment.response.msg.s06Record[responseNum].senderName 			= InputRoot.MRM.senderName;
+			SET Environment.response.msg.s06Record[responseNum].beneficiaryName 	= InputRoot.MRM.beneficiaryName;
+			SET Environment.response.msg.s06Record[responseNum].status 				= InputRoot.MRM.status;
+			SET Environment.response.responseNum = responseNum;
+			RETURN FALSE;
+		ELSE
+			SET Environment.response.s06LastRecord.reffCorrespondent 				= InputRoot.MRM.reffCorrespondent;
+			SET Environment.response.s06LastRecord.bicCover 						= InputRoot.MRM.bicCover;
+			SET Environment.response.s06LastRecord.poType 							= InputRoot.MRM.poType;
+			SET Environment.response.s06LastRecord.status 							= InputRoot.MRM.status;
+			SET Environment.response.s06LastRecord.page 							= InputRoot.MRM.page;
+			SET Environment.response.s06LastRecord.totalRecords 					= InputRoot.MRM.totalRecords;	
+			RETURN TRUE;
+		END IF;	
+		
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+END MODULE;
+
+/*
+ * This module used to compose response message  
+ */
+CREATE COMPUTE MODULE SF_S06Search_CN_composeResponse
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE xsi NAMESPACE 'http://www.w3.org/2001/XMLSchema-instance';
+		DECLARE bo NAMESPACE 'http://service.bni.co.id/core/bo';
+		
+		CALL CopyMessageHeaders();
+		
+		CREATE LASTCHILD OF OutputRoot DOMAIN 'XMLNSC';
+		SET OutputRoot.XMLNSC.content = Environment.response.s06LastRecord;
+		DECLARE totalRecordIndex 		INTEGER CARDINALITY (Environment.response.msg.s06Record[]);
+		DECLARE recordIndex 			INTEGER 0;
+		WHILE recordIndex < totalRecordIndex DO
+			SET recordIndex 										= recordIndex + 1;
+			SET OutputRoot.XMLNSC.content.s06Record[recordIndex] 	= Environment.response.msg.s06Record[recordIndex];
+		END WHILE;
+		SET OutputRoot.XMLNSC.content.(XMLNSC.NamespaceDecl)xmlns:xsi 	= xsi;
+		SET OutputRoot.XMLNSC.content.(XMLNSC.Attribute)xsi:type 		= 'bo:CompiledS06SearchRes'; 
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+END MODULE;
