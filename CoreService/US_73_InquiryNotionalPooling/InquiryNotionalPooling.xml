@@ -1,0 +1,78 @@
+<InquiryNotionalPooling>
+	<Req>
+		<content>
+			<Field id="dummy" 			length="1"  value="E" />
+			<Field id="companyName" 	padding="right" padString=" " length="48" />
+			<Field id="mainAccountNo" 	padding="left" padString="0" length="17" />
+			<Field id="status" 			padding="right" padString=" " length="1" />
+			<Field id="currentPage" 	padding="left" padString="0" length="4" />
+			<Field id="totalPage" 		padding="left" padString="0" length="4" />
+			<Field id="notPolID" 		padding="right" padString=" " length="6" />
+			<Field id="notionalBalance" type="flatMoney" signLocation="after" padding="left" padString="0" length="18" intLength="14" decLength="3" />			
+			<Field id="thresholdAmt" 	type="flatMoney" signLocation="after" padding="left" padString="0" length="18" intLength="14" decLength="3" />
+
+		</content>
+	</Req>
+	<Res>
+		<content>
+			<Field  id="function"  			padding="right"  	padString=" "  startIndex="90"  	length="1" />
+			<Field  id="companyName"  		padding="right"  	padString=" "  startIndex="91"  	length="48" />
+			<Field  id="mainAccountNo" 		padding="left"  	padString="0"  startIndex="139"  	length="17" />
+			<Field  id="status" 			padding="l"  		padString=" "  startIndex="156"  	length="1"  />
+			<Field  id="currentPage"  		padding="left"  	padString="0"  startIndex="157"  	length="4" />
+			<Field  id="totalPage"  		padding="left"  	padString="0"  startIndex="161"  	length="4" />
+			<Field  id="notPolID"  			padding="right"  	padString=" "  startIndex="165"  	length="6" />
+			<Field  id="notionalBalance"  	 type="flatMoney"  signLocation="after"  intLength="14"  decLength="3"  startIndex="171" length="18" />
+			<Field  id="thresholdAmt"  		type="flatMoney"  	signLocation="after"  intLength="14"  decLength="3"  startIndex="189"  length="18"/>
+			<Field  id="accNo1" 			padding="left"  	padString="0"  	startIndex="207"  length="17"  />
+			<Field  id="branchName1"  		padding="right"  	padString=" "  	startIndex="224"  length="40" />
+			<Field  id="balance1"  			type="flatMoney"  	signLocation="after"  intLength="14"  decLength="3"  startIndex="264"  length="18"/>
+			<Field  id="limit1"  			type="flatMoney"  	signLocation="after"  intLength="14"  decLength="3"  startIndex="282"  length="18" />
+			<Field  id="status1"  			padding="left"  	padString="0"  	startIndex="300"  length="1" />
+			
+			<Field  id="accNo2" 			padding="left"  	padString="0"  	startIndex="301"  length="17"  />
+			<Field  id="branchName2"  		padding="right"  	padString=" "  	startIndex="318"  length="40" />
+			<Field  id="balance2"  			type="flatMoney"  	signLocation="after"  intLength="14"  decLength="3"  startIndex="358"  length="18"/>
+			<Field  id="limit2"  			type="flatMoney" 	signLocation="after"  intLength="14"  decLength="3"  startIndex="376"  length="18"/>
+			<Field  id="status2"  			padding="left"  	padString="0"  	startIndex="394"  length="1" />
+			
+			<Field  id="accNo3" 			padding="left"  	padString="0"  		startIndex="395"  length="17"  />
+			<Field  id="branchName3"  		padding="right"  	padString=" "  		startIndex="412"  length="40" />
+			<Field  id="balance3"  			type="flatMoney"  	signLocation="after"  intLength="14"  decLength="3"  startIndex="452"  length="18"/>
+			<Field  id="limit3"  			type="flatMoney"  	signLocation="after"  intLength="14"  decLength="3"  startIndex="470"  length="18"/>
+			<Field  id="status3"  			padding="left" 		padString="0"  	startIndex="488"  length="1" />
+			
+			<Field  id="accNo4" 			padding="left"  	padString="0"  		startIndex="489"  length="17"  />
+			<Field  id="branchName4"  		padding="right"  	padString=" "  		startIndex="506"  length="40" />
+			<Field  id="balance4"  			type="flatMoney"  	signLocation="after"  intLength="14"  decLength="3"  startIndex="546"  length="18"/>
+			<Field  id="limit4"  			type="flatMoney"  	signLocation="after"  intLength="14"  decLength="3"  startIndex="564"  length="18"/>
+			<Field  id="status4"  			padding="left"  	padString="0"  		startIndex="582"  length="1" />
+			
+			<Field  id="accNo5" 			padding="left"  	padString="0"  		startIndex="583"  length="17"  />
+			<Field  id="branchName5"  		padding="right"  	padString=" "  		startIndex="600"  length="40" />
+			<Field  id="balance5"  			type="flatMoney"  	signLocation="after"  intLength="14"  decLength="3"  startIndex="640"  length="18"/>
+			<Field  id="limit5"  			type="flatMoney"  	signLocation="after"  intLength="14"  decLength="3"  startIndex="658"  length="18"/>
+			<Field  id="status5"  			padding="left"  	padString="0"  		startIndex="676"  length="1" />
+			
+			<Field  id="accNo6" 			padding="left"  	padString="0"  		startIndex="677"  length="17"  />
+			<Field  id="branchName6"  		padding="right"  	padString=" "  		startIndex="694"  length="40" />
+			<Field  id="balance6"  			type="flatMoney" 	signLocation="after"  intLength="14"  decLength="3"  startIndex="734"  length="18"/>
+			<Field  id="limit6"  			type="flatMoney"  	signLocation="after"  intLength="14"  decLength="3"  startIndex="752"  length="18"/>
+			<Field  id="status6"  			padding="left" 		padString="0"  		startIndex="770"  length="1" />
+			
+			<Field  id="accNo7" 			padding="left"  	padString="0"  		startIndex="771"  length="17"  />
+			<Field  id="branchName7"  		padding="right"  	padString=" "  		startIndex="788"  length="40" />
+			<Field  id="balance7"  			type="flatMoney"  	signLocation="after"  intLength="14"  decLength="3"  startIndex="828"  length="18"/>
+			<Field  id="limit7"  			type="flatMoney"  	signLocation="after"  intLength="14"  decLength="3"  startIndex="846"  length="18"/>
+			<Field  id="status7"  			padding="left"  	padString="0"  		startIndex="864"  length="1" />
+			
+			<Field  id="accNo8" 			padding="left"  	padString="0"  		startIndex="865"  length="17"  />
+			<Field  id="branchName8"  		padding="right"  	padString=" "  		startIndex="882"  length="40" />
+			<Field  id="balance8"  			type="flatMoney"  	signLocation="after"  intLength="14"  decLength="3"  startIndex="922"  length="18"/>
+			<Field  id="limit8"  			type="flatMoney"  	signLocation="after"  intLength="14"  decLength="3"  startIndex="940"  length="18"/>
+			<Field  id="status8"  			padding="left"  	padString="0"  		startIndex="958"  length="1" />
+			
+			
+		</content>
+	</Res>
+</InquiryNotionalPooling>

@@ -1,0 +1,71 @@
+<RtgsOutward>
+   <Req>
+       <content> 
+        <Field id="accountNum" padding="left" padString="0" length="17" />
+        <Field id="dummy" length="18" value="00000000000000000+"/> <!-- saldo buku -->
+
+        <Field id="nominalPenarikan" type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+                                     
+        <Field id="dummy" length="9" value=" 00000000"/> <!-- transaction date -->
+        <Field id="dummy" length="2" value="  "/>    <!-- promo code -->
+		<!--<Field id="accountPenerima2" length="34" value="                                  "/>    <!{1}** offset **{1}>-->
+		<Field id="dummy" length="53" value="                                                     "/>    <!-- offset -->
+		<Field id="accountPenerima" padding="right" padString=" " length="34"/> 
+	    
+		
+        <Field id="dummy" length="3" value="IDR"/>   <!-- penarikan currency -->
+
+        <Field id="nominalDikirim" type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+
+        <Field id="dummy" length="3" value="IDR"/> <!-- transaksi currency -->
+        <Field id="nominalDikirim" type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />  <!-- base amount  -->
+        <Field id="dummy" length="18" value="00000000000000000+"/> <!-- commision -->
+        <Field id="dummy" length="18" value="00000000000000000+"/> <!-- change -->
+        <Field id="dummy" length="2" value="02"/> <!-- rate type (default 02: reguler) -->
+
+<!--    <Field id="tujuanTransaksi" padding="right" padString=" " length="5"/> -->
+<!--    <Field id="dummy" length="1" value=" "/>   note: closed untuk sementara (11 nov 09) -->
+
+        <Field id="pesan1Pengirim" padding="right" padString=" " length="50" />
+        <Field id="pesan2Pengirim" padding="right" padString=" " length="40" />
+
+        <Field id="pesan3Pengirim" padding="right" padString=" " length="50" />
+        <Field id="namaPenerima" padding="right" padString=" " length="80" />
+
+        <Field id="alamat1Penerima" padding="right" padString=" " length="40" />
+        <Field id="alamat2Penerima" padding="right" padString=" " length="40" />
+
+        <Field id="nomorTelponPenerima" padding="right" padString=" " length="20" />
+        <Field id="kodePosPenerima" padding="right" padString=" " length="8" />
+
+        <Field id="idPenerima" padding="right" padString=" " length="24" />
+        <Field id="tipeIdPenerima" padding="left" padString="0" length="4" />
+
+        <Field id="dummy" length="26" value="                          "/>    <!-- offset -->
+
+        <Field id="nama1Pengirim" padding="right" padString=" " length="80" />
+        <Field id="nama2Pengirim" padding="right" padString=" " length="60" />
+
+        <Field id="tipeResidensiPengirim" padding="left" padString="0" length="1" />
+        <Field id="tipeResidensiPenerima" padding="left" padString="0" length="1" />
+
+        <Field id="dummy" length="65" value="                                                                 "/>    <!-- offset -->
+        <Field id="sandiBankPenerima" padding="right" padString=" " length="12" />
+
+        <Field id="dummy" length="17" value="                 " />
+        <Field id="intermediaryBranch" padding="left" padString="0" length="4" /> <!-- inter branch -->
+
+        <Field id="biaya" type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+        <Field id="dummy" length="1" value="1" /> <!-- send option -->
+
+        <Field id="dummy" length="32" value="                                "/> <!-- pin -->
+        <Field id="dummy" length="16" value="                "/>    <!-- offset -->
+        <Field id="kodeTSA" padding="right" padString=" " length="8" />
+       </content>
+   </Req>
+   <Res>
+     <content>              
+          <Field id="message"  startIndex="99" length="69" padding="right" padString=" " />
+     </content>
+   </Res>
+</RtgsOutward>

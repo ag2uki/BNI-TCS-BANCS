@@ -1,0 +1,11 @@
+<Ping>
+   <Req>
+       <content> 
+       </content>
+   </Req>
+   <Res>
+       <content>
+          <Field id="message"          startIndex="95" length="69" padding="right" padString=" " />
+       </content> 
+   </Res>
+</Ping>

@@ -1,0 +1,33 @@
+
+<GLTarikTunai>
+   <Req>
+       <content> 
+          <Field id="accountNum"    length="17" padding="left"  padString="0" />          
+          <Field id="amount"    type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+          <Field id="dummy"          length="80" value="                                                                                " />
+          <Field id="promoNum"		 length="2"  padding="right" padString=" "/>
+		  <Field id="dummy"          length="34" value="                                  " />
+          <Field id="currency"   length="3" padding="left" padString=" " />          
+          <Field id="exchangeAmount"         type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+          <Field id="exchangeCurrency"       length="3" padding="right" padString=" " />
+          <Field id="baseAmount"         type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0"/>
+		  <Field id="commission"         type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0"/>
+		  <Field id="changeAmount"         type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0"/>
+          <Field id="rateType"		 length="2"  padding="right" padString="0"/>
+          <Field id="currVersion"       length="4" padding="right" padString=" " />
+		  <Field id="dummy"          length="34" value="                                                                                                                                                                                                                                                                                                                        " />
+		  <Field id="segmentCode"       length="4" padding="right" padString=" " />
+		  <Field id="dummy"          length="55" value="                                                       " />
+          <Field id="narasi"    length="50" padding="right" padString=" " />
+          <Field id="dummy"          length="190" value="                                                                                                                                                                                              " />
+         <Field id="bookingNum"    length="7" padding="right" padString=" " />
+       </content>
+   </Req>
+   <Res>
+       <content> 
+          <Field id="message"        startIndex="99" length="69" padding="right" padString=" " />
+      </content>
+   </Res>
+</GLTarikTunai>
+
+

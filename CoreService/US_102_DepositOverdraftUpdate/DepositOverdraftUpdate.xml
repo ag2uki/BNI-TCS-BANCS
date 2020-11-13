@@ -1,0 +1,63 @@
+<OverdraftUpdate>
+	<Req>
+		<content>
+			<Field id="accountNumber" padding="left" padString="0" length="17"/>
+			<Field id="limitType" padding="left" padString="0" length="2"/>
+			<Field id="filler" padding="right" padString=" " length="2"/>
+			<Field id="overDraftLimit1" padding="left" padString="0" length="14"/>
+			<Field id="rate1" type="flatMoney" signLocation="after" intLength="2" decLength="4" padding="left" padString="0"/>
+			<Field id="rateType1" padding="right" padString=" " length="1"/>
+			<Field id="effectiveDate1" type="date" length="8"/>
+			<Field id="dueDate1" type="date" length="8"/>
+			<Field id="type1" padding="left" padString="0" length="2"/>
+			<Field id="value1" padding="left" padString="0" length="11"/>
+			<Field id="overDraftLimit2" padding="left" padString="0" length="14"/>
+			<Field id="rate2" type="flatMoney" signLocation="after" intLength="2" decLength="4" padding="left" padString="0"/>
+			<Field id="rateType2" padding="right" padString=" " length="1"/>
+			<Field id="effectiveDate2" type="date" length="8"/>
+			<Field id="dueDate2" type="date" length="8"/>
+			<Field id="type2" padding="left" padString="0" length="2"/>
+			<Field id="value2" padding="left" padString="0" length="11"/>
+			<Field id="overDraftLimit3" padding="left" padString="0" length="14"/>
+			<Field id="rate3" type="flatMoney" signLocation="after" intLength="2" decLength="4" padding="left" padString="0"/>
+			<Field id="rateType3" padding="right" padString=" " length="1"/>
+			<Field id="effectiveDate3" type="date" length="8"/>
+			<Field id="dueDate3" type="date" length="8"/>
+			<Field id="type3" padding="left" padString="0" length="2"/>
+			<Field id="value3" padding="left" padString="0" length="11"/>
+			<Field id="overDraftLimit4" padding="left" padString="0" length="14"/>
+			<Field id="rate4" type="flatMoney" signLocation="after" intLength="2" decLength="4" padding="left" padString="0"/>
+			<Field id="rateType4" padding="right" padString=" " length="1"/>
+			<Field id="effectiveDate4" type="date" length="8"/>
+			<Field id="dueDate4" type="date" length="8"/>
+			<Field id="type4" padding="left" padString="0" length="2"/>
+			<Field id="value4" padding="left" padString="0" length="11"/>
+			<Field id="kelebihan" padding="left" padString="0" length="11"/>
+			<Field id="dummy1" type="flatMoney" signLocation="after" intLength="2" decLength="4" padding="left" padString="0"/>
+			<Field id="dummy2" padding="right" padString=" " length="1"/>
+			<Field id="dummy3" type="flatMoney" signLocation="after" intLength="2" decLength="4" padding="left" padString="0"/>
+			<Field id="dummy4" padding="right" padString=" " length="1"/>
+			<Field id="marginPengurang" padding="left" padString="0" length="10"/>
+			<Field id="kodeBungaDebit" padding="right" padString=" " length="1"/>
+			<Field id="debitPemindahan" padding="left" padString="0" length="17"/>
+			<Field id="kodeKomitmen" padding="right" padString=" " length="1"/>
+			<Field id="pemindahanKomitmen" padding="left" padString="0" length="17"/>
+			<Field id="jenisOverdraftExpiryRate" padding="right" padString=" " length="1"/>
+			<Field id="overdraftExpiredRate" type="flatMoney" signLocation="after" intLength="2" decLength="5" padding="left" padString="0"/>
+			<Field id="ratingPinjaman" padding="left" padString="0" length="5"/>
+			<Field id="fasilitas" padding="left" padString="0" length="17"/>
+			<Field id="jenisPembayaran" padding="right" padString=" " length="1"/>
+			<Field id="nominalAngsuranTetap" type="flatMoney" signLocation="after" intLength="14" decLength="3" padding="left" padString="0"/>
+			<Field id="hapusDetail" padding="right" padString=" " length="1"/>
+			<Field id="kodePromo" padding="right" padString=" " length="2"/>
+			<Field id="status1" padding="left" padString="0" length="1"/>
+			<Field id="status2" padding="left" padString="0" length="1"/>
+			<Field id="status3" padding="left" padString="0" length="1"/>
+			<Field id="status4" padding="left" padString="0" length="1"/>
+			<Field id="tujuan" padding="left" padString="0" length="3"/>
+			<Field id="dummy" padding="right" padString=" " length="1"/>
+		</content>
+	</Req>
+	<Res>
+	</Res>
+</OverdraftUpdate>

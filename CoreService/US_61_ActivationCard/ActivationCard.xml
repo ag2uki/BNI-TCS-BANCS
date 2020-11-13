@@ -1,0 +1,27 @@
+<ActivationCard>
+	<Req>
+		<content>
+			<Field  id="offset1"  padding="right"  padString=" "  length="39" />
+			<Field  id="cardNum"  padding="left"  padString="0"  length="20" />
+			<Field  id="cardDescription"  padding="right"  padString=" "  length="40" />
+			<Field  id="cifNum"  padding="left"  padString="0"  length="17" />
+			<Field  id="offset2"  padding="right"  padString=" "  length="3" />
+			<Field  id="accountName"  padding="right"  padString=" "  length="80" />
+			<Field  id="address1"  padding="right"  padString=" "  length="40" />
+			<Field  id="address2"  padding="right"  padString=" "  length="40" />
+			<Field  id="address3"  padding="right"  padString=" "  length="40" />
+			<Field  id="address4"  padding="right"  padString=" "  length="40" />
+			<Field  id="postCode"  padding="right"  padString=" "  length="10" />
+			<Field  id="cardName1"  padding="right"  padString=" "  length="30" />
+			<Field  id="cardName2"  padding="right"  padString=" "  length="30" />
+			<Field  id="issueCard"  padding="right"  padString=" "  length="10" />
+			<Field  id="expiredCard"  padding="right"  padString=" "  length="10" />
+			<Field  id="confirmFlag"  padding="right"  padString=" "  length="1" />
+		</content>
+	</Req>
+	<Res>
+		<content>
+			<Field  id="message"  startIndex="94"  length="62"  padding="right"  padString=" " />
+		</content>
+	</Res>
+</ActivationCard>

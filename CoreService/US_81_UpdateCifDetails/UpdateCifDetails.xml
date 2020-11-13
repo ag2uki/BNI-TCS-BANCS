@@ -1,0 +1,93 @@
+<UpdateCifDetails>
+   <Req>
+       <content> 
+        <Field id="cifNum" padding="left" padString="0" length="17" />
+        <Field id="customerType" padding="right" padString=" " length="2" />
+
+		<Field id="relManager" padding="left" padString="0" length="5" />
+        <Field id="salutation" padding="left" padString="0" length="2" />
+
+        <Field id="firstName" padding="right" padString=" " length="40" />
+        <Field id="lastName" padding="right" padString=" " length="30" />
+
+        <Field id="title" padding="right" padString=" " length="10" />
+        <Field id="companyName" padding="right" padString=" " length="50" />
+
+        <Field id="lawFirm" padding="right" padString=" " length="10" />
+		<Field id="dummy" value="                    " length="5" />
+        <Field id="jalan" padding="right" padString=" " length="40" />
+
+        <Field id="rt" padding="right" padString=" " length="3" />
+        <Field id="rw" padding="right" padString=" " length="3" />
+
+        <Field id="perumahan" padding="right" padString=" " length="34" />
+        <Field id="kelurahan" padding="right" padString=" " length="40" />
+
+        <Field id="kecamatan" padding="right" padString=" " length="40" />
+        <Field id="postCode" padding="right" padString=" " length="8" />
+
+        <Field id="countryCode" padding="right" padString=" " length="2" />
+        <Field id="homePhoneNum1" padding="right" padString=" " length="4" />
+
+        <Field id="homePhoneNum2" padding="right" padString=" " length="8" />
+        <Field id="faxNum1" padding="right" padString=" " length="4" />
+
+        <Field id="faxNum2" padding="right" padString=" " length="8" />
+        <Field id="officePhoneNum1" padding="right" padString=" " length="4" />
+        
+        <Field id="officePhoneNum2" padding="right" padString=" " length="8" />
+        <Field id="dummy" length="12" value="            " />
+        <Field id="nationality" padding="right" padString=" " length="2" />
+
+        <Field id="occupancy" padding="right" padString=" " length="1" />
+
+        <Field id="languageCode" padding="right" padString="0" length="2" /> <!-- language code -->
+
+        <Field id="idNum" padding="right" padString=" " length="24" />
+        <Field id="idReleasedDate" padding="right" padString=" " length="8" />
+
+        <Field id="idReleasedFrom" padding="right" padString=" " length="30" />
+        <Field id="idType" padding="left" padString="0" length="4" />
+
+        <Field id="domesticRisk" padding="right" padString=" " length="2" />
+        <Field id="borderRisk" padding="right" padString=" " length="2" />
+
+        <Field id="vipCode" padding="left" padString="0" length="1" /> <!-- DefInteger5 -->
+        <Field id="status" padding="right" padString=" " length="3" />
+
+        <Field id="segmentCode" padding="right" padString=" " length="4" />
+        <Field id="dummy" value="0" length="1" />
+        <Field id="hasNPWP" padding="left" padString="0" length="1" /> 
+        <Field id="openingBranch" padding="left" padString=" " length="5" />
+
+        <Field id="yesNo1" padding="left" padString=" " length="1" />
+        <Field id="yesNo2" padding="left" padString=" " length="1" />
+        <Field id="yesNo3" padding="left" padString=" " length="1" />
+        <Field id="yesNo4" padding="left" padString=" " length="1" />
+        <Field id="yesNo5" padding="left" padString=" " length="1" />
+
+        <Field id="bisnisRiskCode" padding="right" padString=" " length="4" />
+        <Field id="countryOfRiskCode" padding="right" padString=" " length="2" />
+
+        <Field id="countryOfRiskCode2" padding="right" padString=" " length="5" />
+        <Field id="centralBankOwnershipCode" padding="right" padString=" " length="5" />
+
+        <Field id="corporateGroupCode" padding="right" padString=" " length="4" />
+        <Field id="middleName" padding="right" padString=" " length="40" />
+
+        <Field id="locationCode" padding="right" padString=" " length="4" />
+        <Field id="bebasPPH" padding="right" padString=" " length="1" />
+
+        <Field id="ivrFlag" padding="right" padString=" " length="1" />  <!-- ivr flag -->
+        <Field id="idExpiryDate" type="date" length="8" />
+		<Field id="cellPhoneNum1" padding="right" padString=" " length="4" />
+		<Field id="cellPhoneNum2" padding="right" padString=" " length="16" />
+		<Field id="dummy" length="20" value="                    " />
+       </content>
+   </Req>
+   <Res>
+     <content>              
+        <Field  id="message"  startIndex="95"  length="69"  padding="right"  padString=" " />
+     </content>
+   </Res>
+</UpdateCifDetails>

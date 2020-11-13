@@ -1,0 +1,33 @@
+<ForeignExchangeTrx>
+	<Req>
+		<content> 
+			<Field id="dummy"          length="34" value="                                  " /> 
+			<Field id="transactionAmount"    type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+			<Field id="dummy"          length="9" value="         " /> 
+			<Field id="promoCode"	padding="right" padString=" " length="2" />
+			<Field id="dummy"          length="14" value="              " /> 
+			<Field id="beneficiaryIdType"	padding="left" padString="0" length="4" />
+			<Field id="dummy"          length="44" value="                                            " /> 
+			<Field id="senderDetails"	padding="right" padString=" " length="24" />
+			<Field id="dummy"          length="1" value=" " /> 
+			<Field id="sellCurrency"	padding="right" padString=" " length="3" />
+			<Field id="buyAmount"    type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+			<Field id="buyCurrency"	padding="right" padString=" " length="3" />
+			<Field id="baseCcyAmount"    type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+			<Field id="commission"    type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+			<Field id="change"    type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+			<Field id="rateType"	padding="left" padString="0" length="2" />
+			<Field id="dummy"          length="373" value="                                                                                                                                                                                                                                                                                                                                                                                     " />
+			<Field id="fundType"	padding="right" padString=" " length="2" />
+			<Field id="narration"	padding="right" padString=" " length="50" />
+			<Field id="dummy"          length="191" value="                                                                                                                                                                                               " />
+			<Field id="bookingNumber"	padding="right" padString=" " length="7" />
+		</content>
+	</Req>
+	<Res>
+		<content> 
+			<Field id="message"        startIndex="99" length="69" padding="right" padString=" " />
+		</content>
+	</Res>
+
+</ForeignExchangeTrx>

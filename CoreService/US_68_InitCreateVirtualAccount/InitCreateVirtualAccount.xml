@@ -1,0 +1,24 @@
+<InitCreateVirtualAccount>
+	<Req>
+		<content>
+			<Field id="dummy"  length="1"  value="E" />
+			<Field id="dummy"  length="8"  value="        " />
+			<Field id="virtualAccountType"    	padding="left" padString="0" length="3" />
+			<Field id="companyCode"    			padding="left" padString="0" length="5" />
+			<Field id="virtualAccountNum"       padding="left" padString="0" length="17" />
+		</content> 
+	</Req>
+	<Res>
+		<content>
+			<Field id="virtualAccountType"    	padding="left" 	 padString="0" startIndex="99" length="3" />
+			<Field id="companyCode"    			padding="left" 	 padString="0" startIndex="102" length="5" />
+			<Field id="accountNum"      		padding="left"   padString="0" startIndex="107" length="17" />
+			<Field id="virtualAccountNum"       padding="left"   padString="0" startIndex="124" length="17" />
+			<Field id="companyName" 			padding="right"  padString=" " startIndex="141" length="40" />
+			<Field id="accountStatus"    		padding="right"  padString=" " startIndex="181" length="1" />
+			<Field id="virtualAccountName"     	padding="right"  padString=" " startIndex="182" length="80" />
+			<Field id="virtualAccountStatus"    padding="right"  padString=" " startIndex="262" length="1" />
+		</content>
+	</Res>
+</InitCreateVirtualAccount>
+

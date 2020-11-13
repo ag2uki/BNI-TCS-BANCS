@@ -1,0 +1,41 @@
+<DepTrxInquiry>
+   <Req>
+       <content> 
+        <Field id="accountNum"      padding="left" padString="0" length="17" />
+        <Field id="dummy"           length="6"  value="000000" /> 
+        <Field id="transactionType" padding="right" padString=" " length="2" /> 
+        <Field id="toDate"          type="date" length="8"  padding="left" padString="0"/>
+        <Field id="journalNum"      padding="left" padString="0" length="6" />
+        <Field id="amount"          type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+        <Field id="branchNum"       padding="left" padString="0" length="4" />
+        <Field id="dummy"           length="13"  value="00000" />
+        <Field id="starttime"       padding="left" padString="0" length="4" />
+        <Field id="endtime"         padding="left" padString="0" length="4" />
+        <Field id="fromDate"        type="date" length="8"  padding="left" padString="0"/>
+       </content>
+   </Req>
+   <Res>
+      <content> 
+         <Field id="transaction_1"  startIndex="90"  length="80" padding="right" padString=" " />
+         <Field id="transaction_2"  startIndex="170" length="80" padding="right" padString=" " />
+         <Field id="transaction_3"  startIndex="250" length="80" padding="right" padString=" " />
+         <Field id="transaction_4"  startIndex="330" length="80" padding="right" padString=" " />
+         <Field id="transaction_5"  startIndex="410" length="80" padding="right" padString=" " />
+         <Field id="transaction_6"  startIndex="490" length="80" padding="right" padString=" " />
+         <Field id="transaction_7"  startIndex="570" length="80" padding="right" padString=" " />
+         <Field id="transaction_8"  startIndex="650" length="80" padding="right" padString=" " />
+         <Field id="transaction_9"  startIndex="730" length="80" padding="right" padString=" " />
+         <Field id="transaction_10" startIndex="810" length="80" padding="right" padString=" " />
+         <Field id="transaction_11"  startIndex="890"  length="80" padding="right" padString=" " />
+         <Field id="transaction_12"  startIndex="970"  length="80" padding="right" padString=" " />
+         <Field id="transaction_13"  startIndex="1050" length="80" padding="right" padString=" " />
+         <Field id="transaction_14"  startIndex="1130" length="80" padding="right" padString=" " />
+         <Field id="transaction_15"  startIndex="1210" length="80" padding="right" padString=" " />
+         <Field id="transaction_16"  startIndex="1290" length="80" padding="right" padString=" " />
+         <Field id="transaction_17"  startIndex="1370" length="80" padding="right" padString=" " />
+         <Field id="transaction_18"  startIndex="1450" length="80" padding="right" padString=" " />
+         <Field id="transaction_19"  startIndex="1530" length="80" padding="right" padString=" " />
+         <Field id="transaction_20"  startIndex="1610" length="80" padding="right" padString=" " />
+      </content>
+   </Res>
+</DepTrxInquiry>

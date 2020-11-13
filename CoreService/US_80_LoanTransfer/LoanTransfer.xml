@@ -1,0 +1,28 @@
+<LoanTransfer>
+    <Req>
+       <content>
+		<Field id="fromAccount" padding="left" padString="0" startIndex="88" length="17" />
+        <Field id="fromAmount" type="flatMoney" signLocation="after" intLength="14" decLength="3" padding="left" padString="0" />
+        <Field id="dummy" padding="left" padString="0" startIndex="123" length="3" value="101"/>
+        <Field id="promoNumber" padding="right" padString=" " startIndex="126" length="2" />
+		<Field id="dummy" length="25" value="                         "/>
+        <Field id="toAccount" padding="left" padString="0" startIndex="153" length="17" />
+		<Field id="dummy" length="70" value="                                                                      "/>
+        <Field id="fromCurrency" padding="right" padString=" " startIndex="240" length="3" />
+        <Field id="toAmount" type="flatMoney" signLocation="after" intLength="14" decLength="3" padding="left" padString="0" />
+        <Field id="toCurrency" padding="right" padString=" " startIndex="261" length="3" />
+        <Field id="baseAmount" type="flatMoney" signLocation="after" intLength="14" decLength="3" padding="left" padString="0" />
+        <Field id="dummy" length="18" value="00000000000000000+" />
+        <Field id="dummy" length="18" value="00000000000000000+" />
+        <Field id="rateType" padding="left" padString="0" startIndex="318" length="2" />
+        <Field id="dummy" length="375" value="                                                                                                                                                                                                                                                                                                                                                                                       "/>
+        <Field id="narative" padding="right" padString=" " startIndex="695" length="50" />
+        <Field id="dummy" padding="right" padString=" " startIndex="745" length="197" />
+       </content> 
+    </Req>
+    <Res>
+       <content> 
+          <Field id="message"        startIndex="99" length="69" padding="right" padString=" " />
+      </content>
+    </Res>
+</LoanTransfer>

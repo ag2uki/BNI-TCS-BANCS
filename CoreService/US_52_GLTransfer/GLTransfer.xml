@@ -1,0 +1,33 @@
+<GLTransfer>
+   <Req>
+     <content>         
+        <Field id="fromAccount"		length="17" padding="left" padString="0"  />
+		<Field id="dummy"			length="18" value="                  " />		
+		<Field id="debitAmount"		type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />         
+		<Field id="dummy"			length="9" value="         " />
+		<Field id="dummy"			length="12" value="  00000000  " />
+        <Field id="toAccount"		length="17" padding="left" padString="0"  />
+		<Field id="dummy"			length="4" value="    " />
+		<Field id="dummy"			length="56" value="                                                        " />        
+        <Field id="currencyFromAccount"	length="3" padding="right" padString=" "  />       
+		<Field id="creditAmount"    type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" /> 		
+        <Field id="currencyToAccount" length="3" padding="right" padString=" "  />
+		<Field id="dummy"			length="54" value="000000000000000000000000000000000000000000000000000000" />
+		<Field id="kursType"		length="2" padding="left" padString="0"  />
+		<Field id="dummy"			length="4" value="    " />	
+		<Field id="dummy"			length="310" value="                                                                                                                                                                                                                                                                                                                      " />
+		<Field id="dummy"			length="2" value="00" />
+		<Field id="dummy"			length="23" value="                       " />
+		<Field id="dummy"			length="36" value="00                                  " />				
+		<Field id="narasi"			length="50" padding="right" padString=" "  />		
+		<Field id="dummy"			length="201" value="                                                                                                                                                                                                         " />	
+     </content>
+   </Req>
+   <Res>        
+		<content>
+			<Field id="message"          startIndex="95" length="69" padding="right" padString=" " />
+		</content>       
+   </Res>
+</GLTransfer>
+
+

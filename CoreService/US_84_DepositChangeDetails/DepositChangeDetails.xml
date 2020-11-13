@@ -1,0 +1,144 @@
+<DepositChangeDetails>
+   <Req>
+     <content> 
+        <Field id="accountNum"		padding="left" padString="0" length="17" />
+		<Field id="option"			padding="left" padString="1" length="1" />
+		<Field id="dateOverdraft"	padding="left" padString="0" length="8" />
+     </content>
+   </Req>
+   <Res>
+	<RX007085>
+		 <content> 
+
+			<Field id="accountNum" padding="left" padString="0" startIndex="90" length="17" />
+			<Field id="cif" padding="left" padString="0" startIndex="107" length="17" />
+
+			<Field id="idNum" padding="right" padString=" " startIndex="124" length="24" />
+			<Field id="idType" padding="left" padString="0" startIndex="148" length="4" />
+
+			<Field id="customerName" padding="right" padString=" " startIndex="152" length="60" />
+			<Field id="address1" padding="right" padString=" " startIndex="212" length="40" />
+
+			<Field id="address2" padding="right" padString=" " startIndex="252" length="40" />
+			<Field id="npwp" padding="right" padString=" " startIndex="292" length="1" />
+
+			<Field id="address3" padding="right" padString=" " startIndex="293" length="40" />
+			<Field id="nationality" padding="right" padString=" " startIndex="333" length="3" />
+
+			<Field id="address4" padding="right" padString=" " startIndex="336" length="40" />
+			<Field id="postCode" padding="right" padString=" " startIndex="376" length="8" />
+
+			<Field id="accountType" padding="left" padString="0" startIndex="384" length="4" />
+			<Field id="subCategory" padding="left" padString="0" startIndex="388" length="4" />
+
+			<Field id="dummy" padding="right" padString=" " startIndex="392" length="3" />
+			<Field id="interestPaymentType" padding="right" padString=" " startIndex="395" length="1" />
+
+			<Field id="dummy" padding="right" padString=" " startIndex="396" length="3" />
+
+			<Field id="accountAff" padding="left" padString="0" startIndex="399" length="17" />
+			<Field id="profilBebasDenda" padding="left" padString="0" startIndex="416" length="4" />
+
+			<Field id="language" padding="left" padString="0" startIndex="420" length="2" />
+			<Field id="freqRekKoran" padding="right" padString=" " startIndex="422" length="1" />
+
+			<Field id="prosesKonsolidasiRekKoran" padding="right" padString=" " startIndex="423" length="1" />
+			<Field id="dateIndicator" padding="left" padString="0" startIndex="424" length="1" />
+
+			<Field id="mailId" padding="right" padString=" " startIndex="425" length="1" />
+			<Field id="noteIndicator" padding="right" padString=" " startIndex="426" length="1" />
+
+			<Field id="notifCustomer" padding="left" padString="0" startIndex="427" length="17" />
+			<Field id="intVariabel" padString="0" signLocation="none" type="flatMoney" intLength="2" decLength="4" startIndex="444" length="6" />
+
+			<Field id="dummy" padding="right" padString=" " startIndex="450" length="2" />
+			<Field id="freqInt" padding="right" padString=" " startIndex="452" length="4" />
+			<Field id="siklus" padding="left" padString="0" startIndex="456" length="2" />
+
+			<Field id="day" padding="left" padString="0" startIndex="458" length="2" />
+
+			<Field id="agentCode" padding="left" padString="0" startIndex="460" length="4" />
+
+			<Field id="investType" padding="left" padString="0" startIndex="464" length="4" />
+			<Field id="address5" padding="left" padString="0" startIndex="468" length="4" />
+			<Field id="dummy" padding="right" padString=" " startIndex="472" length="7" />
+			<Field id="indGroup" padding="left" padString="0" startIndex="479" length="1" />
+
+			<Field id="accntNumber5" padding="left" padString="0" startIndex="480" length="17" />
+			<Field id="idApplikasi" padding="left" padString="0" startIndex="497" length="2" />
+			<Field id="dummy" padding="right" padString=" " startIndex="499" length="15" />
+			<Field id="DefaultString19" padding="left" padString="0" startIndex="514" length="1" />
+			
+			<Field id="DefaultString20" padding="left" padString="0" startIndex="515" length="5" />
+			<Field id="DefInteger7" padding="left" padString="0" startIndex="520" length="15" />
+			<Field id="dummy" padding="right" padString=" " startIndex="435" length="17" />
+			<Field id="DefInteger13" padding="left" padString="0" startIndex="552" length="4" />
+			<Field id="DefaultString21" padding="right" padString=" " startIndex="556" length="1" />
+
+			<Field id="Unsigned08" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="557" length="18" />
+			<Field id="dummy" padding="right" padString=" " startIndex="475" length="8" />
+			<Field id="idGroupTier" padding="right" padString=" " startIndex="583" length="4" />
+
+			<Field id="resikoDomestik" padding="right" padString=" " startIndex="587" length="2" />
+			<Field id="resikoLintas" padding="right" padString=" " startIndex="589" length="2" />
+
+			<Field id="accCrossBorder" padding="right" padString=" " startIndex="591" length="2" />
+			<Field id="indJaminan" padding="right" padString=" " startIndex="593" length="1" />
+
+			<Field id="lmtJangkaWkt" padding="right" padString=" " startIndex="594" length="2" />
+			<Field id="DefaultString18" padding="right" padString=" " startIndex="596" length="12" /> <!-- vostroIdBank -->
+
+			<Field id="kdGL" padding="right" padString=" " startIndex="608" length="25" />
+
+			<Field id="tglBukaRek" padding="right" padString=" " startIndex="633" length="8" />
+			<Field id="jmlCopy" padding="left" padString="0" startIndex="641" length="2" />
+
+			<Field id="indProses" padding="right" padString=" " startIndex="643" length="1" />
+			<Field id="indEkstrakRek" padding="right" padString=" " startIndex="644" length="1" />
+
+			<Field id="rateSesuai" type="flatMoney" signLocation="after" intLength="3" decLength="4" startIndex="645" length="8" />
+			
+			
+			<Field id="klausaValas" padding="right" padString=" " startIndex="653" length="1" />
+			<Field id="valuta" padding="right" padString=" " startIndex="654" length="3" />
+
+			<Field id="indPerubahanBungaRekKoran" padding="right" padString=" " startIndex="657" length="1" />
+			<Field id="indHerTaksasi" padding="right" padString=" " startIndex="658" length="1" />
+
+			
+			<Field id="BrokerNo1" padding="right" padString=" " startIndex="659" length="7" />
+			<Field id="dummy" padding="right" padString=" " startIndex="666" length="19" />
+			<Field id="DefInteger8" padding="right" padString=" " startIndex="685" length="6" />
+			<!--missing 10 digit-->
+			<Field id="tpr" padding="left" padString="0" signLocation="none" type="flatMoney" intLength="2" decLength="4" startIndex="701" length="6" />
+			<Field id="CertNo1" padding="right" padString=" " startIndex="707" length="10" />
+			<Field id="NoIns" padding="right" padString=" " startIndex="717" length="2" />
+			<Field id="Insurance" padding="right" padString=" " startIndex="719" length="2" />
+
+			<Field id="OpenAcctResason" padding="right" padString=" " startIndex="721" length="4" />
+			<Field id="otherOpenAcctResason" padding="right" padString=" " startIndex="725" length="20" />
+			<Field id="SrcOfFrund" padding="right" padString=" " startIndex="745" length="4" />
+
+			<Field id="SrcOfFrund1" padding="right" padString=" " startIndex="749" length="30" />
+			<Field id="ProjDep" padding="left" padString="0" startIndex="779" length="17" />
+
+			<Field id="ProjWdl" padding="left" padString="0" startIndex="796" length="17" />
+			<Field id="AcctRatio" padding="0" signLocation="none" type="flatMoney" intLength="2" decLength="2" startIndex="813" length="4" />
+
+			<Field id="BICNo" padding="left" padString="0" startIndex="817" length="16" />
+			<Field id="BICLimit" padding="0" type="flatMoney" signLocation="none" intLength="14" decLength="3" startIndex="833" length="17" />
+
+			
+			<Field id="InsuTerm" padding="left" padString="0" startIndex="850" length="4" />
+			<Field id="AutoClose" padding="left" padString="0" startIndex="854" length="1" />
+			<Field id="AutoPremium" padding="left" padString="0" startIndex="855" length="1" />
+			<Field id="MthPay" signLocation="after" type="flatMoney" intLength="14" decLength="3" startIndex="856" length="18" />
+			<Field id="AddCover" padding="left" padString="0" startIndex="874" length="2" />
+			<Field id="AffiAcctNo" padding="left" padString="0" startIndex="876" length="17" />
+			<Field id="InsuAcctNo" padding="left" padString="0" startIndex="893" length="17" />
+			<Field id="PrincArrears" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="910" length="18" />
+			<Field id="PremArrears" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="928" length="18" />
+		 </content>
+	</RX007085>
+   </Res>
+</DepositChangeDetails>

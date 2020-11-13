@@ -1,0 +1,129 @@
+<S06Inquiry>
+	<Req>
+		<content>
+			<Field id="trxSource" padding="right" padString=" " startIndex="88" length="4" />
+			<Field id="trxDate" padding="left" padString="0" length="8" />
+
+			<Field id="date3" padding="left" padString="0" length="8" />
+			<Field id="ccy3" padding="right" padString=" " startIndex="108" length="3" />			
+			<Field id="nomAmount3" padding="right" padString=" " length="18" />
+			<Field id="refferenceNum" padding="right" padString=" " startIndex="129" length="16" />
+			<Field id="counterAdvis" padding="right" padString=" " startIndex="145" length="9" />
+			<Field id="status" padding="right" padString=" " startIndex="154" length="7" />
+			<Field id="date4" padding="left" padString="0" length="8" />
+			<Field id="ccy4" padding="right" padString=" " startIndex="169" length="3" />
+			<Field id="nomAmount4" padding="right" padString=" " length="18" />
+			<Field id="reffNo4" padding="right" padString=" " startIndex="190" length="16" />
+			<Field id="ctrAdvis4" padding="right" padString=" " startIndex="206" length="9" />
+			<Field id="status4" padding="right" padString=" " startIndex="215" length="7" />
+			<Field id="date5" padding="left" padString="0" length="8" />
+			<Field id="ccy5" padding="right" padString=" " startIndex="230" length="3" />
+			<Field id="nomAmount5" padding="right" padString=" " length="18" />
+			<Field id="reffNo5" padding="right" padString=" " startIndex="251" length="16" />
+			<Field id="ctrAdvis5" padding="right" padString=" " startIndex="267" length="9" />
+			<Field id="status5" padding="right" padString=" " startIndex="276" length="7" />
+			<Field id="date6" padding="left" padString="0" length="8" />
+			<Field id="ccy6" padding="right" padString=" " startIndex="291" length="3" />
+			<Field id="nomAmount6" padding="right" padString=" " length="18" />
+			<Field id="reffNo6" padding="right" padString=" " startIndex="312" length="16" />
+			<Field id="ctrAdvis6" padding="right" padString=" " startIndex="328" length="9" />
+			<Field id="status6" padding="right" padString=" " startIndex="337" length="7" />
+			<Field id="date7" padding="left" padString="0" length="8" />
+			<Field id="ccy7" padding="right" padString=" " startIndex="352" length="3" />
+
+			<Field id="nomAmount7" padding="right" padString=" " length="18" />
+
+			<Field id="reffNo7" padding="right" padString=" " startIndex="373" length="16" />
+			<Field id="ctrAdvis7" padding="right" padString=" " startIndex="389" length="9" />
+			<Field id="status7" padding="right" padString=" " startIndex="398" length="7" />
+			<Field id="date8" padding="left" padString="0" length="8" />
+			<Field id="ccy8" padding="right" padString=" " startIndex="413" length="3" />
+
+			<Field id="nomAmount8" padding="right" padString=" " length="18" />
+
+			<Field id="reffNo8" padding="right" padString=" " startIndex="434" length="16" />
+			<Field id="ctrAdvis8" padding="right" padString=" " startIndex="450" length="9" />
+			<Field id="status8" padding="right" padString=" " startIndex="459" length="7" />
+			<Field id="date9" padding="left" padString="0" length="8" />
+			<Field id="ccy9" padding="right" padString=" " startIndex="474" length="3" />
+
+			<Field id="nomAmount9" padding="right" padString=" " length="18" />
+
+			<Field id="reffNo9" padding="right" padString=" " startIndex="495" length="16" />
+			<Field id="ctrAdvis9" padding="right" padString=" " startIndex="511" length="9" />
+			<Field id="status9" padding="right" padString=" " startIndex="520" length="7" />
+			<Field id="date10" padding="left" padString="0" length="8" />
+			<Field id="ccy10" padding="right" padString=" " startIndex="535" length="3" />
+			<Field id="nomAmount10" padding="right" padString=" " length="18" />
+
+			<Field id="reffNo10" padding="right" padString=" " startIndex="556" length="16" />
+			<Field id="ctrAdvis10" padding="right" padString=" " startIndex="572" length="9" />
+			<Field id="status10" padding="right" padString=" " startIndex="581" length="7" />
+			<Field id="date11" padding="left" padString="0" length="8" />
+			<Field id="ccy11" padding="right" padString=" " startIndex="596" length="3" />
+			<Field id="nomAmount11" padding="right" padString=" " length="18" />
+
+			<Field id="reffNo11" padding="right" padString=" " startIndex="617" length="16" />
+			<Field id="ctrAdvis11" padding="right" padString=" " startIndex="633" length="9" />
+			<Field id="status11" padding="right" padString=" " startIndex="642" length="7" />
+			<Field id="date12" padding="left" padString="0" length="8" />
+			<Field id="ccy12" padding="right" padString=" " startIndex="657" length="3" />
+
+			<Field id="nomAmount12" padding="right" padString=" " length="18" />
+
+			<Field id="reffNo12" padding="right" padString=" " startIndex="678" length="16" />
+			<Field id="ctrAdvis12" padding="right" padString=" " startIndex="694" length="9" />
+			<Field id="status12" padding="right" padString=" " startIndex="703" length="7" />
+			<Field id="dummy" length="1" value="H" />
+			<Field id="dummy" length="2" value="01" />
+			<Field id="reffNoPrev" padding="right" padString=" " startIndex="713" length="16" />
+			<Field id="ctrAdvisPrev" padding="right" padString=" " startIndex="729" length="9" />
+			<Field id="branchPrev" padding="left" padString="0" startIndex="738" length="4" />
+		</content>
+	</Req>
+
+	<Res>
+       <RX057302>
+		<content>
+			<Field id="refferenceNum" padding="right" padString=" " startIndex="90" length="16" />
+			<Field id="counterAdvis" padding="right" padString=" " startIndex="106" length="9" />
+			<Field id="trxDate" type="date" startIndex="115" length="8" />
+			<Field id="trxStatus" padding="right" padString=" " startIndex="123" length="7" />
+			<Field id="remmAmount" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="130" length="18" />
+			<Field id="remmAmountCurrency" padding="right" padString=" " startIndex="148" length="3" />
+			<Field id="dummy" padding="right" padString=" " startIndex="151" length="3" />
+			<Field id="trxCharges" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="154" length="18" />
+			<Field id="refundCharge" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="172" length="18" />
+			<Field id="dummy" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="190" length="18" />
+			<Field id="rateType" startIndex="208" length="2" />			
+			<Field id="dummy" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="210" /> <!-- base amount -->
+			<Field id="dummy" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="228" /> <!-- credit amount -->
+			<Field id="beneficiaryAccount" padding="right" padString=" " startIndex="246" length="17" />
+			<Field id="beneficiaryName" padding="right" padString=" " startIndex="263" length="35" />
+			<Field id="beneficiaryAddress" padding="right" padString=" " startIndex="298" length="105" />
+			<Field id="senderName" padding="right" padString=" " startIndex="403" length="35" />
+			<Field id="senderAddress" padding="right" padString=" " startIndex="438" length="105" />
+			<Field id="accountNum" padding="right" padString=" " startIndex="543" length="17" />
+			<Field id="accountName" padding="right" padString=" " startIndex="560" length="35" />
+			<Field id="accountCurrency" padding="right" padString=" " startIndex="595" length="3" />
+			<Field id="nonSTPReason" padding="right" padString=" " startIndex="598" length="35" />
+			<Field id="naration" padding="right" padString=" " startIndex="633" length="140" />
+			<Field id="senderBank" padding="right" padString=" " startIndex="773" length="35" />
+			<Field id="coveringBank" padding="right" padString=" " startIndex="808" length="11" />
+			<Field id="coverRefference" padding="right" padString=" " startIndex="819" length="16" />
+			<Field id="coverAccount" padding="right" padString=" " startIndex="835" length="17" />
+			<Field id="branchNum" padding="right" padString=" " startIndex="852" length="4" />
+			<Field id="debitAccountNum" padding="right" padString=" " startIndex="856" length="17" />
+			<Field id="creditAccountNum" padding="left" padString="0" startIndex="873" length="17" />
+			<Field id="dummy" padding="left" padString="0" startIndex="890" length="17" />
+			<Field id="dummy" padding="right" padString=" " startIndex="907" length="1" />
+			<Field id="dummy" padding="right" padString=" " startIndex="908" length="35" />
+			<Field id="dummy" padding="right" padString=" " startIndex="943" length="10" />
+			<Field id="dummy" padding="right" padString=" " startIndex="953" length="10" />
+			<Field id="chargeType" padding="right" padString=" " startIndex="963" length="3" />
+			<Field id="amdCharges" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="966" length="18" />
+			<Field id="xtrCharges" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="984" length="18" />
+		</content>
+       </RX057302>
+	</Res>
+</S06Inquiry>

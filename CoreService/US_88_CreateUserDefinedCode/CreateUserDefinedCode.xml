@@ -1,0 +1,60 @@
+<CreateUserDefinedCode>
+	<Req>
+		<content>
+			<Field id="accntNumber1" padding="left" padString="0" length="17" />
+			<Field id="defaultString" padding="right" padString=" " length="20" />
+			<Field id="userCode2122" padding="right" padString=" " length="2" />
+			<Field id="teroris" padding="right" padString=" " length="1" />
+			
+			<Field id="defaultString3a" padding="right" padString=" " length="3" />
+			<Field id="defaultString3b" padding="right" padString=" " length="4" />
+			
+			<Field id="defaultString4a" padding="right" padString=" " length="4" />
+			<Field id="defaultString4b" padding="right" padString=" " length="3" />
+			<Field id="defaultString4c" padding="right" padString=" " length="3" />
+			
+			<Field id="defaultString5a" padding="right" padString=" " length="4" />
+			<Field id="defaultString5b" padding="right" padString=" " length="7" />
+			
+			<Field id="defaultString6a" padding="right" padString=" " length="3" />
+			<Field id="defaultString6b" padding="right" padString=" " length="3" />
+			<Field id="defaultString6c" padding="right" padString=" " length="3" />
+			
+			<Field id="hubdgBank" padding="right" padString=" " length="1" />
+			<Field id="badanHukum" padding="right" padString=" " length="2" />
+			<Field id="riskLevel" padding="right" padString=" " length="1" />
+			<Field id="jenisOpr" padding="right" padString=" " length="1" />
+			<Field id="tawarProduk" padding="right" padString=" " length="1" />
+			<Field id="shareDataPri" padding="right" padString=" " length="1" />
+			
+			<Field id="defaultString7h" padding="right" padString=" " length="1" />
+			<Field id="defaultString7i" padding="right" padString=" " length="1" />
+			<Field id="defaultString7j" padding="right" padString=" " length="1" />
+			
+			<Field id="defaultString8a" padding="right" padString=" " length="2" />
+			<Field id="defaultString8b" padding="right" padString=" " length="2" />
+			<Field id="defaultString8c" padding="right" padString=" " length="2" />
+			<Field id="defaultString8d" padding="right" padString=" " length="2" />
+			<Field id="defaultString8e" padding="right" padString=" " length="2" />
+			
+			<Field id="defaultString9a" padding="right" padString=" " length="2" />
+			<Field id="defaultString9b"  padding="right" padString=" " length="2" />
+			<Field id="defaultString9c" padding="right" padString=" " length="2" />
+			<Field id="defaultString9d" padding="right" padString=" " length="2" />
+			<Field id="defaultString9e" padding="right" padString=" " length="2" />
+			
+			<Field id="defaultString10a" padding="right" padString=" " length="2" />
+			<Field id="defaultString10b" padding="right" padString=" " length="2" />
+			<Field id="defaultString10c" padding="right" padString=" " length="2" />
+			<Field id="defaultString10d" padding="right" padString=" " length="2" />
+			<Field id="defaultString10e" padding="right" padString=" " length="2" />
+			
+			<Field id="dummy" length="400" />
+		</content>
+	</Req>
+	<Res>
+		<content>
+         <Field id="message" startIndex="95" length="73" padding="right" padString=" "/>
+      </content>
+	</Res>
+	</CreateUserDefinedCode>

@@ -1,0 +1,190 @@
+<AccountDetails>
+   <Req>
+       <content> 
+          <Field id="accountNum" length="17" padding="left" padString="0" />
+       </content>
+   </Req>
+   <Res>
+       <RX032001>
+          <content>              
+            <Field id="accountProductType"  type="dummy" value="DEP"/>
+            <Field id="d_nomorRekening" padding="left"  padString="0" startIndex="90" length="20" />
+            <Field id="d_currency"  padding="right" padString=" " startIndex="110" length="3" />
+
+            <Field id="d_namaProduk" padding="right" padString=" " startIndex="113" length="30" />
+            <Field id="d_cabangPembuka" padding="right" padString=" " startIndex="143" length="4" />
+
+            <Field id="d_kodeUser" padding="right" padString=" " startIndex="147" length="20" />
+            <Field id="d_statusRekening" padding="right" padString=" " startIndex="167" length="4" />
+
+            <Field id="d_jenisInvestasi" padding="right" padString=" " startIndex="171" length="4" />
+            <Field id="d_kodeArea" padding="right" padString=" " startIndex="175" length="4" />
+
+            <Field id="d_kodeAgen"  padding="right" padString=" " startIndex="179" length="4" />
+            <Field id="d_indNotifikasi" padding="right" padString=" " startIndex="183" length="1" />
+
+            <Field id="d_indSurat" padding="right" padString=" " startIndex="184" length="1" />
+            <Field id="d_namaRekening" padding="right" padString=" " startIndex="185" length="60" />
+
+            <Field id="d_namaNasabah" padding="right" padString=" " startIndex="245" length="60" />
+            <Field id="d_alamatNasabah_1" padding="right" padString=" " startIndex="305" length="40" />
+
+            <Field id="d_nominalBunga_1" padding="right" padString=" " startIndex="345" length="19" />
+            <Field id="d_alamatNasabah_2" padding="right" padString=" " startIndex="364" length="40" />
+
+            <Field id="d_nominalBunga_2" padding="right" padString=" " startIndex="404" length="19" />
+            <Field id="d_alamatNasabah_3" padding="right" padString=" " startIndex="423" length="40" />
+
+            <Field id="d_nominalBunga_3" padding="right" padString=" " startIndex="463" length="19" />
+            <Field id="d_alamatNasabah_4" padding="right" padString=" " startIndex="482" length="40" />
+
+            <Field id="d_kodePos" padding="right" padString=" " startIndex="522" length="8" />
+            <Field id="d_nominalBunga_4" padding="right" padString=" " startIndex="530" length="19" />
+
+            <Field id="d_tglBukaRekening" padding="right" padString=" " startIndex="549" length="10" />
+            <Field id="d_tktBungaKredit" padding="right" padString=" " startIndex="559" length="7" />
+
+            <Field id="d_tktBungaDebet" padding="right" padString=" " startIndex="566" length="7" />
+            <Field id="d_nominalBunga_5" padding="right" padString=" " startIndex="573" length="19" />
+
+            <Field id="d_saldoAkhir" padding="right" padString=" " startIndex="592" length="19" />
+            <Field id="d_tglJthTempoOverdraft" padding="right" padString=" " startIndex="630" length="10" />
+
+            <Field id="d_nominalBlokir" padding="right" padString=" " startIndex="659" length="19" />
+            <Field id="d_limitOverdraft" padding="right" padString=" " startIndex="678" length="14" />
+
+            <Field id="d_danaBelumEfektif" padding="right" padString=" " startIndex="692" length="19" />
+            <Field id="d_tambahanBunga" padding="right" padString=" " startIndex="711" length="19" />
+
+            <Field id="d_tglTrkhrKreditBunga" padding="right" padString=" " startIndex="730" length="10" />
+            <Field id="d_bungaSaatTutupRek" padding="right" padString=" " startIndex="740" length="19" />
+
+            <Field id="d_proyeksiBunga" padding="right" padString=" " startIndex="759" length="19" />
+            <Field id="d_tglKreditBungaYad" padding="right" padString=" " startIndex="778" length="10" />
+
+            <Field id="d_pajakSaatTutupRek" padding="right" padString=" " startIndex="788" length="19" />
+            <Field id="d_bungaTersedia" padding="right" padString=" " startIndex="807" length="19" />
+
+            <Field id="d_tglTrkhrUbahDetail" padding="right" padString=" " startIndex="826" length="10" />
+            <Field id="d_relationshipManager" padding="left" padString="0" startIndex="836" length="5" />
+
+            <Field id="d_kodeBM_CSM" padding="right" padString=" " startIndex="841" length="1" />
+            <Field id="d_rateSesuai" padding="right" padString=" " startIndex="942" length="8" />
+
+            <Field id="d_tglTrkhrUbahJenisRek" padding="right" padString=" " startIndex="950" length="10" />
+            <Field id="d_nilaiBungaOverdraft" padding="right" padString=" " startIndex="960" length="19" />
+
+            <Field id="d_saldoEfektif" padding="right" padString=" " startIndex="979" length="19" />
+            <Field id="d_profitTersedia" padding="right" padString=" " startIndex="1004" length="19" />
+
+            <Field id="d_profitAkrual" padding="right" padString=" " startIndex="1023" length="19" />
+            <Field id="d_numTeller" padding="left" padString="0" startIndex="1042" length="5" />
+          </content>
+       </RX032001>
+
+       <RX032101>
+        <content>
+            <Field id="accountProductType"  type="dummy" value="LON"/>
+            <Field id="l_nomor_rekening" padding="left" padString="0" startIndex="90" length="20" />
+            <Field id="l_currency" padding="right" padString=" " startIndex="110" length="3" />
+
+            <Field id="l_nama_produk" padding="right" padString=" " startIndex="113" length="30" />
+            <Field id="l_nama_rekening" padding="right" padString=" " startIndex="143" length="60" />
+
+            <Field id="l_nama_nasabah" padding="right" padString=" " startIndex="203" length="60" />
+            <Field id="l_alamat_1" padding="right" padString=" " startIndex="263" length="40" />
+
+            <Field id="l_status_rek" padding="right" padString=" " startIndex="303" length="18" />
+            <Field id="l_alamat_2" padding="right" padString=" " startIndex="321" length="40" />
+
+            <Field id="l_ind_note" padding="right" padString=" " startIndex="361" length="1" />
+            <Field id="l_jenis_pinjaman" padding="right" padString=" " startIndex="362" length="4" />
+
+            <Field id="l_alamat_3" padding="right" padString=" " startIndex="366" length="40" />
+            <Field id="l_ind_surat" padding="right" padString=" " startIndex="406" length="1" />
+
+            <Field id="l_tk_suku_bunga" padding="right" padString=" " startIndex="407" length="5" />
+            <Field id="l_alamat_4" padding="right" padString=" " startIndex="412" length="40" />
+
+            <Field id="l_kode_pos" padding="right" padString=" " startIndex="452" length="8" />
+            <Field id="l_nominal_saldo" padding="right" padString=" " startIndex="460" length="19" />
+
+            <Field id="l_nominal_unclose" padding="right" padString=" " startIndex="479" length="19" />
+            <Field id="l_nominal_npb" padding="right" padString=" " startIndex="498" length="19" />
+
+            <Field id="l_nominal_saldo_eom" padding="right" padString=" " startIndex="517" length="19" />
+            <Field id="l_nominal_approved" padding="right" padString=" " startIndex="536" length="19" />
+
+            <Field id="l_nominal_adv" padding="right" padString=" " startIndex="555" length="19" />
+            <Field id="l_nominal_tunggakan" padding="right" padString=" " startIndex="574" length="19" />
+
+            <Field id="l_nominal_angsuran" padding="right" padString=" " startIndex="593" length="19" />
+            <Field id="l_tgl_pk" type="date" startIndex="612" length="8" />
+
+            <Field id="l_tgl_bayar_akhir" type="date" startIndex="620" length="8" />
+            <Field id="l_tgl_adv_akhir" type="date" startIndex="628" length="8" />
+
+            <Field id="l_tgl_mulai_jatuh_tempo" type="date" startIndex="636" length="8" />
+            <Field id="l_misc_dr_1" padding="right" padString=" " startIndex="644" length="11" />
+
+            <Field id="l_misc_dr_2" padding="right" padString=" " startIndex="655" length="11" />
+            <Field id="l_misc_dr_3" padding="right" padString=" " startIndex="666" length="11" />
+
+            <Field id="l_ind_redraw" padding="right" padString=" " startIndex="677" length="1" />
+            <Field id="l_jk_wkt_pinjaman" padding="right" padString=" " startIndex="678" length="4" />
+
+            <Field id="l_rem_repay" padding="right" padString=" " startIndex="682" length="4" />
+            <Field id="l_tgl_mulai_bunga" type="date" startIndex="686" length="8" />
+
+            <Field id="l_user_cds" padding="right" padString=" " startIndex="694" length="23" />
+            <Field id="l_prm_rek" padding="right" padString=" " startIndex="717" length="20" />
+
+            <Field id="l_rel_manager" padding="left" padString="0" startIndex="737" length="5" />
+            <Field id="l_kode_rm" padding="right" padString=" " startIndex="742" length="1" />
+            
+            <Field id="l_basis_waktu" padding="right" padString=" " startIndex="743" length="1" />
+            <Field id="l_nominal_saldo_inf" padding="right" padString=" " startIndex="860" length="19" />
+
+            <Field id="l_nominal_adj_bunga" padding="right" padString=" " startIndex="879" length="19" />
+            <Field id="l_nominal_pokok" padding="right" padString=" " startIndex="898" length="19" />
+
+            <Field id="l_holi_repay" padding="left" padString="0" startIndex="917" length="2" />
+            <Field id="l_jenis_dana" padding="right" padString=" " startIndex="919" length="1" />
+
+            <Field id="l_chan_exec" padding="right" padString=" " startIndex="920" length="1" />
+            <Field id="l_jenis_sindikasi" padding="right" padString=" " startIndex="921" length="1" />
+
+            <Field id="l_jenis_kuk" padding="right" padString=" " startIndex="922" length="1" />
+            <Field id="l_tgl_review_berikut" type="date" startIndex="923" length="8" />          
+       </content>
+       </RX032101>
+
+<!--
+       <RX032201>
+        <content>
+            <Field id="accountProductType"  type="dummy" value="CTA"/> 
+            <Field id="c_accountNum" padding="right" padString=" " startIndex="90" length="20" />
+            <Field id="c_customerNum" padding="right" padString=" " startIndex="110" length="20" />
+            <Field id="c_accountName" padding="right" padString=" " startIndex="130" length="60" />
+            <Field id="c_address1" padding="right" padString=" " startIndex="190" length="40" />
+            <Field id="c_address2" padding="right" padString=" " startIndex="230" length="40" />
+            <Field id="c_address3" padding="right" padString=" " startIndex="270" length="40" />
+            <Field id="c_address4" padding="right" padString=" " startIndex="310" length="40" />
+            <Field id="c_postCode" padding="right" padString=" " startIndex="350" length="8" />
+            <Field id="c_glClasificationCode" padding="right" padString=" " startIndex="358" length="25" />
+            <Field id="c_facilityNum" padding="right" padString=" " startIndex="383" length="20" />
+            <Field id="c_accountStatus" padding="right" padString=" " startIndex="403" length="15" />
+            <Field id="c_accountTypeCode" padding="left" padString="0" startIndex="418" length="4" />
+            <Field id="c_accountSubCatCode" padding="left" padString="0" startIndex="422" length="4" />
+            <Field id="c_currency" padding="right" padString=" " startIndex="426" length="3" />
+            <Field id="c_balance" padding="right" padString=" " startIndex="429" length="19" />
+            <Field id="c_tanggalTerakhirUbahJenisRekening" padding="right" padString=" " startIndex="448" length="8" />
+            <Field id="c_counterGuarantee" padding="right" padString=" " startIndex="456" length="2" />
+            <Field id="c_bankKoresponden" padding="right" padString=" " startIndex="458" length="12" />
+            <Field id="c_beneficiery" padding="right" padString=" " startIndex="470" length="30" />
+        </content>
+       </RX032201>
+-->
+
+   </Res>
+</AccountDetails>

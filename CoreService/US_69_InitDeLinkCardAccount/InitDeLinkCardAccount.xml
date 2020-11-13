@@ -1,0 +1,29 @@
+<InitDeLinkCardAccount>
+   <Req>
+     <content> 
+		<Field id="cardNum"		padding="left"		padString="0"	length="19" />
+     </content>
+   </Req>
+   <Res>
+     <content>              
+		  <Field id="cardNum"			startIndex="90"  length="16" padding="right" padString=" " />
+          <Field id="cardDescription"	startIndex="110" length="30" padding="right" padString=" " /> 
+		  <Field id="nameInCard1"		startIndex="140" length="26" padding="right" padString=" " /> 
+		  <Field id="nameInCard2"		startIndex="170" length="26" padding="right" padString=" " />
+		  <Field id="cifNum"			startIndex="210" length="17" padding="right" padString=" " />
+		  <Field id="name"				startIndex="230" length="40" padding="right" padString=" " />
+		  <Field id="address1"			startIndex="270" length="40" padding="right" padString=" " />
+		  <Field id="address2"			startIndex="310" length="40" padding="right" padString=" " />
+		  <Field id="address3"			startIndex="350" length="40" padding="right" padString=" " />
+		  <Field id="address4"			startIndex="390" length="40" padding="right" padString=" " />
+		  <Field id="postCode"			startIndex="430" length="8"  padding="right" padString=" " />		  
+		  <Field id="account1"			startIndex="440" length="8" padding="right" padString=" " />		  
+		  <Field id="accountNum1"		startIndex="450" length="17" padding="right" padString=" " />		  
+		  <Field id="account2"			startIndex="470" length="8" padding="right" padString=" " />		  
+		  <Field id="accountNum2"		startIndex="480" length="17" padding="right" padString=" " />		  
+		  <Field id="account3"			startIndex="500" length="8" padding="right" padString=" " />
+		  <Field id="accountNum3"		startIndex="510" length="17" padding="right" padString=" " />		  
+		  <Field id="deLinkCardAccount"	startIndex="570" length="17"  padding="right" padString=" " />		  
+     </content>
+   </Res>
+</InitDeLinkCardAccount>

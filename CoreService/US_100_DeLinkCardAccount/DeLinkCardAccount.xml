@@ -1,0 +1,39 @@
+<DeLinkCardAccount>
+   <Req>
+     <content> 
+		<Field id="cardNum"			padding="left"		padString="0"	length="20" />
+		<Field id="cardDescription"	length="30"			padding="right"  padString=" " />
+		<Field id="nameInCard1"			length="26"			padding="right"  padString=" " />
+		<Field id="dummy"				length="4"			value="    " />
+		<Field id="nameInCard1"			length="26"			padding="right"  padString=" " />
+		<Field id="dummy"				length="14"			value="              " />
+		<Field id="cifNum"			padding="left"		padString="0"	length="17" />
+		<Field id="dummy"				length="3"			value="   " />
+		<Field id="name"				length="40"			padding="right"  padString=" " />
+		<Field id="address1"			length="40"			padding="right"  padString=" " />
+		<Field id="address2"			length="40"			padding="right"  padString=" " />
+		<Field id="address3"			length="40"			padding="right"  padString=" " />
+		<Field id="address4"			length="40"			padding="right"  padString=" " />
+		<Field id="postCode"			length="8"			padding="right"  padString=" " />
+		<Field id="dummy"				length="2"			value="  " />
+		<Field id="account1"			length="8"			padding="right"  padString=" " />
+		<Field id="dummy"				length="2"			value="  " />
+		<Field id="accountNum1"			length="17"			padding="right"  padString=" " />
+		<Field id="dummy"				length="3"			value="   " />
+		<Field id="account2"			length="8"			padding="right"  padString=" " />
+		<Field id="dummy"				length="2"			value="  " />
+		<Field id="accountNum2"			length="17"			padding="right"  padString=" " />
+		<Field id="dummy"				length="3"			value="   " />
+		<Field id="account3"			length="8"			padding="right"  padString=" " />
+		<Field id="dummy"				length="2"			value="  " />
+		<Field id="accountNum3"			length="17"			padding="right"  padString=" " />		
+		<Field id="dummy"				length="43"			value="                                           " />
+		<Field id="deLinkCardAccount"		padding="left"		padString="0"	length="17" />		
+     </content>
+   </Req>
+   <Res>
+     <content>              
+		 <Field  id="message"  startIndex="94"  length="69"  padding="right"  padString=" " />
+     </content>
+   </Res>
+</DeLinkCardAccount>

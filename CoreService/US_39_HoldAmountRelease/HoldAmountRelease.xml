@@ -1,0 +1,22 @@
+<HoldAmountRelease>      
+   <Req>
+       <content> 
+          <Field id="accountNum" length="17" padding="left" padString="0" />
+          <Field id="amount" type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" /> 
+          <Field id="detail" length="18" padding="right" padString=" " />
+          <Field id="refMatch" length="1" padding="right" padString=" " />		  
+	      <Field id="dummy" length="16" value="                " /> 
+	      <Field id="setDate" length="8" padding="left" padString="0" />
+	      <Field id="journalNum" length="6" padding="right" padString=" " />
+	      <Field id="reasonBlock" length="2" padding="right" padString=" " />
+		  <Field id="detail2" length="12" padding="right" padString=" " />
+       </content>
+   </Req>
+   <Res>
+       <content> 
+          <Field id="message"        startIndex="99" length="69" padding="right" padString=" " />
+      </content>
+   </Res>
+</HoldAmountRelease>
+
+  

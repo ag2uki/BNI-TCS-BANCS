@@ -1,0 +1,21 @@
+<InquirySMSNotification>
+   <Req>
+       <content> 
+		  <Field id="action" padding="right" length="1" />		
+		  <Field id="dummy" value="        " length="8" />		
+          <Field id="cifNumber" padding="left" padString="0" length="17" />
+          <Field id="accountNumber" padding="left" length="17"  padString="0" />
+       </content>
+   </Req>
+   <Res>
+		<content>
+			<Field id="cifNumber" padding="left" padString="0" startIndex="99" length="17" />
+			<Field id="accountNumber" padding="left" padString="0" startIndex="116" length="17" />
+			<Field id="phoneNumber" padding="right" padString=" " startIndex="133" length="20" />
+			<Field id="debitTreshold"  type="flatMoney"  signLocation="after"  intLength="14"  decLength="3"  startIndex="153"  length="18" />
+			<Field id="checkDebit"  padding="right" padString=" " startIndex="171" length="2" />
+			<Field id="creditTreshold"  type="flatMoney"  signLocation="after"  intLength="14"  decLength="3"  startIndex="173"  length="18" />
+			<Field id="checkCredit"  padding="right" padString=" " startIndex="191" length="2" />
+		</content>
+   </Res>
+</InquirySMSNotification>

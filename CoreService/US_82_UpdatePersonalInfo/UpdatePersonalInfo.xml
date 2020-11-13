@@ -1,0 +1,48 @@
+<UpdatePersonalInfo>
+	<Req>
+		<content>
+			<Field  id="cifNum"  			padding="left"  padString="0"  length="17" />
+			<Field  id="name"  				padding="right"  padString=" "  length="60" />
+			<Field  id="nameAlias"  		padding="right"  padString=" "  length="30" />
+			<Field  id="berdasarPPH"  		padding="left"  padString="0"  length="1" />
+			<Field  id="cabangPbyrPajak"  	padding="left"  padString="0"  length="5" />
+			<Field  id="agama"  			padding="left"  padString="0"  length="4" />
+			<Field  id="lingkupPerusahaan"  padding="left"  padString=" "  length="1" />
+			<Field  id="email1"  			padding="right"  padString=" "  length="50" />
+			<Field  id="email2"  			padding="right"  padString=" "  length="50" />
+			<Field  id="kreditur"  			padding="left"  padString="0"  length="7" />
+			<Field  id="kdPendidikan"  		padding="left"  padString="0"  length="2" />
+			<Field  id="Channel1"  			padding="left"  padString="0"  length="2" />
+			<Field  id="Channel2"  			padding="left"  padString="0"  length="2" />
+			<Field  id="Channel3"  			padding="left"  padString="0"  length="2" />
+			<Field  id="Channel4"  			padding="left"  padString="0"  length="2" />
+			<Field  id="Channel5"  			padding="left"  padString="0"  length="2" />
+			<Field  id="Channel6"  			padding="left"  padString="0"  length="2" />
+			<Field  id="Channel7"  			padding="left"  padString="0"  length="2" />
+			<Field  id="Channel8"  			padding="left"  padString="0"  length="2" />
+			<Field  id="Channel9"  			padding="left"  padString="0"  length="2" />
+			<Field  id="Channel10"  		padding="left"  padString="0"  length="2" />
+			<Field  id="Channel11"  		padding="left"  padString="0"  length="2" />
+			<Field  id="Channel12"  		padding="left"  padString="0"  length="2" />
+			<Field  id="Channel13"  		padding="left"  padString="0"  length="2" />
+			<Field  id="Channel14"  		padding="left"  padString="0"  length="2" />
+			<Field  id="Channel15"  		padding="left"  padString="0"  length="2" />
+			<Field  id="Channel16"  		padding="left"  padString="0"  length="2" />
+			<Field  id="Channel17"  		padding="left"  padString="0"  length="2" />
+			<Field  id="Channel18"  		padding="left"  padString="0"  length="2" />
+			<Field  id="Channel19"  		padding="left"  padString="0"  length="2" />
+			<Field  id="Channel20"  		padding="left"  padString="0"  length="2" />
+			<Field  id="freq"  				padding="left"  padString=" "  length="1" />
+			<Field  id="siklus"  			padding="left"  padString="0"  length="2" />
+			<Field  id="hari"  				padding="left"  padString="0"  length="2" />
+			<Field  id="dummy"   			length="1"  value=" " />
+			<Field  id="Mom_Maiden_Name" 	padding="right"  padString=" "  length="40" />
+			<Field  id="cdHobby"  			padding="left"  padString="0"  length="2" />
+		</content>
+	</Req>
+	<Res>
+		<content> 
+			<Field id="message"        startIndex="95" length="56" padding="right" padString=" " />
+		</content>
+	</Res>
+</UpdatePersonalInfo>

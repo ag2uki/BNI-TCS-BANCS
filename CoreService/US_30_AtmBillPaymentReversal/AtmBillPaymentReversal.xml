@@ -1,0 +1,66 @@
+<AtmBillPaymentReversal>
+    <Req>
+       <content>
+        <Field id="accountNum"    padding="left"   padString="0" length="17" />
+        <Field id="dummy"         length="18"      value="00000000000000000+" />
+        <Field id="amount"        type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+        <Field id="filler"        padding="right"  padString=" " length="8" />
+ 	    <Field id="atmTrxDate"    padding="right"  padString=" " length="8" />
+        <Field id="dummy"         length="2"       value="XA"     comment="promo code" />
+        <Field id="filler"        padding="right"  padString=" " length="80" />
+        <Field id="dummy"         length="3"       value="IDR"    comment="trx currency. IDR only" />        
+        <Field id="dummy"         length="21"      value="00000000000000000+IDR" comment="forex amount + currency" />        
+        <Field id="amount"        type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+        <Field id="dummy"         length="48"      value="00000000000000000+00000000000000000+000000000000" comment="commision, rate, etc" />        
+        <Field id="filler"        padding="right"  padString=" " length="179" />
+ 	    <Field id="atmTrxDate"    padding="right"  padString=" " length="8" />
+        <Field id="dummy"         length="6"       value="111111" comment="bin acquirer. wtf" />        
+
+        <Field id="flag"     		padding="right"  padString=" " length="1" />
+        <Field id="amount1"         type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+        <Field id="amount2"         type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+        <Field id="amount3"         type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+        <Field id="amount4"         type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+        <Field id="amount5"         type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+        
+        <Field id="atmRefference" padding="right"  padString=" " length="23" />
+        <Field id="atmMerchant"   padding="right"  padString=" " length="38" />
+        <Field id="dummy"         length="2"       value="ID"    comment="country code" />        
+        <Field id="filler"        padding="right"  padString=" " length="18" />
+        <Field id="naration"      padding="right"  padString=" " length="50" />
+        <Field id="filler"        padding="right"  padString=" " length="5" />
+
+        <Field id="atmCardNum"    padding="right"  padString=" " length="16" />
+        <Field id="atmTrxTime"    padding="right"  padString=" " length="7" />
+        <Field id="billerCode"    padding="right"  padString=" " length="4" />
+        <Field id="invoiceNum"    padding="right"  padString=" " length="18" />
+        <Field id="regionCode"    padding="right"  padString=" " length="4" />
+        <Field id="amount"        type="flatMoney" intLength="11" decLength="3" signLocation="after" padding="left" padString="0" />
+
+        <Field id="atmTerminal"   padding="right"  padString=" " length="16" />
+        <Field id="atmAddress"    padding="right"  padString=" " length="33" />
+
+        <Field id="billCustomerName" padding="right"  padString=" " length="30" />
+        <Field id="billInvoice1"     padding="right"  padString=" " length="11" />
+        <Field id="billAmount1"      padding="left"   padString="0" length="11" />
+        <Field id="dummy"            length="1"       value="+"/>        
+        <Field id="billInvoice2"     padding="right"  padString=" " length="11" />
+        <Field id="billAmount2"      padding="left"   padString="0" length="11" />
+        <Field id="dummy"            length="1"       value="+"/>        
+        <Field id="billInvoice3"     padding="right"  padString=" " length="11" />
+        <Field id="billAmount3"      padding="left"   padString="0" length="11" />
+        <Field id="dummy"            length="1"       value="+"/>        
+
+        <Field id="filler"        padding="right"  padString=" " length="8" />
+        <Field id="atmTrxTime"    padding="right"  padString=" " length="8" />
+        <Field id="dummy"         length="48" value="0111111111110001                                " comment="wtf unknown" />
+		<Field id="billId"   		padding="right"  padString=" " length="25" />
+
+       </content> 
+    </Req>
+    <Res>
+       <content> 
+          <Field id="message"        startIndex="90" length="100" padding="right" padString=" " />
+      </content>
+    </Res>
+</AtmBillPaymentReversal>

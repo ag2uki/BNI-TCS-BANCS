@@ -1,0 +1,56 @@
+<RemittanceMasterIn>
+	<Req>
+		<content>
+			<Field id="transactionCode" padding="right" padString=" " startIndex="88" length="3" />
+			<Field id="refferenceNum" padding="right" padString=" " startIndex="91" length="16" />
+			<Field id="counterAdvis" padding="right" padString=" " startIndex="107" length="9" />
+			<Field id="transactionType" padding="right" padString=" " startIndex="116" length="3" />
+			<Field id="transactionDate" type="date" startIndex="119" length="8" />
+			<Field id="transactionCurrency" padding="right" padString=" " startIndex="127" length="3" />
+			<Field id="transactionRate" padding="right" padString=" " startIndex="130" length="1" />
+			<Field id="senderBank" padding="right" padString=" " startIndex="131" length="35" />
+			<Field id="toBank" padding="right" padString=" " startIndex="166" length="5" />
+			<Field id="bicCover" padding="right" padString=" " startIndex="171" length="11" />
+			<Field id="bicKIR" padding="right" padString=" " startIndex="182" length="11" />
+			<Field id="correspondentReff" padding="right" padString=" " startIndex="193" length="16" />
+			<Field id="beneficiaryAccount" padding="left" padString="0" startIndex="209" length="17" />
+			<Field id="beneficiaryName" padding="right" padString=" " startIndex="226" length="35" />
+			<Field id="beneficiaryAddress1" padding="right" padString=" " startIndex="261" length="35" />
+			<Field id="beneficiaryAddress2" padding="right" padString=" " startIndex="296" length="35" />
+			<Field id="beneficiaryAddress3" padding="right" padString=" " startIndex="331" length="35" />
+			<Field id="senderName" padding="right" padString=" " startIndex="366" length="35" />
+			<Field id="senderAddress1" padding="right" padString=" " startIndex="401" length="35" />
+			<Field id="senderAddress2" padding="right" padString=" " startIndex="436" length="35" />
+			<Field id="senderAddress3" padding="right" padString=" " startIndex="471" length="35" />
+			<Field id="news1" padding="right" padString=" " startIndex="506" length="35" />
+			<Field id="news2" padding="right" padString=" " startIndex="541" length="35" />
+			<Field id="news3" padding="right" padString=" " startIndex="576" length="35" />
+			<Field id="news4" padding="right" padString=" " startIndex="611" length="35" />
+			<Field id="detailCharge" padding="right" padString=" " startIndex="646" length="3" />
+    		<Field id="remittanceAmount"   type="flatMoney" intLength="12" decLength="2" signLocation="none" padding="left" padString="0" />   
+    		<Field id="chargeAmount"       type="flatMoney" intLength="12" decLength="2" signLocation="none" padding="left" padString="0" />
+    		<Field id="refundChargeAmount" type="flatMoney" intLength="12" decLength="2" signLocation="none" padding="left" padString="0" />
+            <Field id="coverAccount" padding="left" padString="0" startIndex="691" length="17" />
+			<Field id="trxCcyRate"	type="flatMoney" intLength="5" decLength="4" signLocation="none" padding="left" padString="0" />
+			<Field id="paidCcyRate" type="flatMoney" intLength="5" decLength="4" signLocation="none" padding="left" padString="0" />
+			<Field id="amdCharges"	type="flatMoney" intLength="12" decLength="2" signLocation="none" padding="left" padString="0" />
+    		<Field id="xtrCharges"	type="flatMoney" intLength="12" decLength="2" signLocation="none" padding="left" padString="0" />
+		</content>
+	</Req>
+	<Res>
+		<content>
+          <Field id="responseResult" padding="right" padString=" " startIndex="90" length="1" />
+          <Field id="journalNumber" padding="right" padString=" " startIndex="91" length="6" />
+          <Field id="responseDateTime" padding="right" padString=" " startIndex="97" length="16" />
+          <Field id="errorCode" padding="right" padString=" " startIndex="113" length="4" />
+          <Field id="errorDesc" padding="right" padString=" " startIndex="117" length="50" />
+          <Field id="stp" padding="right" padString=" " startIndex="167" length="3" />
+          <Field id="nonstpDesc" padding="right" padString=" " startIndex="170" length="20" />
+          <Field id="account" padding="right" padString=" " startIndex="190" length="15" />
+          <Field id="accountName" padding="right" padString=" " startIndex="205" length="22" />
+          <Field id="homeBranch" padding="right" padString=" " startIndex="227" length="3" />
+          <Field id="currency" padding="right" padString=" " startIndex="230" length="3" />
+          <Field id="remitAmount" type="flatMoney" signLocation="none" intLength="14" decLength="2" startIndex="233" length="16" />  
+        </content>
+	</Res>
+</RemittanceMasterIn>

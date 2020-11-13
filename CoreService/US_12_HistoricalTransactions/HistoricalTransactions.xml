@@ -1,0 +1,151 @@
+<HistoricalTransactions>
+   <Req>
+       <content> 
+			<Field id="accountNum" padding="left" padString="0" length="17" />
+			<Field id="fromDate" type="date" length="8" padding="left" padString="0"/>
+			<Field id="toDate" type="date" length="8" padding="left" padString="0"/>
+			<Field id="pageNum" padding="left" padString="0" length="3" />
+            <!--CR18247, Start-->
+			<Field id="contains" padding="right" padString=" " length="16" />
+            <!--CR18247, End-->
+       </content>
+   </Req>
+   <Res>
+	  <content>
+        <Field id="accountNum" padding="left" padString="0" startIndex="96" length="17" />
+        <Field id="accountName" padding="right" padString=" " startIndex="113" length="30" />
+        <Field id="productName" padding="right" padString=" " startIndex="143" length="30" />
+        <Field id="address1" padding="right" padString=" " startIndex="173" length="40" />
+        <Field id="address2" padding="right" padString=" " startIndex="213" length="40" />
+        <Field id="address3" padding="right" padString=" " startIndex="253" length="40" />
+        <Field id="address4" padding="right" padString=" " startIndex="293" length="40" />
+        <Field id="postCode" padding="right" padString=" " startIndex="333" length="8" />
+        <Field id="accountCurrency" padding="right" padString=" " startIndex="341" length="3" />
+        <Field id="fromDate" type="date" startIndex="344" length="8" />
+        <Field id="toDate" type="date" startIndex="352" length="8" />
+
+        <Field id="historical_1" padding="right" padString=" " startIndex="360" length="601" />
+        <Field id="historical_2" padding="right" padString=" " startIndex="961" length="601" />
+        <Field id="historical_3" padding="right" padString=" " startIndex="1562" length="601" />
+        <Field id="historical_4" padding="right" padString=" " startIndex="2163" length="601" />
+        <Field id="historical_5" padding="right" padString=" " startIndex="2764" length="601" />
+        <Field id="historical_6" padding="right" padString=" " startIndex="3365" length="601" />
+        <Field id="historical_7" padding="right" padString=" " startIndex="3966" length="601" />
+        <Field id="historical_8" padding="right" padString=" " startIndex="4567" length="601" />
+        <Field id="historical_9" padding="right" padString=" " startIndex="5168" length="601" />
+        <Field id="historical_10" padding="right" padString=" " startIndex="5769" length="601" />
+        
+        <Field id="historical_11" padding="right" padString=" " startIndex="6370" length="601" />
+        <Field id="historical_12" padding="right" padString=" " startIndex="6971" length="601" />
+
+        <Field id="historical_13" padding="right" padString=" " startIndex="7572" length="601" />
+        <Field id="historical_14" padding="right" padString=" " startIndex="8173" length="601" />
+        <Field id="historical_15" padding="right" padString=" " startIndex="8774" length="601" />
+        <Field id="historical_16" padding="right" padString=" " startIndex="9375" length="601" />
+        <Field id="historical_17" padding="right" padString=" " startIndex="9976" length="601" />
+        <Field id="historical_18" padding="right" padString=" " startIndex="10577" length="601" />
+        <Field id="historical_19" padding="right" padString=" " startIndex="11178" length="601" />
+        <Field id="historical_20" padding="right" padString=" " startIndex="11779" length="601" />
+
+        <Field id="historical_21" padding="right" padString=" " startIndex="12380" length="601" />
+        <Field id="historical_22" padding="right" padString=" " startIndex="12981" length="601" />
+        <Field id="historical_23" padding="right" padString=" " startIndex="13582" length="601" />
+        <Field id="historical_24" padding="right" padString=" " startIndex="14183" length="601" />
+        <Field id="historical_25" padding="right" padString=" " startIndex="14784" length="601" />
+        <Field id="historical_26" padding="right" padString=" " startIndex="15385" length="601" />
+        <Field id="historical_27" padding="right" padString=" " startIndex="15986" length="601" />
+        <Field id="historical_28" padding="right" padString=" " startIndex="16587" length="601" />
+        <Field id="historical_29" padding="right" padString=" " startIndex="17188" length="601" />
+        <Field id="historical_30" padding="right" padString=" " startIndex="17789" length="601" />
+        
+        <Field id="historical_31" padding="right" padString=" " startIndex="18390" length="601" />
+        <Field id="historical_32" padding="right" padString=" " startIndex="18991" length="601" />
+        <Field id="historical_33" padding="right" padString=" " startIndex="19592" length="601" />
+        <Field id="historical_34" padding="right" padString=" " startIndex="20193" length="601" />
+        <Field id="historical_35" padding="right" padString=" " startIndex="20794" length="601" />
+        <Field id="historical_36" padding="right" padString=" " startIndex="21395" length="601" />
+        <Field id="historical_37" padding="right" padString=" " startIndex="21996" length="601" />
+        <Field id="historical_38" padding="right" padString=" " startIndex="22597" length="601" />
+        <Field id="historical_39" padding="right" padString=" " startIndex="23198" length="601" />
+        <Field id="historical_40" padding="right" padString=" " startIndex="23799" length="601" />
+        
+        <Field id="historical_41" padding="right" padString=" " startIndex="24400" length="601" />
+        <Field id="historical_42" padding="right" padString=" " startIndex="25001" length="601" />
+        <Field id="historical_43" padding="right" padString=" " startIndex="25602" length="601" />
+        <Field id="historical_44" padding="right" padString=" " startIndex="26203" length="601" />
+        <Field id="historical_45" padding="right" padString=" " startIndex="26804" length="601" />
+        <Field id="historical_46" padding="right" padString=" " startIndex="27405" length="601" />
+        <Field id="historical_47" padding="right" padString=" " startIndex="28006" length="601" />
+        <Field id="historical_48" padding="right" padString=" " startIndex="28607" length="601" />
+        <Field id="historical_49" padding="right" padString=" " startIndex="29208" length="601" />
+        <Field id="historical_50" padding="right" padString=" " startIndex="29809" length="601" />
+        
+        <Field id="historical_51" padding="right" padString=" " startIndex="30410" length="601" />
+        <Field id="historical_52" padding="right" padString=" " startIndex="31011" length="601" />
+        <Field id="historical_53" padding="right" padString=" " startIndex="31612" length="601" />
+        <Field id="historical_54" padding="right" padString=" " startIndex="32213" length="601" />
+        <Field id="historical_55" padding="right" padString=" " startIndex="32814" length="601" />
+        <Field id="historical_56" padding="right" padString=" " startIndex="33415" length="601" />
+        <Field id="historical_57" padding="right" padString=" " startIndex="34016" length="601" />
+        <Field id="historical_58" padding="right" padString=" " startIndex="34617" length="601" />
+        <Field id="historical_59" padding="right" padString=" " startIndex="35218" length="601" />
+        <Field id="historical_60" padding="right" padString=" " startIndex="35819" length="601" />
+        
+        <Field id="historical_61" padding="right" padString=" " startIndex="36420" length="601" />
+        <Field id="historical_62" padding="right" padString=" " startIndex="37021" length="601" />
+        <Field id="historical_63" padding="right" padString=" " startIndex="37622" length="601" />
+        <Field id="historical_64" padding="right" padString=" " startIndex="38223" length="601" />
+        <Field id="historical_65" padding="right" padString=" " startIndex="38824" length="601" />
+        <Field id="historical_66" padding="right" padString=" " startIndex="39425" length="601" />
+        <Field id="historical_67" padding="right" padString=" " startIndex="40026" length="601" />
+        <Field id="historical_68" padding="right" padString=" " startIndex="40627" length="601" />
+        <Field id="historical_69" padding="right" padString=" " startIndex="41228" length="601" />
+        <Field id="historical_70" padding="right" padString=" " startIndex="41829" length="601" />
+        
+        <Field id="historical_71" padding="right" padString=" " startIndex="42430" length="601" />
+        <Field id="historical_72" padding="right" padString=" " startIndex="43031" length="601" />
+        <Field id="historical_73" padding="right" padString=" " startIndex="43632" length="601" />
+        <Field id="historical_74" padding="right" padString=" " startIndex="44233" length="601" />
+        <Field id="historical_75" padding="right" padString=" " startIndex="44834" length="601" />
+        <Field id="historical_76" padding="right" padString=" " startIndex="45435" length="601" />
+        <Field id="historical_77" padding="right" padString=" " startIndex="46036" length="601" />
+        <Field id="historical_78" padding="right" padString=" " startIndex="46637" length="601" />
+        <Field id="historical_79" padding="right" padString=" " startIndex="47238" length="601" />
+        <Field id="historical_80" padding="right" padString=" " startIndex="47839" length="601" />
+        
+        <Field id="historical_81" padding="right" padString=" " startIndex="48440" length="601" />
+        <Field id="historical_82" padding="right" padString=" " startIndex="49041" length="601" />
+        <Field id="historical_83" padding="right" padString=" " startIndex="49642" length="601" />
+        <Field id="historical_84" padding="right" padString=" " startIndex="50243" length="601" />
+        <Field id="historical_85" padding="right" padString=" " startIndex="50844" length="601" />
+        <Field id="historical_86" padding="right" padString=" " startIndex="51445" length="601" />
+        <Field id="historical_87" padding="right" padString=" " startIndex="52046" length="601" />
+        <Field id="historical_88" padding="right" padString=" " startIndex="52647" length="601" />
+        <Field id="historical_89" padding="right" padString=" " startIndex="53248" length="601" />
+        <Field id="historical_90" padding="right" padString=" " startIndex="53849" length="601" />
+        
+        <Field id="historical_91" padding="right" padString=" " startIndex="54450" length="601" />
+        <Field id="historical_92" padding="right" padString=" " startIndex="55051" length="601" />
+        <Field id="historical_93" padding="right" padString=" " startIndex="55652" length="601" />
+        <Field id="historical_94" padding="right" padString=" " startIndex="56253" length="601" />
+        <Field id="historical_95" padding="right" padString=" " startIndex="56854" length="601" />
+        <Field id="historical_96" padding="right" padString=" " startIndex="57455" length="601" />
+        <Field id="historical_97" padding="right" padString=" " startIndex="58056" length="601" />
+        <Field id="historical_98" padding="right" padString=" " startIndex="58657" length="601" />
+        <Field id="historical_99" padding="right" padString=" " startIndex="59258" length="601" />
+        <Field id="historical_100" padding="right" padString=" " startIndex="59859" length="601" />
+        
+        <Field id="historical_101" padding="right" padString=" " startIndex="60460" length="601" />
+        <Field id="historical_102" padding="right" padString=" " startIndex="61061" length="601" />
+        <Field id="historical_103" padding="right" padString=" " startIndex="61662" length="601" />
+        <Field id="historical_104" padding="right" padString=" " startIndex="62263" length="601" />
+        <Field id="historical_105" padding="right" padString=" " startIndex="62864" length="601" />
+        <Field id="historical_106" padding="right" padString=" " startIndex="63465" length="601" />
+        <Field id="historical_107" padding="right" padString=" " startIndex="64066" length="601" />
+        <Field id="historical_108" padding="right" padString=" " startIndex="64667" length="601" />
+        <Field id="historical_109" padding="right" padString=" " startIndex="65268" length="601" />
+        <Field id="historical_110" padding="right" padString=" " startIndex="65869" length="601" />
+
+      </content>
+   </Res>
+</HistoricalTransactions>

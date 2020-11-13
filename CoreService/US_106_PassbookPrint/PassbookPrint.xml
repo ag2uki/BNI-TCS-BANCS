@@ -1,0 +1,29 @@
+<PassbookPrint>
+   <Req>
+      <content>
+         <Field id="accountNum" padding="left" padString="0" length="17"/>
+         <Field id="printedBalance" type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+		 <Field id="purgingFlag" padding="left" padString="0" length="1"/>
+      </content>
+   </Req>
+   <Res>
+      <content>
+         <Field id="passbookItem_1" padding="right" padString=" " startIndex="91" length="126 "/>
+         <Field id="passbookItem_2" padding="right" padString=" " startIndex="217" length="126 "/>
+         <Field id="passbookItem_3" padding="right" padString=" " startIndex="343" length="126 "/>
+         <Field id="passbookItem_4" padding="right" padString=" " startIndex="469" length="126 "/>
+         <Field id="passbookItem_5" padding="right" padString=" " startIndex="595" length="126 "/>
+         <Field id="passbookItem_6" padding="right" padString=" " startIndex="721" length="126 "/>
+         <Field id="passbookItem_7" padding="right" padString=" " startIndex="847" length="126 "/>
+         <Field id="passbookItem_8" padding="right" padString=" " startIndex="973" length="126 "/>
+         <Field id="passbookItem_9" padding="right" padString=" " startIndex="1099" length="126 "/>
+         <Field id="passbookItem_10" padding="right" padString=" " startIndex="1225" length="126 "/>
+         <Field id="passbookItem_11" padding="right" padString=" " startIndex="1351" length="126 "/>
+         <Field id="passbookItem_12" padding="right" padString=" " startIndex="1477" length="126 "/>
+         <Field id="passbookItem_13" padding="right" padString=" " startIndex="1603" length="126 "/>
+         <Field id="passbookItem_14" padding="right" padString=" " startIndex="1729" length="126 "/>
+         <Field id="passbookItem_15" padding="right" padString=" " startIndex="1855" length="126 "/>
+         <Field id="passbookItem_16" padding="right" padString=" " startIndex="1981" length="126 "/>
+      </content>
+   </Res>
+</PassbookPrint>

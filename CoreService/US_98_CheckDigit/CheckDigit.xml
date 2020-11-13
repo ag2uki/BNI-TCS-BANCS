@@ -1,0 +1,12 @@
+<CheckDigit>
+	<Req>
+		<content>
+			<Field id="number" length="17" padding="left" padString="0" />
+		</content>
+	</Req>
+	<Res>
+		<content>
+			<Field id="numberCheckDigit" padding="left" padString=" " startIndex="90" length="20" />
+		</content>			
+	</Res>
+</CheckDigit>

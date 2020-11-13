@@ -1,0 +1,34 @@
+<GLSetoranTunai>
+   <Req>
+     <content>         
+        <Field id="accountNum"		length="17" padding="left" padString="0"  />
+		<Field id="trxAmount"		type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />         
+		<Field id="dummy"			length="12" value="            " />
+		<Field id="dummy"			length="4" value="    " />
+		<Field id="additionalInformation"		length="26" padding="right" padString=" "  />
+		<Field id="dummy"			length="38" value="                                      " />
+		<Field id="promoNum"		length="2" padding="right" padString=" "  />
+		<Field id="dummy"			length="34" value="                                  " />
+		<Field id="currency"		length="3" padding="right" padString=" "  />
+		<Field id="amountExchangeRate"		type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+		<Field id="currencyExchangeRate"		length="3" padding="right" padString=" "  />
+		<Field id="baseAmount"		type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+		<Field id="dummy"			length="36" value="000000000000000000000000000000000000" />
+		<Field id="kursType"		length="2" padding="left" padString="0"  />
+		<Field id="dummy"			length="375" value="                                                                                                                                                                                                                                                                                                                                                                                       " />
+		<Field id="narasi"			length="50" padding="right" padString=" "  /> 
+		<Field id="dummy"			length="197" value="                                                                                                                                                                                                     " />
+     </content>
+   </Req>
+   <Res>        
+		<content>
+			<Field id="message"          startIndex="95" length="69" padding="right" padString=" " />
+		</content>       
+   </Res>
+</GLSetoranTunai>
+
+
+
+
+
+

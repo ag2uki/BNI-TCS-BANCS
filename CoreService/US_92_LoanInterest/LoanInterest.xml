@@ -1,0 +1,84 @@
+<LoanInterest>
+   <Req>
+       <content> 
+        <Field id="accountNum" padding="left" padString="0" length="17" />
+       </content>
+   </Req>
+   <Res>
+     <content>              
+        <Field id="accountNum" padding="left" padString="0" startIndex="90" length="17" />
+        <Field id="collectibility" padding="right" padString=" " startIndex="107" length="20" />
+
+        <Field id="collectibilityMaintainedDate" type="date" startIndex="127" length="8" />
+        <Field id="writtenOffDate" type="date" startIndex="135" length="8" />
+
+        <Field id="outArrearsDate" type="date" startIndex="143" length="8" />
+        <Field id="industryCode" padding="right" padString=" " startIndex="151" length="3" />
+
+        <Field id="subSectorCode" padding="right" padString=" " startIndex="154" length="1" />
+        <Field id="seqmentCode" padding="left" padString="0" startIndex="155" length="1" />
+
+        <Field id="suspendedInterest" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="156" length="18" />
+        <Field id="insuranceClaim" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="174" length="18" />
+
+        <Field id="writtenOffInterest" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="192" length="18" />
+        <Field id="principleInterestAmount" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="210" length="18" />
+
+        <Field id="InterestInstallmentAmount" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="228" length="18" />
+        <Field id="previousInterestAccrual" type="flatMoney" signLocation="after" intLength="12" decLength="5" startIndex="246" length="18" />
+
+        <Field id="prevArrearsInterestAccrual" type="flatMoney" signLocation="after" intLength="12" decLength="5" startIndex="264" length="18" />
+        <Field id="holidayRepayment" padding="left" padString="0" startIndex="282" length="2" />
+
+        <Field id="holidayRepaymentTotal" padding="left" padString="0" startIndex="284" length="3" />
+        <Field id="fundType" padding="right" padString=" " startIndex="287" length="1" />
+
+        <Field id="channelExecution" padding="right" padString=" " startIndex="288" length="1" />
+        <Field id="syndicateType" padding="right" padString=" " startIndex="289" length="1" />
+
+        <Field id="kukCode" padding="right" padString=" " startIndex="290" length="1" />
+        <Field id="nextReviewDate" type="date" startIndex="291" length="8" />
+
+        <Field id="agreementNum" padding="right" padString=" " startIndex="299" length="30" />
+        <Field id="effectiveDate" type="date" startIndex="329" length="8" />
+
+        <Field id="approvedAmount" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="337" length="18" />
+        <Field id="maturityPenalty" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="355" length="18" />
+
+        <Field id="totalPPA" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="373" length="18" />
+        <Field id="afiliatedAccount" padding="left" padString="0" startIndex="391" length="17" />
+
+        <Field id="worstCollectibility" padding="right" padString=" " startIndex="408" length="20" />
+        <Field id="maintananceFee" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="428" length="18" />
+
+        <Field id="penaltyRate" type="flatMoney" signLocation="after" intLength="3" decLength="4" startIndex="446" length="8" />
+        <Field id="rahnAkum" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="454" length="18" />
+
+        <Field id="rahnHarian" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="472" length="18" />
+        <Field id="pengurangPPA" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="490" length="18" />
+
+        <Field id="talangan" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="508" length="18" />
+        <Field id="sisaPokokIjaroh" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="526" length="18" />
+
+        <Field id="sisaFeeIjaroh"  padding="left" padString="0" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="544" length="18" />
+        <Field id="applicationNum" padding="right" padString=" " startIndex="562" length="25" />
+
+        <Field id="rmCode" padding="right" padString=" " startIndex="587" length="5" />
+        <Field id="fixRateDate" type="date" startIndex="592" length="8" />
+
+        <Field id="subsidyRate" type="flatMoney" intLength="2" decLength="2" startIndex="600" length="4" />
+        <Field id="economicSectorCode" padding="right" padString=" " startIndex="604" length="4" />
+
+        <Field id="economicSectorQual" padding="right" padString=" " startIndex="608" length="2" />
+        <Field id="grecePeriodType" padding="right" padString=" " startIndex="610" length="1" />
+
+        <Field id="gracePeriodDate" type="date" startIndex="611" length="8" />
+        <Field id="gracePeriod" padding="left" padString="0" startIndex="619" length="4" />
+
+        <Field id="interestDayCap" padding="left" padString="0" startIndex="623" length="2" />
+        <Field id="multifinanceCode" padding="right" padString=" " startIndex="625" length="3" />
+
+        <Field id="purpCode" padding="right" padString=" " startIndex="628" length="3" />
+     </content>
+   </Res>
+</LoanInterest>

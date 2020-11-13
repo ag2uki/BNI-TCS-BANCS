@@ -1,0 +1,27 @@
+<InquiryChequeDetail>
+	<Req>
+		<content>
+			<Field id="accountNo" padding="left" padString="0" length="17" />
+			<Field id="chequePrefix" padding="right" padString=" " length="2" />
+			<Field id="chequeNo" padding="right" padString=" " length="6" />
+			<Field id="status" padding="right" padString=" " length="2" />
+		</content>
+	</Req>
+	<Res>
+		<content>
+			<Field id="chequePrefix" padding="right" padString=" " startIndex="90" length="2" />
+			<Field id="chequeNo" padding="right" padString=" " startIndex="90" length="8" />
+			<Field id="chequeFirstNo" padding="right" padString=" " startIndex="98" length="8" />
+			<Field id="transactionDate" type="date" startIndex="106"  length="8" />
+			<Field id="transactionTime" padding="right" padString=" " startIndex="114" length="8" />
+			<Field id="status" padding="right" padString=" " startIndex="122" length="2" />
+			<Field id="amount" padding="left" padString="0" startIndex="124" length="14" />
+			<Field id="tellerID" padding="right" padString=" " startIndex="50" length="5" />
+			<Field id="branchCode" padding="right" padString=" " startIndex="142" length="4" />
+			<Field id="tranCode" padding="right" padString=" " startIndex="55" length="6" />
+			<Field id="journalNumber" padding="right" padString=" " startIndex="61" length="6" />
+			<Field id="reason" padding="right" padString=" " startIndex="146" length="2" />
+			<Field id="description" padding="right" padString=" " startIndex="148" length="50" />
+		</content>
+	</Res>
+</InquiryChequeDetail>

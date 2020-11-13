@@ -1,0 +1,13 @@
+<CustomerSearchById>
+   <Req>
+       <content> 
+			<Field id="numId" padding="right" padString=" " length="24" />
+	        <Field id="idType" padding="right" padString=" " length="4" />
+       </content>
+   </Req>
+   <Res>
+	  <content>
+        <Field id="cif_number" type="String" padding="right" padString=" " startIndex="129" length="20" />
+      </content>
+   </Res>
+</CustomerSearchById>

@@ -1,0 +1,48 @@
+<GLInquiry>
+   <Req>
+     <content> 
+        <Field id="accountNum" padding="left" padString="0" length="17" />
+        <Field id="dummy"      length="1" value="1" /> <!-- todo option -->
+     </content>
+   </Req>
+   <Res>  
+     <RX032013>
+          <content>              
+            <Field id="accountNum"      padding="left" padString="0" startIndex="90" length="17" />
+            <Field id="accountName"     padding="right" padString=" " startIndex="107" length="40" />
+            <Field id="dummy"           padding="right" padString=" " startIndex="147" length="30" />
+            <Field id="dummy"           padding="left" padString="0" startIndex="177" length="3" />
+            <Field id="branchNum"       padding="left" padString="0" startIndex="180" length="4" />
+            <Field id="currency"        padding="right" padString=" " startIndex="184" length="3" />
+            <Field id="balance"         padding="right" padString=" " startIndex="187" length="19" />
+            <Field id="accountType"     padding="left" padString="0" startIndex="206" length="4" />
+            <Field id="accountSubCat"   padding="left" padString="0" startIndex="210" length="4" />
+            <Field id="status"          padding="left" padString="0" startIndex="217" length="2" />
+            <Field id="dummy"           padding="right" padString=" " startIndex="219" length="19" />
+            <Field id="dummy"           padding="right" padString=" " startIndex="238" length="19" />
+            <Field id="dummy"           padding="right" padString=" " startIndex="257" length="19" />
+            <Field id="dummy"           padding="right" padString=" " startIndex="276" length="19" />
+            <Field id="dummy"           padding="right" padString=" " startIndex="295" length="19" />
+            <Field id="dummy"           padding="right" padString=" " startIndex="314" length="19" />
+            <Field id="dummy"           padding="right" padString=" " startIndex="333" length="19" />
+            <Field id="dummy"           padding="right" padString=" " startIndex="352" length="19" />
+            <Field id="dummy"           padding="right" padString=" " startIndex="371" length="19" />
+            <Field id="dummy"           padding="right" padString=" " startIndex="390" length="19" />
+            <Field id="dummy"           padding="right" padString=" " startIndex="409" length="19" />
+            <Field id="dummy"           padding="right" padString=" " startIndex="428" length="19" />
+            <Field id="ledgerValue"     padding="right" padString=" " startIndex="447" length="6" />
+            <Field id="dummy"           padding="right" padString=" " startIndex="453" length="19" />
+            <Field id="dummy"           padding="right" padString=" " startIndex="472" length="19" />
+            <Field id="dummy"           padding="right" padString=" " startIndex="491" length="19" />
+            <Field id="dummy"           padding="right" padString=" " startIndex="527" length="1" />
+            <Field id="dummy"           padding="left" padString="0" startIndex="529" length="1" />
+            <Field id="dummy"           padding="left" padString="0" startIndex="569" length="2" />
+            <Field id="dummy"           padding="left" padString="0" startIndex="571" length="2" />
+            <Field id="dummy"           padding="right" padString=" " startIndex="573" length="10" />
+            <Field id="glcc"            padding="right" padString=" " startIndex="583" length="25" />
+            <Field id="dummy"           padding="right" padString=" " startIndex="608" length="4" />
+            <Field id="dummy"           padding="right" padString=" " startIndex="612" length="10" />
+          </content>              
+     </RX032013>
+   </Res>
+</GLInquiry>

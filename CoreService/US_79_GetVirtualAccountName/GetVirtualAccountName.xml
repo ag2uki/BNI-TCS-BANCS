@@ -1,0 +1,12 @@
+<GetVirtualAccountName>
+   <Req>
+       <content> 
+          <Field id="accountNum" length="17" padding="left" padString="0" />
+       </content>
+   </Req>
+   <Res>
+		<content>
+	    <Field id="accountName" padding="right" padString=" " startIndex="90" length="32" />
+		</content>
+   </Res>
+</GetVirtualAccountName>

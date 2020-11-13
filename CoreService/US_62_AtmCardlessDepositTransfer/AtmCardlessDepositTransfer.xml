@@ -1,0 +1,55 @@
+<AtmCardlessDepositTransfer>
+   <Req>
+     <content> 
+		<Field id="toAcctNo"		padding="left"		padString="0"	length="17" />
+		<Field id="dummy" 			length="18"			value="00000000000000000+"/> <!-- balance -->  
+		<Field id="amount" 			type="flatMoney"	intLength="14"	decLength="3" signLocation="after" padding="left" padString="0" />
+		<Field id="clearCode"		padding="left"		padString="0"	length="2" />
+		<Field id="tranDate"		padding="right"		padString=" "	length="8" />
+		<Field id="dummy" 			length="2"			value="XK"/> <!-- promoCode -->
+		<Field id="dummy" 			length="2"			value="  "/> <!-- clearDays --> 
+		<Field id="dummy" 			length="84"			value="                                                                                    "/> <!-- filler -->  
+		<Field id="dummy" 			length="3"			value="IDR"/> <!-- acctCurrAmt -->
+		<Field id="dummy" 			length="18"			value="00000000000000000+"/> <!-- foreignAmt -->  
+		<Field id="dummy" 			length="3"			value="IDR"/> <!-- foreignCcyAmt -->
+		<Field id="baseCurrAmt" 	type="flatMoney"	intLength="14"	decLength="3" signLocation="after" padding="left" padString="0" />
+		<Field id="dummy" 			length="18"			value="00000000000000000+"/> <!-- commission --> 
+		<Field id="dummy" 			length="18"			value="00000000000000000+"/> <!-- changeAmt -->
+		<Field id="dummy" 			length="2"			value="00"/> <!-- rateType -->
+		<Field id="dummy" 			length="4"			value="0000"/> <!-- ccyVer -->
+		<Field id="dummy" 			length="6"			value="000000"/> <!-- journalNumber -->
+		<Field id="dummy" 			length="270"		value="                                                                                                                                                                                                                                                                              "/>  <!--filler-->
+		<Field id="sysDate"			padding="right"		padString=" "	length="8" />
+		<Field id="bin"				padding="left"		padString="0"	length="6" /> 
+		<Field id="refference"		padding="right"		padString=" "	length="23" />
+		<Field id="merchant"		padding="right"		padString=" "	length="38" />
+		<Field id="country"			padding="right"		padString=" "	length="2" />		
+		<Field id="dummy" 			length="18"			value="                  "/> <!-- frnAmt --> 
+		<Field id="dummy" 			length="50"			value="                                                  "/> <!-- narrative -->  
+		<Field id="dummy" 			length="5"			value="     "/> <!-- filler -->  
+		<Field id="dummy" 			length="16"			value="0000000000000000"/> <!-- cardNo -->  
+		<Field id="postTime"		padding="right"		padString=" "	length="8" />
+		<Field id="termId"			padding="right"		padString=" "	length="16" /> 
+		<Field id="termAddress"		padding="right"		padString=" "	length="25" />
+		<Field id="branch"			padding="left"		padString="0"	length="4" />
+		<Field id="dummy" 			length="4"			value="0010"/> <!-- region -->
+		<Field id="dummy" 			length="167"		value="                                                                                                                                                                       "/> <!-- filler -->  
+		<Field id="dummy" 			length="3"			value="000"/> <!-- srcBrch -->
+		<Field id="dummy" 			length="10"			value="          "/> <!-- txnSeqNum -->
+		<Field id="dummy"			length="1"			value=" "/> <!-- edcIdn -->
+		<Field id="dummy" 			length="68"			value="                                                                    "/> <!-- filler -->
+     </content>
+   </Req>
+   <Res>
+     <content>              
+		  <Field id="accountNum"		startIndex="101" length="17" padding="right" padString=" " />
+          <Field id="date"				startIndex="119" length="16" padding="right" padString=" " />
+		  <Field id="cif"				startIndex="135" length="17" padding="right" padString=" " />
+		  <Field id="ledgerBalance"		startIndex="154" length="18" padding="right" padString=" " />
+		  <Field id="availableBalance"  startIndex="172" length="18" padding="right" padString=" " />
+     </content>
+   </Res>
+</AtmCardlessDepositTransfer>
+
+
+

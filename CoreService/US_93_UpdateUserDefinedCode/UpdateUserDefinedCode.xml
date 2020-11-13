@@ -1,0 +1,59 @@
+<UpdateUserDefinedCode>
+   <Req>
+      <content>
+         <Field id="accntNumber1" length="17" padding="left" padString="0"/>
+         <Field id="TahunHaji" length="4" padding="right" padString=" "/>
+         <Field id="tutupOtomatis" length="1" padding="right" padString=" "/>
+         <Field id="kodeBagAnggaran" length="3" padding="right" padString=" "/>
+         <Field id="handlingCode" length="1" padding="right" padString=" "/>
+         <Field id="defaultString1e" length="1" padding="right" padString=" "/>
+         <Field id="KodeDomain" length="1" padding="right" padString=" "/>
+         <Field id="KodeUser" length="5" padding="right" padString=" "/>
+         <Field id="defaultString2c" length="4" padding="right" padString=" "/>
+         <Field id="SalesCode" length="7" padding="right" padString=" "/>
+         <Field id="defaultString3b" length="3" padding="right" padString=" "/>
+         <Field id="defaultString4a" length="3" padding="right" padString=" "/>
+         <Field id="defaultString4b" length="3" padding="right" padString=" "/>
+         <Field id="defaultString4c" length="4" padding="right" padString=" "/>
+         <Field id="defaultString5a" length="3" padding="right" padString=" "/>
+         <Field id="defaultString5b" length="3" padding="right" padString=" "/>
+         <Field id="defaultString5c" length="4" padding="right" padString=" "/>
+         <Field id="defaultString6a" length="4" padding="right" padString=" "/>
+         <Field id="KodeKLN" length="2" padding="right"  padString=" "/> 
+         <Field id="defaultString6c" length="4" padding="right" padString=" "/>
+         <Field id="JenisGiro" length="1" padding="right" padString=" "/>
+         <Field id="tujuanSetoranJaminan" length="1" padding="right" padString=" "/>
+         <Field id="salesCodesGroup" length="1" padding="right" padString=" "/>
+         <Field id="CatInstKeuAkt" length="1" padding="right" padString=" "/>
+         <Field id="CatInstKeuPasv" length="1" padding="right" padString=" "/>
+         <Field id="Kualitas" length="1" padding="right" padString=" "/>
+         <Field id="CadKerugianTrnNilai" length="1" padding="right" padString=" "/>
+         <Field id="BundlingCode" length="1" padding="right" padString=" "/>
+         <Field id="SkimPembayaran" length="1" padding="right" padString=" "/>
+         <Field id="AutoCloseDormant" length="1" padding="right" padString=" "/>
+         <Field id="SatkerBankOps" length="4" padding="right" padString=" "/>
+         <Field id="AccRestriction" length="3" padding="right" padString=" "/> 
+         <Field id="Burekol" length="1" padding="right" padString=" "/>
+         <Field id="KodePenawaran" length="1" padding="right" padString=" "/>
+         <Field id="DefaultString8e" length="1" padding="right" padString=" "/>
+         <Field id="DefaultString9a" length="2" padding="right" padString=" "/>
+         <Field id="DefaultString9b" length="2" padding="right" padString=" "/>
+         <Field id="DefaultString9c" length="2" padding="right" padString=" "/>
+         <Field id="DefaultString9d" length="2" padding="right" padString=" "/>
+         <Field id="KodeProgMarketing" length="2" padding="right" padString=" "/>
+         <Field id="DefaultString10a" length="3" padding="right" padString=" "/>
+         <Field id="DefaultString10b" length="2" padding="right" padString=" "/>
+         <Field id="DefaultString10c" length="2" padding="right" padString=" "/>
+         <Field id="DefaultString10d" length="2" padding="right" padString=" "/>
+         <Field id="DefaultString10e" length="1" padding="right" padString=" "/>
+         <Field id="dummy" length="400" value="REK MINOR - DIBUTUHKAN GUARDIAN         ************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+"/>
+      </content>
+   </Req>
+   <Res>
+      <content>
+         <Field id="message" startIndex="95" length="73" padding="right" padString=" "/>
+      </content>
+   </Res>
+</UpdateUserDefinedCode>
+

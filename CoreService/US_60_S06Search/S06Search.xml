@@ -1,0 +1,37 @@
+<S06Search>
+	<Req>
+		<content>
+            <Field id="reffCorrespondent" padding="right" padString=" " length="16" />
+            <Field id="bicCover" padding="right" padString=" " length="11" />
+            <Field id="poType" padding="right" padString=" " length="3" />
+            <Field id="poStatus" padding="right" padString=" " length="1" />
+            <Field id="page" padding="left" padString="0" length="5" />
+		</content>
+	</Req>
+
+	<Res>
+		<content>
+            <Field id="record_1" padding="right" padString=" " startIndex="90" length="155" />
+            <Field id="record_2" padding="right" padString=" " startIndex="245" length="155" />
+            <Field id="record_3" padding="right" padString=" " startIndex="400" length="155" />
+            <Field id="record_4" padding="right" padString=" " startIndex="555" length="155" />
+            <Field id="record_5" padding="right" padString=" " startIndex="710" length="155" />
+            <Field id="record_6" padding="right" padString=" " startIndex="865" length="155" />
+            <Field id="record_7" padding="right" padString=" " startIndex="1020" length="155" />
+            <Field id="record_8" padding="right" padString=" " startIndex="1175" length="155" />
+            <Field id="record_9" padding="right" padString=" " startIndex="1330" length="155" />
+            <Field id="record_10" padding="right" padString=" " startIndex="1485" length="155" />
+            <Field id="record_11" padding="right" padString=" " startIndex="1640" length="155" />
+            <Field id="record_12" padding="right" padString=" " startIndex="1795" length="155" />
+            <Field id="record_13" padding="right" padString=" " startIndex="1950" length="155" />
+            <Field id="record_14" padding="right" padString=" " startIndex="2105" length="155" />
+            <Field id="record_15" padding="right" padString=" " startIndex="2260" length="155" />
+            <Field id="record_16" padding="right" padString=" " startIndex="2415" length="155" />
+            <Field id="record_17" padding="right" padString=" " startIndex="2570" length="155" />
+            <Field id="record_18" padding="right" padString=" " startIndex="2725" length="155" />
+            <Field id="record_19" padding="right" padString=" " startIndex="2880" length="155" />
+            <Field id="record_20" padding="right" padString=" " startIndex="3035" length="155" />
+            <Field id="record_21" padding="right" padString=" " startIndex="3190" length="155" />
+		</content>
+	</Res>
+</S06Search>

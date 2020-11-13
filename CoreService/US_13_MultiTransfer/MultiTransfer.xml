@@ -1,0 +1,275 @@
+<MultiTransfer>
+   <Req>
+       <content> 
+          <Field id="dummy" length="1" value="0" comment="TranType0" />
+          <Field id="EntriesType" length="1" padding="left" padString=" " />
+          <Field id="RateType" length="1" padding="left" padString=" " />
+          <Field id="Narative1" length="35" padding="right" padString=" " />
+          <Field id="Narative2" length="35" padding="right" padString=" " />
+          <Field id="Narative3" length="35" padding="right" padString=" " />
+          <Field id="HighestAmount" length="14" padding="left" padString="0" />
+
+          <Field id="TranType1_1" length="1" padding="left" padString=" " />
+          <Field id="EntrySetNum_1" length="2" padding="left" padString="0" />
+          <Field id="CashFlag_1" length="1" padding="left" padString=" " />
+          <Field id="AccountNum_1" length="15" padding="right" padString=" " />
+          <Field id="TxnType_1" length="1" padding="left" padString=" " />
+          <Field id="Amount_1" type="flatMoney" intLength="14" decLength="2" signLocation="none" padding="left" padString="0" />
+
+          <Field id="TranType1_2" length="1" padding="left" padString=" " />
+          <Field id="EntrySetNum_2" length="2" padding="left" padString="0" />
+          <Field id="CashFlag_2" length="1" padding="left" padString=" " />
+          <Field id="AccountNum_2" length="15" padding="right" padString=" " />
+          <Field id="TxnType_2" length="1" padding="left" padString=" " />
+          <Field id="Amount_2" type="flatMoney" intLength="14" decLength="2" signLocation="none" padding="left" padString="0" />
+
+          <Field id="TranType1_3" length="1" padding="left" padString=" " />
+          <Field id="EntrySetNum_3" length="2" padding="left" padString="0" />
+          <Field id="CashFlag_3" length="1" padding="left" padString=" " />
+          <Field id="AccountNum_3" length="15" padding="right" padString=" " />
+          <Field id="TxnType_3" length="1" padding="left" padString=" " />
+          <Field id="Amount_3" type="flatMoney" intLength="14" decLength="2" signLocation="none" padding="left" padString="0" />
+
+          <Field id="TranType1_4" length="1" padding="left" padString=" " />
+          <Field id="EntrySetNum_4" length="2" padding="left" padString="0" />
+          <Field id="CashFlag_4" length="1" padding="left" padString=" " />
+          <Field id="AccountNum_4" length="15" padding="right" padString=" " />
+          <Field id="TxnType_4" length="1" padding="left" padString=" " />
+          <Field id="Amount_4" type="flatMoney" intLength="14" decLength="2" signLocation="none" padding="left" padString="0" />
+
+          <Field id="TranType1_5" length="1" padding="left" padString=" " />
+          <Field id="EntrySetNum_5" length="2" padding="left" padString="0" />
+          <Field id="CashFlag_5" length="1" padding="left" padString=" " />
+          <Field id="AccountNum_5" length="15" padding="right" padString=" " />
+          <Field id="TxnType_5" length="1" padding="left" padString=" " />
+          <Field id="Amount_5" type="flatMoney" intLength="14" decLength="2" signLocation="none" padding="left" padString="0" />
+
+          <Field id="TranType1_6" length="1" padding="left" padString=" " />
+          <Field id="EntrySetNum_6" length="2" padding="left" padString="0" />
+          <Field id="CashFlag_6" length="1" padding="left" padString=" " />
+          <Field id="AccountNum_6" length="15" padding="right" padString=" " />
+          <Field id="TxnType_6" length="1" padding="left" padString=" " />
+          <Field id="Amount_6" type="flatMoney" intLength="14" decLength="2" signLocation="none" padding="left" padString="0" />
+
+          <Field id="TranType1_7" length="1" padding="left" padString=" " />
+          <Field id="EntrySetNum_7" length="2" padding="left" padString="0" />
+          <Field id="CashFlag_7" length="1" padding="left" padString=" " />
+          <Field id="AccountNum_7" length="15" padding="right" padString=" " />
+          <Field id="TxnType_7" length="1" padding="left" padString=" " />
+          <Field id="Amount_7" type="flatMoney" intLength="14" decLength="2" signLocation="none" padding="left" padString="0" />
+
+          <Field id="TranType1_8" length="1" padding="left" padString=" " />
+          <Field id="EntrySetNum_8" length="2" padding="left" padString="0" />
+          <Field id="CashFlag_8" length="1" padding="left" padString=" " />
+          <Field id="AccountNum_8" length="15" padding="left" padString="0" />
+          <Field id="TxnType_8" length="1" padding="left" padString=" " />
+          <Field id="Amount_8" type="flatMoney" intLength="14" decLength="2" signLocation="none" padding="left" padString="0" />
+
+          <Field id="TranType1_9" length="1" padding="left" padString=" " />
+          <Field id="EntrySetNum_9" length="2" padding="left" padString="0" />
+          <Field id="CashFlag_9" length="1" padding="left" padString=" " />
+          <Field id="AccountNum_9" length="15" padding="right" padString=" " />
+          <Field id="TxnType_9" length="1" padding="left" padString=" " />
+          <Field id="Amount_9" type="flatMoney" intLength="14" decLength="2" signLocation="none" padding="left" padString="0" />
+
+          <Field id="TranType1_10" length="1" padding="left" padString=" " />
+          <Field id="EntrySetNum_10" length="2" padding="left" padString="0" />
+          <Field id="CashFlag_10" length="1" padding="left" padString=" " />
+          <Field id="AccountNum_10" length="15" padding="right" padString=" " />
+          <Field id="TxnType_10" length="1" padding="left" padString=" " />
+          <Field id="Amount_10" type="flatMoney" intLength="14" decLength="2" signLocation="none" padding="left" padString="0" />
+
+          <Field id="TranType1_11" length="1" padding="left" padString=" " />
+          <Field id="EntrySetNum_11" length="2" padding="left" padString="0" />
+          <Field id="CashFlag_11" length="1" padding="left" padString=" " />
+          <Field id="AccountNum_11" length="15" padding="right" padString=" " />
+          <Field id="TxnType_11" length="1" padding="left" padString=" " />
+          <Field id="Amount_11" type="flatMoney" intLength="14" decLength="2" signLocation="none" padding="left" padString="0" />
+
+          <Field id="TranType1_12" length="1" padding="left" padString=" " />
+          <Field id="EntrySetNum_12" length="2" padding="left" padString="0" />
+          <Field id="CashFlag_12" length="1" padding="left" padString=" " />
+          <Field id="AccountNum_12" length="15" padding="right" padString=" " />
+          <Field id="TxnType_12" length="1" padding="left" padString=" " />
+          <Field id="Amount_12" type="flatMoney" intLength="14" decLength="2" signLocation="none" padding="left" padString="0" />
+
+          <Field id="TranType1_13" length="1" padding="left" padString=" " />
+          <Field id="EntrySetNum_13" length="2" padding="left" padString="0" />
+          <Field id="CashFlag_13" length="1" padding="left" padString=" " />
+          <Field id="AccountNum_13" length="15" padding="right" padString=" " />
+          <Field id="TxnType_13" length="1" padding="left" padString=" " />
+          <Field id="Amount_13" type="flatMoney" intLength="14" decLength="2" signLocation="none" padding="left" padString="0" />
+
+          <Field id="TranType1_14" length="1" padding="left" padString=" " />
+          <Field id="EntrySetNum_14" length="2" padding="left" padString="0" />
+          <Field id="CashFlag_14" length="1" padding="left" padString=" " />
+          <Field id="AccountNum_14" length="15" padding="right" padString=" " />
+          <Field id="TxnType_14" length="1" padding="left" padString=" " />
+          <Field id="Amount_14" type="flatMoney" intLength="14" decLength="2" signLocation="none" padding="left" padString="0" />
+
+          <Field id="TranType1_15" length="1" padding="left" padString=" " />
+          <Field id="EntrySetNum_15" length="2" padding="left" padString="0" />
+          <Field id="CashFlag_15" length="1" padding="left" padString=" " />
+          <Field id="AccountNum_15" length="15" padding="right" padString=" " />
+          <Field id="TxnType_15" length="1" padding="left" padString=" " />
+          <Field id="Amount_15" type="flatMoney" intLength="14" decLength="2" signLocation="none" padding="left" padString="0" />
+
+          <Field id="TranType1_16" length="1" padding="left" padString=" " />
+          <Field id="EntrySetNum_16" length="2" padding="left" padString="0" />
+          <Field id="CashFlag_16" length="1" padding="left" padString=" " />
+          <Field id="AccountNum_16" length="15" padding="right" padString=" " />
+          <Field id="TxnType_16" length="1" padding="left" padString=" " />
+          <Field id="Amount_16" type="flatMoney" intLength="14" decLength="2" signLocation="none" padding="left" padString="0" />
+
+          <Field id="TranType1_17" length="1" padding="left" padString=" " />
+          <Field id="EntrySetNum_17" length="2" padding="left" padString="0" />
+          <Field id="CashFlag_17" length="1" padding="left" padString=" " />
+          <Field id="AccountNum_17" length="15" padding="right" padString=" " />
+          <Field id="TxnType_17" length="1" padding="left" padString=" " />
+          <Field id="Amount_17" type="flatMoney" intLength="14" decLength="2" signLocation="none" padding="left" padString="0" />
+
+          <Field id="TranType1_18" length="1" padding="left" padString=" " />
+          <Field id="EntrySetNum_18" length="2" padding="left" padString="0" />
+          <Field id="CashFlag_18" length="1" padding="left" padString=" " />
+          <Field id="AccountNum_18" length="15" padding="right" padString=" " />
+          <Field id="TxnType_18" length="1" padding="left" padString=" " />
+          <Field id="Amount_18" type="flatMoney" intLength="14" decLength="2" signLocation="none" padding="left" padString="0" />
+
+          <Field id="TranType1_19" length="1" padding="left" padString=" " />
+          <Field id="EntrySetNum_19" length="2" padding="left" padString="0" />
+          <Field id="CashFlag_19" length="1" padding="left" padString=" " />
+          <Field id="AccountNum_19" length="15" padding="right" padString=" " />
+          <Field id="TxnType_19" length="1" padding="left" padString=" " />
+          <Field id="Amount_19" type="flatMoney" intLength="14" decLength="2" signLocation="none" padding="left" padString="0" />
+
+          <Field id="TranType1_20" length="1" padding="left" padString=" " />
+          <Field id="EntrySetNum_20" length="2" padding="left" padString="0" />
+          <Field id="CashFlag_20" length="1" padding="left" padString=" " />
+          <Field id="AccountNum_20" length="15" padding="right" padString=" " />
+          <Field id="TxnType_20" length="1" padding="left" padString=" " />
+          <Field id="Amount_20" type="flatMoney" intLength="14" decLength="2" signLocation="none" padding="left" padString="0" />
+
+          <Field id="TranType1_21" length="1" padding="left" padString=" " />
+          <Field id="EntrySetNum_21" length="2" padding="left" padString="0" />
+          <Field id="CashFlag_21" length="1" padding="left" padString=" " />
+          <Field id="AccountNum_21" length="15" padding="right" padString=" " />
+          <Field id="TxnType_21" length="1" padding="left" padString=" " />
+          <Field id="Amount_21" type="flatMoney" intLength="14" decLength="2" signLocation="none" padding="left" padString="0" />
+
+          <Field id="TranType1_22" length="1" padding="left" padString=" " />
+          <Field id="EntrySetNum_22" length="2" padding="left" padString="0" />
+          <Field id="CashFlag_22" length="1" padding="left" padString=" " />
+          <Field id="AccountNum_22" length="15" padding="right" padString=" " />
+          <Field id="TxnType_22" length="1" padding="left" padString=" " />
+          <Field id="Amount_22" type="flatMoney" intLength="14" decLength="2" signLocation="none" padding="left" padString="0" />
+
+          <Field id="dummy" length="1" value="7" comment="TranType7" />
+          <Field id="NetTotal" type="flatMoney" intLength="14" decLength="2" signLocation="none" padding="left" padString="0" />
+          <Field id="CreditTotal" type="flatMoney" intLength="14" decLength="2" signLocation="none" padding="left" padString="0" />
+          <Field id="DebitTotal" type="flatMoney" intLength="14" decLength="2" signLocation="none" padding="left" padString="0" />
+          <Field id="EntrySetControl" length="2" padding="left" padString="0" />
+          <Field id="DetailRecordControl" length="2" padding="left" padString="0" />
+
+       </content>
+   </Req>
+   <Res>
+          <content>
+             <Field id="Result" startIndex="90" length="1" />  
+             <Field id="JournalNum" startIndex="91" length="6" padding="left" padString="0" />
+             <Field id="ResponseDate" startIndex="97" length="8" padding="right" padString=" " /> 
+             <Field id="ResponseTime" startIndex="105" length="8" padding="right" padString=" " />
+             <Field id="ErrorCode" startIndex="113" length="4" padding="left" padString="0" />
+             <Field id="ErrorDescription" startIndex="117" length="50" padding="right" padString=" " />
+             
+             <Field id="Account_1" startIndex="167" length="15" padding="left" padString="0" />
+             <Field id="AccountName_1" startIndex="182" length="22" padding="right" padString=" " />
+             <Field id="HomeBranch_1" startIndex="204" length="3" padding="left" padString="0" />
+
+             <Field id="Account_2" startIndex="207" length="15" padding="left" padString="0" />
+             <Field id="AccountName_2" startIndex="222" length="22" padding="right" padString=" " />
+             <Field id="HomeBranch_2" startIndex="244" length="3" padding="left" padString="0" />
+
+             <Field id="Account_3" startIndex="247" length="15" padding="left" padString="0" />
+             <Field id="AccountName_3" startIndex="262" length="22" padding="right" padString=" " />
+             <Field id="HomeBranch_3" startIndex="284" length="3" padding="left" padString="0" />
+
+             <Field id="Account_4" startIndex="287" length="15" padding="left" padString="0" />
+             <Field id="AccountName_4" startIndex="302" length="22" padding="right" padString=" " />
+             <Field id="HomeBranch_4" startIndex="324" length="3" padding="left" padString="0" />
+
+             <Field id="Account_5" startIndex="327" length="15" padding="left" padString="0" />
+             <Field id="AccountName_5" startIndex="342" length="22" padding="right" padString=" " />
+             <Field id="HomeBranch_5" startIndex="364" length="3" padding="left" padString="0" />
+
+             <Field id="Account_6" startIndex="367" length="15" padding="left" padString="0" />
+             <Field id="AccountName_6" startIndex="382" length="22" padding="right" padString=" " />
+             <Field id="HomeBranch_6" startIndex="404" length="3" padding="left" padString="0" />
+
+             <Field id="Account_7" startIndex="407" length="15" padding="left" padString="0" />
+             <Field id="AccountName_7" startIndex="422" length="22" padding="right" padString=" " />
+             <Field id="HomeBranch_7" startIndex="444" length="3" padding="left" padString="0" />
+
+             <Field id="Account_8" startIndex="447" length="15" padding="left" padString="0" />
+             <Field id="AccountName_8" startIndex="462" length="22" padding="right" padString=" " />
+             <Field id="HomeBranch_8" startIndex="484" length="3" padding="left" padString="0" />
+
+             <Field id="Account_9" startIndex="487" length="15" padding="left" padString="0" />
+             <Field id="AccountName_9" startIndex="502" length="22" padding="right" padString=" " />
+             <Field id="HomeBranch_9" startIndex="524" length="3" padding="left" padString="0" />
+
+             <Field id="Account_10" startIndex="527" lngth="15" padding="left" padString="0" />
+             <Field id="AccountName_10" startIndex="542" length="22" padding="right" padString=" " />
+             <Field id="HomeBranch_10" startIndex="564" length="3" padding="left" padString="0" />
+
+             <Field id="Account_11" startIndex="567" length="15" padding="left" padString="0" />
+             <Field id="AccountName_11" startIndex="582" length="22" padding="right" padString=" " />
+             <Field id="HomeBranch_11" startIndex="604" length="3" padding="left" padString="0" />
+
+             <Field id="Account_12" startIndex="607" length="15" padding="left" padString="0" />
+             <Field id="AccountName_12" startIndex="622" length="22" padding="right" padString=" " />
+             <Field id="HomeBranch_12" startIndex="644" length="3" padding="left" padString="0" /> 
+
+             <Field id="Account_13" startIndex="647" length="15" padding="left" padString="0" />
+             <Field id="AccountName_13" startIndex="662" length="22" padding="right" padString=" " />
+             <Field id="HomeBranch_13" startIndex="684" length="3" padding="left" padString="0" />
+
+             <Field id="Account_14" startIndex="687" length="15" padding="left" padString="0" />
+             <Field id="AccountName_14" startIndex="702" length="22" padding="right" padString=" " />
+             <Field id="HomeBranch_14" startIndex="724" length="3" padding="left" padString="0" />
+
+             <Field id="Account_15" startIndex="727" length="15" padding="left" padString="0" />
+             <Field id="AccountName_15" startIndex="742" length="22" padding="right" padString=" " />
+             <Field id="HomeBranch_15" startIndex="764" length="3" padding="left" padString="0" />
+
+             <Field id="Account_16" startIndex="767" length="15" padding="left" padString="0" />
+             <Field id="AccountName_16" startIndex="782" length="22" padding="right" padString=" " />
+             <Field id="HomeBranch_16" startIndex="804" length="3" padding="left" padString="0" />
+
+             <Field id="Account_17" startIndex="807" length="15" padding="left" padString="0" />
+             <Field id="AccountName_17" startIndex="822" length="22" padding="right" padString=" " />
+             <Field id="HomeBranch_17" startIndex="844" length="3" padding="left" padString="0" />
+
+             <Field id="Account_18" startIndex="847" length="15" padding="left" padString="0" />
+             <Field id="AccountName_18" startIndex="862" length="22" padding="right" padString=" " />
+             <Field id="HomeBranch_18" startIndex="884" length="3" padding="left" padString="0" />
+
+             <Field id="Account_19" startIndex="887" length="15" padding="left" padString="0" />
+             <Field id="AccountName_19" startIndex="902" length="22" padding="right" padString=" " />
+             <Field id="HomeBranch_19" startIndex="924" length="3" padding="left" padString="0" />
+
+             <Field id="Account_20" startIndex="927" length="15" padding="left" padString="0" />
+             <Field id="AccountName_20" startIndex="942" length="22" padding="right" padString=" " />
+             <Field id="HomeBranch_20" startIndex="964" length="3" padding="left" padString="0" />
+
+             <Field id="Account_21" startIndex="967" length="15" padding="left" padString="0" />
+             <Field id="AccountName_21" startIndex="982" length="22" padding="right" padString=" " />
+             <Field id="HomeBranch_21" startIndex="1004" length="3" padding="left" padString="0" />
+
+             <Field id="Account_22" startIndex="1007" length="15" padding="left" padString="0" />
+             <Field id="AccountName_22" startIndex="1022" length="22" padding="right" padString=" " />
+             <Field id="HomeBranch_22" startIndex="1044" length="3" padding="left" padString="0" />
+
+             <Field id="ResponseCount" startIndex="1047" length="2" padding="left" padString="0" />
+          </content>
+   </Res>
+</MultiTransfer>

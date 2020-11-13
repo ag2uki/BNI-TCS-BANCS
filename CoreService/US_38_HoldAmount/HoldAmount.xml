@@ -1,0 +1,21 @@
+<HoldAmount>
+   <Req>
+       <content> 
+			   <Field id="accountNum"    length="17" padding="left"  padString="0" />
+			   <Field id="amount"         type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+			   <Field id="detail"       length="18" padding="right" padString=" " />
+			   <Field id="dummy"          length="7" value="       " /> 
+			   <Field id="promoNum"       length="2" padding="right" padString=" " />
+			   <Field id="reasonBlock"       length="2" padding="right" padString=" " />
+			   <Field id="detail2"       length="12" padding="right" padString=" " />
+			   <Field id="dummy"          length="22" value="       " />
+       </content>
+   </Req>
+   <Res>
+       <content> 
+          <Field id="message"        startIndex="99" length="69" padding="right" padString=" " />
+      </content>
+   </Res>
+</HoldAmount>
+
+  

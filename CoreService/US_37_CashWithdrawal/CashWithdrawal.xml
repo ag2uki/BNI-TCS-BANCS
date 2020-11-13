@@ -1,0 +1,28 @@
+<CashWithdrawal>
+   <Req>
+     <content> 
+		<Field id="accountNum"	padding="left"		padString="0"	length="17" />
+		<Field id="dummy"		length="18"			value="                  " />
+		<Field id="amount"		type="flatMoney"	intLength="14"	decLength="3" signLocation="after" padding="left" padString="0" />
+		<Field id="dummy"		length="16"			value="                " />
+		<Field id="promoCode"	length="2"			padding="right"  padString=" " />
+		<Field id="dummy"		length="80"			value="                                                                                " />
+		<Field id="currency"	length="3"			padding="right"  padString=" " />
+		<Field id="exchangeRateAmount"	type="flatMoney"	intLength="14"	decLength="3" signLocation="after" padding="left" padString="0" />
+		<Field id="exchangeRateCurrency"	length="3"		padding="right"  padString=" " />
+		<Field id="baseAmount"	type="flatMoney"	intLength="14"	decLength="3" signLocation="after" padding="left" padString="0" />
+		<Field id="commission"	type="flatMoney"	intLength="14"	decLength="3" signLocation="after" padding="left" padString="0" />
+		<Field id="refund"		type="flatMoney"	intLength="14"	decLength="3" signLocation="after" padding="left" padString="0" />
+		<Field id="rateType"	padding="left"		padString="0"	length="2" />
+		<Field id="dummy"		length="375"			value="                                                                                                                                                                                                                                                                                                                                                                                       " />
+		<Field id="narative"	length="50"			padding="right"  padString=" " />
+		<Field id="dummy"		length="229"			value="                                                                                                                                                                                                                                     " />
+     </content>
+   </Req>
+   <Res>
+     <content>              
+		 <Field  id="message"  startIndex="94"  length="62"  padding="right"  padString=" " />
+     </content>
+   </Res>
+</CashWithdrawal>
+

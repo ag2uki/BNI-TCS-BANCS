@@ -1,0 +1,25 @@
+<InitActivationCard>
+	<Req>
+		<content>
+			<Field  id="cardNum"  padding="left"  padString="0"  length="19" />
+		</content>
+	</Req>
+	<Res>
+		<content>
+			<Field id="cardNum" 		padding="right" padString=" " startIndex="90" length="59" />
+			<Field id="cardDescription" padding="right" padString=" " startIndex="149" length="30" />
+			<Field id="cifNum" 			padding="right" padString=" " startIndex="179" length="27" />
+			<Field id="accountName" 	padding="right" padString=" " startIndex="206" length="43" />
+			<Field id="address1" 		padding="right" padString=" " startIndex="249" length="80" />
+			<Field id="address2" 		padding="right" padString=" " startIndex="329" length="40" />
+			<Field id="address3" 		padding="right" padString=" " startIndex="369" length="40" />
+			<Field id="address4" 		padding="right" padString=" " startIndex="409" length="40" />
+			<Field id="postCode" 		padding="right" padString=" " startIndex="449" length="8" />
+			<Field id="cardName1" 		padding="right" padString=" " startIndex="457" length="28" />
+			<Field id="cardName2" 		padding="right" padString=" " startIndex="485" length="30" />
+			<Field id="issueCard" 		padding="right" padString=" " startIndex="515" length="12" />
+			<Field id="expiredCard"		padding="right" padString=" " startIndex="527" length="10" />			
+			<Field id="confirmFlag" 	padding="right" padString=" " startIndex="537" length="3" />
+		</content>
+	</Res>
+</InitActivationCard>

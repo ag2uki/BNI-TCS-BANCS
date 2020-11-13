@@ -1,0 +1,66 @@
+<XRateParamUpdate>
+   <Req>
+       <content> 
+
+            <Field id="dummy"      length="4" value="A003" /> 
+            <Field id="code"       padding="right" padString=" " length="3" />
+            <Field id="tanggal"    type="date" length="8" />
+            <Field id="waktu"      padding="right" padString=" " length="8" />
+            <Field id="satuanKurs" padding="left" padString="0" length="4" />
+
+            <Field id="kursValutaLain"  type="flatMoney" intLength="5" decLength="4" signLocation="none" padding="left" padString="0"/>            
+            <Field id="midRate"         type="flatMoney" intLength="5" decLength="4" signLocation="none" padding="left" padString="0"/>            
+            <Field id="dummy"           length="1" value="Y" /> 
+
+            <Field id="rateType_1"       padding="left" padString="0" length="2" />
+            <Field id="rateDesc_1"       padding="right" padString=" " length="10" />
+            <Field id="rateVariant_1"    padding="right" padString=" " length="1" />
+            <Field id="rateMaxVariant_1" type="flatMoney" intLength="14" decLength="3" signLocation="none" padding="left" padString="0" />
+            <Field id="rateBuy_1"        type="flatMoney" intLength="5" decLength="4" signLocation="none" padding="left" padString="0" />
+            <Field id="rateSell_1"       type="flatMoney" intLength="5" decLength="4" signLocation="none" padding="left" padString="0" />
+            <Field id="rateTierFlag_1"   padding="right" padString=" " length="1" />
+
+            <Field id="rateType_2"       padding="left" padString="0" length="2" />
+            <Field id="rateDesc_2"       padding="right" padString=" " length="10" />
+            <Field id="rateVariant_2"    padding="right" padString=" " length="1" />
+            <Field id="rateMaxVariant_2" type="flatMoney" intLength="14" decLength="3" signLocation="none" padding="left" padString="0" />
+            <Field id="rateBuy_2"        type="flatMoney" intLength="5" decLength="4" signLocation="none" padding="left" padString="0" />
+            <Field id="rateSell_2"       type="flatMoney" intLength="5" decLength="4" signLocation="none" padding="left" padString="0" />
+            <Field id="rateTierFlag_2"   padding="right" padString=" " length="1" />
+
+            <Field id="rateType_3"       padding="left" padString="0" length="2" />
+            <Field id="rateDesc_3"       padding="right" padString=" " length="10" />
+            <Field id="rateVariant_3"    padding="right" padString=" " length="1" />
+            <Field id="rateMaxVariant_3" type="flatMoney" intLength="14" decLength="3" signLocation="none" padding="left" padString="0" />
+            <Field id="rateBuy_3"        type="flatMoney" intLength="5" decLength="4" signLocation="none" padding="left" padString="0" />
+            <Field id="rateSell_3"       type="flatMoney" intLength="5" decLength="4" signLocation="none" padding="left" padString="0" />
+            <Field id="rateTierFlag_3"   padding="right" padString=" " length="1" />
+            
+            <Field id="rateType_4"       padding="left" padString="0" length="2" />
+            <Field id="rateDesc_4"       padding="right" padString=" " length="10" />
+            <Field id="rateVariant_4"    padding="right" padString=" " length="1" />
+            <Field id="rateMaxVariant_4" type="flatMoney" intLength="14" decLength="3" signLocation="none" padding="left" padString="0" />
+            <Field id="rateBuy_4"        type="flatMoney" intLength="5" decLength="4" signLocation="none" padding="left" padString="0" />
+            <Field id="rateSell_4"       type="flatMoney" intLength="5" decLength="4" signLocation="none" padding="left" padString="0" />
+            <Field id="rateTierFlag_4"   padding="right" padString=" " length="1" />
+            
+            <Field id="rateType_5"       padding="left" padString="0" length="2" />
+            <Field id="rateDesc_5"       padding="right" padString=" " length="10" />
+            <Field id="rateVariant_5"    padding="right" padString=" " length="1" />
+            <Field id="rateMaxVariant_5" type="flatMoney" intLength="14" decLength="3" signLocation="none" padding="left" padString="0" />
+            <Field id="rateBuy_5"        type="flatMoney" intLength="5" decLength="4" signLocation="none" padding="left" padString="0" />
+            <Field id="rateSell_5"       type="flatMoney" intLength="5" decLength="4" signLocation="none" padding="left" padString="0" />
+            <Field id="rateTierFlag_5"   padding="right" padString=" " length="1" />
+            
+            <Field id="versionFrom"      padding="right" padString=" " length="4" />
+            <Field id="versionFileFrom"  padding="right" padString=" " length="4" />
+            <Field id="dummy"            length="8" value="YUPDATED" /> 
+            <Field id="indikatorSatuan"  padding="right" padString=" " length="1" />
+       </content>
+   </Req>
+   <Res>
+       <content> 
+          <Field id="message"        startIndex="99" length="69" padding="right" padString=" " />
+      </content>
+   </Res>
+</XRateParamUpdate>

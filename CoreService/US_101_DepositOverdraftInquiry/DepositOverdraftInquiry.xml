@@ -1,0 +1,69 @@
+<DepositOverdraftInquiry>
+	<Req>
+		<content>
+			<Field id="accountNumber" padding="left" padString="0" length="17"/>
+			<Field id="optionType" padding="right" padString=" " length="1"/>
+			<Field id="recordDate" type="date" length="8"/>
+		</content>
+	</Req>
+	<Res>
+		<RX007010>
+			<content startOffset="2">
+				<Field id="accountNumber" padding="left" padString="0" startIndex="90" length="17"/>
+				<Field id="limitType" padding="left" padString="0" startIndex="107" length="2"/>
+				<Field id="overDraftLimit1" padding="left" padString="0" startIndex="111" length="14"/>
+				<Field id="rate1" type="flatMoney" signLocation="after" intLength="2" decLength="4" startIndex="125" length="7"/>
+				<Field id="rateType1" padding="right" padString=" " startIndex="132" length="1"/>
+				<Field id="effectiveDate1" type="date" startIndex="133" length="8"/>
+				<Field id="dueDate1" type="date" startIndex="141" length="8"/>
+				<Field id="type1" padding="left" padString=" " startIndex="149" length="2"/>
+				<Field id="value1" padding="left" padString=" " startIndex="151" length="11"/>
+				<Field id="overDraftLimit2" padding="left" padString="0" startIndex="162" length="14"/>
+				<Field id="rate2" type="flatMoney" signLocation="after" intLength="2" decLength="4" startIndex="176" length="7"/>
+				<Field id="rateType2" padding="right" padString=" " startIndex="183" length="1"/>
+				<Field id="effectiveDate2" type="date" startIndex="184" length="8"/>
+				<Field id="dueDate2" type="date" startIndex="192" length="8"/>
+				<Field id="type2" padding="left" padString=" " startIndex="200" length="2"/>
+				<Field id="value2" padding="left" padString=" " startIndex="202" length="11"/>
+				<Field id="overDraftLimit3" padding="left" padString="0" startIndex="213" length="14"/>
+				<Field id="rate3" type="flatMoney" signLocation="after" intLength="2" decLength="4" startIndex="227" length="7"/>
+				<Field id="rateType3" padding="right" padString=" " startIndex="234" length="1"/>
+				<Field id="effectiveDate3" type="date" startIndex="235" length="8"/>
+				<Field id="dueDate3" type="date" startIndex="243" length="8"/>
+				<Field id="type3" padding="left" padString=" " startIndex="251" length="2"/>
+				<Field id="value3" padding="left" padString=" " startIndex="253" length="11"/>
+				<Field id="overDraftLimit4" padding="left" padString="0" startIndex="264" length="14"/>
+				<Field id="rate4" type="flatMoney" signLocation="after" intLength="2" decLength="4" startIndex="278" length="7"/>
+				<Field id="rateType4" padding="right" padString=" " startIndex="285" length="1"/>
+				<Field id="effectiveDate4" type="date" startIndex="286" length="8"/>
+				<Field id="dueDate4" type="date" startIndex="294" length="8"/>
+				<Field id="type4" padding="left" padString=" " startIndex="302" length="2"/>
+				<Field id="value4" padding="left" padString=" " startIndex="304" length="11"/>
+				<Field id="kelebihan" padding="left" padString="0" startIndex="315" length="11"/>
+				<Field id="dummy1" type="flatMoney" signLocation="after" intLength="2" decLength="4" startIndex="326" length="7"/>
+				<Field id="dummy2" padding="right" padString=" " startIndex="333" length="1"/>
+				<Field id="dummy3" type="flatMoney" signLocation="after" intLength="2" decLength="4" startIndex="334" length="7"/>
+				<Field id="dummy4" padding="right" padString=" " startIndex="341" length="1"/>
+				<Field id="marginPengurang" padding="left" padString="0" startIndex="342" length="10"/>
+				<Field id="kodeBungaDebit" padding="right" padString=" " startIndex="352" length="1"/>
+				<Field id="debitPemindahan" padding="left" padString=" " startIndex="353" length="17"/>
+				<Field id="kodeKomitmen" padding="right" padString=" " startIndex="370" length="1"/>
+				<Field id="pemindahanKomitmen" padding="left" padString=" " startIndex="371" length="17"/>
+				<Field id="jenisOverdraftExpiryRate" padding="right" padString=" " startIndex="388" length="1"/>
+				<Field id="overdraftExpiredRate" type="flatMoney" signLocation="after" intLength="2" decLength="5" startIndex="389" length="8"/>
+				<Field id="ratingPinjaman" padding="left" padString="0" startIndex="397" length="5"/>
+				<Field id="fasilitas" padding="left" padString=" " startIndex="402" length="17"/>
+				<Field id="jenisPembayaran" padding="right" padString=" " startIndex="419" length="1"/>
+				<Field id="nominalAngsuranTetap" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="420" length="18"/>
+				<Field id="hapusDetail" padding="right" padString=" " startIndex="438" length="1"/>
+				<Field id="kodePromo" padding="right" padString=" " startIndex="439" length="2"/>
+				<Field id="status1" padding="left" padString="0" startIndex="441" length="1"/>
+				<Field id="status2" padding="left" padString="0" startIndex="442" length="1"/>
+				<Field id="status3" padding="left" padString="0" startIndex="443" length="1"/>
+				<Field id="status4" padding="left" padString="0" startIndex="444" length="1"/>
+				<Field id="tujuan" padding="left" padString="0" startIndex="445" length="3"/>
+				<Field id="dummy" padding="right" padString=" " startIndex="448" length="1"/>
+			</content>
+		</RX007010>
+	</Res>
+</DepositOverdraftInquiry>

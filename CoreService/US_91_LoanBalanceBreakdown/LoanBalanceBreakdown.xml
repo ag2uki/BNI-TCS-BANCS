@@ -1,0 +1,45 @@
+<LoanBalanceBreakdown>
+   <Req>
+       <content> 
+        <Field id="accountNum" padding="left" padString="0" length="17" />
+        <Field id="dummy"  length="1" value="3"/>
+       </content>
+   </Req>
+   <Res>
+     <content>              
+        <Field id="accountNum" padding="left" padString="0" startIndex="90" length="20" />
+
+        <Field id="saldoPokok" padding="right" padString=" " startIndex="110" length="19" />
+        <Field id="tunggakanPokok" padding="right" padString=" " startIndex="129" length="19" />
+
+        <Field id="saldoBunga" padding="right" padString=" " startIndex="148" length="19" />
+        <Field id="tunggakanBunga" padding="right" padString=" " startIndex="167" length="19" />
+
+        <Field id="saldoBiaya" padding="right" padString=" " startIndex="186" length="19" />
+        <Field id="tunggakanBiaya" padding="right" padString=" " startIndex="205" length="19" />
+
+        <Field id="saldoDenda" padding="right" padString=" " startIndex="224" length="19" />
+        <Field id="tunggakanDenda" padding="right" padString=" " startIndex="243" length="19" />
+
+        <Field id="saldoBiayaProvisi" padding="right" padString=" " startIndex="262" length="19" />
+        <Field id="tunggakanBiayaProvisi" padding="right" padString=" " startIndex="281" length="19" />
+
+        <Field id="saldoTotal" padding="right" padString=" " startIndex="300" length="19" />
+        <Field id="tunggakanTotal" padding="right" padString=" " startIndex="319" length="19" />
+
+        <Field id="teoPokok" padding="right" padString=" " startIndex="338" length="19" />
+        <Field id="teoBunga" padding="right" padString=" " startIndex="357" length="19" />
+
+        <Field id="teoBiaya" padding="right" padString=" " startIndex="376" length="19" />
+        <Field id="teoDenda" padding="right" padString=" " startIndex="395" length="19" />
+
+        <Field id="teoBiayaProvisi" padding="right" padString=" " startIndex="414" length="19" />
+        <Field id="teoTotal" padding="right" padString=" " startIndex="433" length="19" />
+
+        <Field id="saldoMarkup" padding="right" padString=" " startIndex="452" length="19" />
+        <Field id="tunggakanMarkup" padding="right" padString=" " startIndex="471" length="19" />
+
+        <Field id="teoMarkup" padding="right" padString=" " startIndex="490" length="19" />
+     </content>
+   </Res>
+</LoanBalanceBreakdown>

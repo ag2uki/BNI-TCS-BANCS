@@ -1,0 +1,20 @@
+<TaxFileNum>
+   <Req>
+       <content> 
+        <Field id="cifNum" padding="left" padString="0" length="17" />
+        <Field id="dummy" length="80" value="                                                            00000000000000000   " />
+       </content>
+   </Req>
+   <Res>
+     <content>              
+        <Field id="cifNum" padding="left" padString="0" startIndex="90" length="17" />
+        <Field id="customerName" padding="right" padString=" " startIndex="107" length="60" />
+
+        <Field id="accountNum" padding="left" padString="0" startIndex="167" length="17" />
+        <Field id="dummy" padding="right" padString=" " startIndex="187" length="16" />
+
+        <Field id="investorTypeCode" padding="right" padString=" " startIndex="203" length="1" />
+        <Field id="taxFileNum" padding="right" padString=" " startIndex="204" length="16" />
+     </content>
+   </Res>
+</TaxFileNum>

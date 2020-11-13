@@ -1,0 +1,60 @@
+<InquiryUserDefinedCodeV2>
+	<Req>
+		<content>
+			<Field id="accountNum" length="17" padding="left" padString="0" />
+		</content>
+	</Req>
+	<Res>
+		<content>
+			<Field id="accntNumber1" startIndex="90" padding="left" padString="0" length="17" />
+			<Field id="defaultString" startIndex="107" padding="right" padString=" " length="20" />
+			<Field id="userCode2122" startIndex="127" padding="right" padString=" " length="2" />
+			<Field id="teroris" startIndex="129" padding="right" padString=" " length="1" />
+			
+			<Field id="defaultString3a" startIndex="130" padding="right" padString=" " length="3" />
+			<Field id="defaultString3b" startIndex="133" padding="right" padString=" " length="4" />
+			
+			<Field id="defaultString4a" startIndex="137" padding="right" padString=" " length="4" />
+			<Field id="defaultString4b" startIndex="141"  padding="right" padString=" " length="3" />
+			<Field id="defaultString4c" startIndex="144" padding="right" padString=" " length="3" />
+			
+			<Field id="defaultString5a" startIndex="147" padding="right" padString=" " length="4" />
+			<Field id="defaultString5b" startIndex="151" padding="right" padString=" " length="7" />
+			
+			<Field id="defaultString6a" startIndex="158" padding="right" padString=" " length="3" />
+			<Field id="defaultString6b" startIndex="161" padding="right" padString=" " length="3" />
+			<Field id="defaultString6c" startIndex="164" padding="right" padString=" " length="3" />
+			
+			<Field id="hubdgBank" startIndex="167" padding="right" padString=" " length="1" />
+			<Field id="badanHukum" startIndex="168" padding="right" padString=" " length="2" />
+			<Field id="riskLevel" startIndex="170" padding="right" padString=" " length="1" />
+			<Field id="jenisOpr" startIndex="171" padding="right" padString=" " length="1" />
+			<Field id="tawarProduk" startIndex="172" padding="right" padString=" " length="1" />
+			<Field id="shareDataPri" startIndex="173" padding="right" padString=" " length="1" />
+			
+			<Field id="defaultString7h" startIndex="174" padding="right" padString=" " length="1" />
+			<Field id="defaultString7i" startIndex="175" padding="right" padString=" " length="1" />
+			<Field id="defaultString7j" startIndex="176" padding="right" padString=" " length="1" />
+			
+			<Field id="defaultString8a" startIndex="177" padding="right" padString=" " length="2" />
+			<Field id="defaultString8b" startIndex="179" padding="right" padString=" " length="2" />
+			<Field id="defaultString8c" startIndex="181" padding="right" padString=" " length="2" />
+			<Field id="defaultString8d" startIndex="183" padding="right" padString=" " length="2" />
+			<Field id="defaultString8e" startIndex="185" padding="right" padString=" " length="2" />
+			
+			<Field id="defaultString9a" startIndex="187" padding="right" padString=" " length="2" />
+			<Field id="defaultString9b" startIndex="189" padding="right" padString=" " length="2" />
+			<Field id="defaultString9c" startIndex="191" padding="right" padString=" " length="2" />
+			<Field id="defaultString9d" startIndex="193" padding="right" padString=" " length="2" />
+			<Field id="defaultString9e" startIndex="195" padding="right" padString=" " length="2" />
+			
+			<Field id="defaultString10a" startIndex="197" padding="right" padString=" " length="2" />
+			<Field id="defaultString10b" startIndex="199" padding="right" padString=" " length="2" />
+			<Field id="defaultString10c" startIndex="201" padding="right" padString=" " length="2" />
+			<Field id="defaultString10d" startIndex="203" padding="right" padString=" " length="2" />
+			<Field id="defaultString10e" startIndex="205" padding="right" padString=" " length="2" />
+			
+			<Field id="dummy" startIndex="207" length="400" />
+		</content>
+	</Res>
+</InquiryUserDefinedCodeV2>

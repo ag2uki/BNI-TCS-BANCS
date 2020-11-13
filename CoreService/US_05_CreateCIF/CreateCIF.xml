@@ -1,0 +1,91 @@
+<CreateCIF>
+	<Req>
+		<content>
+			<Field id="cifNum"			padding="left"	padString="0" length="17"/>
+			<Field id="customerType"	padding="right" padString=" " length="2"/>
+			<Field id="relManager"		padding="left"	padString="0" length="5"/>
+			<Field id="title"			padding="left"	padString="0" length="2"/>
+			<Field id="firstName"		padding="right" padString=" " length="40"/>
+			<Field id="lastName"		padding="right" padString=" " length="30"/>
+			<Field id="gelar"			padding="right" padString=" " length="10"/>
+			<Field id="companyName"		padding="right" padString=" " length="50"/>
+			<Field id="legalEntity"		padding="right" padString=" " length="10"/>
+			<Field id="filler"			padding="right" padString=" "  length="20" />
+			<Field id="adrress1"		padding="right" padString=" " length="40"/>
+			<Field id="address2"		padding="right" padString=" " length="40"/>
+			<Field id="address3"		padding="right" padString=" " length="40"/>
+			<Field id="address4"		padding="right" padString=" " length="40"/>
+			<Field id="zipCode"			padding="right" padString=" " length="8"/>
+			<Field id="countryCode"		padding="right" padString=" " length="2"/>
+			<Field id="homePhone1"		padding="right" padString=" " length="4"/>
+			<Field id="homePhone2"		padding="right" padString=" " length="8"/>
+			<Field id="noFax1"			padding="right" padString=" " length="4"/>
+			<Field id="noFax2"			padding="right" padString=" " length="8"/>
+			<Field id="officePhone1"	padding="right" padString=" " length="4"/>
+			<Field id="officePhone2"	padding="right" padString=" " length="8"/>
+			<Field id="dummy"			length="12" value="            "/>
+			<Field id="nationality"		padding="right" padString=" " length="2"/>
+			<Field id="occupant"		padding="right" padString=" " length="1"/>
+			<Field id="languageCode"	padding="left"	padString="0" length="2"/>
+			<Field id="idNumber"		padding="right" padString=" " length="24"/>
+			<Field id="buildDate"		padding="right" padString=" " length="8"/>
+			<Field id="publisherCity"	padding="right" padString=" " length="30"/>
+			<Field id="idType"			padding="left"	padString="0" length="4"/>
+			<Field id="jobCode"			padding="right" padString=" " length="2"/>
+			<Field id="BorderRisk1"		padding="right" padString=" " length="2"/>
+			<Field id="vipCode"			padding="left"	padString="0" length="1"/>
+			<Field id="status"			padding="left"	padString="0" length="3"/>
+			<Field id="BISegmentCode"	padding="right" padString=" " length="4"/>
+			<Field id="lockerHolder"	padding="right" padString=" " length="1"/>
+			<Field id="optNPWP"			padding="left"  padString="0" length="1"/>
+			<Field id="branchOpening"	padding="left"	padString="0" length="5"/>
+			<Field id="optCustomer"		padding="right" padString=" " length="1"/>
+			<Field id="optIdCustomer"	padding="right" padString=" " length="1"/>
+			<Field id="optIndustry"		padding="right" padString=" " length="1"/>
+			<Field id="optCountry"		padding="right" padString=" " length="1"/>
+			<Field id="optSector"		padding="right" padString=" " length="1"/>
+			<Field id="sectorCode"		padding="right" padString=" " length="4"/>
+			<Field id="countryOfRisk"	padding="right" padString=" " length="2"/>
+			<Field id="affiliationCode"	padding="right" padString=" " length="5"/>
+			<Field id="BIOwnerCode"		padding="right" padString=" " length="5"/>
+			<Field id="companyGroup"	padding="right" padString=" " length="4"/>
+			<Field id="middleName"		padding="right" padString=" " length="40"/>
+			<Field id="locationCode"	padding="right" padString=" " length="4"/>
+			<Field id="bebasPph"		padding="right" padString=" " length="1"/>
+			<Field id="IVRFlag"			padding="right" padString=" " length="1"/>
+			<Field id="idDueDate"		padding="right" padString=" " length="8"/>
+			<Field id="placeOfBirth"	padding="right" padString=" " length="30"/>
+			<Field id="dateOfBirth"		padding="right" padString=" " length="8"/>
+			<Field id="gender"			padding="right" padString=" " length="1"/>
+			<Field id="isMaried"		padding="right" padString=" " length="1"/>
+			<Field id="motherName"		padding="right" padString=" " length="40"/>
+			<Field id="income"			padding="left"	padString="0" length="15"/>
+			<Field id="frekuensi"		padding="right" padString=" " length="1"/>
+			<Field id="religion"		padding="left"	padString="0" length="1"/>
+			<Field id="education"		padding="left"	padString="0" length="2"/>
+			<Field id="email"			padding="right" padString=" " length="50"/>
+			<Field id="NPWPNum"			padding="left"	padString="0" length="16"/>
+			<Field id="dummy"			length="16" value="                " />
+			<Field id="SIUPNum"			padding="right" padString=" " length="24"/>
+			<Field id="SIUPDueDate"		padding="right" padString=" " length="8"/>
+			<Field id="TDPNum"			padding="right" padString=" " length="24"/>
+			<Field id="TDPDueDate"		padding="right" padString=" " length="8"/>
+			<Field id="kitasNum"		padding="right" padString=" " length="24"/>
+			<Field id="kitasDueDate"	padding="right" padString=" " length="8"/>
+			<Field id="BNISegmentCode"	padding="right" padString=" " length="4"/>
+			<Field id="RMCode"			padding="right" padString=" " length="7"/>	
+			<Field id="dummy"			length="1" value=" " />
+			<Field id="dummy"			length="2" value="  " />
+			<Field id="dummy"			length="25" value="                         " />
+			<Field id="dummy"			length="1" value=" " />
+			<Field id="handPhone1"		padding="right" padString=" " length="4"/>	
+			<Field id="handPhone2"		padding="right" padString=" " length="16"/>
+			<Field id="dummy"			length="20" value="                    "/>			
+		</content>
+	</Req>
+	<Res>
+		<content>
+			<Field  id="message"  startIndex="131"  length="69"  padding="right"  padString=" " />
+		</content>
+	</Res>
+</CreateCIF>

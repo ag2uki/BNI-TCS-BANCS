@@ -1,0 +1,31 @@
+<BillingPayment>
+    <Req>
+       <content>
+        <Field id="billerCode"    padding="right" padString=" " startIndex="88" length="4" />
+        <Field id="regionCode"    padding="right" padString=" " startIndex="92" length="4" />
+        <Field id="billerName"    padding="right" padString=" " startIndex="96" length="20" />
+        <Field id="cardNum"       padding="right" padString=" " startIndex="116" length="18" />
+        <Field id="cardName"      padding="right" padString=" " startIndex="134" length="20" />
+        <Field id="paymentMethod" padding="left"  padString="0" startIndex="154" length="1" />
+        <Field id="accountNum"    padding="left"  padString="0" startIndex="155" length="17" />	
+		<Field id="trxAmount"     type="flatMoney" intLength="12" decLength="3" signLocation="none"  startIndex="172" length="15" padding="left"  padString="0" />
+		<Field id="feeAmount"     type="flatMoney" intLength="12" decLength="3" signLocation="none"  startIndex="187" length="15" padding="left"  padString="0" />
+        <Field id="naration"      padding="right" padString=" " startIndex="202" length="50" />
+        <Field id="invoiceNum"    padding="right" padString=" " startIndex="252" length="11" />
+		<Field id="journalNum"    padding="right" padString=" " startIndex="263" length="6" />
+		<Field id="sign"    	padding="right" padString=" " startIndex="269" length="1" />
+		<Field id="refNo"    padding="right" padString=" " startIndex="270" length="12" />
+		<Field id="flag"    padding="right" padString=" " startIndex="282" length="1" />
+		<Field id="amount1"     type="flatMoney" intLength="12" decLength="3" signLocation="none"  startIndex="283" length="15" padding="left"  padString="0" />
+		<Field id="amount2"     type="flatMoney" intLength="12" decLength="3" signLocation="none"  startIndex="298" length="15" padding="left"  padString="0" />
+		<Field id="amount3"     type="flatMoney" intLength="12" decLength="3" signLocation="none"  startIndex="313" length="15" padding="left"  padString="0" />
+		<Field id="amount4"     type="flatMoney" intLength="12" decLength="3" signLocation="none"  startIndex="328" length="15" padding="left"  padString="0" />
+		<Field id="amount5"     type="flatMoney" intLength="12" decLength="3" signLocation="none"  startIndex="343" length="15" padding="left"  padString="0" />
+       </content> 
+    </Req>
+    <Res>
+       <content> 
+          <Field id="message"        startIndex="99" length="69" padding="right" padString=" " />
+      </content>
+    </Res>
+</BillingPayment>

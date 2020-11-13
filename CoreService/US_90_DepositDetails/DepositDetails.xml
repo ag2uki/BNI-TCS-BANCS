@@ -1,0 +1,97 @@
+<DepositDetails>
+   <Req>
+     <content> 
+        <Field id="accountNum" padding="left" padString="0" length="17" />
+        <Field id="dummy"      length="9" value="100000000" />
+     </content>
+   </Req>
+   <Res>
+     <content> 
+
+        <Field id="accountNum" padding="left" padString="0" startIndex="90" length="17" />
+        <Field id="cifNum" padding="left" padString="0" startIndex="107" length="17" />
+
+        <Field id="idNumber" padding="right" padString=" " startIndex="124" length="24" />
+        <Field id="idType" padding="left" padString="0" startIndex="148" length="4" />
+
+        <Field id="customerName" padding="right" padString=" " startIndex="152" length="60" />
+        <Field id="address1" padding="right" padString=" " startIndex="212" length="40" />
+
+        <Field id="address2" padding="right" padString=" " startIndex="252" length="40" />
+        <Field id="hasNPWP" padding="right" padString=" " startIndex="292" length="1" />
+
+        <Field id="address3" padding="right" padString=" " startIndex="293" length="40" />
+        <Field id="citizenCountryCode" padding="right" padString=" " startIndex="333" length="3" />
+
+        <Field id="address4" padding="right" padString=" " startIndex="336" length="40" />
+        <Field id="postCode" padding="right" padString=" " startIndex="376" length="8" />
+
+        <Field id="accountTypeCode" padding="left" padString="0" startIndex="384" length="4" />
+        <Field id="accountSubcatCode" padding="left" padString="0" startIndex="388" length="4" />
+
+        <Field id="interestPaymentMethodCode" padding="right" padString=" " startIndex="395" length="1" />
+        <Field id="affiliatedAccountNum" padding="left" padString="0" startIndex="399" length="17" />
+
+        <Field id="profilBebasBiaya" padding="left" padString="0" startIndex="416" length="4" />
+        <Field id="frekuensiRekeningKoran" padding="right" padString=" " startIndex="422" length="1" />
+
+        <Field id="konsolidasiRekeningKoran" padding="right" padString=" " startIndex="423" length="1" />
+        <Field id="calenderCode" padding="left" padString="0" startIndex="424" length="1" />
+
+        <Field id="indikatorSuratMenyurat" padding="right" padString=" " startIndex="425" length="1" />
+        <Field id="indikatorPemberitahuan" padding="right" padString=" " startIndex="426" length="1" />
+
+        <Field id="pemberitahunanKeNasabah" padding="left" padString="0" startIndex="427" length="17" />
+        <Field id="rateBungaVariabel" type="flatMoney" intLength="2" decLength="4" startIndex="444" length="6" />
+
+        <Field id="frekuensiBunga" padding="right" padString=" " startIndex="452" length="4" />
+        <Field id="siklusRekeningKoran" padding="left" padString="0" startIndex="456" length="2" />
+
+        <Field id="tanggalHariRekeningKoran" padding="left" padString="0" startIndex="458" length="2" />
+        <Field id="jenisInvestasi" padding="left" padString="0" startIndex="464" length="4" />
+
+        <Field id="nomorFasilitas" padding="left" padString="0" startIndex="480" length="17" />
+        <Field id="kreditRating" padding="left" padString="0" startIndex="547" length="5" />
+
+        <Field id="jangkaWaktu" padding="left" padString="0" startIndex="552" length="4" />
+        <Field id="termBasis" padding="right" padString=" " startIndex="556" length="1" />
+
+        <Field id="nominalDeposito" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="557" length="18" />
+        <Field id="jenisTierRate" padding="right" padString=" " startIndex="583" length="4" />
+
+        <Field id="domesticRiskCode" padding="right" padString=" " startIndex="587" length="2" />
+        <Field id="crossBorderRiskCode" padding="right" padString=" " startIndex="589" length="2" />
+
+        <Field id="borderRiskCode" padding="right" padString=" " startIndex="591" length="2" />
+        <Field id="indikatorSekuriti" padding="right" padString=" " startIndex="593" length="1" />
+
+        <Field id="limitJangkaWaktu" padding="right" padString=" " startIndex="594" length="2" />
+        <Field id="vostroIdBank" padding="right" padString=" " startIndex="596" length="12" />
+
+        <Field id="glClasificationCode" padding="right" padString=" " startIndex="608" length="25" />
+        <Field id="jumlahCopyRekeningKoran" padding="left" padString="0" startIndex="641" length="2" />
+
+        <Field id="indikatorProsesPemberitahuan" padding="right" padString=" " startIndex="643" length="1" />
+        <Field id="indikatorEkstraksiRekening" padding="right" padString=" " startIndex="644" length="1" />
+
+        <Field id="rateSesuai" type="flatMoney" signLocation="after" intLength="3" decLength="4" startIndex="645" length="8" />
+        <Field id="indikatorPerubahanRekeningKoran" padding="right" padString=" " startIndex="657" length="1" />
+
+        <Field id="indikatorTaksasi" padding="right" padString=" " startIndex="658" length="1" />
+        <Field id="alasanBukaRekening" padding="right" padString=" " startIndex="721" length="4" />
+
+        <Field id="alasanBukaRekeningLainnya" padding="right" padString=" " startIndex="725" length="20" />
+        <Field id="sumberDana" padding="right" padString=" " startIndex="745" length="4" />
+
+        <Field id="sumberDanaLainnya" padding="right" padString=" " startIndex="749" length="30" />
+        <Field id="projectedDepositPerMonth" padding="left" padString="0" startIndex="779" length="17" />
+
+        <Field id="projectedWithdrawalPerMonth" padding="left" padString="0" startIndex="796" length="17" />
+        <Field id="accountRatio" type="flatMoney" intLength="2" decLength="2" startIndex="813" length="4" />
+
+        <Field id="bicNum" padding="left" padString="0" startIndex="817" length="16" />
+        <Field id="bicLimit" padding="left" padString="0" type="flatMoney" intLength="14" decLength="3" startIndex="833" length="17" />
+        
+     </content>
+   </Res>
+</DepositDetails>

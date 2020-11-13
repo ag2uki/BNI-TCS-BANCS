@@ -1,0 +1,8 @@
+<GetLinkedDebitCard>
+	<Req>
+		<content>
+			<Field id="accountNum" padding="left" padString="0" length="17" />
+			<Field id="dummy" length="6" value="  0000"/>
+		</content>
+	</Req>
+</GetLinkedDebitCard>

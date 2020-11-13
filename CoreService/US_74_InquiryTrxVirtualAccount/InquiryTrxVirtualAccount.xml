@@ -1,0 +1,125 @@
+<InquiryTrxVirtualAccount>
+   <Req>
+      <content>
+         <Field id="dummy" length="1" value="E"/>
+         <Field id="virtualAccountNum" padding="left" padString="0" length="17"/>
+         <Field id="companyName" padding="left" padString=" " length="40"/>
+         <Field id="status" padding="left" padString=" " length="1"/>
+         <Field id="companyAccountNum" padding="left" padString="0" length="17"/>
+         <Field id="virtualAccountType" padding="left" padString="0" length="3"/>
+         <Field id="companyCode" padding="left" padString=" " length="5"/>
+         <Field id="txnType" padding="left" padString=" " length="2"/>
+         <Field id="currentPage" padding="left" padString="0" length="4"/>
+         <Field id="fromDate" type="date" length="8" padding="left" padString="0"/>
+         <Field id="toDate" type="date" length="8" padding="left" padString="0"/>
+         <Field id="journalNum" padding="left" padString="0" length="6"/>
+         <Field id="virtualAccountName" padding="left" padString=" " length="80"/>
+         <Field id="virtualAccountStatus" padding="left" padString=" " length="1"/>
+         <Field id="virtualAccountBalance" padding="left" padString=" " length="18"/>
+      </content>
+   </Req>
+   <Res>
+      <content>
+         <Field id="trxVirtualAccount_1" padding="right" padString=" " startIndex="91" length="126 "/>
+         <Field id="trxVirtualAccount_2" padding="right" padString=" " startIndex="217" length="126 "/>
+         <Field id="trxVirtualAccount_3" padding="right" padString=" " startIndex="343" length="126 "/>
+         <Field id="trxVirtualAccount_4" padding="right" padString=" " startIndex="469" length="126 "/>
+         <Field id="trxVirtualAccount_5" padding="right" padString=" " startIndex="595" length="126 "/>
+         <Field id="trxVirtualAccount_6" padding="right" padString=" " startIndex="721" length="126 "/>
+         <Field id="trxVirtualAccount_7" padding="right" padString=" " startIndex="847" length="126 "/>
+         <Field id="trxVirtualAccount_8" padding="right" padString=" " startIndex="973" length="126 "/>
+         <Field id="trxVirtualAccount_9" padding="right" padString=" " startIndex="1099" length="126 "/>
+         <Field id="trxVirtualAccount_10" padding="right" padString=" " startIndex="1225" length="126 "/>
+         <Field id="trxVirtualAccount_11" padding="right" padString=" " startIndex="1351" length="126 "/>
+         <Field id="trxVirtualAccount_12" padding="right" padString=" " startIndex="1477" length="126 "/>
+         <Field id="trxVirtualAccount_13" padding="right" padString=" " startIndex="1603" length="126 "/>
+         <Field id="trxVirtualAccount_14" padding="right" padString=" " startIndex="1729" length="126 "/>
+         <Field id="trxVirtualAccount_15" padding="right" padString=" " startIndex="1855" length="126 "/>
+         <Field id="trxVirtualAccount_16" padding="right" padString=" " startIndex="1981" length="126 "/>
+         <Field id="trxVirtualAccount_17" padding="right" padString=" " startIndex="2107" length="126 "/>
+         <Field id="trxVirtualAccount_18" padding="right" padString=" " startIndex="2233" length="126 "/>
+         <Field id="trxVirtualAccount_19" padding="right" padString=" " startIndex="2359" length="126 "/>
+         <Field id="trxVirtualAccount_20" padding="right" padString=" " startIndex="2485" length="126 "/>
+         <Field id="trxVirtualAccount_21" padding="right" padString=" " startIndex="2611" length="126 "/>
+         <Field id="trxVirtualAccount_22" padding="right" padString=" " startIndex="2737" length="126 "/>
+         <Field id="trxVirtualAccount_23" padding="right" padString=" " startIndex="2863" length="126 "/>
+         <Field id="trxVirtualAccount_24" padding="right" padString=" " startIndex="2989" length="126 "/>
+         <Field id="trxVirtualAccount_25" padding="right" padString=" " startIndex="3115" length="126 "/>
+         <Field id="trxVirtualAccount_26" padding="right" padString=" " startIndex="3241" length="126 "/>
+         <Field id="trxVirtualAccount_27" padding="right" padString=" " startIndex="3367" length="126 "/>
+         <Field id="trxVirtualAccount_28" padding="right" padString=" " startIndex="3493" length="126 "/>
+         <Field id="trxVirtualAccount_29" padding="right" padString=" " startIndex="3619" length="126 "/>
+         <Field id="trxVirtualAccount_30" padding="right" padString=" " startIndex="3745" length="126 "/>
+         <Field id="trxVirtualAccount_31" padding="right" padString=" " startIndex="3871" length="126 "/>
+         <Field id="trxVirtualAccount_32" padding="right" padString=" " startIndex="3997" length="126 "/>
+         <Field id="trxVirtualAccount_33" padding="right" padString=" " startIndex="4123" length="126 "/>
+         <Field id="trxVirtualAccount_34" padding="right" padString=" " startIndex="4249" length="126 "/>
+         <Field id="trxVirtualAccount_35" padding="right" padString=" " startIndex="4375" length="126 "/>
+         <Field id="trxVirtualAccount_36" padding="right" padString=" " startIndex="4501" length="126 "/>
+         <Field id="trxVirtualAccount_37" padding="right" padString=" " startIndex="4627" length="126 "/>
+         <Field id="trxVirtualAccount_38" padding="right" padString=" " startIndex="4753" length="126 "/>
+         <Field id="trxVirtualAccount_39" padding="right" padString=" " startIndex="4879" length="126 "/>
+         <Field id="trxVirtualAccount_40" padding="right" padString=" " startIndex="5005" length="126 "/>
+         <Field id="trxVirtualAccount_41" padding="right" padString=" " startIndex="5131" length="126 "/>
+         <Field id="trxVirtualAccount_42" padding="right" padString=" " startIndex="5257" length="126 "/>
+         <Field id="trxVirtualAccount_43" padding="right" padString=" " startIndex="5383" length="126 "/>
+         <Field id="trxVirtualAccount_44" padding="right" padString=" " startIndex="5509" length="126 "/>
+         <Field id="trxVirtualAccount_45" padding="right" padString=" " startIndex="5635" length="126 "/>
+         <Field id="trxVirtualAccount_46" padding="right" padString=" " startIndex="5761" length="126 "/>
+         <Field id="trxVirtualAccount_47" padding="right" padString=" " startIndex="5887" length="126 "/>
+         <Field id="trxVirtualAccount_48" padding="right" padString=" " startIndex="6013" length="126 "/>
+         <Field id="trxVirtualAccount_49" padding="right" padString=" " startIndex="6139" length="126 "/>
+         <Field id="trxVirtualAccount_50" padding="right" padString=" " startIndex="6265" length="126 "/>
+         <Field id="trxVirtualAccount_51" padding="right" padString=" " startIndex="6391" length="126 "/>
+         <Field id="trxVirtualAccount_52" padding="right" padString=" " startIndex="6517" length="126 "/>
+         <Field id="trxVirtualAccount_53" padding="right" padString=" " startIndex="6643" length="126 "/>
+         <Field id="trxVirtualAccount_54" padding="right" padString=" " startIndex="6769" length="126 "/>
+         <Field id="trxVirtualAccount_55" padding="right" padString=" " startIndex="6895" length="126 "/>
+         <Field id="trxVirtualAccount_56" padding="right" padString=" " startIndex="7021" length="126 "/>
+         <Field id="trxVirtualAccount_57" padding="right" padString=" " startIndex="7147" length="126 "/>
+         <Field id="trxVirtualAccount_58" padding="right" padString=" " startIndex="7273" length="126 "/>
+         <Field id="trxVirtualAccount_59" padding="right" padString=" " startIndex="7399" length="126 "/>
+         <Field id="trxVirtualAccount_60" padding="right" padString=" " startIndex="7525" length="126 "/>
+         <Field id="trxVirtualAccount_61" padding="right" padString=" " startIndex="7651" length="126 "/>
+         <Field id="trxVirtualAccount_62" padding="right" padString=" " startIndex="7777" length="126 "/>
+         <Field id="trxVirtualAccount_63" padding="right" padString=" " startIndex="7903" length="126 "/>
+         <Field id="trxVirtualAccount_64" padding="right" padString=" " startIndex="8029" length="126 "/>
+         <Field id="trxVirtualAccount_65" padding="right" padString=" " startIndex="8155" length="126 "/>
+         <Field id="trxVirtualAccount_66" padding="right" padString=" " startIndex="8281" length="126 "/>
+         <Field id="trxVirtualAccount_67" padding="right" padString=" " startIndex="8407" length="126 "/>
+         <Field id="trxVirtualAccount_68" padding="right" padString=" " startIndex="8533" length="126 "/>
+         <Field id="trxVirtualAccount_69" padding="right" padString=" " startIndex="8659" length="126 "/>
+         <Field id="trxVirtualAccount_70" padding="right" padString=" " startIndex="8785" length="126 "/>
+         <Field id="trxVirtualAccount_71" padding="right" padString=" " startIndex="8911" length="126 "/>
+         <Field id="trxVirtualAccount_72" padding="right" padString=" " startIndex="9037" length="126 "/>
+         <Field id="trxVirtualAccount_73" padding="right" padString=" " startIndex="9163" length="126 "/>
+         <Field id="trxVirtualAccount_74" padding="right" padString=" " startIndex="9289" length="126 "/>
+         <Field id="trxVirtualAccount_75" padding="right" padString=" " startIndex="9415" length="126 "/>
+         <Field id="trxVirtualAccount_76" padding="right" padString=" " startIndex="9541" length="126 "/>
+         <Field id="trxVirtualAccount_77" padding="right" padString=" " startIndex="9667" length="126 "/>
+         <Field id="trxVirtualAccount_78" padding="right" padString=" " startIndex="9793" length="126 "/>
+         <Field id="trxVirtualAccount_79" padding="right" padString=" " startIndex="9919" length="126 "/>
+         <Field id="trxVirtualAccount_80" padding="right" padString=" " startIndex="10045" length="126 "/>
+         <Field id="trxVirtualAccount_81" padding="right" padString=" " startIndex="10171" length="126 "/>
+         <Field id="trxVirtualAccount_82" padding="right" padString=" " startIndex="10297" length="126 "/>
+         <Field id="trxVirtualAccount_83" padding="right" padString=" " startIndex="10423" length="126 "/>
+         <Field id="trxVirtualAccount_84" padding="right" padString=" " startIndex="10549" length="126 "/>
+         <Field id="trxVirtualAccount_85" padding="right" padString=" " startIndex="10675" length="126 "/>
+         <Field id="trxVirtualAccount_86" padding="right" padString=" " startIndex="10801" length="126 "/>
+         <Field id="trxVirtualAccount_87" padding="right" padString=" " startIndex="10927" length="126 "/>
+         <Field id="trxVirtualAccount_88" padding="right" padString=" " startIndex="11053" length="126 "/>
+         <Field id="trxVirtualAccount_89" padding="right" padString=" " startIndex="11179" length="126 "/>
+         <Field id="trxVirtualAccount_90" padding="right" padString=" " startIndex="11305" length="126 "/>
+         <Field id="trxVirtualAccount_91" padding="right" padString=" " startIndex="11431" length="126 "/>
+         <Field id="trxVirtualAccount_92" padding="right" padString=" " startIndex="11557" length="126 "/>
+         <Field id="trxVirtualAccount_93" padding="right" padString=" " startIndex="11683" length="126 "/>
+         <Field id="trxVirtualAccount_94" padding="right" padString=" " startIndex="11809" length="126 "/>
+         <Field id="trxVirtualAccount_95" padding="right" padString=" " startIndex="11935" length="126 "/>
+         <Field id="trxVirtualAccount_96" padding="right" padString=" " startIndex="12061" length="126 "/>
+         <Field id="trxVirtualAccount_97" padding="right" padString=" " startIndex="12187" length="126 "/>
+         <Field id="trxVirtualAccount_98" padding="right" padString=" " startIndex="12313" length="126 "/>
+         <Field id="trxVirtualAccount_99" padding="right" padString=" " startIndex="12439" length="126 "/>
+         <Field id="trxVirtualAccount_100" padding="right" padString=" " startIndex="12565" length="126 "/>
+      </content>
+   </Res>
+</InquiryTrxVirtualAccount>

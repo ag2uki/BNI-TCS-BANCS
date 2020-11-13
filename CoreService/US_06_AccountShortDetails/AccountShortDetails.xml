@@ -1,0 +1,203 @@
+<AccountShortDetails>
+   <Req>
+       <content> 
+          <Field id="accountNum" length="17" padding="left" padString="0" />
+          <Field id="options" length="1" padding="right" padString=" " />
+       </content>
+   </Req>
+   <Res>
+       <RX032000>
+          <content>              
+            <Field id="accountProductType"  type="dummy" value="DEP"/> 
+            <Field id="d_accountNum" padding="left" padString="0" startIndex="90" length="20" />
+            <Field id="d_accountCurrency" padding="right" padString=" " startIndex="110" length="3" />
+            <Field id="d_status" padding="right" padString=" " startIndex="113" length="18" />
+            <Field id="d_branchNum" padding="right" padString=" " startIndex="131" length="4" />
+            <Field id="d_accountType" padding="right" padString=" " startIndex="135" length="30" />
+            <Field id="d_accountTypeCode" padding="right" padString=" " startIndex="165" length="4" />
+            <Field id="d_accountSubcatCode" padding="right" padString=" " startIndex="169" length="4" />
+            <Field id="d_metodeHitungBunga" padding="right" padString=" " startIndex="173" length="18" />
+            <Field id="d_tingkatSukuBunga" padding="right" padString=" " startIndex="191" length="7" />
+            <Field id="d_accountName" padding="right" padString=" " startIndex="198" length="60" />
+            <Field id="d_customerName" padding="right" padString=" " startIndex="258" length="60" />
+            <Field id="d_homePhoneNum" padding="right" padString=" " startIndex="318" length="12" />
+            <Field id="d_officePhoneNum" padding="right" padString=" " startIndex="330" length="12" />
+            <Field id="d_tanggalPembukaan" padding="right" padString=" " startIndex="342" length="10" />
+            <Field id="d_tanggalMaintainTerakhir" padding="right" padString=" " startIndex="352" length="10" />
+            <Field id="d_tanggalTransaksiFinansial" padding="right" padString=" " startIndex="362" length="10" />
+            <Field id="d_tanggalBungaSebelumnya" padding="right" padString=" " startIndex="372" length="10" />
+            <Field id="d_tanggalBungaBerikutnya" padding="right" padString=" " startIndex="382" length="10" />
+            <Field id="d_tanggalKadaluarsaVisa" padding="right" padString=" " startIndex="392" length="10" />
+            <Field id="d_saldoAkhir" padding="right" padString=" " startIndex="402" length="19" />
+            <Field id="d_danaBelumEfektif" padding="right" padString=" " startIndex="421" length="19" />
+            <Field id="d_nominalBelumDicetak" padding="right" padString=" " startIndex="440" length="19" />
+            <Field id="d_bungaPerProvitHariIni" padding="right" padString=" " startIndex="459" length="19" />
+            <Field id="d_saldoBuku" padding="right" padString=" " startIndex="478" length="19" />
+            <Field id="d_nominalTanpaBunga" padding="right" padString=" " startIndex="497" length="19" />
+            <Field id="d_saldoAkibatInflasi" padding="right" padString=" " startIndex="516" length="19" />
+            <Field id="d_adjBungaSebelumnya" padding="right" padString=" " startIndex="535" length="19" />
+            <Field id="d_orderBukuCek" padding="right" padString=" " startIndex="554" length="2" />
+            <Field id="d_term" padding="right" padString=" " startIndex="556" length="8" />
+            <Field id="d_bungaSampaiHariIni" padding="right" padString=" " startIndex="564" length="19" />
+            <Field id="d_tanggalOverlimitTerakhir" padding="right" padString=" " startIndex="583" length="10" />
+            <Field id="d_pphPendudukSampaiHariIni" padding="right" padString=" " startIndex="593" length="19" />
+            <Field id="d_pphNonPendudukSampaiHariIni" padding="right" padString=" " startIndex="612" length="19" />
+            <Field id="d_bungaTunaiTersedia" padding="right" padString=" " startIndex="667" length="17" />
+            <Field id="d_visaPembelian" padding="right" padString=" " startIndex="684" length="19" />
+            <Field id="d_bicNum" padding="left" padString="0" startIndex="780" length="16" />
+            <Field id="d_frekuensiRekeningKoran" padding="right" padString=" " startIndex="796" length="1" />
+            <Field id="d_siklusRekeingKoran" padding="left" padString="0" startIndex="797" length="2" />
+            <Field id="d_hariRekeningKoran" padding="left" padString="0" startIndex="799" length="2" />
+            <Field id="d_alasanBukaRekening" padding="right" padString=" " startIndex="801" length="4" />
+            <Field id="d_alasanBukaRekening2" padding="right" padString=" " startIndex="805" length="20" />
+            <Field id="d_sumberDana" padding="right" padString=" " startIndex="825" length="4" />
+            <Field id="d_sumberDana2" padding="right" padString=" " startIndex="829" length="20" />
+            <Field id="d_perkiraanNominalSetoran" padding="right" padString=" " startIndex="849" length="19" />
+            <Field id="d_perkiraanNominalPenarikan" padding="right" padString=" " startIndex="868" length="19" />
+            <Field id="d_tanggalProsesBukaRekening" padding="right" padString=" " startIndex="903" length="10" />
+            <Field id="d_kodeKlafikasiGl" padding="right" padString=" " startIndex="913" length="25" />
+            <Field id="d_perubahanTerakhirRekeninIni" padding="right" padString=" " startIndex="938" length="10" />
+            <Field id="d_nominalBungaOverdraft" padding="right" padString=" " startIndex="948" length="19" />
+            <Field id="d_tprRate" padding="right" padString=" " startIndex="1006" length="8" />
+            <Field id="d_nomorSertifikat" padding="right" padString=" " startIndex="1014" length="10" />
+            <Field id="d_provitAvailable" padding="right" padString=" " startIndex="1024" length="19" />
+            <Field id="d_userIdPembukaRekening" padding="left" padString="0" startIndex="1085" length="5" />
+          </content>
+       </RX032000>
+
+       <RX032100>
+        <content>
+            <Field id="accountProductType"  type="dummy" value="LON"/> 
+            <Field id="l_accountNum" padding="left" padString="0" startIndex="90" length="20" />
+            <Field id="l_accountCurrency" padding="right" padString=" " startIndex="110" length="3" />
+            <Field id="l_status" padding="right" padString=" " startIndex="113" length="18" />
+            <Field id="l_branchNum" padding="right" padString=" " startIndex="131" length="4" />
+            <Field id="l_accountType" padding="right" padString=" " startIndex="135" length="30" />
+            <Field id="l_accountTypeCode" padding="right" padString=" " startIndex="165" length="4" />
+            <Field id="l_accountSubcatCode" padding="right" padString=" " startIndex="169" length="4" />
+            <Field id="l_jangkaWaktu" padding="left" padString="0" startIndex="173" length="3" />
+            <Field id="l_unitPengelola" padding="right" padString=" " startIndex="176" length="4" />
+            <Field id="l_refDischarge" padding="right" padString=" " startIndex="180" length="4" />
+            <Field id="l_remRepay" padding="right" padString=" " startIndex="184" length="3" />
+            <Field id="l_accountName" padding="right" padString=" " startIndex="187" length="60" />
+            <Field id="l_customerName" padding="right" padString=" " startIndex="247" length="60" />
+            <Field id="l_kodeKlafikasiGL" padding="right" padString=" " startIndex="307" length="25" />
+            <Field id="l_aplikasi" padding="right" padString=" " startIndex="332" length="19" />
+            <Field id="l_saldo" padding="right" padString=" " startIndex="351" length="19" />
+            <Field id="l_approved" padding="right" padString=" " startIndex="370" length="19" />
+            <Field id="l_advanced" padding="right" padString=" " startIndex="389" length="19" />
+            <Field id="l_commision" padding="right" padString=" " startIndex="408" length="19" />
+            <Field id="l_unearn" padding="right" padString=" " startIndex="427" length="19" />
+            <Field id="l_earn" padding="right" padString=" " startIndex="446" length="19" />
+            <Field id="l_angsuran" padding="right" padString=" " startIndex="465" length="19" />
+            <Field id="l_tunggakan_disponible" padding="right" padString=" " startIndex="484" length="19" />
+            <Field id="l_npb" padding="right" padString=" " startIndex="503" length="19" />
+            <Field id="l_bungaAkumulatif" padding="right" padString=" " startIndex="522" length="19" />
+            <Field id="l_excesAkumulatif" padding="right" padString=" " startIndex="541" length="19" />
+            <Field id="l_ciac" padding="right" padString=" " startIndex="560" length="19" />
+            <Field id="l_bungaHarian" padding="right" padString=" " startIndex="579" length="19" />
+            <Field id="l_excesHarian" padding="right" padString=" " startIndex="598" length="19" />
+            <Field id="l_ciin" padding="right" padString=" " startIndex="617" length="19" />
+            <Field id="l_addLoan" padding="right" padString=" " startIndex="636" length="1" />
+            <Field id="l_tingkatSukuBunga" padding="right" padString=" " startIndex="637" length="8" />
+            <Field id="l_nominalBunga" padding="right" padString=" " startIndex="645" length="19" />
+            <Field id="l_lastArrearDate" type="date" startIndex="664" length="8" />
+            <Field id="l_insurance" padding="right" padString=" " startIndex="672" length="19" />
+            <Field id="l_repaymentRate" padding="right" padString=" " startIndex="691" length="7" />
+            <Field id="l_arin" padding="right" padString=" " startIndex="698" length="19" />
+            <Field id="l_tanggalPersetujuan" type="date" startIndex="717" length="8" />
+            <Field id="l_tanggalFinansialTerakhir" type="date" startIndex="725" length="8" />
+            <Field id="l_tanggalMaintainTerakhir" type="date" startIndex="733" length="8" />
+            <Field id="l_tanggalAdvanceTerakhir" type="date" startIndex="741" length="8" />
+            <Field id="l_tanggalMulaiJatuhTempo" type="date" startIndex="749" length="8" />
+            <Field id="l_jenisRepayment" padding="right" padString=" " startIndex="757" length="6" />
+            <Field id="l_tanggalTundaJatuhTempo" type="date" startIndex="763" length="8" />
+            <Field id="l_tundaJatuhTempo" padding="right" padString=" " startIndex="771" length="19" />
+            <Field id="l_badDebtIndicator" padding="right" padString=" " startIndex="790" length="2" />
+            <Field id="l_inTax" padding="right" padString=" " startIndex="792" length="19" />
+            <Field id="l_dwnBayar" padding="right" padString=" " startIndex="811" length="19" />
+            <Field id="l_theo" padding="right" padString=" " startIndex="830" length="19" />
+            <Field id="l_bungaPrepayStrt" type="date" startIndex="849" length="8" />
+            <Field id="l_bungaPrepayExp" type="date" startIndex="857" length="8" />
+            <Field id="l_ipAmount" padding="right" padString=" " startIndex="865" length="16" />
+            <Field id="l_frekuensiRekeningKoran" padding="right" padString=" " startIndex="881" length="1" />
+            <Field id="l_siklusRekeningKoran" padding="right" padString=" " startIndex="882" length="2" />
+            <Field id="l_statementHarian" padding="left" padString="0" startIndex="884" length="2" />
+            <Field id="l_indicatorRedrawn" padding="right" padString=" " startIndex="886" length="1" />
+            <Field id="l_dendaAkumulasi" padding="right" padString=" " startIndex="887" length="19" />
+            <Field id="l_dendaHarian" padding="right" padString=" " startIndex="906" length="19" />
+            <Field id="l_nomorBooking" padding="right" padString=" " startIndex="925" length="7" />
+            <Field id="l_tanggalOptPolicy" type="date" startIndex="932" length="8" />
+            <Field id="l_optPolicy" padding="right" padString=" " startIndex="940" length="1" />
+            <Field id="l_tanggalJatuhTempo" type="date" startIndex="941" length="8" />
+            <Field id="l_sisaGP" padding="left" padString="0" startIndex="968" length="3" />
+            <Field id="l_perubahanJenisRekening" type="date" startIndex="1026" length="8" />
+            <Field id="l_redraw" padding="right" padString=" " startIndex="1034" length="19" />
+            <Field id="l_rekArr" padding="right" padString=" " startIndex="1053" length="19" />
+            <Field id="l_dasarPerhitungan" padding="right" padString=" " startIndex="1072" length="1" />
+        </content>
+       </RX032100>
+
+       <RX032065>
+        <content>
+            <Field id="td_accountNum" padding="left" padString="0" startIndex="90" length="17" />
+            <Field id="td_startDate" padding="right" padString=" " startIndex="117" length="10" />
+            <Field id="td_currencyCode" padding="right" padString=" " startIndex="146" length="3" />
+            <Field id="td_currentBalance" padding="right" padString=" " startIndex="149" length="19" />
+            <Field id="td_currencyRate" padding="right" padString=" " startIndex="168" length="7" />
+            <Field id="td_periodInDays" padding="right" padString=" " startIndex="175" length="5" />
+            <Field id="td_maturityDate" padding="right" padString=" " startIndex="180" length="10" />
+            <Field id="td_projectedInterest" padding="right" padString=" " startIndex="190" length="19" />
+            <Field id="td_transferAccount" padding="right" padString=" " startIndex="209" length="17" />
+            <Field id="td_overdraftLimitType" padding="right" padString=" " startIndex="226" length="2" />
+        </content>
+       </RX032065>
+
+<!--
+       <RX032200>
+        <content>
+            <Field id="accountProductType"  type="dummy" value="CTA"/> 
+            <Field id="c_cifNum" padding="right" padString=" " startIndex="90" length="17" />
+            <Field id="c_accountName" padding="right" padString=" " startIndex="107" length="60" />
+            <Field id="c_homePhoneNum" padding="right" padString=" " startIndex="167" length="12" />
+            <Field id="c_officePhoneNum" padding="right" padString=" " startIndex="179" length="12" />
+            <Field id="c_citizenCode" padding="right" padString=" " startIndex="191" length="3" />
+            <Field id="c_accountNum" padding="right" padString=" " startIndex="194" length="17" />
+            <Field id="c_facilityNum" padding="right" padString=" " startIndex="211" length="17" />
+            <Field id="c_glClasificationCode" padding="right" padString=" " startIndex="228" length="25" />
+            <Field id="c_accountTypeCode" padding="right" padString=" " startIndex="253" length="4" />
+            <Field id="c_accountSubCatCode" padding="right" padString=" " startIndex="257" length="4" />
+            <Field id="c_currency" padding="right" padString=" " startIndex="261" length="3" />
+            <Field id="c_accountStatus" padding="right" padString=" " startIndex="264" length="2" />
+            <Field id="c_branchCode" padding="right" padString=" " startIndex="266" length="4" />
+            <Field id="c_currentBalance" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="270" length="18" />
+            <Field id="c_jenisInstrument" padding="right" padString=" " startIndex="288" length="5" />
+            <Field id="c_rekeningAfiliasiBiaya" padding="right" padString=" " startIndex="293" length="17" />
+            <Field id="c_nominalAplikasi" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="310" length="18" />
+            <Field id="c_tanggalAplikasi" type="date" startIndex="328" length="8" />
+            <Field id="c_negaraAsal_1" padding="right" padString=" " startIndex="336" length="3" />
+            <Field id="c_negaraAsal_2" padding="right" padString=" " startIndex="339" length="3" />
+            <Field id="c_kreditAvailPada" padding="right" padString=" " startIndex="342" length="12" />
+            <Field id="c_kreditAvailOleh" padding="right" padString=" " startIndex="354" length="1" />
+            <Field id="c_tanggalJatuhTempo" type="date" startIndex="355" length="8" />
+            <Field id="c_profilBebasBiaya" padding="right" padString=" " startIndex="363" length="4" />
+            <Field id="c_tempatJatuhTempo" padding="right" padString=" " startIndex="367" length="30" />
+            <Field id="c_lastMaintainedDate" type="date" startIndex="397" length="8" />
+            <Field id="c_lastFinancialDate" type="date" startIndex="405" length="8" />
+            <Field id="c_nominalYgDisetujui" type="flatMoney" signLocation="after" intLength="14" decLength="3" startIndex="413" length="18" />
+            <Field id="c_tanggalPersetujuan" type="date" startIndex="431" length="8" />
+            <Field id="c_tanggalTerakhirUbahJenisRekening" type="date" startIndex="439" length="8" />
+            <Field id="c_biayaTetap" type="flatMoney" signLocation="after" intLength="6" decLength="3" startIndex="452" length="10" />
+            <Field id="c_prosentaseBiaya" type="flatMoney" signLocation="after" intLength="2" decLength="3" startIndex="462" length="6" />
+            <Field id="c_favouree" padding="right" padString=" " startIndex="468" length="30" />
+            <Field id="c_tanggalReview" type="date" startIndex="498" length="8" />
+            <Field id="c_counterGuarantee" padding="right" padString=" " startIndex="506" length="2" />
+            <Field id="c_bankKoresponden" padding="right" padString=" " startIndex="508" length="12" />
+            <Field id="c_beneficiery" padding="right" padString=" " startIndex="520" length="30" />
+            <Field id="c_documentNum" padding="right" padString=" " startIndex="550" length="30" />
+
+        </content>
+       </RX032200>
+-->
+   </Res>
+</AccountShortDetails>

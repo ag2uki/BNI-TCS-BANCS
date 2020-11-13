@@ -1,0 +1,143 @@
+<RenewDepositAccount>
+   <Req>
+     <content> 
+		<Field id="accountNum" padding="left"	padString="0" length="17" />
+        <Field id="cif" padding="left"		padString="0" length="17" />
+
+        <Field id="idNum" padding="right"	padString=" " length="24" />
+        <Field id="idType" padding="left"		padString="0" length="4" />
+
+        <Field id="customerName" padding="right" padString=" " length="60" />
+        <Field id="address1" padding="right"	padString=" "  length="40" />
+
+        <Field id="address2" padding="right" padString=" " length="40" />
+        <Field id="npwp" padding="right" padString=" " length="1" />
+
+        <Field id="address3" padding="right" padString=" " length="40" />
+        <Field id="nationality" padding="right" padString=" " length="3" />
+
+        <Field id="address4" padding="right" padString=" " length="40" />
+        <Field id="postCode" padding="right" padString=" " length="8" />
+
+        <Field id="accountType" padding="left" padString="0" length="4" />
+        <Field id="subCategory" padding="left" padString="0" length="4" />
+
+        <Field id="dummy"			length="3" value="   " />
+		<Field id="interestPaymentType" padding="right" padString=" " length="1" />
+		<Field id="dummy"			length="3" value="   " />
+        <Field id="accountAff" padding="left" padString="0" length="17" />
+
+        <Field id="profilBebasDenda" padding="left" padString="0" length="4" />
+        <Field id="language" padding="left" padString="0" length="2" />
+
+		<Field id="freqRekKoran" padding="right" padString=" " length="1" />
+        <Field id="prosesKonsolidasiRekKoran" padding="right" padString=" " length="1" />
+        <Field id="dateIndicator" padding="left" padString="0" length="1" />
+
+        <Field id="mailId" padding="right" padString=" " length="1" />
+        <Field id="noteIndicator" padding="right" padString=" " length="1" />
+
+        <Field id="notifCustomer" padding="left" padString="0" length="17" />
+        <Field id="intVariabel" type="flatMoney" intLength="2" decLength="4" signLocation="none" padding="left" padString="0" />
+
+        <Field id="dummy"			length="2" value="  " />
+		<Field id="freqInt" padding="right" padString=" " length="4" />
+        <Field id="siklus" padding="left" padString="0" length="2" />
+
+        <Field id="day" padding="left" padString="0" length="2" />
+		<Field id="investType" padding="left" padString="0" length="4" />
+
+		<Field id="agentCode" padding="left" padString="0" length="4" /> 
+		<Field id="address5" padding="left" padString="0" length="4" />
+
+		<Field id="dummy"			length="7" value="       " />
+		<Field id="indGroup" padding="left" padString="0" length="1" /> 
+
+		<Field id="accntNumber5" padding="left" padString="0" length="17" />
+		<Field id="idApplikasi" padding="left" padString=" " length="2" />
+		<Field id="dummy"			length="15" value="               " />
+		<Field id="DefaultString19" padding="left" padString=" " length="1" />
+
+		<Field id="DefaultString20" padding="left" padString=" " length="5" />	
+		<Field id="DefInteger7" padding="left" padString="0" length="15" />
+
+		<Field id="dummy"			length="17" value="                 " />
+        <Field id="DefInteger13" padding="left" padString="0" length="4" />
+        <Field id="DefaultString21" padding="right" padString=" " length="1" />
+
+        <Field id="Unsigned08" type="flatMoney" signLocation="after" intLength="14" decLength="3" length="18" padding="left" padString="0" />
+		<Field id="dummy"			length="8" value="        " />
+        <Field id="idGroupTier" padding="right" padString=" " length="4" />
+
+        <Field id="resikoDomestik" padding="right" padString=" " length="2" />
+        <Field id="resikoLintas" padding="right" padString=" " length="2" />
+
+        <Field id="accCrossBorder" padding="right" padString=" " length="2" />
+        <Field id="indJaminan" padding="right" padString=" " length="1" />
+
+        <Field id="lmtJangkaWkt" padding="right" padString=" " length="2" />
+        <Field id="DefaultString18" padding="right" padString=" " length="12" />
+
+        <Field id="kdGL" padding="right" padString=" " length="25" />
+		<Field id="tglBukaRek" padding="right" padString="0" length="8" />
+
+        <Field id="jmlCopy" padding="left" padString="0" length="2" />
+        <Field id="indProses" padding="right" padString=" " length="1" />
+        <Field id="indEkstrakRek" padding="right" padString=" " length="1" />
+
+        <Field id="rateSesuai" type="flatMoney" intLength="3" decLength="4" signLocation="after" padding="left" padString="0" />
+		<Field id="klausaValas" padding="right" padString="0" length="1" /> 
+		<Field id="valuta" padding="right" padString=" " length="3" />
+
+
+        <Field id="indPerubahanBungaRekKoran" padding="right" padString=" " length="1" />
+        <Field id="indHerTaksasi" padding="right" padString=" " length="1" />
+        <Field id="BrokerNo1" padding="right" padString="0" length="17" />
+
+		<Field id="dummy"			length="19" value="                   " />
+        <Field id="DefInteger8" padding="right" padString="0" length="6" />
+
+		<Field id="tpr" type="flatMoney" signLocation="none" intLength="2" decLength="4" length="6" padding="left" padString="0" />
+		<Field id="CertNo1" padding="right" padString=" " length="10" />
+
+		<Field id="NoIns" padding="right" padString="0" length="2" />
+		<Field id="Insurance" padding="right" padString="0" length="2" />
+
+        <Field id="OpenAcctResason" padding="right" padString=" " length="4" />
+        <Field id="otherOpenAcctResason" padding="right" padString=" " length="20" />
+
+        <Field id="SrcOfFrund" padding="right" padString=" " length="4" />
+        <Field id="SrcOfFrund1" padding="right" padString=" " length="30" />
+
+		<Field id="ProjDep" padding="left" padString="0" length="17" />
+        <Field id="ProjWdl" padding="left" padString="0" length="17" />
+
+		<Field id="AcctRatio" type="flatMoney" intLength="2" decLength="2" signLocation="none" padding="left" padString="0" />
+
+        <Field id="BICNo" padding="left" padString="0" length="16" />
+        <Field id="BICLimit" type="flatMoney" intLength="14" decLength="3" signLocation="none" padding="left" padString="0" />        
+
+		<Field id="InsuTerm" padding="left" padString="0" length="4" />
+		<Field id="AutoClose" padding="left" padString=" " length="1" />
+		<Field id="AutoPremium" padding="left" padString=" " length="1" />
+		<Field id="MthPay" type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />     
+
+		<Field id="AddCover" padding="left" padString="0" length="2" />
+		<Field id="AffiAcctNo" padding="left" padString="0" length="17" />
+		<Field id="InsuAcctNo" padding="left" padString="0" length="17" />
+
+
+		<Field id="PrincArrears" type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0"  />        
+		<Field id="PremArrears" type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />        
+
+
+     </content>
+   
+   </Req>
+   <Res>
+     <content> 
+
+        <Field id="message"        startIndex="99" length="69" padding="right" padString=" " />
+     </content>
+   </Res>
+</RenewDepositAccount>

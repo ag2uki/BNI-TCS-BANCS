@@ -1,0 +1,39 @@
+<CifAdditionalDetailsInq>
+	<Req>
+		<content>
+			<Field id="institutionNum"    length="3" padding="left"  padString="0" />
+			<Field id="journalNum"    length="6" padding="left"  padString="0" />
+			<Field id="trxAmount"    type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+			<Field id="currency"    length="3" padding="left"  padString="0" />
+			<Field id="branch"    length="3" padding="left"  padString="0" />
+			<Field id="tranCode"    length="6" padding="left"  padString="0" />
+			<Field id="trxDate"    length="8" padding="left"  padString="0" />
+			<Field id="sourceAccount"    length="17" padding="left"  padString="0" />
+			<Field id="destAccount"    length="17" padding="left"  padString="0" />
+			<Field id="flag"    length="1" padding="right"  padString=" " />
+		</content>
+	</Req>
+	<Res>
+		<content>
+			<Field id="institutionNum" startIndex="90"  length="3"  padding="left"  padString="0" />
+			<Field id="journalNum" startIndex="93"  length="6"  padding="left"  padString="0" />
+			<Field id="trxAmount" startIndex="99"  type="flatMoney" intLength="14" decLength="3" signLocation="after" length="18"/>
+			<Field id="currency" startIndex="117"  length="3"  padding="left"  padString="0" />
+			<Field id="branch" startIndex="120"  length="3"  padding="left"  padString="0" />
+			<Field id="tranCode" startIndex="123"  length="6"  padding="left"  padString="0" />
+			<Field id="trxDate" startIndex="129"  length="8"  padding="left"  padString="0" />
+			<Field id="BICode" startIndex="137"  length="2"  padding="left"  padString="0" />
+			<Field id="beneficiaryStatus" startIndex="139"  length="2"  padding="right"  padString=" " />
+			<Field id="beneficiaryCat" startIndex="141"  length="2"  padding="right"  padString=" " />
+			<Field id="applStatus" startIndex="143"  length="2"  padding="right"  padString=" " />
+			<Field id="applCat" startIndex="145"  length="2"  padding="right"  padString=" " />
+			<Field id="recipientRelation" startIndex="147"  length="1"  padding="right"  padString=" " />
+			<Field id="correspondentBank" startIndex="148"  length="2"  padding="right"  padString=" " />
+			<Field id="purposeCode" startIndex="150"  length="4"  padding="left"  padString="0" />
+			<Field id="nationality" startIndex="154"  length="2"  padding="left"  padString="0" />
+			<Field id="sourceAccount" startIndex="156"  length="17"  padding="left"  padString="0" />
+			<Field id="destAccount" startIndex="173"  length="17"  padding="left"  padString="0" />
+			<Field id="flag" startIndex="190"  length="1" padding="right"  padString=" " />
+		</content>
+	</Res>
+</CifAdditionalDetailsInq>

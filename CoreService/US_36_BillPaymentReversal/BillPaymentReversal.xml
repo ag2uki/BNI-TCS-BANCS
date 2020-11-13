@@ -1,0 +1,25 @@
+<BillPaymentReversal>
+    <Req>
+       <content>
+        <Field id="billerCode"    padding="right" padString=" " startIndex="88" length="4" />
+        <Field id="regionCode"    padding="right" padString=" " startIndex="92" length="4" />
+        <Field id="billerName"    padding="right" padString=" " startIndex="96" length="20" />
+        <Field id="cardNum"       padding="right" padString=" " startIndex="116" length="18" />
+        <Field id="cardName"      padding="right" padString=" " startIndex="134" length="20" />
+        <Field id="paymentMethod" padding="left"  padString="0" startIndex="154" length="1" />
+        <Field id="accountNum"    padding="left"  padString="0" startIndex="155" length="17" />
+        <Field id="trxAmount"     padding="left"  padString="0" startIndex="172" length="12" />
+        <Field id="feeAmount"     padding="left"  padString="0" startIndex="184" length="12" />
+        <Field id="naration"      padding="right" padString=" " startIndex="196" length="50" />
+        <Field id="invoiceNum"    padding="right" padString=" " startIndex="246" length="11" />
+        <Field id="journalNum"    padding="left"  padString="0" length="6" />
+		<Field id="dummy"  		  padding="right" padString=" " startIndex="257"  length="115" value="                                                                                                                   " />
+        <Field id="billId"    	  padding="right" padString=" " startIndex="372" length="25" />
+       </content> 
+    </Req>
+    <Res>
+       <content> 
+          <Field id="message"        startIndex="99" length="69" padding="right" padString=" " />
+      </content>
+    </Res>
+</BillPaymentReversal>

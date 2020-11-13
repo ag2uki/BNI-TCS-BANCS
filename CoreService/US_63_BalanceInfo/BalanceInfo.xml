@@ -1,0 +1,38 @@
+<BalanceInfo>
+   <Req>
+       <content> 
+          <Field id="accountNum" length="17" padding="left" padString="0" />
+       </content>
+   </Req>
+   <Res>
+       <RX032001>
+          <content> 
+             <Field id="customerName" startIndex="245" length="60" padding="right" padString=" " />
+             <Field id="currency"     startIndex="110" length="3"  padding="right" padString=" " />
+             <Field id="balance"      type="formattedMoney" startIndex="979" length="19" style="ID" />
+             <Field id="status"       startIndex="167" length="4"  padding="right" padString=" " />
+             <Field id="accountType"  type="dummy" value="DEP"/>
+          </content>
+       </RX032001>
+       <RX032101>
+          <content>
+             <Field id="customerName" startIndex="203" length="60" padding="right" padString=" " />
+             <Field id="currency"     startIndex="110" length="3"  padding="right" padString=" " />
+             <Field id="balance"      type="formattedMoney" startIndex="460" length="18" style="ID" />
+             <Field id="status"       startIndex="303" length="18"  padding="right" padString=" " />
+             <Field id="accountType"  type="dummy" value="LON"/>
+          </content>
+       </RX032101>
+
+       <RX032201>
+        <content>
+            <Field id="customerName" padding="right" padString=" " startIndex="130" length="60" />
+            <Field id="currency" padding="right" padString=" " startIndex="426" length="3" />
+            <Field id="balance"  type="formattedMoney" startIndex="429" length="19" style="ID" /> 
+            <Field id="status" padding="right" padString=" " startIndex="403" length="15" />
+            <Field id="accountType"  type="dummy" value="CTA"/> 
+        </content>
+       </RX032201>
+
+   </Res>
+</BalanceInfo>

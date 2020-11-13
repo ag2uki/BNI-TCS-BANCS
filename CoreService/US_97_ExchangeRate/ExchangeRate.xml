@@ -1,0 +1,21 @@
+<ExchangeRate>
+   <Req>
+     <content> 
+        <Field id="dummy" length="4"  value="    " /> 
+     </content>
+   </Req>
+   <Res>
+     <content> 
+        <Field id="data_1" padding="right" padString=" " startIndex="90" length="390" />
+        <Field id="data_2" padding="right" padString=" " startIndex="480" length="390" />
+        <Field id="data_3" padding="right" padString=" " startIndex="870" length="390" />
+        <Field id="data_4" padding="right" padString=" " startIndex="1260" length="390" />
+        <Field id="data_5" padding="right" padString=" " startIndex="1650" length="390" />
+        <Field id="data_6" padding="right" padString=" " startIndex="2040" length="390" />
+        <Field id="data_7" padding="right" padString=" " startIndex="2430" length="390" />
+        <Field id="data_8" padding="right" padString=" " startIndex="2820" length="390" />
+        <Field id="data_9" padding="right" padString=" " startIndex="3210" length="390" />
+        <Field id="data_10" padding="right" padString=" " startIndex="3600" length="390" />
+     </content>
+   </Res>
+</ExchangeRate>

@@ -1,0 +1,27 @@
+<SweepAccount>
+	<Req>
+		<content>
+			<Field id="sweepType" 					padding="left" padString=" " length="18"  />
+			<Field id="accountPartnerNum" 	padding="left" 	padString="0" length="17" />
+			<Field id="DefaultString2" 				padding="right" padString=" " length="3" />
+			<Field id="startDate" 					padding="right" padString=" " length="8" />
+			<Field id="endDate" 					padding="right" padString=" " length="8" />
+			<Field id="cycle" 						padding="right" padString=" " length="1" />
+			<Field id="balanceSpecifiedAmount" 		type="flatMoney" signLocation="after" padding="left" padString="0" length="18" intLength="14" decLength="3" />
+			<Field id="balanceResultsAmount"		type="flatMoney" signLocation="after" padding="left" padString="0" length="18" intLength="14" decLength="3" />
+			<Field id="maxLimitAmount" 				type="flatMoney" signLocation="after" padding="left" padString="0" length="18" intLength="14" decLength="3" />
+			<Field id="accumulationLimitAmount" 	type="flatMoney" signLocation="after" padding="left" padString="0" length="18" intLength="14" decLength="3" />
+			<Field id="DefaultBalance5" 			type="flatMoney" signLocation="after" padding="left" padString="0" length="18" intLength="14" decLength="3" />
+			<Field id="priority" 					padding="left" padString="0" length="1" />
+			<Field id="DefaultString1" 				value="N" padding="right" padString=" " length="1" />
+			<Field id="DefInteger2" 				value="1" padding="left" padString=" " length="8" />
+			<Field id="individualCurrentAccNum" 			padding="left" padString="0" length="17" />
+
+		</content>
+	</Req>
+	<Res>
+		<content>
+			<Field  id="message"  startIndex="99"  length="69"  padding="right"  padString=" " />
+		</content>
+	</Res>
+</SweepAccount>

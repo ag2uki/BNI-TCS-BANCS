@@ -1,0 +1,71 @@
+<CustomerSearch>
+   <Req>
+       <content> 
+			<Field id="lastName" padding="right" padString=" " length="40" />
+			<Field id="firstName" padding="right" padString=" " length="40" />
+			<Field id="branchNum" padding="left" padString="0" length="5" />
+			<Field id="city" padding="right" padString=" " length="40" />
+			<Field id="postCode" padding="right" padString=" " length="8" />
+			<Field id="homePhoneNum" padding="right" padString=" " length="12" />
+			<Field id="startFromRecordNum" padding="left" padString="0" length="4" />
+			<Field id="dummy" length="2" value="04"/>
+			<Field id="middleName" padding="right" padString=" " length="40" />
+       </content>
+   </Req>
+   <Res>
+	  <content>
+        <Field id="fullName_1" padding="right" padString=" " startIndex="90" length="49" />
+        <Field id="cifNum_1" padding="right" padString=" " startIndex="139" length="15" />
+        <Field id="addressType_1" padding="right" padString=" " startIndex="154" length="16" />
+        <Field id="address_1" padding="right" padString=" " startIndex="170" length="49" />
+        <Field id="fullName_2" padding="right" padString=" " startIndex="250" length="49" />
+        <Field id="cifNum_2" padding="right" padString=" " startIndex="299" length="15" />
+        <Field id="addressType_2" padding="right" padString=" " startIndex="314" length="16" />
+        <Field id="address_2" padding="right" padString=" " startIndex="330" length="49" />
+        <Field id="fullName_3" padding="right" padString=" " startIndex="410" length="49" />
+        <Field id="cifNum_3" padding="right" padString=" " startIndex="459" length="15" />
+        <Field id="addressType_3" padding="right" padString=" " startIndex="474" length="16" />
+        <Field id="address_3" padding="right" padString=" " startIndex="490" length="49" />
+        <Field id="fullName_4" padding="right" padString=" " startIndex="570" length="49" />
+        <Field id="cifNum_4" padding="right" padString=" " startIndex="619" length="15" />
+        <Field id="addressType_4" padding="right" padString=" " startIndex="634" length="16" />
+        <Field id="address_4" padding="right" padString=" " startIndex="650" length="49" />
+        <Field id="fullName_5" padding="right" padString=" " startIndex="730" length="49" />
+        <Field id="cifNum_5" padding="right" padString=" " startIndex="779" length="15" />
+        <Field id="addressType_5" padding="right" padString=" " startIndex="794" length="16" />
+        <Field id="address_5" padding="right" padString=" " startIndex="810" length="49" />
+        <Field id="fullName_6" padding="right" padString=" " startIndex="890" length="49" />
+        <Field id="cifNum_6" padding="right" padString=" " startIndex="939" length="15" />
+        <Field id="addressType_6" padding="right" padString=" " startIndex="954" length="16" />
+        <Field id="address_6" padding="right" padString=" " startIndex="970" length="49" />
+        <Field id="fullName_7" padding="right" padString=" " startIndex="1050" length="49" />
+        <Field id="cifNum_7" padding="right" padString=" " startIndex="1099" length="15" />
+        <Field id="addressType_7" padding="right" padString=" " startIndex="1114" length="16" />
+        <Field id="address_7" padding="right" padString=" " startIndex="1130" length="49" />
+        <Field id="fullName_8" padding="right" padString=" " startIndex="1210" length="49" />
+        <Field id="cifNum_8" padding="right" padString=" " startIndex="1259" length="15" />
+        <Field id="addressType_8" padding="right" padString=" " startIndex="1274" length="16" />
+        <Field id="address_8" padding="right" padString=" " startIndex="1290" length="49" />
+        <Field id="fullName_9" padding="right" padString=" " startIndex="1370" length="49" />
+        <Field id="cifNum_9" padding="right" padString=" " startIndex="1419" length="15" />
+        <Field id="addressType_9" padding="right" padString=" " startIndex="1434" length="16" />
+        <Field id="address_9" padding="right" padString=" " startIndex="1450" length="49" />
+        <Field id="fullName_10" padding="right" padString=" " startIndex="1530" length="49" />
+        <Field id="cifNum_10" padding="right" padString=" " startIndex="1579" length="15" />
+        <Field id="addressType_10" padding="right" padString=" " startIndex="1594" length="16" />
+        <Field id="address_10" padding="right" padString=" " startIndex="1610" length="49" />
+        <Field id="fullName_11" padding="right" padString=" " startIndex="1690" length="49" />
+        <Field id="cifNum_11" padding="right" padString=" " startIndex="1739" length="15" />
+        <Field id="addressType_11" padding="right" padString=" " startIndex="1754" length="16" />
+        <Field id="address_11" padding="right" padString=" " startIndex="1770" length="49" />
+        <Field id="fullName_12" padding="right" padString=" " startIndex="1850" length="49" />
+        <Field id="cifNum_12" padding="right" padString=" " startIndex="1899" length="15" />
+        <Field id="addressType_12" padding="right" padString=" " startIndex="1914" length="16" />
+        <Field id="address_12" padding="right" padString=" " startIndex="1930" length="49" />
+        <Field id="fullName_13" padding="right" padString=" " startIndex="2010" length="49" />
+        <Field id="cifNum_13" padding="right" padString=" " startIndex="2059" length="15" />
+        <Field id="addressType_13" padding="right" padString=" " startIndex="2074" length="16" />
+        <Field id="address_13" padding="right" padString=" " startIndex="2090" length="49" />
+	  </content>
+   </Res>
+</CustomerSearch>

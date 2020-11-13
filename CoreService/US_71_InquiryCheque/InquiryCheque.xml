@@ -1,0 +1,39 @@
+<InquiryCheque>
+	<Req>
+		<content>
+			<Field id="accountNo" padding="left" padString="0" length="17" />
+			<Field id="chequePrefix" padding="right" padString=" " length="2" />
+			<Field id="chequeFirstNo" padding="right" padString=" " length="6" />
+			<Field id="status" padding="right" padString=" " length="1" />
+		</content>
+	</Req>
+	<Res>
+		<content>
+			<Field id="data_1" padding="right" padString=" " startIndex="90" length="35" />
+			<Field id="data_2" padding="right" padString=" " startIndex="125" length="35" />
+			<Field id="data_3" padding="right" padString=" " startIndex="160" length="35" />
+			<Field id="data_4" padding="right" padString=" " startIndex="195"  length="35" />
+			<Field id="data_5" padding="right" padString=" " startIndex="230" length="35" />
+			<Field id="data_6" padding="right" padString=" " startIndex="265" length="35" />
+			<Field id="data_7" padding="right" padString=" " startIndex="300" length="35" />
+			<Field id="data_8" padding="right" padString=" " startIndex="335" length="35" />
+			<Field id="data_9" padding="right" padString=" " startIndex="370" length="35" />
+			<Field id="data_10" padding="right" padString=" " startIndex="405" length="35" />
+			<Field id="data_11" padding="right" padString=" " startIndex="440"  length="35" />
+			<Field id="data_12" padding="right" padString=" " startIndex="475" length="35" />
+			<Field id="data_13" padding="right" padString=" " startIndex="510" length="35" />
+			<Field id="data_14" padding="right" padString=" " startIndex="545" length="35" />
+			<Field id="data_15" padding="right" padString=" " startIndex="580" length="35" />
+			<Field id="data_16" padding="right" padString=" " startIndex="615" length="35" />
+			<Field id="data_17" padding="right" padString=" " startIndex="650" length="35" />
+			<Field id="data_18" padding="right" padString=" " startIndex="685"  length="35" />
+			<Field id="data_19" padding="right" padString=" " startIndex="750" length="35" />
+			<Field id="data_20" padding="right" padString=" " startIndex="785" length="35" />
+			<Field id="data_21" padding="right" padString=" " startIndex="820" length="35" />
+			<Field id="data_22" padding="right" padString=" " startIndex="855" length="35" />
+			<Field id="data_23" padding="right" padString=" " startIndex="890" length="35" />
+			<Field id="data_24" padding="right" padString=" " startIndex="925" length="35" />
+			<Field id="data_25" padding="right" padString=" " startIndex="960" length="35" />
+		</content>
+	</Res>
+</InquiryCheque>

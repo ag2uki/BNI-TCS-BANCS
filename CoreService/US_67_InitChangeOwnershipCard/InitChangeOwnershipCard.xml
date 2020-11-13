@@ -1,0 +1,24 @@
+<InitChangeOwnershipCard>
+   <Req>
+     <content> 
+		<Field id="cardNum"		padding="left"		padString="0"	length="19" />
+     </content>
+   </Req>
+   <Res>
+     <content>              
+		  <Field id="cardNum"			startIndex="90"  length="16" padding="right" padString=" " />
+          <Field id="cardDescription"	startIndex="110" length="30" padding="right" padString=" " />
+		  <Field id="oldCifNum"			startIndex="140" length="17" padding="right" padString=" " />
+		  <Field id="name"				startIndex="170" length="40" padding="right" padString=" " />
+		  <Field id="address1"			startIndex="260" length="40" padding="right" padString=" " />
+		  <Field id="address2"			startIndex="300" length="40" padding="right" padString=" " />
+		  <Field id="address3"			startIndex="340" length="40" padding="right" padString=" " />
+		  <Field id="address4"			startIndex="380" length="40" padding="right" padString=" " />
+		  <Field id="postCode"			startIndex="420" length="8"  padding="right" padString=" " />
+		  <Field id="cardName"			startIndex="430" length="26" padding="right" padString=" " />
+		  <Field id="issueCard"			startIndex="490" length="8"  padding="right" padString=" " />
+		  <Field id="expiredCard"		startIndex="500" length="8"  padding="right" padString=" " />
+		  <Field id="newCifNum"			startIndex="510" length="17" padding="right" padString=" " />
+     </content>
+   </Res>
+</InitChangeOwnershipCard>

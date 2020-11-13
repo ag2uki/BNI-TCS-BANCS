@@ -1,0 +1,27 @@
+<DepositTransfer>
+   <Req>
+       <content> 
+          <Field id="fromAccount"    length="17" padding="left"  padString="0" />
+          <Field id="dummy"          length="18" value="                  " /> 
+          <Field id="debitAmount"    type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+          <Field id="dummy"          length="10" value="          " />
+          <Field id="promoCode"      length="2"  padding="right" padString=" "/>
+          <Field id="toAccount"      length="17" padding="left" padString="0" />
+          <Field id="dummy"          length="70" value="  000000                                                              " />
+          <Field id="currency"       length="3" padding="right" padString=" " />
+          <Field id="amount"         type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+          <Field id="currency"       length="3" padding="right" padString=" " />
+          <Field id="amount"         type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0"/>
+          <Field id="dummy"          length="413" value="00000000000000000+00000000000000000+02                                                                                                                                                                                                                                                                                                                                                                                       " />
+          <Field id="narative"       length="50" padding="right" padString=" " />
+          <Field id="narativeExt"    length="50" padding="right" padString=" " />
+          <Field id="dummy"          length="214" value="                                                                                                                                                                                                                      " />
+          <Field id="charge"         type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+       </content>
+   </Req>
+   <Res>
+       <content> 
+          <Field id="message"        startIndex="99" length="69" padding="right" padString=" " />
+      </content>
+   </Res>
+</DepositTransfer>

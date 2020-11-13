@@ -1,0 +1,36 @@
+<S06Payment>
+	<Req>
+		<content>
+			<Field id="refferenceNum" padding="right" padString=" " length="16" />
+			<Field id="counterAdvis" padding="right" padString=" " length="9" />
+			<Field id="unused" padding="right" padString=" " length="15" />
+			<Field id="remmAmount" type="flatMoney" signLocation="after" intLength="14" decLength="3" padding="left" padString="0" /> <!-- remm amount -->
+			<Field id="remmAmountCurrency" padding="right" padString=" " length="3" />                                                <!-- remm amount curr -->
+			<Field id="unused" padding="right" padString=" " length="3" />
+			<Field id="trxCharges" type="flatMoney" signLocation="after" intLength="14" decLength="3" padding="left" padString="0" />
+			<Field id="refundCharge" type="flatMoney" signLocation="after" intLength="14" decLength="3" padding="left" padString="0" />
+			<Field id="refundCharge" type="flatMoney" signLocation="after" intLength="14" decLength="3" padding="left" padString="0" />
+			<Field id="rateType" padding="left" padString="0" length="2" />
+			<Field id="baseAmount" type="flatMoney" signLocation="after" intLength="14" decLength="3" padding="left" padString="0" />
+			<Field id="creditAmount" type="flatMoney" signLocation="after" intLength="14" decLength="3" padding="left" padString="0" />
+			<Field id="unused" padding="right" padString=" " length="349" />
+			<Field id="creditAmountCurrency" padding="right" padString=" " length="3" />
+			<Field id="unused" padding="right" padString=" " length="258" />
+			<Field id="debitAccountNum" padding="right" padString=" " length="17" />
+			<Field id="creditAccountNum" padding="left" padString="0" length="17" />
+			<Field id="debitAccountNum" padding="left" padString="0" length="17" />
+			<Field id="dummy" length="1" value="A" />
+			<Field id="unused" padding="right" padString=" " length="35" />
+			<Field id="debitRate" type="flatMoney" signLocation="none" intLength="6" decLength="4" padding="left" padString="0" />
+			<Field id="creditRate" type="flatMoney" signLocation="none" intLength="6" decLength="4" padding="left" padString="0" />
+			<Field id="chargeType" padding="right" padString=" " length="3" />
+			<Field id="amdCharges" type="flatMoney" signLocation="after" intLength="14" decLength="3" padding="left" padString="0" />
+			<Field id="xtrCharges" type="flatMoney" signLocation="after" intLength="14" decLength="3" padding="left" padString="0" />
+		</content>
+	</Req>
+    <Res>
+       <content> 
+          <Field id="message"        startIndex="99" length="69" padding="right" padString=" " />
+      </content>
+    </Res>
+</S06Payment>
