@@ -1,0 +1,516 @@
+BROKER SCHEMA id.co.bni.mf.core.handler
+PATH id.co.bni.mf.common.core,id.co.bni.common;
+
+/*
+ *
+ * File name: SF_ProcessICONSResponse.esql
+ *
+ * Purpose  : Set header response message from ICONS ( BANCS to XML)  or compose sysFault for timeout 
+ *
+ * Authors  : Elisabeth Sitanggang
+ *            
+ * Date     : October 2012
+ * Version  : 1.0
+ *
+ * @copyright  PT Bank Negara Indonesia. 2012.  All rights reserved.
+ *
+ */
+
+
+/**
+* This Module used to set message header to transform message response from ICONS(Bancs) to SOAP
+*/
+
+CREATE COMPUTE MODULE SF_ProcessICONSResponse_CN_checkAccTypedivideMessage
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE messageBody  CHAR CAST(InputRoot.BLOB.BLOB AS CHAR CCSID 1208);
+		DECLARE AccountShortInquiry,newRecord ROW;
+		DECLARE accountProductType CHAR;
+		DECLARE headerLength 				INTEGER 89;
+		DECLARE accountShortInquiryLength 	INTEGER 712;
+		DECLARE depositTDALength			INTEGER 32;
+		DECLARE depositTDAFillerLength		INTEGER 215;
+		DECLARE depositTUALength			INTEGER 247;
+		DECLARE tabunganHajiLength			INTEGER 41;
+		DECLARE tabunganHajiFillerLength	INTEGER 206;
+		DECLARE loanLength					INTEGER 810;
+		DECLARE indexAccountProductType		INTEGER 640;
+		DECLARE errorLength					INTEGER 103;
+		DECLARE mobilePhoneNewLength		INTEGER 20;
+		DECLARE productInfoFiller			INTEGER 247; 
+		DECLARE index INTEGER 1;
+		DECLARE flag BOOLEAN FALSE;
+		DECLARE totalLengthMsg INTEGER;
+		
+		CALL CopyMessageHeaders();
+		
+		SET totalLengthMsg			= LENGTH(InputRoot.BLOB.BLOB);
+		
+		-- Compose Error Message
+		IF totalLengthMsg = headerLength + errorLength THEN
+			SET OutputRoot.BLOB.BLOB = InputRoot.BLOB.BLOB;
+			PROPAGATE TO LABEL 'ErrorOccured' FINALIZE NONE;
+		END IF;
+		
+		SET accountProductType	= SUBSTRING(messageBody FROM (headerLength + indexAccountProductType) FOR 1);
+		-- FOR DEPOSIT TDA
+		IF  accountProductType  = 'T' THEN
+			WHILE index <= 3 DO
+				SET Environment.Variables.accountProductType = 'T';  
+				IF index = 1 THEN
+					SET Environment.Variables.index	= index;
+					SET Environment.Variables.flag 	= flag;
+					SET newRecord  				= SUBSTRING(InputRoot.BLOB.BLOB FROM (headerLength + 1) FOR accountShortInquiryLength);
+					SET OutputRoot.BLOB.BLOB 	= newRecord;
+					PROPAGATE TO LABEL 'AccountShortInquiry' FINALIZE DEFAULT DELETE NONE;
+				ELSEIF index = 2 THEN
+					SET Environment.Variables.index	= index;
+					SET Environment.Variables.flag 	= flag;
+					SET newRecord  				= SUBSTRING(InputRoot.BLOB.BLOB FROM (headerLength + accountShortInquiryLength + 1) FOR depositTDALength);
+					SET OutputRoot.BLOB.BLOB 	= newRecord;
+					PROPAGATE TO LABEL 'DepositTDA' FINALIZE DEFAULT DELETE NONE;
+				ELSE
+					SET Environment.Variables.index	= index;
+					SET Environment.Variables.flag 	= TRUE;
+					SET newRecord  				= SUBSTRING(InputRoot.BLOB.BLOB FROM (headerLength + accountShortInquiryLength + depositTDALength + depositTDAFillerLength + 1) FOR mobilePhoneNewLength);
+					SET OutputRoot.BLOB.BLOB 	= newRecord;		
+					PROPAGATE TO LABEL 'MobilePhone' FINALIZE DEFAULT DELETE NONE;
+				END IF;
+				SET index = index + 1 ;	
+			END WHILE;
+		END IF;
+		
+		
+		-- FOR DEPOSIT TUA
+		IF  accountProductType  = 'I' THEN
+			WHILE index <= 3 DO
+				SET Environment.Variables.accountProductType = 'I';  
+				IF index = 1 THEN	
+					SET Environment.Variables.index	= index;
+					SET Environment.Variables.flag 	= flag;
+					SET newRecord  				= SUBSTRING(InputRoot.BLOB.BLOB FROM (headerLength + 1) FOR accountShortInquiryLength);
+					SET OutputRoot.BLOB.BLOB 	= newRecord;
+					PROPAGATE TO LABEL 'AccountShortInquiry' FINALIZE DEFAULT DELETE NONE;
+				ELSEIF index = 2 THEN
+					SET Environment.Variables.index	= index;
+					SET Environment.Variables.flag 	= flag;
+					SET newRecord  				= SUBSTRING(InputRoot.BLOB.BLOB FROM (headerLength + accountShortInquiryLength + 1) FOR depositTUALength);
+					SET OutputRoot.BLOB.BLOB 	= newRecord;
+					PROPAGATE TO LABEL 'DepositTUA' FINALIZE DEFAULT DELETE NONE;
+				ELSE
+					SET Environment.Variables.index	= index;
+					SET Environment.Variables.flag 	= TRUE;
+					SET newRecord  				= SUBSTRING(InputRoot.BLOB.BLOB FROM (headerLength + accountShortInquiryLength + depositTUALength + 1) FOR mobilePhoneNewLength);
+					SET OutputRoot.BLOB.BLOB 	= newRecord;		
+					PROPAGATE TO LABEL 'MobilePhone' FINALIZE DEFAULT DELETE NONE;
+				END IF;
+				SET index = index + 1 ;	
+			END WHILE;
+		END IF;
+		
+		-- FOR TABUNGAN HAJI
+		IF  accountProductType  = 'H' THEN
+			WHILE index <= 3 DO
+				SET Environment.Variables.accountProductType = 'H';  
+				IF index = 1 THEN	
+					SET Environment.Variables.index	= index;
+					SET newRecord  				= SUBSTRING(InputRoot.BLOB.BLOB FROM (headerLength + 1) FOR accountShortInquiryLength);
+					SET OutputRoot.BLOB.BLOB 	= newRecord;
+					PROPAGATE TO LABEL 'AccountShortInquiry' FINALIZE DEFAULT DELETE NONE;
+				ELSEIF index = 2 THEN
+					SET Environment.Variables.index	= index;
+					SET newRecord  				= SUBSTRING(InputRoot.BLOB.BLOB FROM (headerLength + accountShortInquiryLength + 1) FOR tabunganHajiLength);
+					SET OutputRoot.BLOB.BLOB 	= newRecord;
+					PROPAGATE TO LABEL 'TabunganHaji' FINALIZE DEFAULT DELETE NONE;
+				ELSE
+					SET Environment.Variables.index	= index;
+					SET Environment.Variables.flag 	= TRUE;
+					SET newRecord  				= SUBSTRING(InputRoot.BLOB.BLOB FROM (headerLength + accountShortInquiryLength + tabunganHajiLength + tabunganHajiFillerLength + 1) FOR mobilePhoneNewLength);
+					SET OutputRoot.BLOB.BLOB 	= newRecord;		
+					PROPAGATE TO LABEL 'MobilePhone' FINALIZE DEFAULT DELETE NONE;
+				END IF;
+				SET index = index + 1 ;	
+			END WHILE;
+		END IF;
+		
+				
+		-- FOR TAPLUS
+		IF  accountProductType  = 'D' THEN
+			WHILE index <= 2 DO
+				SET Environment.Variables.accountProductType = 'D';  
+				IF index = 1 THEN	
+					SET Environment.Variables.index	= index;
+					SET newRecord  				= SUBSTRING(InputRoot.BLOB.BLOB FROM (headerLength + 1) FOR accountShortInquiryLength);
+					SET OutputRoot.BLOB.BLOB 	= newRecord;
+					PROPAGATE TO LABEL 'AccountShortInquiry' FINALIZE DEFAULT DELETE NONE;
+				ELSE
+					SET Environment.Variables.index	= index;
+					SET Environment.Variables.flag 	= TRUE;
+					SET newRecord  				= SUBSTRING(InputRoot.BLOB.BLOB FROM 
+					(headerLength + accountShortInquiryLength + productInfoFiller + 1) FOR mobilePhoneNewLength);
+					SET OutputRoot.BLOB.BLOB 	= newRecord;		
+					PROPAGATE TO LABEL 'MobilePhone' FINALIZE DEFAULT DELETE NONE;
+				END IF;
+				SET index = index + 1 ;	
+			END WHILE;
+		END IF;
+		
+		-- FOR LOAN
+		IF  accountProductType  = 'B' THEN
+			WHILE index <= 2 DO
+				SET Environment.Variables.accountProductType = 'B';  
+				IF index = 1 THEN	
+					SET Environment.Variables.index	= index;
+					SET newRecord  				= SUBSTRING(InputRoot.BLOB.BLOB FROM (headerLength + 1) FOR loanLength);
+					SET OutputRoot.BLOB.BLOB 	= newRecord;
+					PROPAGATE TO LABEL 'Loan' FINALIZE DEFAULT DELETE NONE;
+				ELSE
+					SET Environment.Variables.index	= index;
+					SET Environment.Variables.flag 	= TRUE;
+					SET newRecord  				= SUBSTRING(InputRoot.BLOB.BLOB FROM (headerLength + loanLength + 1) FOR mobilePhoneNewLength);
+					SET OutputRoot.BLOB.BLOB 	= newRecord;		
+					PROPAGATE TO LABEL 'MobilePhone' FINALIZE DEFAULT DELETE NONE;
+				END IF;
+				SET index = index + 1 ;	
+			END WHILE;
+		END IF;
+		
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+END MODULE;
+
+
+CREATE COMPUTE MODULE SF_ProcessICONSResponse_CN_composeResponse
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE xsi NAMESPACE 'http://www.w3.org/2001/XMLSchema-instance';
+		DECLARE bo NAMESPACE 'http://service.bni.co.id/core/bo';
+		
+		DECLARE index 				REFERENCE TO Environment.Variables.index;
+		DECLARE flag  				REFERENCE TO Environment.Variables.flag;
+		DECLARE accountProductType 	REFERENCE TO Environment.Variables.accountProductType;
+
+		CALL CopyMessageHeaders();
+		-- accountProductType = DEPOSIT TDA
+		IF Environment.Variables.accountProductType = 'T' THEN
+			DECLARE indexRecord	INTEGER index;
+			IF index = 1  THEN
+				DECLARE reffAccountShort reference to InputRoot.MRM.accountShort.*[1];
+				WHILE(LASTMOVE(reffAccountShort)) DO
+					DECLARE fieldName 		CHAR FIELDNAME(reffAccountShort);
+					IF FIELDNAME(reffAccountShort) = 'd_openDate' THEN
+						-- d_openDate format 
+						DECLARE openDateValue    REFERENCE TO InputRoot.MRM.accountShort.d_openDate;
+						IF SUBSTRING(openDateValue FROM 1 FOR 2) > 31 THEN	
+							SET Environment.Variables.content.{fieldName} = '';
+						ELSE
+							DECLARE date1 DATE CAST(InputRoot.MRM.accountShort.d_openDate AS DATE FORMAT 'ddMMyyyy');
+							DECLARE date2 CHARACTER CAST(date1 AS CHARACTER FORMAT 'yyyy-MM-dd');
+							SET Environment.Variables.content.d_openDate = date2;
+						END IF;
+					ELSE
+						SET Environment.Variables.content.{fieldName} 	= TRIM(InputRoot.MRM.accountShort.{fieldName});
+					END IF;
+					MOVE reffAccountShort NEXTSIBLING;
+				END WHILE;
+			ELSEIF index = 2  THEN
+				DECLARE reffDepositTDA reference to InputRoot.MRM.depositTDA.*[1];
+				WHILE(LASTMOVE(reffDepositTDA)) DO
+					DECLARE fieldName 		CHAR FIELDNAME(reffDepositTDA);
+					IF FIELDNAME(reffDepositTDA) = 'd_maturityDate' THEN
+						-- d_maturityDate format 
+						DECLARE matDateValue    REFERENCE TO InputRoot.MRM.depositTDA.d_maturityDate;
+						IF SUBSTRING(matDateValue FROM 1 FOR 2) > 31 THEN	
+							SET Environment.Variables.content.{fieldName} = '';
+						ELSE
+							DECLARE date1 DATE CAST(InputRoot.MRM.depositTDA.d_maturityDate AS DATE FORMAT 'ddMMyyyy');
+							DECLARE date2 CHARACTER CAST(date1 AS CHARACTER FORMAT 'yyyy-MM-dd');
+							SET Environment.Variables.content.d_maturityDate = date2;
+						END IF;
+					ELSE
+						SET Environment.Variables.content.{fieldName} 	= TRIM(InputRoot.MRM.depositTDA.{fieldName});
+					END IF;
+					MOVE reffDepositTDA NEXTSIBLING;
+				END WHILE;
+			ELSE
+				SET Environment.Variables.content.d_mobilePhone 	= TRIM(InputRoot.MRM.mobilePhone.mobilePhone2);
+			END IF;
+		END IF;
+		
+		-- accountProductType = DEPOSIT TUA
+		IF Environment.Variables.accountProductType = 'I' THEN
+			DECLARE indexRecord	INTEGER index;
+			IF index = 1  THEN
+				DECLARE reffAccountShort reference to InputRoot.MRM.accountShort.*[1];
+				WHILE(LASTMOVE(reffAccountShort)) DO
+					DECLARE fieldName 		CHAR FIELDNAME(reffAccountShort);
+					IF FIELDNAME(reffAccountShort) = 'd_openDate' THEN
+						-- d_openDate format 
+						DECLARE openDateValue    REFERENCE TO InputRoot.MRM.accountShort.d_openDate;
+						IF SUBSTRING(openDateValue FROM 1 FOR 2) > 31 THEN	
+							SET Environment.Variables.content.{fieldName} = '';
+						ELSE
+							DECLARE date1 DATE CAST(InputRoot.MRM.accountShort.d_openDate AS DATE FORMAT 'ddMMyyyy');
+							DECLARE date2 CHARACTER CAST(date1 AS CHARACTER FORMAT 'yyyy-MM-dd');
+							SET Environment.Variables.content.d_openDate = date2;
+						END IF;
+					ELSE
+						SET Environment.Variables.content.{fieldName} 	= TRIM(InputRoot.MRM.accountShort.{fieldName});
+					END IF;
+					MOVE reffAccountShort NEXTSIBLING;
+				END WHILE;	
+			ELSEIF index = 2  THEN
+				DECLARE reffDepositTUA reference to InputRoot.MRM.depositTUA.*[1];
+				WHILE(LASTMOVE(reffDepositTUA)) DO
+					DECLARE fieldName 		CHAR FIELDNAME(reffDepositTUA);
+					IF FIELDNAME(reffDepositTUA) = 'd_birthdate' THEN
+						-- d_birthdate format 
+						DECLARE birthDateValue    REFERENCE TO InputRoot.MRM.depositTUA.d_birthdate;
+						IF SUBSTRING(birthDateValue FROM 1 FOR 2) > 31 THEN	
+							SET Environment.Variables.content.{fieldName} = '';
+						ELSE
+							DECLARE date1 DATE CAST(InputRoot.MRM.depositTUA.d_birthdate AS DATE FORMAT 'ddMMyyyy');
+							DECLARE date2 CHARACTER CAST(date1 AS CHARACTER FORMAT 'yyyy-MM-dd');
+							SET Environment.Variables.content.d_birthdate = date2;
+						END IF;
+					ELSEIF FIELDNAME(reffDepositTUA) = 'd_maturityDate' THEN
+						-- d_maturityDate format 
+						DECLARE matDateValue    REFERENCE TO InputRoot.MRM.depositTUA.d_maturityDate;
+						IF SUBSTRING(matDateValue FROM 1 FOR 2) > 31 THEN	
+							SET Environment.Variables.content.{fieldName} = '';
+						ELSE
+							DECLARE date1 DATE CAST(InputRoot.MRM.depositTUA.d_maturityDate AS DATE FORMAT 'ddMMyyyy');
+							DECLARE date2 CHARACTER CAST(date1 AS CHARACTER FORMAT 'yyyy-MM-dd');
+							SET Environment.Variables.content.d_maturityDate = date2;
+						END IF;
+					ELSE
+						SET Environment.Variables.content.{fieldName} 	= TRIM(InputRoot.MRM.depositTUA.{fieldName});
+					END IF;
+					
+					MOVE reffDepositTUA NEXTSIBLING;
+				END WHILE;
+			ELSE
+				SET Environment.Variables.content.d_mobilePhone 	= TRIM(InputRoot.MRM.mobilePhone.mobilePhone2);
+			END IF;
+		END IF;
+		
+		-- accountProductType = TABUNGAN HAJI
+		IF Environment.Variables.accountProductType = 'H' THEN
+			DECLARE indexRecord	INTEGER index;
+			IF index = 1  THEN
+				DECLARE reffAccountShort reference to InputRoot.MRM.accountShort.*[1];
+				WHILE(LASTMOVE(reffAccountShort)) DO
+					DECLARE fieldName 		CHAR FIELDNAME(reffAccountShort);
+					IF FIELDNAME(reffAccountShort) = 'd_openDate' THEN
+						-- d_openDate format 
+						DECLARE openDateValue    REFERENCE TO InputRoot.MRM.accountShort.d_openDate;
+						IF SUBSTRING(openDateValue FROM 1 FOR 2) > 31 THEN	
+							SET Environment.Variables.content.{fieldName} = '';
+						ELSE
+							DECLARE date1 DATE CAST(InputRoot.MRM.accountShort.d_openDate AS DATE FORMAT 'ddMMyyyy');
+							DECLARE date2 CHARACTER CAST(date1 AS CHARACTER FORMAT 'yyyy-MM-dd');
+							SET Environment.Variables.content.d_openDate = date2;
+						END IF;
+					ELSE
+						SET Environment.Variables.content.{fieldName} 	= TRIM(InputRoot.MRM.accountShort.{fieldName});
+					END IF;
+					MOVE reffAccountShort NEXTSIBLING;
+				END WHILE;	
+			ELSEIF index = 2  THEN
+				DECLARE reffTabunganHaji reference to InputRoot.MRM.tabunganHaji.*[1];
+				WHILE(LASTMOVE(reffTabunganHaji)) DO
+					DECLARE fieldName 		CHAR FIELDNAME(reffTabunganHaji);
+					SET Environment.Variables.content.{fieldName} 	= TRIM(InputRoot.MRM.tabunganHaji.{fieldName});
+					MOVE reffTabunganHaji NEXTSIBLING;
+				END WHILE;
+			ELSE
+				SET Environment.Variables.content.d_mobilePhone 	= TRIM(InputRoot.MRM.mobilePhone.mobilePhone2);
+			END IF;
+		END IF;
+		
+		-- accountProductType = TAPLUS
+		IF Environment.Variables.accountProductType = 'D' THEN
+			DECLARE indexRecord	INTEGER index;
+			IF index = 1  THEN
+				DECLARE reffAccountShort reference to InputRoot.MRM.accountShort.*[1];
+				WHILE(LASTMOVE(reffAccountShort)) DO
+					DECLARE fieldName 		CHAR FIELDNAME(reffAccountShort);
+					IF FIELDNAME(reffAccountShort) = 'd_openDate' THEN
+						-- d_openDate format 
+						DECLARE openDateValue    REFERENCE TO InputRoot.MRM.accountShort.d_openDate;
+						IF SUBSTRING(openDateValue FROM 1 FOR 2) > 31 THEN	
+							SET Environment.Variables.content.{fieldName} = '';
+						ELSE
+							DECLARE date1 DATE CAST(InputRoot.MRM.accountShort.d_openDate AS DATE FORMAT 'ddMMyyyy');
+							DECLARE date2 CHARACTER CAST(date1 AS CHARACTER FORMAT 'yyyy-MM-dd');
+							SET Environment.Variables.content.d_openDate = date2;
+						END IF;
+					ELSE
+						SET Environment.Variables.content.{fieldName} 	= TRIM(InputRoot.MRM.accountShort.{fieldName});
+					END IF;
+					MOVE reffAccountShort NEXTSIBLING;
+				END WHILE;	
+			ELSE
+				SET Environment.Variables.content.d_mobilePhone 	= TRIM(InputRoot.MRM.mobilePhone.mobilePhone2);
+			END IF;
+		END IF;
+		
+		-- accountProductType = LOAN
+		IF Environment.Variables.accountProductType = 'B' THEN
+			DECLARE indexRecord	INTEGER index;
+			IF index = 1  THEN
+				DECLARE reffLoan reference to InputRoot.MRM.loan.*[1];
+				WHILE(LASTMOVE(reffLoan)) DO
+					DECLARE fieldName 		CHAR FIELDNAME(reffLoan);
+					IF FIELDNAME(reffLoan) = 'l_openDate' THEN
+						-- l_openDate format 
+						DECLARE openDateValue    REFERENCE TO InputRoot.MRM.loan.l_openDate;
+						IF SUBSTRING(openDateValue FROM 1 FOR 2) > 31 THEN	
+							SET Environment.Variables.content.{fieldName} = '';
+						ELSE
+							DECLARE date1 DATE CAST(InputRoot.MRM.loan.l_openDate AS DATE FORMAT 'ddMMyyyy');
+							DECLARE date2 CHARACTER CAST(date1 AS CHARACTER FORMAT 'yyyy-MM-dd');
+							SET Environment.Variables.content.l_openDate = date2;
+						END IF;
+					ELSEIF FIELDNAME(reffLoan) = 'l_maturityDate' THEN
+						-- l_maturityDate format 
+						DECLARE matDateValue    REFERENCE TO InputRoot.MRM.loan.l_maturityDate;
+						IF SUBSTRING(matDateValue FROM 1 FOR 2) > 31 THEN	
+							SET Environment.Variables.content.{fieldName} = '';
+						ELSE
+							DECLARE date1 DATE CAST(InputRoot.MRM.loan.l_maturityDate AS DATE FORMAT 'ddMMyyyy');
+							DECLARE date2 CHARACTER CAST(date1 AS CHARACTER FORMAT 'yyyy-MM-dd');
+							SET Environment.Variables.content.l_maturityDate = date2;
+						END IF;
+					ELSEIF FIELDNAME(reffLoan) = 'l_approvedDate' THEN
+						-- l_approvedDate format 
+						DECLARE approvedDateValue    REFERENCE TO InputRoot.MRM.loan.l_approvedDate;
+						IF SUBSTRING(approvedDateValue FROM 1 FOR 2) > 31 THEN	
+							SET Environment.Variables.content.{fieldName} = '';
+						ELSE
+							DECLARE date1 DATE CAST(InputRoot.MRM.loan.l_approvedDate AS DATE FORMAT 'ddMMyyyy');
+							DECLARE date2 CHARACTER CAST(date1 AS CHARACTER FORMAT 'yyyy-MM-dd');
+							SET Environment.Variables.content.l_approvedDate = date2;
+						END IF;
+					ELSE
+						SET Environment.Variables.content.{fieldName} 	= TRIM(InputRoot.MRM.loan.{fieldName});
+					END IF; 
+					
+					MOVE reffLoan NEXTSIBLING;
+				END WHILE;	
+			ELSE
+				SET Environment.Variables.content.l_mobilePhone 	= TRIM(InputRoot.MRM.mobilePhone.mobilePhone2);
+			END IF;
+		END IF;
+		
+		IF flag = TRUE THEN	
+			CREATE LASTCHILD OF OutputRoot DOMAIN 'XMLNSC';
+			SET OutputRoot.XMLNSC.content 									= Environment.Variables.content;
+
+			IF OutputRoot.XMLNSC.content.accountProductType = 'T' THEN
+				SET OutputRoot.XMLNSC.content.accountProductType = 'TDA';
+			ELSEIF OutputRoot.XMLNSC.content.accountProductType = 'I' THEN
+				SET OutputRoot.XMLNSC.content.accountProductType = 'TUA';
+			ELSEIF OutputRoot.XMLNSC.content.accountProductType = 'H' THEN
+				SET OutputRoot.XMLNSC.content.accountProductType = 'HAJ';
+			ELSEIF OutputRoot.XMLNSC.content.accountProductType = 'D' THEN
+				SET OutputRoot.XMLNSC.content.accountProductType = 'DEP';
+			ELSEIF OutputRoot.XMLNSC.content.accountProductType = 'B' THEN
+				SET OutputRoot.XMLNSC.content.accountProductType = 'LON';
+				--replace minus loan--
+				DECLARE reffDataLCurrentBalance REFERENCE TO OutputRoot.XMLNSC.content.l_currentBalance;
+				CALL replaceMinus(reffDataLCurrentBalance,reffDataLCurrentBalance);
+				DECLARE reffDataLAvailableBalance REFERENCE TO OutputRoot.XMLNSC.content.l_availableBalance;
+				CALL replaceMinus(reffDataLAvailableBalance,reffDataLAvailableBalance);
+				DECLARE reffDataOverdueAmount REFERENCE TO OutputRoot.XMLNSC.content.l_overdueAmount;
+				CALL replaceMinus(reffDataOverdueAmount,reffDataOverdueAmount);
+				DECLARE reffDataApproved REFERENCE TO OutputRoot.XMLNSC.content.l_approved;
+				CALL replaceMinus(reffDataApproved,reffDataApproved);
+				DECLARE reffDataAdvanced REFERENCE TO OutputRoot.XMLNSC.content.l_advanced;
+				CALL replaceMinus(reffDataAdvanced,reffDataAdvanced);
+				DECLARE reffDataInstallmentAmount REFERENCE TO OutputRoot.XMLNSC.content.l_installmentAmount;
+				CALL replaceMinus(reffDataInstallmentAmount,reffDataInstallmentAmount);
+				DECLARE reffDataBalance REFERENCE TO OutputRoot.XMLNSC.content.l_balance;
+				CALL replaceMinus(reffDataBalance,reffDataBalance);
+				DECLARE reffDataPrincipalOverdue REFERENCE TO OutputRoot.XMLNSC.content.l_principalOverdue;
+				CALL replaceMinus(reffDataPrincipalOverdue,reffDataPrincipalOverdue);
+			END IF;				
+			
+			DECLARE reffDataCurrentBalance REFERENCE TO OutputRoot.XMLNSC.content.d_currentBalance;
+			CALL replaceMinus(reffDataCurrentBalance,reffDataCurrentBalance);
+			DECLARE reffDataAvailableBalance REFERENCE TO OutputRoot.XMLNSC.content.d_availableBalance;
+			CALL replaceMinus(reffDataAvailableBalance,reffDataAvailableBalance);
+			DECLARE reffDataAvailableInterest REFERENCE TO OutputRoot.XMLNSC.content.d_availableInterest;
+			CALL replaceMinus(reffDataAvailableInterest,reffDataAvailableInterest);
+			DECLARE reffDataLienInterest REFERENCE TO OutputRoot.XMLNSC.content.d_lienBalance;
+			CALL replaceMinus(reffDataLienInterest,reffDataLienInterest);
+			DECLARE reffDataUnclearInterest REFERENCE TO OutputRoot.XMLNSC.content.d_unclearBalance;
+			CALL replaceMinus(reffDataUnclearInterest,reffDataUnclearInterest);
+			
+			SET OutputRoot.XMLNSC.content.(XMLNSC.NamespaceDecl)xmlns:xsi 	= xsi;
+			SET OutputRoot.XMLNSC.content.(XMLNSC.Attribute)xsi:type 		= 'bo:AccountShortInquiryRes'; 
+		ELSE
+			RETURN FALSE;
+		END IF;
+		
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;
+
+
+CREATE COMPUTE MODULE SF_ProcessICONSResponse_CN_errorTransform
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE headerLength 				INTEGER 89;
+		DECLARE errorIndex					INTEGER 5;
+		DECLARE errorMessageIndex			INTEGER 12;
+		DECLARE errorCode,errorMessage		CHARACTER;
+
+		DECLARE outMsg REFERENCE TO OutputRoot;
+		DECLARE errMessage CHAR CAST (InputRoot.BLOB.BLOB AS CHAR CCSID 1208);
+		SET errorCode 		= SUBSTRING(errMessage from (headerLength + errorIndex) for 4);
+		SET errorMessage 	= SUBSTRING(errMessage from (headerLength + errorMessageIndex));
+		
+		CALL composeAppFault(errorCode,errorMessage,outMsg);
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;
