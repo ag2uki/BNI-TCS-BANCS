@@ -1,12 +1,16 @@
 Sample SOAP Request
 ```
-<soapenv:Envelope xmlns:q0="http://service.bni.co.id/core" xmlns:bo="http://service.bni.co.id/core/bo" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<soapenv:Envelope xmlns:q0="http://service.bni.co.id/core" 
+xmlns:bo="http://service.bni.co.id/core/bo" 
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <soapenv:Body>
       <q0:transaction>
          <request>
             <systemId>NEWIBANK-CORE</systemId>
             <content xsi:type="bo:CustomerDetailReq">
-               <accountNum>00000000116896595</accountNum>
+               <accountNum>0115471119</accountNum>
             </content>
          </request>
       </q0:transaction>
@@ -22,61 +26,68 @@ Sample SOAP Response
       <core:transactionResponse xmlns:bo="http://service.bni.co.id/core/bo" xmlns:core="http://service.bni.co.id/core">
          <response>
             <header>
-               <coreJournal>238277</coreJournal>
+               <coreJournal>298671</coreJournal>
             </header>
             <content xsi:type="bo:CustomerDetailRes">
                <flag>A1</flag>
                <jenisNasabah>01</jenisNasabah>
-               <namaNasabah>EDWARD VAN DER KAATSEN</namaNasabah>
-               <gelar/>
-               <titleCode>99</titleCode>
+               <namaNasabah>JONOMADE MADEMADEMADEMADE IMAMADE</namaNasabah>
+               <gelar>S.KOM</gelar>
+               <titleCode>01</titleCode>
                <accountCurrency>IDR</accountCurrency>
-               <tempatLahir>bali</tempatLahir>
-               <tglLahir>1991-11-19</tglLahir>
-               <alamatId>JL. BUNTU NO. 00</alamatId>
-               <rt>010</rt>
-               <rw>5</rw>
+               <tempatLahir>erwrwrwerewr</tempatLahir>
+               <tglLahir>1985-05-27</tglLahir>
+               <alamatId>BENDI VII NO 14</alamatId>
+               <rt/>
+               <rw/>
                <perum/>
-               <kelurahan>Cipaku</kelurahan>
-               <kecamatan>Bogor SltnBogor</kecamatan>
-               <kodePos>16133</kodePos>
-               <jalan2>JL. BUNTU NO. 00</jalan2>
-               <rt2>010</rt2>
-               <rw2>5</rw2>
+               <kelurahan>kebayoran</kelurahan>
+               <kecamatan>Kebayoran</kecamatan>
+               <kodePos>12120</kodePos>
+               <jalan2>BENDI VII NO 14</jalan2>
+               <rt2/>
+               <rw2/>
                <perum2/>
-               <kelurahan2>Cipaku</kelurahan2>
-               <kecamatan2>Bogor SltnBogor</kecamatan2>
-               <kodePos2>16133</kodePos2>
-               <telpRumah>02518234567</telpRumah>
+               <kelurahan2>kebayoran</kelurahan2>
+               <kecamatan2>Kebayoran</kecamatan2>
+               <kodePos2>12120</kodePos2>
+               <telpRumah/>
                <telpKantor/>
-               <handPhone>081283218838</handPhone>
                <fax/>
-               <email>Setyanto.Anggara@bni.co.id</email>
-               <npwp>213213213321312</npwp>
+               <email/>
+               <npwp>123456789012345</npwp>
                <wargaCode>ID</wargaCode>
                <jenisId>0001</jenisId>
-               <tempatId>dfsdfsdfsd</tempatId>
-               <noId>3423423432423555</noId>
+               <tempatId>JAKARTA</tempatId>
+               <noId>3205040810881234</noId>
                <tglTerbit>-  -0</tglTerbit>
-               <tglHabis>2019-06-30</tglHabis>
+               <tglHabis>2026-11-05</tglHabis>
                <sumberInfo/>
-               <maidenName>Mariana Philips</maidenName>
+               <maidenName>raika</maidenName>
                <maritalIndikator>S</maritalIndikator>
                <jumlahAnak/>
-               <religiCode>2</religiCode>
-               <educationCode>06</educationCode>
+               <religiCode>0</religiCode>
+               <educationCode>00</educationCode>
                <jobCode>01</jobCode>
-               <namaPerusahaan>Bos</namaPerusahaan>
-               <alamatPerusahaan>bali                          bali</alamatPerusahaan>
+               <namaPerusahaan>ewrew</namaPerusahaan>
+               <alamatPerusahaan>wrerwer                       werwer</alamatPerusahaan>
                <postCodePerusahaan/>
                <startJobDate>0</startJobDate>
-               <gaji>4</gaji>
-               <namaAlias>VAN DER KAATSEN</namaAlias>
+               <gaji>2</gaji>
+               <namaAlias>IMAMADE</namaAlias>
                <frekuensiGaji>M</frekuensiGaji>
                <gajiLain>000000000000000</gajiLain>
+               <handPhone>000000001154</handPhone>
             </content>
          </response>
       </core:transactionResponse>
    </soapenv:Body>
 </soapenv:Envelope>
+```
+
+Bancs Format
+```
+[ 0099                    **            003099600100001069490000000     0  I  0 000000  00000000115471119]
+
+[ 1067    0983            0000    000000003099600100001069491298671000040320400 000000  03A101JONOMADE MADEMADEMADEMADE IMAMADE                           S.KOM   01IDRerwrwrwerewr                  27051985BENDI VII NO 14                                                                 kebayoran           Kebayoran           12120   BENDI VII NO 14                                                                 kebayoran           Kebayoran           12120                           089534641949            00                                           123456789012345 ID0001JAKARTA                       3205040810881234    0       05112026 raika                                   S0000001ewrew                                                       wrerwer                       werwer                                0       02IMAMADE          M000000000000000            00000000115471119TAPLUS BISNIS PERORANGAN    00000000000000000000000R1600000000004000000   000000000000000000                                                             0000000914478236323000001    089534641949                            ]
 ```
