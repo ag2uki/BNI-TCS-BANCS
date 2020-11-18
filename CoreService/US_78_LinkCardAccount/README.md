@@ -4,19 +4,19 @@ Sample SOAP Request
    <soapenv:Body>
       <q0:transaction>
          <request>
-            <systemId>SYARIAH</systemId>
+            <systemId>KIOSK</systemId>
             <content xsi:type="bo:LinkCardAccountReq">
-               <cardNum>5371762590015009</cardNum>
-               <cardDescription>BNI CARD GOLD</cardDescription>
-               <cardName1>RESYA ISTINA</cardName1>
+               <cardNum>5264222590517835</cardNum>
+               <cardDescription>Virtual MCI Silver - KANIA</cardDescription>
+               <cardName1>FAJAR  NURCAHYO</cardName1>
                <cardName2/>
-               <cifNum>9344095963</cifNum>
-               <name>RESYA ISTINA</name>
-               <address1>KP. PD KOPI</address1>
-               <address2>010 012</address2>
-               <address3>KOTA SURAKARTA SELATAN</address3>
-               <Address4>PONDOK KOPI</Address4>
-               <postCode>15221</postCode>
+               <cifNum>9100751913</cifNum>
+               <name>FAJAR  NURCAHYO</name>
+               <address1>JALAN EBONY NO. 99</address1>
+               <address2>9999KOMPLEK BUDIMAN SENTOSA</address2>
+               <address3>Tanah Sareal</address3>
+               <address4>Tanah Sereal       /Bogor</address4>
+               <postCode>16161</postCode>
                <related1>00000000</related1>
                <acctRel1/>
                <related2>00000000</related2>
@@ -24,7 +24,7 @@ Sample SOAP Request
                <related3>00000000</related3>
                <acctRel3/>
                <seqAddRel>00000001</seqAddRel>
-               <acctAddRel>00000000317210964</acctAddRel>
+               <acctAddRel>00000000114479721</acctAddRel>
                <acctAddRelDesc>SAVINGS ACCOUNT</acctAddRelDesc>
                <confirmFlag>Y</confirmFlag>
             </content>
@@ -42,7 +42,7 @@ Sample SOAP Response
       <core:transactionResponse xmlns:bo="http://service.bni.co.id/core/bo" xmlns:core="http://service.bni.co.id/core">
          <response>
             <header>
-               <coreJournal>022636</coreJournal>
+               <coreJournal>396610</coreJournal>
             </header>
             <content xsi:type="bo:OKMessage">
                <message>O.K.</message>
@@ -51,4 +51,11 @@ Sample SOAP Response
       </core:transactionResponse>
    </soapenv:Body>
 </soapenv:Envelope>
+```
+
+Bancs Format
+```
+[ 0613                    **            003099600100001037601000000     0  I  0 000000  00005264222590517835Virtual MCI Silver - KANIA    FAJAR  NURCAHYO                                                       00000009100751913   FAJAR  NURCAHYO                         JALAN EBONY NO. 99                      9999KOMPLEK BUDIMAN SENTOSA             Tanah Sareal                            Tanah Sereal       /Bogor               16161     00000000                      00000000                      00000000                                                    00000001  00000000114479721   SAVINGS ACCOUNT               Y]
+
+[ 0162    0078            0000    000000003099600100001037601396610000040320200 000000  080000 O.K.                                                                     ]
 ```

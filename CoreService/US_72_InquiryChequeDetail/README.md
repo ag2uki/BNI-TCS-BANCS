@@ -6,10 +6,10 @@ Sample SOAP Request
          <request>
             <systemId>NEWIBANK-CORE</systemId>
             <content xsi:type="bo:InquiryChequeDetailReq">
-               <accountNo>316035436</accountNo>
-               <chequePrefix>BA</chequePrefix>
-               <chequeNo>200001</chequeNo>
-               <status>CI</status>
+               <accountNo>00000000115469575</accountNo>
+               <chequePrefix>CA</chequePrefix>
+               <chequeNo>151511</chequeNo>
+               <status>CP</status>
             </content>
          </request>
       </q0:transaction>
@@ -25,25 +25,32 @@ Sample SOAP Response
       <core:transactionResponse xmlns:bo="http://service.bni.co.id/core/bo" xmlns:core="http://service.bni.co.id/core">
          <response>
             <header>
-               <coreJournal>116300</coreJournal>
+               <coreJournal>237470</coreJournal>
             </header>
             <content xsi:type="bo:InquiryChequeDetailRes">
-               <chequePrefix>BA</chequePrefix>
-               <chequeNo>BA200001</chequeNo>
-               <chequeFirstNo>BA200001</chequeFirstNo>
-               <transactionDate>2014-11-01</transactionDate>
-               <transactionTime>10:00:30</transactionTime>
-               <status>CI</status>
-               <amount/>
+               <chequePrefix>CA</chequePrefix>
+               <chequeNo>CA151511</chequeNo>
+               <chequeFirstNo>CA151511</chequeFirstNo>
+               <transactionDate>2010-05-31</transactionDate>
+               <transactionTime>14:53:14</transactionTime>
+               <status>CP</status>
+               <amount>1000000</amount>
                <tellerID>00001</tellerID>
-               <branchCode>0001</branchCode>
+               <branchCode>0259</branchCode>
                <tranCode>052217</tranCode>
-               <journalNumber>116300</journalNumber>
+               <journalNumber>237470</journalNumber>
                <reason>00</reason>
-               <description>PENERBITAN BILYET GIRO</description>
+               <description>TEST 51071</description>
             </content>
          </response>
       </core:transactionResponse>
    </soapenv:Body>
 </soapenv:Envelope>
+```
+
+Bancs Format
+```
+[ 0109                    **            003099600100001052217000000     0  I  0 000000  00000000115469575CA151511CP]
+
+[ 0192    0108            0000    000000003099600100001052217237470000040320000 000000  03CA151511CA1515113105201014:53:14CP00000001000000000+025900TEST 51071                                        0000 O.K.                                                                     ]
 ```

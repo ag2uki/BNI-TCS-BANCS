@@ -85,3 +85,10 @@ Sample SOAP Response
    </soapenv:Body>
 </soapenv:Envelope>
 ```
+
+Bancs Format
+```
+[ 0101                    **            003099600100001067050000000     0  I  0 000000  0000000914475123201]
+
+[ 0738    0654            0000    000000003099600100001067000000000000040320600 000000  0300000009144751232010000002SHERLOCK                                HOLMES                        SIR                                                                                       BAKER STREET                                                                    Kebun Bunga                             Kalijati                                41271                                                     ID 04                                                              000000  00003100N100259NNNNN9990       9000                                         09999                                        0102N0                                                ]
+```

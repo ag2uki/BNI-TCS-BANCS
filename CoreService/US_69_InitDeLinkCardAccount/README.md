@@ -49,3 +49,10 @@ Sample SOAP Response
    </soapenv:Body>
 </soapenv:Envelope>
 ```
+
+Bancs Format
+```
+[ 0101                    **            003099600100001037620000000     0  I  0 000000  0005326682590000395]
+
+[ 0581    0497            0000    000000003099600100001037621237823000040320600 000000  035326682590000395    BNI EMERALD CARD IDR          SHERLOCK  HOLMES                                                      9144751232          SHERLOCK  HOLMES                        BAKER STREET                                                                    Kebun Bunga                             Kalijati                                41271     00000001  00000000115409515   00000000                      00000000                                                              00000000000000000]
+```

@@ -4,34 +4,31 @@ Sample SOAP Request
    <soapenv:Body>
       <q0:transaction>
          <request>
-            <systemId>SYARIAH</systemId>
-            <customHeader>
-               <teller>00001</teller>
-               <branch>0259</branch>
-               <overrideFlag>I</overrideFlag>
-            </customHeader>
-            <content xsi:type="bo:KliringOutwardReq">
-               <accountNum>116943547</accountNum>
+            <systemId>BNIDIRECT</systemId>
+            <content xsi:type="bo:KliringOutwardv2Req">
+               <accountNum>7778018</accountNum>
                <nominalPenarikan>355000</nominalPenarikan>
                <nominalDikirim>350000</nominalDikirim>
-               <pesan1Pengirim>kliring out via soa 1</pesan1Pengirim>
-               <pesan2Pengirim>kliring out via soa 2</pesan2Pengirim>
-               <namaPenerima>penerima</namaPenerima>
-               <alamat1Penerima>alamat 1 penerima</alamat1Penerima>
-               <alamat2Penerima>alamat 2 penerima</alamat2Penerima>
+               <pesan1Pengirim>Kliring Out via SOA BNIDIRECT</pesan1Pengirim>
+               <pesan2Pengirim>Kliring Out via SOA BNIDIRECT</pesan2Pengirim>
+               <namaPenerima>Mr.Albus Wulfric Brian</namaPenerima>
+               <alamat1Penerima>Hogwarts School</alamat1Penerima>
+               <alamat2Penerima>Diagon Alley</alamat2Penerima>
                <nomorTelponPenerima>987654321</nomorTelponPenerima>
                <kodePosPenerima>12345</kodePosPenerima>
                <idPenerima>654321654321</idPenerima>
                <tipeIdPenerima>0001</tipeIdPenerima>
-               <namaPengirim>nama pengirim</namaPengirim>
-               <alamatPengirim>alamat pengirim</alamatPengirim>
+               <namaPengirim>Mr. Tom Marvolo</namaPengirim>
+               <alamatPengirim>Knockturn Alley</alamatPengirim>
                <nomorTelponPengirim>021987654321</nomorTelponPengirim>
                <tipeResidensiPengirim>0</tipeResidensiPengirim>
                <tipeResidensiPenerima>0</tipeResidensiPenerima>
                <sandiBankPenerima>0010016</sandiBankPenerima>
-               <accountPenerima>888123456789</accountPenerima>
+               <accountPenerima>8881234567898563215212532685000002</accountPenerima>
+               <jenisPenerima>1</jenisPenerima>
                <intermediaryBranch>760</intermediaryBranch>
                <biaya>5000</biaya>
+               <bankPenerimaAkhir>BRINIDJA</bankPenerimaAkhir>
                <sandiTransaksi>50</sandiTransaksi>
             </content>
          </request>
@@ -48,10 +45,10 @@ Sample SOAP Response
       <core:transactionResponse xmlns:bo="http://service.bni.co.id/core/bo" xmlns:core="http://service.bni.co.id/core">
          <response>
             <header>
-               <coreJournal>565578</coreJournal>
+               <coreJournal>300188</coreJournal>
             </header>
             <content xsi:type="bo:OKMessage">
-               <message>T25924ADA1AF594A565578</message>
+               <message/>
             </content>
          </response>
       </core:transactionResponse>
@@ -61,7 +58,7 @@ Sample SOAP Response
 
 Bancs Format
 ```
-[ 1055 ** 003099600100001055645000000 0 I 0 000000 0000000011681727300000000000000000+00000000105000000+ 00000000 121132135 IDR00000000100000000+IDR00000000100000000+00000000000000000+00000000000000000+02 KEVANDIO BAYU HARVEYANTO 0000 Kim Caca 1 Macica 01 076000000000005000000+0 BBBAIDJA50 1]
+[ 1055                    **            003098900100001055645000000     0  I  0 000000  0000000000777801800000000000000000+00000000355000000+ 00000000                                                       8881234567898563215212532685000002IDR00000000350000000+IDR00000000350000000+00000000000000000+00000000000000000+02Kliring Out via SOA BNIDIRECT                     Kliring Out via SOA BNIDIRECT                                                             Mr.Albus Wulfric Brian                                                          Hogwarts School                         Diagon Alley                            987654321           12345   654321654321            0001                          Mr. Tom Marvolo                                                                 Knockturn Alley                         021987654321        00                                                                                              076000000000005000000+0                                        BRINIDJA50                                                  1]
 
-[ 0162 0078 0000 000000003099600100001055645256083000040320200 000000 080000 O.K. T99624AD9ECE3453256083 ]
+[ 0162    0078            0000    000000003098900100001060408300158000040320200 000000  080000 O.K.                                                                     ]
 ```

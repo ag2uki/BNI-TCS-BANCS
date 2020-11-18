@@ -4,9 +4,10 @@ Sample SOAP Request
    <soapenv:Body>
       <q0:transaction>
          <request>
-            <systemId>SOA</systemId>
+            <systemId>API</systemId>
             <content xsi:type="bo:InquiryTrxVirtualAccountReq">
-               <virtualAccountNum>9880024408522120</virtualAccountNum>
+               <virtualAccountNum>9870011447972101</virtualAccountNum>
+               <currentPage>1</currentPage>
             </content>
          </request>
       </q0:transaction>
@@ -22,21 +23,141 @@ Sample SOAP Response
       <core:transactionResponse xmlns:bo="http://service.bni.co.id/core/bo" xmlns:core="http://service.bni.co.id/core">
          <response>
             <header>
-               <coreJournal>571813</coreJournal>
+               <coreJournal>324463</coreJournal>
             </header>
             <content xsi:type="bo:CompiledInquiryTrxVirtualAccountRes">
-               <virtualAccountNum>09880024408522120</virtualAccountNum>
-               <companyName>Pegadaian 988</companyName>
+               <trxVirtualAccount>
+                  <colTxnType>01</colTxnType>
+                  <colPostDate>31/05/2010</colPostDate>
+                  <colTranDate>31/05/2010</colTranDate>
+                  <colTranTime>11160658</colTranTime>
+                  <colTranCode>001055</colTranCode>
+                  <colJournalNum>904810</colJournalNum>
+                  <colUserID>000001</colUserID>
+                  <colBranch>0986</colBranch>
+                  <colAmount>1.00-</colAmount>
+                  <desc>0.00</desc>
+               </trxVirtualAccount>
+               <trxVirtualAccount>
+                  <colTxnType>01</colTxnType>
+                  <colPostDate>31/05/2010</colPostDate>
+                  <colTranDate>31/05/2010</colTranDate>
+                  <colTranTime>09505204</colTranTime>
+                  <colTranCode>001055</colTranCode>
+                  <colJournalNum>904726</colJournalNum>
+                  <colUserID>000001</colUserID>
+                  <colBranch>0986</colBranch>
+                  <colAmount>1.00</colAmount>
+                  <desc>1.00</desc>
+               </trxVirtualAccount>
+               <trxVirtualAccount>
+                  <colTxnType>01</colTxnType>
+                  <colPostDate>31/05/2010</colPostDate>
+                  <colTranDate>31/05/2010</colTranDate>
+                  <colTranTime>09505204</colTranTime>
+                  <colTranCode>001055</colTranCode>
+                  <colJournalNum>904726</colJournalNum>
+                  <colUserID>000001</colUserID>
+                  <colBranch>0986</colBranch>
+                  <colAmount>1.00-</colAmount>
+                  <desc>998926.00</desc>
+               </trxVirtualAccount>
+               <trxVirtualAccount>
+                  <colTxnType>01</colTxnType>
+                  <colPostDate>31/05/2010</colPostDate>
+                  <colTranDate>31/05/2010</colTranDate>
+                  <colTranTime>11162133</colTranTime>
+                  <colTranCode>001055</colTranCode>
+                  <colJournalNum>904503</colJournalNum>
+                  <colUserID>000001</colUserID>
+                  <colBranch>0986</colBranch>
+                  <colAmount>1.00-</colAmount>
+                  <desc>998927.00</desc>
+               </trxVirtualAccount>
+               <trxVirtualAccount>
+                  <colTxnType>01</colTxnType>
+                  <colPostDate>31/05/2010</colPostDate>
+                  <colTranDate>31/05/2010</colTranDate>
+                  <colTranTime>10300029</colTranTime>
+                  <colTranCode>001055</colTranCode>
+                  <colJournalNum>904375</colJournalNum>
+                  <colUserID>000001</colUserID>
+                  <colBranch>0986</colBranch>
+                  <colAmount>1000.00-</colAmount>
+                  <desc>998928.00</desc>
+               </trxVirtualAccount>
+               <trxVirtualAccount>
+                  <colTxnType>01</colTxnType>
+                  <colPostDate>31/05/2010</colPostDate>
+                  <colTranDate>31/05/2010</colTranDate>
+                  <colTranTime>13312253</colTranTime>
+                  <colTranCode>001055</colTranCode>
+                  <colJournalNum>904324</colJournalNum>
+                  <colUserID>000001</colUserID>
+                  <colBranch>0986</colBranch>
+                  <colAmount>1.00-</colAmount>
+                  <desc>999928.00</desc>
+               </trxVirtualAccount>
+               <trxVirtualAccount>
+                  <colTxnType>01</colTxnType>
+                  <colPostDate>31/05/2010</colPostDate>
+                  <colTranDate>31/05/2010</colTranDate>
+                  <colTranTime>11284184</colTranTime>
+                  <colTranCode>001055</colTranCode>
+                  <colJournalNum>904314</colJournalNum>
+                  <colUserID>000001</colUserID>
+                  <colBranch>0986</colBranch>
+                  <colAmount>1.00-</colAmount>
+                  <desc>999929.00</desc>
+               </trxVirtualAccount>
+               <trxVirtualAccount>
+                  <colTxnType>01</colTxnType>
+                  <colPostDate>31/05/2010</colPostDate>
+                  <colTranDate>31/05/2010</colTranDate>
+                  <colTranTime>14405463</colTranTime>
+                  <colTranCode>001055</colTranCode>
+                  <colJournalNum>904295</colJournalNum>
+                  <colUserID>000001</colUserID>
+                  <colBranch>0986</colBranch>
+                  <colAmount>1.00-</colAmount>
+                  <desc>999930.00</desc>
+               </trxVirtualAccount>
+               <trxVirtualAccount>
+                  <colTxnType>01</colTxnType>
+                  <colPostDate>31/05/2010</colPostDate>
+                  <colTranDate>31/05/2010</colTranDate>
+                  <colTranTime>10471871</colTranTime>
+                  <colTranCode>001055</colTranCode>
+                  <colJournalNum>904276</colJournalNum>
+                  <colUserID>000001</colUserID>
+                  <colBranch>0986</colBranch>
+                  <colAmount>1.00-</colAmount>
+                  <desc>999931.00</desc>
+               </trxVirtualAccount>
+               <trxVirtualAccount>
+                  <colTxnType>01</colTxnType>
+                  <colPostDate>31/05/2010</colPostDate>
+                  <colTranDate>31/05/2010</colTranDate>
+                  <colTranTime>10370004</colTranTime>
+                  <colTranCode>001055</colTranCode>
+                  <colJournalNum>904274</colJournalNum>
+                  <colUserID>000001</colUserID>
+                  <colBranch>0986</colBranch>
+                  <colAmount>1.00-</colAmount>
+                  <desc>999932.00</desc>
+               </trxVirtualAccount>
+               <virtualAccountNum>09870011447972101</virtualAccountNum>
+               <companyName>FAJAR NURCAHYO</companyName>
                <status>1</status>
-               <companyAccountNum>00000000000000883</companyAccountNum>
+               <companyAccountNum>00000000114479721</companyAccountNum>
                <virtualAccountType>007</virtualAccountType>
-               <companyCode>00244</companyCode>
+               <companyCode></companyCode>
                <txnType></txnType>
                <currentPage>0001</currentPage>
                <fromDate>00000000</fromDate>
                <toDate>00000000</toDate>
                <journalNum>000000</journalNum>
-               <virtualAccountName>Pegadaian 120</virtualAccountName>
+               <virtualAccountName>NYOPEDIA</virtualAccountName>
                <virtualAccountStatus>1</virtualAccountStatus>
                <virtualAccountBalance>0.00</virtualAccountBalance>
             </content>
@@ -44,4 +165,11 @@ Sample SOAP Response
       </core:transactionResponse>
    </soapenv:Body>
 </soapenv:Envelope>
+```
+
+Bancs Format
+```
+[ 0293                    **            003098600100001031997000000     0  I  0 000000  E09870011447972101                                         00000000000000000000       00010000000000000000000000                                                                                                   ]
+
+[ 0210    0126            0000    000000003098600100001031997324463000040320000 000000  03013105201031052010111606580010559048100000010986             1.00-             0.00                                           013105201031052010095052040010559047260000010986             1.00              1.00                                           013105201031052010095052040010559047260000010986             1.00-        998926.00                                           013105201031052010111621330010559045030000010986             1.00-        998927.00                                           013105201031052010103000290010559043750000010986          1000.00-        998928.00                                           013105201031052010133122530010559043240000010986             1.00-        999928.00                                           013105201031052010112841840010559043140000010986             1.00-        999929.00                                           013105201031052010144054630010559042950000010986             1.00-        999930.00                                           013105201031052010104718710010559042760000010986             1.00-        999931.00                                           013105201031052010103700040010559042740000010986             1.00-        999932.00                                           E09870011447972101FAJAR NURCAHYO                          100000000114479721007       00010000000000000000000000NYOPEDIA                                                                        1             0.00 01310520]
 ```

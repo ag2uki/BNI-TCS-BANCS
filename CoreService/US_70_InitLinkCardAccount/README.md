@@ -4,10 +4,10 @@ Sample SOAP Request
    <soapenv:Body>
       <q0:transaction>
          <request>
-            <systemId>SYARIAH</systemId>
+            <systemId>KIOSK</systemId>
             <content xsi:type="bo:InitLinkCardAccountReq">
-               <accountNum>317210964</accountNum>
-               <cardNum>5371762590015009</cardNum>
+               <accountNum>114479721</accountNum>
+               <cardNum>5264222590517835</cardNum>
             </content>
          </request>
       </q0:transaction>
@@ -23,20 +23,20 @@ Sample SOAP Response
       <core:transactionResponse xmlns:bo="http://service.bni.co.id/core/bo" xmlns:core="http://service.bni.co.id/core">
          <response>
             <header>
-               <coreJournal>022635</coreJournal>
+               <coreJournal>396573</coreJournal>
             </header>
             <content xsi:type="bo:InitLinkCardAccountRes">
-               <cardNum>5371762590015009</cardNum>
-               <cardDescription>BNI CARD GOLD</cardDescription>
-               <cardName1>RESYA ISTINA</cardName1>
+               <cardNum>5264222590517835</cardNum>
+               <cardDescription>Virtual MCI Silver - KANIA</cardDescription>
+               <cardName1>FAJAR  NURCAHYO</cardName1>
                <cardName2/>
-               <cifNum>9344095963</cifNum>
-               <name>RESYA ISTINA</name>
-               <address1>KP. PD KOPI</address1>
-               <address2>010 012</address2>
-               <address3>KOTA SURAKARTA SELATAN</address3>
-               <Address4>PONDOK KOPI</Address4>
-               <postCode>15221</postCode>
+               <cifNum>9100751913</cifNum>
+               <name>FAJAR  NURCAHYO</name>
+               <address1>JALAN EBONY NO. 99</address1>
+               <address2>9999KOMPLEK BUDIMAN SENTOSA</address2>
+               <address3>Tanah Sareal</address3>
+               <address4>Tanah Sereal       /Bogor</address4>
+               <postCode>16161</postCode>
                <related1>00000000</related1>
                <acctRel1/>
                <related2>00000000</related2>
@@ -44,7 +44,7 @@ Sample SOAP Response
                <related3>00000000</related3>
                <acctRel3/>
                <seqAddRel>00000001</seqAddRel>
-               <acctAddRel>00000000317210964</acctAddRel>
+               <acctAddRel>00000000114479721</acctAddRel>
                <acctAddRelDesc>SAVINGS ACCOUNT</acctAddRelDesc>
                <confirmFlag>Y</confirmFlag>
             </content>
@@ -52,4 +52,11 @@ Sample SOAP Response
       </core:transactionResponse>
    </soapenv:Body>
 </soapenv:Envelope>
+```
+
+Bancs Format
+```
+[ 0121                    **            003099600100001037600000000     0  I  0 000000  00000000114479721  00005264222590517835]
+
+[ 0615    0531            0000    000000003099600100001037601396573000040320600 000000  035264222590517835    Virtual MCI Silver - KANIA    FAJAR  NURCAHYO                                                       9100751913          FAJAR  NURCAHYO                         JALAN EBONY NO. 99                      9999KOMPLEK BUDIMAN SENTOSA             Tanah Sareal                            Tanah Sereal       /Bogor               16161     00000000                      00000000                      00000000                                                    00000001  00000000114479721   SAVINGS ACCOUNT               Y]
 ```

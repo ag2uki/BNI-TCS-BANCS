@@ -4,16 +4,11 @@ Sample SOAP Request
    <soapenv:Body>
       <q0:transaction>
          <request>
-            <systemId>SYARIAH</systemId>
-            <customHeader>
-               <teller>00001</teller>
-               <branch>0259</branch>
-               <overrideFlag>I</overrideFlag>
-            </customHeader>
+            <systemId>H2HSERVICE</systemId>
             <content xsi:type="bo:InquiryVirtualAccountReq">
-               <virtualAccountType>988</virtualAccountType>
-               <companyCode>244</companyCode>
-               <virtualAccountNum>9880024408522120</virtualAccountNum>
+               <virtualAccountType>8</virtualAccountType>
+               <companyCode>697</companyCode>
+               <virtualAccountNum>8697190430092710</virtualAccountNum>
             </content>
          </request>
       </q0:transaction>
@@ -29,25 +24,25 @@ Sample SOAP Response
       <core:transactionResponse xmlns:bo="http://service.bni.co.id/core/bo" xmlns:core="http://service.bni.co.id/core">
          <response>
             <header>
-               <coreJournal>565520</coreJournal>
+               <coreJournal>396600</coreJournal>
             </header>
             <content xsi:type="bo:InquiryVirtualAccountRes">
-               <virtualAccountType>988</virtualAccountType>
-               <companyCode>244</companyCode>
-               <virtualAccountNum>9880024408522120</virtualAccountNum>
-               <accountNum>883</accountNum>
-               <companyName>Pegadaian 988</companyName>
+               <virtualAccountType>8</virtualAccountType>
+               <companyCode>697</companyCode>
+               <virtualAccountNum>8697190430092710</virtualAccountNum>
+               <accountNum>114484120</accountNum>
+               <companyName>KUCING BELANG TIGA</companyName>
                <accountStatus>1</accountStatus>
-               <virtualAccountName>Pegadaian 120</virtualAccountName>
+               <virtualAccountName>Test SIT</virtualAccountName>
                <virtualAccountStatus>1</virtualAccountStatus>
-               <virtualAccountTrxType>7</virtualAccountTrxType>
-               <billAmount>0</billAmount>
+               <virtualAccountTrxType>8</virtualAccountTrxType>
+               <billAmount>-50000.000</billAmount>
                <handphoneNumber/>
-               <chargesAmount>0</chargesAmount>
+               <chargesAmount>500.000</chargesAmount>
                <var1Amount>0</var1Amount>
                <var2Amount>0</var2Amount>
-               <date1>99999999</date1>
-               <exptime>00000000</exptime>
+               <date1>20062020</date1>
+               <exptime>01272900</exptime>
             </content>
          </response>
       </core:transactionResponse>
@@ -57,7 +52,7 @@ Sample SOAP Response
 
 Bancs Format
 ```
-[ 0116 ** 003099900100027031992000000 0 I 0 000000 E 9886001109886001120091503]
+[ 0116                    **            003098700300002031992000000     0  I  0 000000  E        0080069708697190430092710]
 
-[ 0375 0291 0000 000000003099900100027031993252384000040320600 000000 03E 988600110988600112009150300000000114484120PT MENCARI CINTA SEJATI 1Test TAP 1100000000000000000+ 00000000000500000+00000000000000000+00000000000000000+0611202106494400 ]
+[ 0375    0291            0000    000000003098700300002031993396600000040320600 000000  03E        008006970869719043009271000000000114484120KUCING BELANG TIGA                      1Test SIT                                                                        1800000000050000000-                    00000000000500000+00000000000000000+00000000000000000+2006202001272900         ]
 ```

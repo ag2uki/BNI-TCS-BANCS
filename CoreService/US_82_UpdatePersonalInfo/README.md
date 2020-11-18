@@ -6,17 +6,17 @@ Sample SOAP Request
          <request>
             <systemId>NEWIBANK-CORE</systemId>
             <content xsi:type="bo:UpdatePersonalInfoReq">
-               <cifNum>9021096442</cifNum>
-               <name>Sdri ING NGARSO SUNG TULODHO JER BASUKI MOWO BEYO</name>
-               <nameAlias>LULUK HARINI</nameAlias>
+               <cifNum>9144772525</cifNum>
+               <name>Sdri DIAN AMALIA PONGDATU</name>
+               <nameAlias>PONGDATU</nameAlias>
                <berdasarPPH/>
                <cabangPbyrPajak/>
-               <agama>1</agama>
+               <agama>2</agama>
                <lingkupPerusahaan/>
-               <email1>luluk.harini@bni.co.id</email1>
+               <email1>dian.pongdatu@mail.com</email1>
                <email2/>
                <kreditur/>
-               <kdPendidikan>5</kdPendidikan>
+               <kdPendidikan/>
                <Channel1/>
                <Channel2/>
                <Channel3/>
@@ -40,8 +40,8 @@ Sample SOAP Request
                <freq/>
                <siklus/>
                <hari/>
-               <Mom_Maiden_Name>SUPARTIANA</Mom_Maiden_Name>
-               <cdHobby></cdHobby>
+               <Mom_Maiden_Name>MAMA</Mom_Maiden_Name>
+               <cdHobby/>
             </content>
          </request>
       </q0:transaction>
@@ -57,7 +57,7 @@ Sample SOAP Response
       <core:transactionResponse xmlns:bo="http://service.bni.co.id/core/bo" xmlns:core="http://service.bni.co.id/core">
          <response>
             <header>
-               <coreJournal>687748</coreJournal>
+               <coreJournal>240182</coreJournal>
             </header>
             <content xsi:type="bo:OKMessage">
                <message>O.K.</message>
@@ -66,4 +66,11 @@ Sample SOAP Response
       </core:transactionResponse>
    </soapenv:Body>
 </soapenv:Envelope>
+```
+
+Bancs Format
+```
+[ 0397                    **            003099600100001067108000000     0  I  0 000000  00000009144772525Sdri DIAN AMALIA PONGDATU                                   PONGDATU                      0000000002 dian.pongdatu@mail.com                                                                              0000000000000000000000000000000000000000000000000 0000 MAMA                                    00]
+
+[ 0162    0078            0000    000000003099600100001067108240182000040320200 000000  080000 O.K.                                                                     ]
 ```

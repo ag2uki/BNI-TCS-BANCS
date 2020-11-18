@@ -22,7 +22,7 @@ Sample SOAP Response
       <core:transactionResponse xmlns:bo="http://service.bni.co.id/core/bo" xmlns:core="http://service.bni.co.id/core">
          <response>
             <header>
-               <coreJournal>237480</coreJournal>
+               <coreJournal>324475</coreJournal>
             </header>
             <content xsi:type="bo:InquiryUserDefinedCodeRes">
                <accntNumber1>116892513</accntNumber1>
@@ -75,4 +75,11 @@ Sample SOAP Response
       </core:transactionResponse>
    </soapenv:Body>
 </soapenv:Envelope>
+```
+
+Bancs Format
+```
+[ 0099                    **            003098700300002007094000000     0  I  0 000000  00000000116892513]
+
+[ 0601    0517            0000    000000003098700300002007044324475000040320600 000000  0300000000116892513N   112 3tX         oenjil                        0   69    06U355212100060021Y       0 A6         1REK MINOR - DIBUTUHKAN GUARDIAN         ************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************]
 ```
