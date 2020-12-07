@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<GROUP ID="060450" Name="CIF:account Inquiry">
+  <TX>
+    <FIELD Format="9(17)" ID="accntNumber1" />
+    <FIELD Format="X(24)" ID="IDNumber" />
+    <FIELD Format="9(4)" ID="id_type1" />
+    <FIELD Format="X" ID="CustAccount1" />
+  </TX>
+  <RX>
+    <FIELD Format="9(17)" ID="accntNumber1" />
+    <FIELD Format="X(6)" ID="DefaultString1" />
+    <FIELD Format="X" ID="DefaultString2" />
+    <FIELD Format="X(30)" ID="DefaultString3" />
+    <FIELD Format="XXX" ID="DefaultString4" />
+    <FIELD Format="X(4)" ID="DefaultString5" />
+    <FIELD Format="X(20)" ID="DefaultString7" />
+    <FIELD Format="X(20)" ID="DefaultString8" />
+    <FIELD Format="X(4)" ID="DefaultString6" />
+    <FIELD Format="X(4)" ID="DefaultString9" />
+  </RX>
+</GROUP>

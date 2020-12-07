@@ -1,0 +1,71 @@
+<?xml version="1.0" standalone="yes"?>
+<GROUP ID="060451" Name="Customer Information Enquiry">
+  <TX>
+    <FIELD Format="X(17)" ID="DefaultString1" />
+    <FIELD Format="XX" ID="DefaultString2" />
+    <FIELD Format="9(5)" ID="DefInteger1" />
+    <FIELD Format="99" ID="DefInteger2" />
+    <FIELD Format="X(60)" ID="DefaultString3" />
+    <FIELD Format="X(40)" ID="DefaultString4" />
+    <FIELD Format="X(40)" ID="DefaultString6" />
+    <FIELD Format="X(40)" ID="DefaultString7" />
+    <FIELD Format="X(40)" ID="DefaultString8" />
+    <FIELD Format="X(8)" ID="DefaultString9" />
+    <FIELD Format="X(12)" ID="DefaultString10" />
+    <FIELD Format="X(12)" ID="DefaultString11" />
+    <FIELD Format="XX" ID="DefaultString12" />
+    <FIELD Format="X(12)" ID="DefaultString13" />
+    <FIELD Format="X(12)" ID="DefaultString14" />
+    <FIELD Format="XX" ID="DefaultString15" />
+    <FIELD Format="XX" ID="DefaultString16" />
+    <FIELD Format="XX" ID="DefaultString17" />
+    <FIELD Format="X(4)" ID="DefaultString18" />
+    <FIELD Format="X(20)" ID="DefaultString19" />
+    <FIELD Format="X(20)" ID="DefaultString20" />
+    <FIELD Format="XXX" ID="DefaultString21" />
+    <FIELD Format="X(17)" ID="DefaultString5" />
+    <FIELD Format="X" ID="DefaultString22" />
+    <FIELD Format="X(4)" ID="DefaultString23" />
+    <FIELD Format="X(20)" ID="noHPprimary" />
+    <FIELD Format="X(20)" ID="noHPsecondary" />
+  </TX>
+  <RX>
+    <SELECT switch="Flag2">
+      <CASE ID="4" ID2="6" ID3="7">
+        <FIELD Format="9(17)" ID="DefaultString1" />
+        <FIELD Format="XX" ID="DefaultString2" />
+        <FIELD Format="9(5)" ID="DefInteger1" />
+        <FIELD Format="99" ID="DefInteger2" />
+        <FIELD Format="X(60)" ID="DefaultString3" />
+        <FIELD Format="X(40)" ID="DefaultString4" />
+        <FIELD Format="X(40)" ID="DefaultString6"  />
+        <FIELD Format="X(40)" ID="DefaultString7" />
+        <FIELD Format="X(40)" ID="DefaultString8" />
+        <FIELD Format="X(8)" ID="DefaultString9" />
+        <FIELD Format="X(12)" ID="DefaultString10" />
+        <FIELD Format="X(12)" ID="DefaultString11" />
+        <FIELD Format="XX" ID="DefaultString12" />
+        <FIELD Format="X(12)" ID="DefaultString13" />
+        <FIELD Format="X(12)" ID="DefaultString14" />
+        <FIELD Format="XX" ID="DefaultString15" />
+        <FIELD Format="XX" ID="DefaultString16" />
+        <FIELD Format="XX" ID="DefaultString17" />
+        <FIELD Format="X(4)" ID="DefaultString18" />
+        <FIELD Format="X(20)" ID="DefaultString19" />
+        <FIELD Format="X(20)" ID="DefaultString20" />
+        <FIELD Format="XXX" ID="DefaultString21" />
+        <FIELD Format="X(17)" ID="DefaultString5" />
+        <FIELD Format="X" ID="DefaultString22" />
+        <FIELD Format="X(4)" ID="DefaultString23" Offset="4"/>
+		<FIELD Format="X(4)" ID="homeBranch" />
+    <FIELD Format="X(20)" ID="noHPprimary" />
+    <FIELD Format="X(20)" ID="noHPsecondary" />
+      </CASE>
+      <CASEELSE>
+        <COLLECTION ID="Collection1" NumSubParts="10">
+          <FIELD Format="X(80)" ID="DefaultString90" />
+        </COLLECTION>
+      </CASEELSE>
+    </SELECT>
+  </RX>
+</GROUP>
