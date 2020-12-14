@@ -1,12 +1,16 @@
 Sample SOAP Request
 ```
-<soapenv:Envelope xmlns:q0="http://service.bni.co.id/core" xmlns:bo="http://service.bni.co.id/core/bo" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<soapenv:Envelope xmlns:q0="http://service.bni.co.id/core"
+xmlns:bo="http://service.bni.co.id/core/bo"
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <soapenv:Body>
     <q0:transaction>
       <request>
-        <systemId>KSEI_AKSES</systemId>
+        <systemId>NEWIBANK-CORE</systemId>
         <content xsi:type="bo:OpenDepositAccountListReq">
-          <cifNum>00000009100202500</cifNum>
+          <cifNum>9154902054</cifNum>
         </content>
       </request>
     </q0:transaction>
@@ -22,64 +26,288 @@ Sample SOAP Response
       <core:transactionResponse xmlns:bo="http://service.bni.co.id/core/bo" xmlns:core="http://service.bni.co.id/core">
          <response>
             <header>
-               <coreJournal>237878</coreJournal>
+               <coreJournal>298698</coreJournal>
             </header>
             <content xsi:type="bo:CompiledOpenDepositAccountListRes">
-               <cifNum>00000009100202500</cifNum>
-               <customerName>Bpk FAJAR ARIF FAJAR ARIF BUDIMAN, SE.MM</customerName>
+               <cifNum>00000009154902054</cifNum>
+               <customerName>Sdri ATIKA ATIKA SUSILO                        S.SI</customerName>
                <keyPerson></keyPerson>
-               <noDIN></noDIN>
-               <noHP>08129942310</noHP>
+               <noDIN>37383939737389363739</noDIN>
+               <noHP>0000000568</noHP>
                <openDepositAccountInfo>
-                  <accountNum>00000000115409526</accountNum>
-                  <accountStatus>DORM</accountStatus>
+                  <accountNum>00000000114570993</accountNum>
+                  <accountStatus>BUKA</accountStatus>
                   <accountTypeCode></accountTypeCode>
-                  <productName>TAPLUS BISNIS PERORANGAN</productName>
+                  <productName>DEPOSITO KAPITALISASI 3 IDR</productName>
                   <currency>IDR</currency>
                   <ownership></ownership>
-                  <balance>500.892.500,00</balance>
-                  <intRate>3.5000</intRate>
-                  <matDate/>
-                  <accType>2300</accType>
-                  <subCat>0001</subCat>
-                  <effectiveBalance>500.892.500,00</effectiveBalance>
+                  <balance>0,00</balance>
+                  <intRate>5.7500</intRate>
+                  <matDate>2010-08-31</matDate>
+                  <accType>3201</accType>
+                  <subCat>0002</subCat>
+                  <effectiveBalance>0,00</effectiveBalance>
                   <branchCode>0259</branchCode>
                   <flagIbank>0</flagIbank>
                </openDepositAccountInfo>
                <openDepositAccountInfo>
-                  <accountNum>00000000115409491</accountNum>
-                  <accountStatus>DORM</accountStatus>
+                  <accountNum>00000000114588617</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>DEPOSITO  BLN 12 USD</productName>
+                  <currency>USD</currency>
+                  <ownership></ownership>
+                  <balance>0,00</balance>
+                  <intRate>0.2500</intRate>
+                  <matDate>2011-05-31</matDate>
+                  <accType>3002</accType>
+                  <subCat>0005</subCat>
+                  <effectiveBalance>0,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114582773</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>DEPOSITO  BLN 12 IDR</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>0,00</balance>
+                  <intRate>6.0000</intRate>
+                  <matDate>2011-05-31</matDate>
+                  <accType>3001</accType>
+                  <subCat>0005</subCat>
+                  <effectiveBalance>0,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114739408</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>DEPOSITO BLN 3 IDR</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>100.000.000,00</balance>
+                  <intRate>5.7500</intRate>
+                  <matDate>2010-08-31</matDate>
+                  <accType>3001</accType>
+                  <subCat>0002</subCat>
+                  <effectiveBalance>100.000.000,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114571090</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>DEPOSITO  BLN 12 IDR</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>98.000.000,00</balance>
+                  <intRate>6.0000</intRate>
+                  <matDate>2011-05-31</matDate>
+                  <accType>3001</accType>
+                  <subCat>0005</subCat>
+                  <effectiveBalance>98.000.000,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114738176</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>DEPOSITO BLN 3 IDR</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>0,00</balance>
+                  <intRate>5.7500</intRate>
+                  <matDate>2010-08-31</matDate>
+                  <accType>3001</accType>
+                  <subCat>0002</subCat>
+                  <effectiveBalance>0,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000001000006436</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>BNI TAPENAS</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>0,00</balance>
+                  <intRate>4.5000</intRate>
+                  <matDate>2011-06-05</matDate>
+                  <accType>2800</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>0,00</effectiveBalance>
+                  <branchCode>0063</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000001000006470</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>BNI TAPENAS</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>0,00</balance>
+                  <intRate>4.5000</intRate>
+                  <matDate>2011-06-05</matDate>
+                  <accType>2800</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>0,00</effectiveBalance>
+                  <branchCode>0063</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114488170</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>TABUNGANKU LAKU PANDAI</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>0,00</balance>
+                  <intRate>0.1500</intRate>
+                  <matDate/>
+                  <accType>2702</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>0,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>1</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114488169</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>TABUNGANKU LAKU PANDAI</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>0,00</balance>
+                  <intRate>0.1500</intRate>
+                  <matDate/>
+                  <accType>2702</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>0,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>1</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114486864</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>TABUNGANKU LAKU PANDAI</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>0,00</balance>
+                  <intRate>0.1500</intRate>
+                  <matDate/>
+                  <accType>2702</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>0,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114486820</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>TABUNGANKU LAKU PANDAI</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>123.450,00</balance>
+                  <intRate>0.1500</intRate>
+                  <matDate/>
+                  <accType>2702</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>123.450,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>1</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114488307</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>TABUNGANKU LAKU PANDAI</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>0,00</balance>
+                  <intRate>0.1500</intRate>
+                  <matDate/>
+                  <accType>2702</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>0,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>1</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114488181</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>TABUNGANKU LAKU PANDAI</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>0,00</balance>
+                  <intRate>0.1500</intRate>
+                  <matDate/>
+                  <accType>2702</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>0,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>1</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114469622</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>TAB BNI DOLLAR PERORANGAN USD</productName>
+                  <currency>USD</currency>
+                  <ownership></ownership>
+                  <balance>99.375.115,29</balance>
+                  <intRate>0.5000</intRate>
+                  <matDate/>
+                  <accType>2004</accType>
+                  <subCat>0002</subCat>
+                  <effectiveBalance>99.375.115,29</effectiveBalance>
+                  <branchCode>0243</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114468856</accountNum>
+                  <accountStatus>BUKA</accountStatus>
                   <accountTypeCode></accountTypeCode>
                   <productName>BNI TAPLUS</productName>
                   <currency>IDR</currency>
                   <ownership></ownership>
-                  <balance>100.847.136,00</balance>
+                  <balance>128.406.500,00</balance>
                   <intRate>2.5000</intRate>
                   <matDate/>
                   <accType>2000</accType>
                   <subCat>0001</subCat>
-                  <effectiveBalance>100.847.136,00</effectiveBalance>
+                  <effectiveBalance>128.406.500,00</effectiveBalance>
                   <branchCode>0259</branchCode>
                   <flagIbank>0</flagIbank>
                </openDepositAccountInfo>
                <openDepositAccountInfo>
-                  <accountNum>00000000115410065</accountNum>
-                  <accountStatus>DORM</accountStatus>
+                  <accountNum>00000000114496577</accountNum>
+                  <accountStatus>BUKA</accountStatus>
                   <accountTypeCode></accountTypeCode>
                   <productName>BNI TAPLUS</productName>
                   <currency>IDR</currency>
                   <ownership></ownership>
-                  <balance>5.805.340.154,00</balance>
-                  <intRate>3.0000</intRate>
+                  <balance>599.900.000,00</balance>
+                  <intRate>2.7500</intRate>
                   <matDate/>
                   <accType>2000</accType>
                   <subCat>0001</subCat>
-                  <effectiveBalance>5.805.050.154,00</effectiveBalance>
+                  <effectiveBalance>599.900.000,00</effectiveBalance>
                   <branchCode>0259</branchCode>
-                  <flagIbank>0</flagIbank>
+                  <flagIbank>1</flagIbank>
                </openDepositAccountInfo>
                <openDepositAccountInfo>
-                  <accountNum>00000000115471958</accountNum>
+                  <accountNum>00000000114539817</accountNum>
                   <accountStatus>BUKA</accountStatus>
                   <accountTypeCode></accountTypeCode>
                   <productName>BNI TAPLUS</productName>
@@ -91,302 +319,1045 @@ Sample SOAP Response
                   <accType>2000</accType>
                   <subCat>0001</subCat>
                   <effectiveBalance>0,00</effectiveBalance>
-                  <branchCode>0243</branchCode>
-                  <flagIbank>0</flagIbank>
-               </openDepositAccountInfo>
-               <openDepositAccountInfo>
-                  <accountNum>00000000115409582</accountNum>
-                  <accountStatus>DORM</accountStatus>
-                  <accountTypeCode></accountTypeCode>
-                  <productName>BNI TAPLUS</productName>
-                  <currency>IDR</currency>
-                  <ownership></ownership>
-                  <balance>50.762.510,00</balance>
-                  <intRate>2.2500</intRate>
-                  <matDate/>
-                  <accType>2000</accType>
-                  <subCat>0001</subCat>
-                  <effectiveBalance>50.762.510,00</effectiveBalance>
                   <branchCode>0259</branchCode>
                   <flagIbank>0</flagIbank>
                </openDepositAccountInfo>
                <openDepositAccountInfo>
-                  <accountNum>00000000115409480</accountNum>
-                  <accountStatus>DORM</accountStatus>
+                  <accountNum>00000000114571374</accountNum>
+                  <accountStatus>BUKA</accountStatus>
                   <accountTypeCode></accountTypeCode>
                   <productName>BNI TAPLUS</productName>
                   <currency>IDR</currency>
                   <ownership></ownership>
-                  <balance>51.983.189,00</balance>
-                  <intRate>2.2500</intRate>
-                  <matDate/>
-                  <accType>2000</accType>
-                  <subCat>0001</subCat>
-                  <effectiveBalance>51.983.189,00</effectiveBalance>
-                  <branchCode>0259</branchCode>
-                  <flagIbank>0</flagIbank>
-               </openDepositAccountInfo>
-               <openDepositAccountInfo>
-                  <accountNum>00000000115412096</accountNum>
-                  <accountStatus>DORM</accountStatus>
-                  <accountTypeCode></accountTypeCode>
-                  <productName>BNI TAPLUS</productName>
-                  <currency>IDR</currency>
-                  <ownership></ownership>
-                  <balance>4.964.715,00</balance>
+                  <balance>1.100.000,00</balance>
                   <intRate>1.7500</intRate>
                   <matDate/>
                   <accType>2000</accType>
                   <subCat>0001</subCat>
-                  <effectiveBalance>4.964.715,00</effectiveBalance>
+                  <effectiveBalance>1.100.000,00</effectiveBalance>
                   <branchCode>0259</branchCode>
                   <flagIbank>0</flagIbank>
                </openDepositAccountInfo>
                <openDepositAccountInfo>
-                  <accountNum>00000000115412085</accountNum>
+                  <accountNum>00000000114736554</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>BNI TAPLUS</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>12.699.999,00</balance>
+                  <intRate>2.0000</intRate>
+                  <matDate/>
+                  <accType>2000</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>1.700.000,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000116938015</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>BNI TAPLUS</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>100.493.039,23</balance>
+                  <intRate>2.5000</intRate>
+                  <matDate/>
+                  <accType>2000</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>100.453.039,23</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114496588</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>BNI TAPLUS</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>11.408.500,00</balance>
+                  <intRate>2.0000</intRate>
+                  <matDate/>
+                  <accType>2000</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>10.708.500,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>1</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114551347</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>BNI TAPLUS</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>598.889.990,55</balance>
+                  <intRate>2.7500</intRate>
+                  <matDate/>
+                  <accType>2000</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>598.889.990,55</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114584689</accountNum>
                   <accountStatus>DORM</accountStatus>
                   <accountTypeCode></accountTypeCode>
                   <productName>BNI TAPLUS</productName>
                   <currency>IDR</currency>
                   <ownership></ownership>
-                  <balance>7.962.340,00</balance>
+                  <balance>9.908.000,00</balance>
                   <intRate>1.7500</intRate>
                   <matDate/>
                   <accType>2000</accType>
                   <subCat>0001</subCat>
-                  <effectiveBalance>7.962.340,00</effectiveBalance>
+                  <effectiveBalance>9.908.000,00</effectiveBalance>
+                  <branchCode>0996</branchCode>
+                  <flagIbank>1</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114733756</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>BNI TAPLUS PRA KERJA</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>0,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>2000</accType>
+                  <subCat>8001</subCat>
+                  <effectiveBalance>0,00</effectiveBalance>
                   <branchCode>0259</branchCode>
                   <flagIbank>0</flagIbank>
                </openDepositAccountInfo>
                <openDepositAccountInfo>
-                  <accountNum>00000000115409548</accountNum>
-                  <accountStatus>DORM</accountStatus>
+                  <accountNum>00000000114737751</accountNum>
+                  <accountStatus>BUKA</accountStatus>
                   <accountTypeCode></accountTypeCode>
                   <productName>BNI TAPLUS</productName>
                   <currency>IDR</currency>
                   <ownership></ownership>
-                  <balance>50.722.997,00</balance>
+                  <balance>1.099.999,00</balance>
+                  <intRate>1.7500</intRate>
+                  <matDate/>
+                  <accType>2000</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>100.000,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>1</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114798045</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>BNI TAPLUS</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>0,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>2000</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>0,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114486365</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>BNI TAPLUS</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>996.344.000,00</balance>
+                  <intRate>2.7500</intRate>
+                  <matDate/>
+                  <accType>2000</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>996.344.000,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114488589</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>BNI TAPLUS TAX AMNESTY</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>0,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>2000</accType>
+                  <subCat>1001</subCat>
+                  <effectiveBalance>0,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114496656</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>BNI TAPLUS</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>100.000,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>2000</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>100.000,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>1</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114584758</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>BNI TAPLUS</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>1.500.658.000,00</balance>
+                  <intRate>3.0000</intRate>
+                  <matDate/>
+                  <accType>2000</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>1.500.298.000,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>1</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114733938</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>BNI TAPLUS</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>150.000,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>2000</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>150.000,00</effectiveBalance>
+                  <branchCode>0234</branchCode>
+                  <flagIbank>1</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114737831</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>BNI TAPLUS</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>1.099.999,00</balance>
+                  <intRate>1.7500</intRate>
+                  <matDate/>
+                  <accType>2000</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>100.000,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>1</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000113165400</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>BNI TAPLUS</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>38.702,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>2000</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>38.702,00</effectiveBalance>
+                  <branchCode>0265</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114496838</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>BNI TAPLUS</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>596.866.800,00</balance>
+                  <intRate>2.7500</intRate>
+                  <matDate/>
+                  <accType>2000</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>596.866.800,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>1</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114510479</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>BNI TAPLUS</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>7.747.105,00</balance>
+                  <intRate>1.7500</intRate>
+                  <matDate/>
+                  <accType>2000</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>7.747.105,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114577150</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>BNI TAPLUS</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>150.000,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>2000</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>150.000,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>1</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114496883</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>BNI TAPLUS</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>0,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>2000</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>0,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>1</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114510480</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>BNI TAPLUS</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>50.091.500,00</balance>
                   <intRate>2.2500</intRate>
                   <matDate/>
                   <accType>2000</accType>
                   <subCat>0001</subCat>
-                  <effectiveBalance>50.722.997,00</effectiveBalance>
+                  <effectiveBalance>50.091.500,00</effectiveBalance>
                   <branchCode>0259</branchCode>
                   <flagIbank>0</flagIbank>
                </openDepositAccountInfo>
                <openDepositAccountInfo>
-                  <accountNum>00000000115409593</accountNum>
-                  <accountStatus>DORM</accountStatus>
+                  <accountNum>00000000114577387</accountNum>
+                  <accountStatus>BUKA</accountStatus>
                   <accountTypeCode></accountTypeCode>
                   <productName>BNI TAPLUS</productName>
                   <currency>IDR</currency>
                   <ownership></ownership>
-                  <balance>50.835.504,00</balance>
-                  <intRate>2.2500</intRate>
+                  <balance>150.000,00</balance>
+                  <intRate>0.0000</intRate>
                   <matDate/>
                   <accType>2000</accType>
                   <subCat>0001</subCat>
-                  <effectiveBalance>50.835.504,00</effectiveBalance>
+                  <effectiveBalance>150.000,00</effectiveBalance>
                   <branchCode>0259</branchCode>
-                  <flagIbank>0</flagIbank>
+                  <flagIbank>1</flagIbank>
                </openDepositAccountInfo>
                <openDepositAccountInfo>
-                  <accountNum>00000000115409537</accountNum>
-                  <accountStatus>DORM</accountStatus>
+                  <accountNum>00000000812345670</accountNum>
+                  <accountStatus>BUKA</accountStatus>
                   <accountTypeCode></accountTypeCode>
                   <productName>BNI TAPLUS</productName>
                   <currency>IDR</currency>
                   <ownership></ownership>
-                  <balance>50.901.208,00</balance>
-                  <intRate>2.2500</intRate>
-                  <matDate/>
-                  <accType>2000</accType>
-                  <subCat>0001</subCat>
-                  <effectiveBalance>50.901.208,00</effectiveBalance>
-                  <branchCode>0259</branchCode>
-                  <flagIbank>0</flagIbank>
-               </openDepositAccountInfo>
-               <openDepositAccountInfo>
-                  <accountNum>00000000115410203</accountNum>
-                  <accountStatus>DORM</accountStatus>
-                  <accountTypeCode></accountTypeCode>
-                  <productName>BNI TAPLUS</productName>
-                  <currency>IDR</currency>
-                  <ownership></ownership>
-                  <balance>10.656.307,00</balance>
+                  <balance>30.886.252,00</balance>
                   <intRate>2.0000</intRate>
                   <matDate/>
                   <accType>2000</accType>
                   <subCat>0001</subCat>
-                  <effectiveBalance>10.656.307,00</effectiveBalance>
+                  <effectiveBalance>30.886.252,00</effectiveBalance>
                   <branchCode>0259</branchCode>
                   <flagIbank>0</flagIbank>
                </openDepositAccountInfo>
                <openDepositAccountInfo>
-                  <accountNum>00000000115410269</accountNum>
-                  <accountStatus>DORM</accountStatus>
+                  <accountNum>00000000114496442</accountNum>
+                  <accountStatus>BUKA</accountStatus>
                   <accountTypeCode></accountTypeCode>
                   <productName>BNI TAPLUS</productName>
                   <currency>IDR</currency>
                   <ownership></ownership>
-                  <balance>19.942.581,00</balance>
-                  <intRate>2.0000</intRate>
+                  <balance>501.999.000,00</balance>
+                  <intRate>2.7500</intRate>
                   <matDate/>
                   <accType>2000</accType>
                   <subCat>0001</subCat>
-                  <effectiveBalance>19.942.581,00</effectiveBalance>
+                  <effectiveBalance>501.999.000,00</effectiveBalance>
                   <branchCode>0259</branchCode>
-                  <flagIbank>0</flagIbank>
+                  <flagIbank>1</flagIbank>
                </openDepositAccountInfo>
                <openDepositAccountInfo>
-                  <accountNum>00000000115409559</accountNum>
-                  <accountStatus>DORM</accountStatus>
+                  <accountNum>00000000114496894</accountNum>
+                  <accountStatus>BUKA</accountStatus>
                   <accountTypeCode></accountTypeCode>
                   <productName>BNI TAPLUS</productName>
                   <currency>IDR</currency>
                   <ownership></ownership>
-                  <balance>50.825.497,00</balance>
-                  <intRate>2.2500</intRate>
+                  <balance>246.999,00</balance>
+                  <intRate>0.0000</intRate>
                   <matDate/>
                   <accType>2000</accType>
                   <subCat>0001</subCat>
-                  <effectiveBalance>50.825.497,00</effectiveBalance>
+                  <effectiveBalance>44.999,00</effectiveBalance>
                   <branchCode>0259</branchCode>
-                  <flagIbank>0</flagIbank>
+                  <flagIbank>1</flagIbank>
                </openDepositAccountInfo>
                <openDepositAccountInfo>
-                  <accountNum>00000000115409571</accountNum>
-                  <accountStatus>DORM</accountStatus>
+                  <accountNum>00000000114577489</accountNum>
+                  <accountStatus>BUKA</accountStatus>
                   <accountTypeCode></accountTypeCode>
                   <productName>BNI TAPLUS</productName>
                   <currency>IDR</currency>
                   <ownership></ownership>
-                  <balance>50.880.004,00</balance>
-                  <intRate>2.2500</intRate>
+                  <balance>0,00</balance>
+                  <intRate>0.0000</intRate>
                   <matDate/>
                   <accType>2000</accType>
                   <subCat>0001</subCat>
-                  <effectiveBalance>50.880.004,00</effectiveBalance>
-                  <branchCode>0259</branchCode>
-                  <flagIbank>0</flagIbank>
+                  <effectiveBalance>0,00</effectiveBalance>
+                  <branchCode>0996</branchCode>
+                  <flagIbank>1</flagIbank>
                </openDepositAccountInfo>
                <openDepositAccountInfo>
-                  <accountNum>00000000115409560</accountNum>
-                  <accountStatus>DORM</accountStatus>
+                  <accountNum>00000000114496453</accountNum>
+                  <accountStatus>BUKA</accountStatus>
                   <accountTypeCode></accountTypeCode>
                   <productName>BNI TAPLUS</productName>
                   <currency>IDR</currency>
                   <ownership></ownership>
-                  <balance>50.772.504,00</balance>
-                  <intRate>2.2500</intRate>
+                  <balance>0,00</balance>
+                  <intRate>0.0000</intRate>
                   <matDate/>
                   <accType>2000</accType>
                   <subCat>0001</subCat>
-                  <effectiveBalance>50.772.504,00</effectiveBalance>
+                  <effectiveBalance>0,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>1</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114496929</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>BNI TAPLUS</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>50.000,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>2000</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>50.000,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>1</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114496464</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>BNI TAPLUS</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>0,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>2000</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>0,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>1</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114536317</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>BNI TAPLUS</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>9.217.500,00</balance>
+                  <intRate>1.7500</intRate>
+                  <matDate/>
+                  <accType>2000</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>9.217.500,00</effectiveBalance>
                   <branchCode>0259</branchCode>
                   <flagIbank>0</flagIbank>
                </openDepositAccountInfo>
                <openDepositAccountInfo>
-                  <accountNum>00000000115295733</accountNum>
-                  <accountStatus>DORM</accountStatus>
+                  <accountNum>00000000114792598</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>BNI TAPLUS</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>0,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>2000</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>0,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114601287</accountNum>
+                  <accountStatus>BUKA</accountStatus>
                   <accountTypeCode></accountTypeCode>
                   <productName>GIRO TANPA SO MIN TRX DB TERBT</productName>
                   <currency>IDR</currency>
                   <ownership></ownership>
-                  <balance>9.900.000,00</balance>
+                  <balance>0,00</balance>
                   <intRate>0.0000</intRate>
                   <matDate/>
                   <accType>1811</accType>
                   <subCat>6101</subCat>
-                  <effectiveBalance>9.900.000,00</effectiveBalance>
-                  <branchCode>0017</branchCode>
-                  <flagIbank>0</flagIbank>
-               </openDepositAccountInfo>
-               <openDepositAccountInfo>
-                  <accountNum>00000000115408680</accountNum>
-                  <accountStatus>DORM</accountStatus>
-                  <accountTypeCode></accountTypeCode>
-                  <productName>GIRO OVERDRAFT BERKARTU</productName>
-                  <currency>IDR</currency>
-                  <ownership></ownership>
-                  <balance>1.365.000,00</balance>
-                  <intRate>0.0000</intRate>
-                  <matDate/>
-                  <accType>1413</accType>
-                  <subCat>5001</subCat>
-                  <effectiveBalance>1.365.000,00</effectiveBalance>
+                  <effectiveBalance>0,00</effectiveBalance>
                   <branchCode>0259</branchCode>
                   <flagIbank>0</flagIbank>
                </openDepositAccountInfo>
                <openDepositAccountInfo>
-                  <accountNum>00000000115409195</accountNum>
-                  <accountStatus>DORM</accountStatus>
-                  <accountTypeCode></accountTypeCode>
-                  <productName>GIRO OVERDRAFT BERKARTU</productName>
-                  <currency>IDR</currency>
-                  <ownership></ownership>
-                  <balance>10.770.000,00</balance>
-                  <intRate>0.0000</intRate>
-                  <matDate/>
-                  <accType>1413</accType>
-                  <subCat>5001</subCat>
-                  <effectiveBalance>10.770.000,00</effectiveBalance>
-                  <branchCode>0259</branchCode>
-                  <flagIbank>0</flagIbank>
-               </openDepositAccountInfo>
-               <openDepositAccountInfo>
-                  <accountNum>00000000115409117</accountNum>
-                  <accountStatus>DORM</accountStatus>
-                  <accountTypeCode></accountTypeCode>
-                  <productName>GIRO OVERDRAFT BERKARTU</productName>
-                  <currency>IDR</currency>
-                  <ownership></ownership>
-                  <balance>4.667.500,00</balance>
-                  <intRate>0.0000</intRate>
-                  <matDate/>
-                  <accType>1413</accType>
-                  <subCat>5001</subCat>
-                  <effectiveBalance>4.667.500,00</effectiveBalance>
-                  <branchCode>0259</branchCode>
-                  <flagIbank>0</flagIbank>
-               </openDepositAccountInfo>
-               <openDepositAccountInfo>
-                  <accountNum>00000000115409071</accountNum>
-                  <accountStatus>DORM</accountStatus>
-                  <accountTypeCode></accountTypeCode>
-                  <productName>GIRO OVERDRAFT BERKARTU</productName>
-                  <currency>IDR</currency>
-                  <ownership></ownership>
-                  <balance>5.717.500,00</balance>
-                  <intRate>0.0000</intRate>
-                  <matDate/>
-                  <accType>1413</accType>
-                  <subCat>5001</subCat>
-                  <effectiveBalance>5.717.500,00</effectiveBalance>
-                  <branchCode>0259</branchCode>
-                  <flagIbank>0</flagIbank>
-               </openDepositAccountInfo>
-               <openDepositAccountInfo>
-                  <accountNum>00000000115410565</accountNum>
+                  <accountNum>00000000114495653</accountNum>
                   <accountStatus>BUKA</accountStatus>
                   <accountTypeCode></accountTypeCode>
-                  <productName>GIRO OVERDRAFT BB PERORANGAN</productName>
+                  <productName>GIRO TANPA SO MIN TRX DB TERBT</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>0,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>1811</accType>
+                  <subCat>6101</subCat>
+                  <effectiveBalance>0,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114588594</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO RDL</productName>
+                  <currency>USD</currency>
+                  <ownership></ownership>
+                  <balance>0,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>1811</accType>
+                  <subCat>6402</subCat>
+                  <effectiveBalance>0,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114584769</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO RDL</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>1.500.000.000,00</balance>
+                  <intRate>2.5000</intRate>
+                  <matDate/>
+                  <accType>1811</accType>
+                  <subCat>6401</subCat>
+                  <effectiveBalance>1.500.000.000,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>1</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114552249</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO RDL</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>0,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>1811</accType>
+                  <subCat>6401</subCat>
+                  <effectiveBalance>0,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114584781</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO RDL</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>1.500.000.000,00</balance>
+                  <intRate>2.5000</intRate>
+                  <matDate/>
+                  <accType>1811</accType>
+                  <subCat>6401</subCat>
+                  <effectiveBalance>1.500.000.000,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>1</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114588753</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO RDF IDR</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>0,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>1811</accType>
+                  <subCat>6501</subCat>
+                  <effectiveBalance>0,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114568963</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO RDL</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>750.000,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>1811</accType>
+                  <subCat>6401</subCat>
+                  <effectiveBalance>750.000,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114584805</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO RDL</productName>
+                  <currency>USD</currency>
+                  <ownership></ownership>
+                  <balance>15,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>1811</accType>
+                  <subCat>6402</subCat>
+                  <effectiveBalance>15,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>1</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114584838</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO RDL</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>15,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>1811</accType>
+                  <subCat>6401</subCat>
+                  <effectiveBalance>15,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>1</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114588775</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO DANA BNTN PEM TDHIT BUNGA</productName>
                   <currency>IDR</currency>
                   <ownership></ownership>
                   <balance>10.000.000,00</balance>
-                  <intRate>1.0000</intRate>
+                  <intRate>0.0000</intRate>
                   <matDate/>
-                  <accType>1410</accType>
-                  <subCat>5001</subCat>
+                  <accType>1811</accType>
+                  <subCat>1001</subCat>
                   <effectiveBalance>10.000.000,00</effectiveBalance>
                   <branchCode>0259</branchCode>
                   <flagIbank>0</flagIbank>
                </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000116942395</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO OVERDRAFT BERKARTU</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>40.477.126.359,00</balance>
+                  <intRate>3.0000</intRate>
+                  <matDate/>
+                  <accType>1413</accType>
+                  <subCat>5001</subCat>
+                  <effectiveBalance>40.477.026.359,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114488578</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO ESCR TDK HIT B PERUSAHAAN</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>0,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>1311</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>0,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114554213</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO TDK HIT BUNGA BANK IDR</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>810.000,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>1050</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>810.000,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114725463</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO TDK HIT BBB PEMERINTAH</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>11.900.693.064,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>1012</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>11.900.693.064,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114495642</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO TDK HIT BBB PEMERINTAH</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>900.000,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>1012</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>900.000,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114744191</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO TDK HIT BBB PEMERINTAH</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>10.000.000,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>1012</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>10.000.000,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114797948</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO HIT BUNGA BB PEMERINTAH</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>151.729.980,00</balance>
+                  <intRate>1.5000</intRate>
+                  <matDate/>
+                  <accType>1012</accType>
+                  <subCat>5001</subCat>
+                  <effectiveBalance>151.729.980,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114554202</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO TDK HIT BBB PEMERINTAH</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>640.000,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>1012</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>640.000,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114725452</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO TDK HIT BBB PEMERINTAH</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>9.449.131.105,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>1012</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>9.449.131.105,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114552238</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO TDK HIT BBB PERUSAHAAN</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>530.004,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>1011</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>530.004,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114552136</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO HIT BUNGA BB PERUSAHAAN</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>500.000.000,00</balance>
+                  <intRate>2.5000</intRate>
+                  <matDate/>
+                  <accType>1011</accType>
+                  <subCat>5001</subCat>
+                  <effectiveBalance>500.000.000,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114552125</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO HIT BUNGA BB PERUSAHAAN</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>500.650.000,00</balance>
+                  <intRate>2.5000</intRate>
+                  <matDate/>
+                  <accType>1011</accType>
+                  <subCat>5001</subCat>
+                  <effectiveBalance>500.650.000,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114446821</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO TDK HIT BBB PERUSAHAAN</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>93.813.217,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>1011</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>93.813.217,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114552114</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO HIT BUNGA BB PERUSAHAAN</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>500.000.000,00</balance>
+                  <intRate>2.5000</intRate>
+                  <matDate/>
+                  <accType>1011</accType>
+                  <subCat>5001</subCat>
+                  <effectiveBalance>500.000.000,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000116943900</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO TDK HIT BBB PERUSAHAAN</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>47.514.735,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>1011</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>47.514.735,00</effectiveBalance>
+                  <branchCode>0718</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114554177</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO TDK HIT BBB PERUSAHAAN</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>2.770.000,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>1011</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>2.770.000,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114551381</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO HIT BUNGA BB PERUSAHAAN</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>0,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>1011</accType>
+                  <subCat>5001</subCat>
+                  <effectiveBalance>0,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000136686039</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO TDK HIT BBB PERUSAHAAN</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>11.221.884,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>1011</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>11.221.884,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114506789</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO TDK HIT BBB PERUSAHAAN</productName>
+                  <currency>USD</currency>
+                  <ownership></ownership>
+                  <balance>131,42</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>1011</accType>
+                  <subCat>0002</subCat>
+                  <effectiveBalance>131,42</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000001366860394</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO TDK HIT BBB PERUSAHAAN</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>0,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>1011</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>0,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114506440</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO TDK HIT BBB PERORANGAN</productName>
+                  <currency>IDR</currency>
+                  <ownership></ownership>
+                  <balance>576.999,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>1010</accType>
+                  <subCat>0001</subCat>
+                  <effectiveBalance>-525.001,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
+               <openDepositAccountInfo>
+                  <accountNum>00000000114588606</accountNum>
+                  <accountStatus>BUKA</accountStatus>
+                  <accountTypeCode></accountTypeCode>
+                  <productName>GIRO PENAMPUNGAN INTERNAL</productName>
+                  <currency>USD</currency>
+                  <ownership></ownership>
+                  <balance>0,00</balance>
+                  <intRate>0.0000</intRate>
+                  <matDate/>
+                  <accType>1009</accType>
+                  <subCat>0002</subCat>
+                  <effectiveBalance>0,00</effectiveBalance>
+                  <branchCode>0259</branchCode>
+                  <flagIbank>0</flagIbank>
+               </openDepositAccountInfo>
                <curr1>IDR</curr1>
-               <totBalance>6.900.709.146,00</totBalance>
+               <totBalance>1402750812255</totBalance>
             </content>
          </response>
       </core:transactionResponse>
    </soapenv:Body>
 </soapenv:Envelope>
+```
+
+Bancs Format
+```
+[ 0101                    **            003099600100001060583000000     0  I  0 000000  0000000915490205403]
+
+[ 0273    0189            0000    000000003099600100001060586298695000040320400 000000  0300000009154902054Sdri ATIKA ATIKA SUSILO                        S.SI                                                                     373839397373893637390000000568  0000000568          00000000114570993BUKA DEPOSITO KAPITALISASI 3 IDR   IDR                   0,00    5.75003108201032010002              0,00  0259000000000114588617BUKA DEPOSITO  BLN 12 USD          USD                   0,00    0.25003105201130020005              0,00  0259000000000114582773BUKA DEPOSITO  BLN 12 IDR          IDR                   0,00    6.00003105201130010005              0,00  0259000000000114739408BUKA DEPOSITO BLN 3 IDR            IDR         100.000.000,00    5.75003108201030010002    100.000.000,00  0259000000000114571090BUKA DEPOSITO  BLN 12 IDR          IDR          98.000.000,00    6.00003105201130010005     98.000.000,00  0259000000000114738176BUKA DEPOSITO BLN 3 IDR            IDR                   0,00    5.75003108201030010002              0,00  0259000000001000006436BUKA BNI TAPENAS                   IDR                   0,00    4.50000506201128000001              0,00  0063000000001000006470BUKA BNI TAPENAS                   IDR                   0,00    4.50000506201128000001              0,00  0063000000000114488170BUKA TABUNGANKU LAKU PANDAI        IDR                   0,00    0.15009999999927020001              0,00  0259100000000114488169BUKA TABUNGANKU LAKU PANDAI        IDR                   0,00    0.15009999999927020001              0,00  0259100000000114486864BUKA TABUNGANKU LAKU PANDAI        IDR                   0,00    0.15009999999927020001              0,00  0259000000000114486820BUKA TABUNGANKU LAKU PANDAI        IDR             123.450,00    0.15009999999927020001        123.450,00  0259100000000114488307BUKA TABUNGANKU LAKU PANDAI        IDR                   0,00    0.15009999999927020001              0,00  0259100000000114488181BUKA TABUNGANKU LAKU PANDAI        IDR                   0,00    0.15009999999927020001              0,00  0259100000000114469622BUKA TAB BNI DOLLAR PERORANGAN USD USD          99.375.115,29    0.50009999999920040002     99.375.115,29  0243000000000114468856BUKA BNI TAPLUS                    IDR         128.406.500,00    2.50009999999920000001    128.406.500,00  0259000000000114496577BUKA BNI TAPLUS                    IDR         599.900.000,00    2.75009999999920000001    599.900.000,00  0259100000000114539817BUKA BNI TAPLUS                    IDR                   0,00    0.00009999999920000001              0,00  0259000000000114571374BUKA BNI TAPLUS                    IDR           1.100.000,00    1.75009999999920000001      1.100.000,00  0259000000000114736554BUKA BNI TAPLUS                    IDR          12.699.999,00    2.00009999999920000001      1.700.000,00  0259000000000116938015BUKA BNI TAPLUS                    IDR         100.493.039,23    2.50009999999920000001    100.453.039,23  0259000000000114496588BUKA BNI TAPLUS                    IDR          11.408.500,00    2.00009999999920000001     10.708.500,00  0259100000000114551347BUKA BNI TAPLUS                    IDR         598.889.990,55    2.75009999999920000001    598.889.990,55  0259000000000114584689DORM BNI TAPLUS                    IDR           9.908.000,00    1.75009999999920000001      9.908.000,00  0996100000000114733756BUKA BNI TAPLUS PRA KERJA          IDR                   0,00    0.00009999999920008001              0,00  0259000000000114737751BUKA BNI TAPLUS                    IDR           1.099.999,00    1.75009999999920000001        100.000,00  0259100000000114798045BUKA BNI TAPLUS                    IDR                   0,00    0.00009999999920000001              0,00  0259000000000114486365BUKA BNI TAPLUS                    IDR         996.344.000,00    2.75009999999920000001    996.344.000,00  0259000000000114488589BUKA BNI TAPLUS TAX AMNESTY        IDR                   0,00    0.00009999999920001001              0,00  0259000000000114496656BUKA BNI TAPLUS                    IDR             100.000,00    0.00009999999920000001        100.000,00  0259100000000114584758BUKA BNI TAPLUS                    IDR       1.500.658.000,00    3.00009999999920000001  1.500.298.000,00  0259100000000114733938BUKA BNI TAPLUS                    IDR             150.000,00    0.00009999999920000001        150.000,00  0234100000000114737831BUKA BNI TAPLUS                    IDR           1.099.999,00    1.75009999999920000001        100.000,00  0259100000000113165400BUKA BNI TAPLUS                    IDR              38.702,00    0.00009999999920000001         38.702,00  0265000000000114496838BUKA BNI TAPLUS                    IDR         596.866.800,00    2.75009999999920000001    596.866.800,00  0259100000000114510479BUKA BNI TAPLUS                    IDR           7.747.105,00    1.75009999999920000001      7.747.105,00  0259000000000114577150BUKA BNI TAPLUS                    IDR             150.000,00    0.00009999999920000001        150.000,00  0259100000000114496883BUKA BNI TAPLUS                    IDR                   0,00    0.00009999999920000001              0,00  0259100000000114510480BUKA BNI TAPLUS                    IDR          50.091.500,00    2.25009999999920000001     50.091.500,00  0259000000000114577387BUKA BNI TAPLUS                    IDR             150.000,00    0.00009999999920000001        150.000,00  0259100000000812345670BUKA BNI TAPLUS                    IDR          30.886.252,00    2.00009999999920000001     30.886.252,00  0259000000000114496442BUKA BNI TAPLUS                    IDR         501.999.000,00    2.75009999999920000001    501.999.000,00  0259100000000114496894BUKA BNI TAPLUS                    IDR             246.999,00    0.00009999999920000001         44.999,00  0259100000000114577489BUKA BNI TAPLUS                    IDR                   0,00    0.00009999999920000001              0,00  0996100000000114496453BUKA BNI TAPLUS                    IDR                   0,00    0.00009999999920000001              0,00  0259100000000114496929BUKA BNI TAPLUS                    IDR              50.000,00    0.00009999999920000001         50.000,00  0259100000000114496464BUKA BNI TAPLUS                    IDR                   0,00    0.00009999999920000001              0,00  0259100000000114536317BUKA BNI TAPLUS                    IDR           9.217.500,00    1.75009999999920000001      9.217.500,00  0259000000000114792598BUKA BNI TAPLUS                    IDR                   0,00    0.00009999999920000001              0,00  0259000000000114601287BUKA GIRO TANPA SO MIN TRX DB TERBTIDR                   0,00    0.00009999999918116101              0,00  0259000000000114495653BUKA GIRO TANPA SO MIN TRX DB TERBTIDR                   0,00    0.00009999999918116101              0,00  0259000000000114588594BUKA GIRO RDL                      USD                   0,00    0.00009999999918116402              0,00  0259000000000114584769BUKA GIRO RDL                      IDR       1.500.000.000,00    2.50009999999918116401  1.500.000.000,00  0259100000000114552249BUKA GIRO RDL                      IDR                   0,00    0.00009999999918116401              0,00  0259000000000114584781BUKA GIRO RDL                      IDR       1.500.000.000,00    2.50009999999918116401  1.500.000.000,00  0259100000000114588753BUKA GIRO RDF IDR                  IDR                   0,00    0.00009999999918116501              0,00  0259000000000114568963BUKA GIRO RDL                      IDR             750.000,00    0.00009999999918116401        750.000,00  0259000000000114584805BUKA GIRO RDL                      USD                  15,00    0.00009999999918116402             15,00  0259100000000114584838BUKA GIRO RDL                      IDR                  15,00    0.00009999999918116401             15,00  0259100000000114588775BUKA GIRO DANA BNTN PEM TDHIT BUNGAIDR          10.000.000,00    0.00009999999918111001     10.000.000,00  0259000000000116942395BUKA GIRO OVERDRAFT BERKARTU       IDR      40.477.126.359,00    3.00009999999914135001 40.477.026.359,00  0259000000000114488578BUKA GIRO ESCR TDK HIT B PERUSAHAANIDR                   0,00    0.00009999999913110001              0,00  0259000000000114554213BUKA GIRO TDK HIT BUNGA BANK IDR   IDR             810.000,00    0.00009999999910500001        810.000,00  0259000000000114725463BUKA GIRO TDK HIT BBB PEMERINTAH   IDR      11.900.693.064,00    0.00009999999910120001 11.900.693.064,00  0259000000000114495642BUKA GIRO TDK HIT BBB PEMERINTAH   IDR             900.000,00    0.00009999999910120001        900.000,00  0259000000000114744191BUKA GIRO TDK HIT BBB PEMERINTAH   IDR          10.000.000,00    0.00009999999910120001     10.000.000,00  0259000000000114797948BUKA GIRO HIT BUNGA BB PEMERINTAH  IDR         151.729.980,00    1.50009999999910125001    151.729.980,00  0259000000000114554202BUKA GIRO TDK HIT BBB PEMERINTAH   IDR             640.000,00    0.00009999999910120001        640.000,00  0259000000000114725452BUKA GIRO TDK HIT BBB PEMERINTAH   IDR       9.449.131.105,00    0.00009999999910120001  9.449.131.105,00  0259000000000114552238BUKA GIRO TDK HIT BBB PERUSAHAAN   IDR             530.004,00    0.00009999999910110001        530.004,00  0259000000000114552136BUKA GIRO HIT BUNGA BB PERUSAHAAN  IDR         500.000.000,00    2.50009999999910115001    500.000.000,00  0259000000000114552125BUKA GIRO HIT BUNGA BB PERUSAHAAN  IDR         500.650.000,00    2.50009999999910115001    500.650.000,00  0259000000000114446821BUKA GIRO TDK HIT BBB PERUSAHAAN   IDR          93.813.217,00    0.00009999999910110001     93.813.217,00  0259000000000114552114BUKA GIRO HIT BUNGA BB PERUSAHAAN  IDR         500.000.000,00    2.50009999999910115001    500.000.000,00  0259000000000116943900BUKA GIRO TDK HIT BBB PERUSAHAAN   IDR          47.514.735,00    0.00009999999910110001     47.514.735,00  0718000000000114554177BUKA GIRO TDK HIT BBB PERUSAHAAN   IDR           2.770.000,00    0.00009999999910110001      2.770.000,00  0259000000000114551381BUKA GIRO HIT BUNGA BB PERUSAHAAN  IDR                   0,00    0.00009999999910115001              0,00  0259000000000136686039BUKA GIRO TDK HIT BBB PERUSAHAAN   IDR          11.221.884,00    0.00009999999910110001     11.221.884,00  0259000000000114506789BUKA GIRO TDK HIT BBB PERUSAHAAN   USD                 131,42    0.00009999999910110002            131,42  0259000000001366860394BUKA GIRO TDK HIT BBB PERUSAHAAN   IDR                   0,00    0.00009999999910110001              0,00  0259000000000114506440BUKA GIRO TDK HIT BBB PERORANGAN   IDR             576.999,00    0.00009999999910100001        525.001,00- 0259000000000114588606BUKA GIRO PENAMPUNGAN INTERNAL     USD                   0,00    0.00009999999910090002              0,00  02590IDR     1402750812255]
 ```

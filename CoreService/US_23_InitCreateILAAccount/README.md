@@ -117,3 +117,10 @@ Sample SOAP Response
    </soapenv:Body>
 </soapenv:Envelope>
 ```
+
+Bancs Format
+```
+[ 0131                    **            003099600100001062000000000     0  I  0 000000  00000009100132052                        0000ILA ]
+
+[ 0709    0625            0000    000000003099600100001002085238684000040320600 000000  03                 00000009100132052                        0000Bpk BAMBANG                                                 JLN. SETIABUDI V NO 17 GG 2             01 05                                   NSETIABUDI                               ID Setia Budi                              12910                                                                                                                                                                                                              08                                                                                                                              ]
+```

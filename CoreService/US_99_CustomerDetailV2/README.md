@@ -83,3 +83,10 @@ Sample SOAP Response
    </soapenv:Body>
 </soapenv:Envelope>
 ```
+
+Bancs Format
+```
+[ 0099                    **            003099299901001069490000000     0  I  0 000000  00000000116910930]
+
+[ 1067    0983            0000    000000003099299901001069491298681000040320400 000000  03A101STEVEN RAMA SI RAMAI RAMAI                                          03IDRJAKARTA                       27051985JALAN PANJANG HARI BARU                                                         Jati                Sumbawa             84311   JALAN PANJANG HARI BARU                                                         Jati                Sumbawa             84311                           085233333333            00                                           NOT FOUND       ID0001JAKARTA                       3171055702880001    0       31102025 Nur                                     S0000001wwqeqwe                                                     wewqedsad                     asdasd                                0       03BELA             M000000000000000            00000000116910930BNI TAPLUS                  00000000000000000000000R1200000000755000000   000000000000000000                                                             0000000910020870520000001    085233333333                           ]
+```

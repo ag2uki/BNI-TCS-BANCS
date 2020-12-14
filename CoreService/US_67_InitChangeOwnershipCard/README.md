@@ -51,3 +51,10 @@ Sample SOAP Response
    </soapenv:Body>
 </soapenv:Envelope>
 ```
+
+Bancs Format
+```
+[ 0101                    **            003025945224113037206000000     0     0 000000  0005264230630052564]
+
+[ 0521    0437            0000    000201003025920124113037207565405000040320600 000000  035264230630052564    Kartu Taplus Muda - Generik   555555555                     KARTU INSTANT                                                                                                                                                                                                                                                       KARTU INSTANT                                               09012019  31122023                   ]
+```

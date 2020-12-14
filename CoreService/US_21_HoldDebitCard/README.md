@@ -47,3 +47,10 @@ Sample SOAP Response
    </soapenv:Body>
 </soapenv:Envelope>
 ```
+
+Bancs Format
+```
+[ 0532                    **            003099600100001037273000000     0  I  0 000000  00005264222330108796BNI CARD SILVER               00000009021096442             RI HANDAYANI JER BASUKI MOWO B          Active              Normal                        ADD1                                    . 2                                     ADD3                                    2 X 11 Enam Lingkung                    25584     DEWI NOVITASARI                                             25072011  31032014  Restricted                    ]
+
+[ 1067    0983            0000    000000003099600100001037273463368000040320600 000000  71     O.K.                                                    00  04    003099600100001037273463368    0**         N00 0                Y  I0 000005264222330108796BNI CARD SILVER               00000009021096442             RI HANDAYANI JER BASUKI MOWO B          Active              Normal                        ADD1                                    . 2                                     ADD3                                    2 X 11 Enam Lingkung                    25584     DEWI NOVITASARI                                             25072011  31032014  Restricted                                        31052010  Normal                              000010996                                                                                                                                                                                                                                                                                                                            ]
+```

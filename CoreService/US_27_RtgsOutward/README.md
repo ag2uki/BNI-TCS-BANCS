@@ -52,3 +52,10 @@ Sample SOAP Response
    </soapenv:Body>
 </soapenv:Envelope>
 ```
+
+Bancs Format
+```
+[ 1010                    **            003076600100777055675000000     0  I  0 000000  0000000011447972100000000000000000+00000125030000000+ 00000000                                                       5589456793678497684736487384763893IDR00000125000000000+IDR00000125000000000+00000000000000000+00000000000000000+02rtgs via soa pesan 1                              rtgs via soa pesan 2                    rtgs via soa pesan 3                              Ibu Ella                                                                        Jalan sukacita                          Jakarta                                 987654321           321654  EL12232323233           0tes                          Ibu Elli                                                                        pengirim 2                                                  00                                                                 CENAIDJA                     076000000000030000000+1                                                        ]
+
+[ 0162    0078            0000    000000003076600100777055675233961000040320200 000000  080000 O.K.                                                                     ]
+```

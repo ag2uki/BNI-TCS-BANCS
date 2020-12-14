@@ -107,3 +107,10 @@ Sample SOAP Response
    </soapenv:Body>
 </soapenv:Envelope>
 ```
+
+Bancs Format
+```
+[ 0131                    **            003099600100001062000000000     0  I  0 000000  00000000114479721                        0000DEP ]
+
+[ 0702    0618            0000    000000003099600100001002000396512000040320600 000000  03                 000000091007519133271061512600001        0001Bpk FAJAR NURCAHYO                                          JALAN EBONY NO. 99                      9999KOMPLEK BUDIMAN SENTOSA             YTanah Sareal                            ID Tanah Sereal       /Bogor               16161                                                                                                                                                                                                              17                      ]
+```

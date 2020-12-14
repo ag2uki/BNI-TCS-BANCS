@@ -49,3 +49,17 @@ Sample SOAP Response
    </soapenv:Body>
 </soapenv:Envelope>
 ```
+
+```
+[ 0579                    **
+       003099600100001037621000000     0  I  0 000000  00005269210600000038BNI Debit Galeri Lafayette    Test-2 BNI 6                  Test-2 BNI 6
+                         00000009284943401   ARILLULSYAH IBRAHIM FAJAR 12 34         BEKASI
+               bekasi                                  Abang
+                    80852     00000001  00000000315613669   00000000
+               00000000
+          00000000315613669]
+
+
+[ 0162    0078            0000    000000003099600100001037621149887000040320200 000000  080000 O.K.
+                                                          ]
+```
