@@ -1,0 +1,1425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CoreServiceRouting>
+	<!--Each Routing_Record element signifies a transaction type. New transactions are expected to have their own entry-->
+	<!--
+		systemId indicates the allowed systemID codes that are permitted to perform the transaction. If all systemId's are permitted to perform a transaction then insert an asterisk
+		systemCode indicates the ICON Specific system code for a transaction
+		specialHandling set to Y indicates that only pre-processing and routing to be performed by DataPower with no SOAP2Stream transformation;
+		specialHandling set to N indicates that the SOAP2Stream conversion is also to be done on DataPower
+		Routing_URL is the DataPower specific routing URL used to send a request to the backend
+	-->
+	
+	<Routing_Record TransactionType="AccountDetails">
+		<systemId>BNIDIRECT</systemId>
+		<systemId>IBANK</systemId>
+		<systemId>SMS</systemId>
+		<systemId>KSEI</systemId>
+		<systemId>SERVICE_MAPPER</systemId>
+		<systemId>IREM</systemId>
+		<systemId>IBOC</systemId>
+		<systemId>NEWIBANK</systemId>
+		<systemId>BCC_BCO</systemId>
+		<systemId>SMART-REMITTANCE</systemId>
+		<systemId>INTERBANK</systemId>
+		<systemId>H2HSERVICE</systemId>
+		<systemId>GLOBS</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemId>ORM</systemId>
+		<systemId>RAISECALL</systemId>	<!-- syaiful : CR21806-->
+		<systemId>GOWEALTH</systemId>
+		<systemId>API</systemId>	<!-- ryan : CR23774 -->
+		<systemCode>069440</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="AccountShortDetails">
+		<systemId>ANTIATTRITION</systemId>
+		<systemId>AUTO-SPAN</systemId>
+		<systemId>BCC_BCO</systemId>
+		<systemId>RAISECALL</systemId>	<!-- syaiful : CR21806-->
+		<systemId>DPLK</systemId>
+		<systemId>BNIDIRECT</systemId>
+		<systemId>SMS</systemId>
+		<systemId>SISKOHAT</systemId>
+		<systemId>NEWIBANK-CORE</systemId><!--CR15311-->
+		<systemId>PERSEKOT</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemId>AGENT</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemId>GLOBS</systemId>
+		<systemId>TAXINF</systemId>
+		<systemId>NEWTASPEN</systemId>
+		<systemCode>069400</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="AccountShortInquiry">
+		<systemId>AUTO-SPAN</systemId>
+		<systemId>BNIDIRECT</systemId>
+		<systemId>IBANK</systemId>
+		<systemId>SMS</systemId>
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemId>ETRADE</systemId>
+		<systemId>ECHANNEL</systemId>
+		<systemId>BCC_BCO</systemId>
+		<systemId>MOBILE</systemId>
+		<systemId>KSEI_AKSES</systemId>
+		<systemId>IREM</systemId><!--CR19952-->
+		<systemId>OASE</systemId>
+		<systemId>AGENT</systemId>		<!-- femi : add for alcomindo-->
+		<systemId>AGENT-CORE</systemId>		<!-- ayu : CR26024-->
+		<systemId>KIOSK</systemId>		<!--Tinor : LEN -->
+		<systemId>NEWMOBILE-CORE</systemId> 
+		<systemId>AGREGATOR</systemId>
+		<systemId>MHP</systemId><!-- femi : add for GOPAY-->
+		<systemId>OPBG</systemId>
+		<systemId>ORM</systemId>
+		<systemId>IREM</systemId>
+		<systemId>RAISECALL</systemId>	<!-- syaiful : CR21806-->
+		<systemId>EXT-AXWAY</systemId>
+		<systemId>EXT-IBM</systemId>
+		<systemId>EXT-REDHAT</systemId>
+		<systemId>AUTOPAY-ADM</systemId>
+		<systemId>SERVICE_MAPPER</systemId><!--rana: add for update sb_servicemapper-->
+		<systemId>NEWMOBILE</systemId>
+		<systemId>ATM</systemId>	<!--ryan: add for lpg3kg-->
+		<systemId>H2HSERVICE</systemId>	<!-- wildan: pln dashboard -->
+		<systemId>API</systemId>	<!-- ryan : CR23774 -->
+		<systemId>FSCM</systemId>
+		<systemId>KSEI</systemId>	<!-- gede : CR21501 -->
+		<systemId>OPBK</systemId>	<!-- akmal : CR25016 -->
+		<systemId>ECMS</systemId>	<!--hans: CR25106-->
+		<systemId>SPRINT</systemId>	<!--Asrul: Sprint kemenkeu-->
+		<systemId>PERSEKOT</systemId>
+		<systemId>DIGISALES</systemId>
+		<systemCode>069400</systemCode>
+		<specialHandling>Y</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ACCOUNTSHORTINQUIRY.REQ;ReplyQueue=QA.CORE.ACCOUNTSHORTINQUIRY.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="ActivationCard">
+		<systemId>KIOSK</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemId>EFORM</systemId>
+		<systemId>VCN</systemId> 
+		<systemCode>037241</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="AtmBillPayment">
+		<systemId>SOA</systemId>
+		<systemId>ATM</systemId>
+		<systemId>SPCH2H</systemId>
+		<systemId>MHP</systemId>
+		<systemId>SABH</systemId>
+		<systemCode>004050</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="AtmBillPaymentReversal">
+		<systemId>SOA</systemId>
+		<systemId>ATM</systemId>
+		<systemId>SPCH2H</systemId>
+		<systemId>MHP</systemId>
+		<systemId>SABH</systemId>
+		<systemCode>004150</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="AtmCardlessDepositTransfer">
+		<systemId>ATM</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemId>SY_ATM</systemId>
+		<systemCode>004010</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="AtmInquiry">
+		<systemId>SOA</systemId>
+		<systemCode>022020</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="BalanceInfo">
+		<systemId>BNIDIRECT</systemId>
+		<systemId>SOA</systemId>
+		<systemId>SMS</systemId>
+		<systemId>IBANK</systemId>
+		<systemId>CMS</systemId>
+		<systemId>KSEI</systemId>
+		<systemId>BCC_IVR</systemId>
+		<systemId>H2HSERVICE</systemId>
+		<systemId>AUTO-SPAN</systemId>
+		<systemId>IBOC</systemId>
+		<systemId>DPLK</systemId>
+		<systemId>MHP</systemId>
+		<systemId>TIPLUS</systemId>
+		<systemId>GLOBS</systemId>
+		<systemId>PERSEKOT</systemId> <!-- wildan : persekot -->
+		<systemId>SYARIAH</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemId>GOWEALTH</systemId>
+		<systemId>API</systemId>	<!-- ryan : CR23774 -->
+		<systemCode>069440</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="BillingPayment">
+		<systemId>MHP</systemId>
+		<systemId>SOA</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemCode>095045</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="BillingPaymentReversal">
+		<systemId>MHP</systemId>
+		<systemId>SOA</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemCode>095046</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="BillingPaymentBigAmount">
+		<systemId>MHP</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemCode>095050</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="BillingPaymentBigAmountReversal">
+		<systemId>MHP</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemCode>095051</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="BillPayment">
+		<systemId>SOA</systemId>
+		<systemId>ATM</systemId>
+		<systemId>SPCH2H</systemId>
+		<systemId>MHP</systemId>
+		<systemId>SABH</systemId>
+		<systemCode>095043</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="BillPaymentReversal">
+		<systemId>SOA</systemId>
+		<systemId>ATM</systemId>
+		<systemId>SPCH2H</systemId>
+		<systemId>MHP</systemId>
+		<systemId>SABH</systemId>
+		<systemCode>095044</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+		<Routing_Record TransactionType="BreakDepositAccount">
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemCode>003045</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="CashDepositIDR">
+		<systemId>SYARIAH</systemId>
+		<systemId>TELLER</systemId>
+		<systemCode>001010</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="CashWithdrawal">
+		<systemId>ASABRI</systemId>
+		<systemId>BULOG_FANY</systemId>
+		<systemId>BULOG</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemId>CARDLESSCASHVA</systemId> <!-- CR24367 -->
+		<systemCode>001060</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="ChangeOwnershipCard">
+		<systemId>KIOSK</systemId>		
+		<systemId>VCN</systemId> <!-- CR24485 -->
+		<systemId>SYARIAH</systemId>
+		<systemId>EFORM</systemId>
+		<systemCode>037207</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="CheckDigit">
+		<systemId>_DISABLED_</systemId>
+		<systemCode>009022</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<!--CR 21096 Start-->
+	<Routing_Record TransactionType="CifAdditionalDetailsInq">
+		<systemId>NEWMOBILE</systemId>
+		<systemCode>060408</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	<Routing_Record TransactionType="CifAdditionalDetailsFlag">
+		<systemId>NEWMOBILE</systemId>
+		<systemCode>060409</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	<!--CR 21096 End-->
+	
+	<Routing_Record TransactionType="CifDetails">
+		<systemId>BNIDIRECT</systemId>
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>NEWIBANK</systemId>
+		<systemId>BCC_BCO</systemId>
+		<systemId>MOBILE</systemId>
+		<systemId>SMS</systemId>
+		<systemId>IREM</systemId>
+		<systemId>ELO</systemId>
+		<systemId>NEWMOBILE-CORE</systemId>
+		<!--Tinor:laku pandai-->
+		<systemId>AGREGATOR</systemId>
+		<systemId>PHONEBANKING</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemId>ORM</systemId>
+		<systemId>RAISECALL</systemId>	<!-- syaiful : CR21806-->
+		<systemId>SYARIAH</systemId>
+		<systemId>ATM</systemId>	<!--ryan : add for lpg3kg-->
+		<systemId>GOWEALTH</systemId>
+		<systemId>KSEI</systemId> <!--kiss : untuk KSEI -->
+		<systemId>API</systemId>	<!--ryan : untuk RDL-->
+		<systemId>GLOBS</systemId>
+		<systemId>AGENT</systemId> <!-- firda: CR25890-->
+		<systemId>AGENT-CORE</systemId> <!-- ayu: CR26024-->
+		<systemId>SERVICE_MAPPER</systemId> <!-- ghina: CR25455-->
+		<systemId>DIGISALES</systemId>
+		<systemCode>067050</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+
+	<!-- hilmi: CR27695-->
+	<Routing_Record TransactionType="CifPersonalDetails">
+		<systemId>API</systemId>
+		<systemCode>067050</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="CreateCIDVirtualAccount">
+		<systemId>API</systemId>	<!-- ryan : CR24510 -->
+		<systemCode>31991</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.VA.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="CreateCIF">
+		<!--laku pandai-->
+		<systemId>IREM</systemId>
+		<systemId>EDC_MINIATM</systemId>		<!--femi : edc_miniatm-->
+		<systemId>AGENT</systemId>		<!--femi : alcomindo lakupandai-->
+		<systemId>KIOSK</systemId>		<!--Tinor : LEN -->
+		<systemId>EDC_ANDROID</systemId> <!--Femi : EDC ANDROID -->
+		<systemId>SYARIAH</systemId>
+		<systemId>KSEI</systemId> <!--kiss : untuk KSEI -->
+		<systemId>API</systemId>	<!--ryan : untuk RDL-->
+		<systemId>EFORM</systemId>
+		<systemId>DIGISALES</systemId>
+		<systemCode>063001</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="CreateDepositAccount">
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>IREM</systemId>		<!--Tinor:laku pandai-->
+		<systemId>EDC_MINIATM</systemId>		<!--femi : edc_miniatm-->
+		<systemId>AGENT</systemId>		<!--femi : alcomindo lakupandai-->
+		<systemId>KIOSK</systemId>		<!--Tinor : LEN -->
+		<systemId>KIOSK-A</systemId>	<!--Wildan : LEN -->		
+		<systemId>EDC_ANDROID</systemId><!--Femi : EDC ANDROID -->
+		<systemId>NEWMOBILE</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemId>KSEI</systemId> <!--kiss : untuk KSEI -->
+		<systemId>API</systemId>	<!--ryan : untuk RDL-->
+		<systemId>EFORM</systemId>
+		<systemId>DIGISALES</systemId>
+		<systemCode>002000</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<!--Routing_Record TransactionType="CreateNotionalPooling">
+		<systemId>BNIDIRECT</systemId>
+		<systemCode>060425</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record-->
+	
+	<Routing_Record TransactionType="CreateUpdateSMSNotification">
+		<systemId>SERVICE_MAPPER</systemId>
+		<systemId>SMS</systemId>
+		<systemId>NEWIBANK</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemId>KSEI</systemId> <!--kiss : untuk KSEI -->
+		<systemCode>031931</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<!-- CR23973 Update Nomor Handphone (CreateUser) -->
+	<Routing_Record TransactionType="CreateUserDefinedCode">
+		<systemId>AGREGATOR</systemId>
+		<systemId>ATM</systemId>
+		<systemCode>067044</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000
+		</Routing_URL>
+	</Routing_Record>
+	<!-- end of CR23973 Update Nomor Handphone (CreateUser) -->
+	
+	<Routing_Record TransactionType="CreateTopUpAccount">
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemId>DIGISALES</systemId>
+		<systemCode>002085</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="CreateVARetail">
+		<systemId>API</systemId>	<!-- ryan : CR24510 -->
+		<systemCode>31993</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.VA.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="CreateVirtualAccount">
+		<systemId>SMS</systemId>
+		<systemId>EWALLET</systemId>
+		<systemId>H2HSERVICE</systemId>
+		<systemId>BNIDIRECT</systemId>
+		<systemId>DOCOTEL</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemId>API</systemId>	<!-- ryan : CR23774 -->
+		<systemCode>31993</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.VA.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="CustomerDetail">
+		<systemId>PHONEBANKING</systemId>
+		<systemId>DPLK</systemId>
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>NEWIBANK</systemId>
+		<systemId>EWALLET</systemId>
+		<systemId>MOBILE</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemId>BCC_IVR</systemId> <!--Gilang:Virtual Assistant -->
+		<systemId>AGREGATOR</systemId>
+		<systemId>ELO</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemId>PUSHPAYMENT</systemId>
+		<systemId>FSCM</systemId>	<!-- Syaiful: FSCM-->
+		<systemId>KSEI</systemId> <!--kiss : untuk KSEI -->
+		<systemId>SERVICE_MAPPER</systemId> <!-- hilmi: CR23036 RDF -->
+		<systemId>API</systemId> <!-- ryan: CR25279 OpenBanking -->
+		<systemId>GOWEALTH</systemId> <!-- CR26109 Gowealth Fase 2 -->
+		<systemCode>069490</systemCode>
+		<specialHandling>Y</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.CUSTOMERDETAILS.REQ;ReplyQueue=QA.CORE.HANDLER.CUSTOMERDETAILS.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="CustomerDetailV2">
+		<systemId>SYARIAH</systemId>
+		<systemCode>069490</systemCode>
+		<specialHandling>Y</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.CUSTOMERDETAILSV2.REQ;ReplyQueue=QA.CORE.HANDLER.CUSTOMERDETAILSV2.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="CustomerSearch">
+		<systemId>_DISABLED_</systemId>
+		<systemCode>060480</systemCode>
+		<specialHandling>Y</specialHandling>
+		<responseLength>129</responseLength>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.LIST.REQ;ReplyQueue=QA.CORE.HANDLER.LIST.RES;ParseHeaders=true;TimeOut=150000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="CustomerSearchById">
+		<systemId>KSEI</systemId>
+		<systemId>KIOSK</systemId>		<!--tinor: LEN -->
+		<systemId>EDC_ANDROID</systemId> <!--Femi : EDC ANDROID -->
+		<systemId>SYARIAH</systemId> <!-- Dina : hasanah syariah -->
+		<systemId>EFORM</systemId>
+		<systemId>API</systemId>
+		<systemId>DIGISALES</systemId>
+		<systemCode>060465</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="DebitCardDetails">
+		<systemId>BCC_IVR</systemId>
+		<systemId>ECHANNEL</systemId>
+		<systemId>PHONEBANKING</systemId>
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>BCC_BCO</systemId>
+		<systemId>EDC_MINIATM</systemId>
+		<systemId>SYARIAH</systemId>
+		<!--femi : edc_miniatm-->
+		<systemId>AGENT</systemId><!--dina : agent-->
+		<systemId>ORM</systemId>
+		<systemId>RAISECALL</systemId>	<!-- syaiful : CR21806-->
+		<systemId>NEWMOBILE</systemId>
+		<systemId>NEWIBANK</systemId>
+		<systemId>KIOSK</systemId> <!-- dinahamidah : CR24697-->
+		<systemId>API</systemId> <!--directdebit-->
+		<systemId>DIGISALES</systemId>
+		<systemId>PERSEKOT</systemId> <!-- dinahamidah : CR27990-->
+		<systemCode>037440</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+		
+	<Routing_Record TransactionType="DeLinkCardAccount">
+		<systemId>KIOSK</systemId> <!-- CR24697 -->
+		<systemId>VCN</systemId> <!-- CR24485 -->
+		<systemId>EFORM</systemId>
+		<systemCode>037621</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+		
+	<Routing_Record TransactionType="DepositChangeDetails">
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemCode>007050</systemCode>
+		<specialHandling>N</specialHandling>
+		<responseLength>80</responseLength>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="DepositDetails">
+		<systemId>_DISABLED_</systemId>
+		<systemCode>007050</systemCode>
+		<specialHandling>N</specialHandling>
+		<responseLength>80</responseLength>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="DepositOverdraftInquiry">
+		<systemId>BNIDIRECT</systemId>
+		<systemCode>007050</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="DepositOverdraftLimitUpdate">
+		<systemId>BNIDIRECT</systemId>
+		<systemCode>007010</systemCode>
+		<specialHandling>Y</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.DEPOSITOVERDRAFTLIMITUPDATE.REQ;ReplyQueue=QA.CORE.HANDLER.DEPOSITOVERDRAFTLIMITUPDATE.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="DepositTransfer">
+		<systemId>AUTO-SPAN</systemId>
+		<systemId>BCC_IVR</systemId>
+		<systemId>BNIDIRECT</systemId>
+		<systemId>CUSTODY</systemId>
+		<systemId>IMS</systemId>
+		<systemId>KSEI</systemId>
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>SMS</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemId>SISKOHAT</systemId>
+		<systemId>IBOC</systemId>
+		<systemId>GLOBS</systemId>
+		<systemId>KIOSK</systemId>		<!--Tinor : LEN -->
+		<systemId>NEWMOBILE-CORE</systemId> 
+		<systemId>AGENT</systemId> <!--femi : alcom-->
+		<systemId>AGENT-CORE</systemId> <!--ayu : CR26024-->
+		<systemId>ASABRI</systemId> <!--femi : asabri-->
+		<systemId>PERSEKOT</systemId> <!-- wildan : persekot-->
+		<systemId>BULOG</systemId>
+		<systemId>BULOG_FANY</systemId>
+		<systemId>EXT-AXWAY</systemId>
+		<systemId>EXT-IBM</systemId>
+		<systemId>EXT-REDHAT</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemId>GOWEALTH</systemId>
+		<systemId>FSCM</systemId>	<!-- Syaiful: FSCM-->
+		<systemId>API</systemId>
+		<systemId>ELO</systemId> <!-- Dina api: CR25061-->
+		<systemId>NEWTASPEN</systemId> <!-- Hans api: CR24794-->
+		<systemId>ECMS</systemId>	<!--hans: CR25106-->
+		<systemCode>001045</systemCode>
+		<specialHandling>Y</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.FIN.REQ;ReplyQueue=QA.CORE.HANDLER.FIN.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="DepositTransferReversal">
+		<systemId>SYARIAH</systemId>
+		<systemId>SISKOHAT</systemId>
+		<systemId>SMS</systemId>
+		<systemId>NEWMOBILE-CORE</systemId>
+		<systemCode>001145</systemCode>
+		<specialHandling>Y</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.MANREVERSAL.REQ;ReplyQueue=QA.CORE.HANDLER.MANREVERSAL.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="DepTransferCross">
+		<systemId>H2HSERVICE</systemId>
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>BNIDIRECT</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemId>API</systemId>	<!-- ryan : CR23774 -->
+		<systemCode>001045</systemCode>
+		<specialHandling>Y</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.FIN2.REQ;ReplyQueue=QA.CORE.HANDLER.FIN2.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="DepTrxInquiry">
+		<systemId>BNIDIRECT</systemId>
+		<systemId>SMS</systemId>
+		<systemId>H2HSERVICE</systemId>
+		<systemId>IBANK</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemId>API</systemId>	<!-- ryan : CR23774 -->
+		<systemCode>000450</systemCode>
+		<specialHandling>Y</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.LIST.REQ;ReplyQueue=QA.CORE.HANDLER.LIST.RES;ParseHeaders=true;TimeOut=150000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="ExchangeRate">
+		<systemId>BNIDIRECT</systemId>
+		<systemId>XRATE</systemId>
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>WIC</systemId>
+		<systemId>BNIWEB</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemId>GLOBS</systemId>
+		<systemCode>009599</systemCode>
+		<specialHandling>Y</specialHandling>
+		<responseLength>390</responseLength>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.XRATE.REQ;ReplyQueue=QA.CORE.HANDLER.XRATE.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="ExchangeRateByType">
+		<systemId>XRATE</systemId>
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemId>BNIWEB</systemId>
+		<systemId>FSCM</systemId>
+		<systemId>GLOBS</systemId>
+		<systemCode>999999</systemCode>
+		<specialHandling>Y</specialHandling>
+		<responseLength>390</responseLength>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.XRATEBYTYPE.REQ;ReplyQueue=QA.CORE.HANDLER.XRATEBYTYPE.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<!-- CRXXXX Foreign Exchange Machine -->
+	<Routing_Record TransactionType="ForeignExchangeTrx">
+		<systemId>FEM</systemId>
+		<systemCode>021046</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	<!-- CRXXXX Foreign Exchange Machine -->
+	
+	<Routing_Record TransactionType="GetCardByAccount">
+		<systemId>ECHANNEL</systemId>
+		<systemId>IBANK</systemId>
+		<systemId>PHONEBANKING</systemId>
+		<systemId>SMS</systemId>
+		<systemId>NEWIBANK</systemId>
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>INTERBANK</systemId>
+		<systemId>BCC_BCO</systemId>
+		<systemId>RAISECALL</systemId>	<!-- syaiful : CR21806-->
+		<!--Tinor:20-08-2014-->
+		<systemId>KSEI_AKSES</systemId>
+		<systemId>AGENT</systemId><!--Keagenan, 30-03-2016-->
+		<systemId>NEWMOBILE</systemId>
+		<systemId>PUSHPAYMENT</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemId>API</systemId> <!--HANS ONEPUSH-->
+		<systemId>AUTODB</systemId> <!--HANS autodebet bpjsks-->
+		<systemId>KIOSK</systemId>
+		<systemCode>037450</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="GetLinkedDebitCard">
+		<systemId>SMS</systemId>
+		<systemId>H2HSERVICE</systemId>
+		<systemId>NEWIBANK</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemId>ORM</systemId>
+		<systemId>RAISECALL</systemId>	<!-- syaiful : CR21806-->
+		<systemId>API</systemId>
+		<systemId>SOA</systemId>
+		<systemCode>037460</systemCode>
+		<specialHandling>Y</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.LIST.REQ;ReplyQueue=QA.CORE.HANDLER.LIST.RES;ParseHeaders=true;TimeOut=150000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="GetPersonalInfo">
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>NEWMOBILE-CORE</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemId>AGENT</systemId> <!-- Nurus : CR25890 -->
+		<systemCode>067050</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="GetVirtualAccountName">
+		<systemId>BNIDIRECT</systemId>
+		<systemId>H2HSERVICE</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemId>API</systemId>	<!-- ryan : CR23774 -->
+		<systemCode>009024</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="GLInquiry">
+		<systemId>IBOC</systemId>
+		<systemId>ETRADE</systemId>
+		<systemId>TIPLUS</systemId>
+		<systemId>GLOBS</systemId>
+		<systemId>PERSEKOT</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemId>TAXINF</systemId>
+		<systemId>GOWEALTH</systemId>
+		<systemCode>020400</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="GLReversalSimpanan">
+		<systemId>KIOSK</systemId> <!--CR24697 -->
+		<systemCode>021131</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="GLReversalTarikTunai">
+		<systemId>KAS</systemId>
+		<systemCode>020160</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="GLSetoranTunai">
+		<systemId>KAS</systemId>
+		<systemId>KAS_VALAS</systemId>
+		<systemCode>020010</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="GLTarikTunai">
+		<systemId>KAS</systemId>
+		<systemId>KAS_VALAS</systemId>
+		<systemCode>020060</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="GLTransfer">
+	        <systemId>ELO</systemId>
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemId>PERSEKOT</systemId>
+		<systemId>GLOBS</systemId>
+		<systemId>FSCM</systemId>
+		<systemId>KIOSK</systemId> <!-- dinahamidah : CR24697-->
+		<systemId>AGENT</systemId> <!-- Nurus: CR23510-->
+		<systemCode>021031</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="GLTransferGL">
+		<systemId>KAS_VALAS</systemId>
+		<systemId>PERSEKOT</systemId>
+		<systemId>ECMS</systemId>	<!--hans: CR25106-->
+		<systemId>PSAK73</systemId> <!--hans CR25701-->
+		<systemId>POINPLUS</systemId> <!-- CR 25050-->
+		<systemCode>020047</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="GLTransferDeposit">
+		<systemId>PERSEKOT</systemId>
+		<systemId>AGENT</systemId> <!-- Nurus: CR23510-->
+        <systemId>POINPLUS</systemId> <!-- CR 25050-->		
+		<systemCode>021051</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="HistoricalTransactions">
+		<systemId>BNIDIRECT</systemId>
+		<systemId>FSCM</systemId>	<!-- Syaiful: FSCM-->
+		<systemId>SOA</systemId>
+		<systemId>IBANK</systemId>
+		<systemId>BCC_BCO</systemId>
+		<systemId>RAISECALL</systemId>	<!-- syaiful : CR21806-->
+		<systemId>BCC_IVR</systemId>
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>IREM</systemId>
+		<systemId>EWALLET</systemId>
+		<systemId>AUTO-SPAN</systemId>
+		<systemId>KIOSK</systemId>		<!--Tinor : LEN -->
+		<systemId>NEWMOBILE-CORE</systemId> 
+		<systemId>EXT-AXWAY</systemId>
+		<systemId>EXT-IBM</systemId>
+		<systemId>EXT-REDHAT</systemId>
+		<systemId>H2HSERVICE</systemId><!-- WILDAN : Dashboard PLN -->
+		<systemId>NEWMOBILE</systemId>
+		<systemId>API</systemId>	<!-- ryan : CR23774 -->
+		<systemId>ECHANNEL</systemId>	<!-- hans : CR25362 -->
+		<systemId>SYARIAH</systemId>	<!-- dina api : CR25248 -->
+		<systemCode>069447</systemCode>
+		<specialHandling>Y</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.LIST.REQ;ReplyQueue=QA.CORE.HANDLER.LIST.RES;ParseHeaders=true;TimeOut=150000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="HoldAmount">
+		<systemId>CUSTODY</systemId>
+		<systemId>ETRADE</systemId>
+		<systemId>H2HSERVICE</systemId>
+		<systemId>ASABRI</systemId> <!--testing for dev-->
+		<systemId>GOWEALTH</systemId>
+		<systemId>API</systemId>	<!-- ryan : CR23774 -->
+		<systemId>NEWTASPEN</systemId>
+		<systemId>GLOBS</systemId>
+		<systemId>BNIDIRECT</systemId> <!-- ulfha : CR27175 -->
+		<systemId>SYARIAH</systemId> <!-- Banu -->
+		<systemCode>009093</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<!-- Banu CR27984 -->
+	<Routing_Record TransactionType="HoldAmountBerjangka">
+		<systemId>NEWMOBILE</systemId>
+		<systemCode>009093</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="HoldAmountRelease">
+		<systemId>CUSTODY</systemId>
+		<systemId>ETRADE</systemId>
+		<systemId>H2HSERVICE</systemId>
+		<systemId>ASABRI</systemId>
+		<!--femi : Asabri-->
+		<systemId>GOWEALTH</systemId>
+		<systemId>API</systemId>	<!-- ryan : CR23774 -->
+		<systemId>NEWTASPEN</systemId>
+		<systemId>GLOBS</systemId>
+		<systemId>BNIDIRECT</systemId> <!-- ulfha : CR27175 -->
+		<systemId>SYARIAH</systemId> <!-- Banu -->
+		<systemCode>009095</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="HoldDebitCard">
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemId>OPBG</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemCode>037273</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="InitActivationCard">
+		<systemId>KIOSK</systemId>
+		<systemId>SYARIAH</systemId> 
+		<systemId>EFORM</systemId>
+		<systemId>VCN</systemId> 
+		<systemCode>037240</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="InitChangeOwnershipCard">
+		<systemId>KIOSK</systemId>
+		<systemId>VCN</systemId> <!-- CR24485 -->
+		<systemId>SYARIAH</systemId>
+		<systemId>EFORM</systemId>
+		<systemCode>037206</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="InitCreateDEPAccount">
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>IREM</systemId>		<!--Tinor:laku pandai-->
+		<systemId>EDC_MINIATM</systemId>		<!--femi : edc_miniatm-->
+		<systemId>AGENT</systemId>		<!--femi : alcomindo lakupandai-->
+		<systemId>KIOSK</systemId>		<!--Tinor : LEN -->		
+		<systemId>EDC_ANDROID</systemId> <!--Femi : EDC ANDROID -->
+		<systemId>NEWMOBILE</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemId>KSEI</systemId> <!--kiss : untuk KSEI -->
+		<systemId>API</systemId>	<!--ryan : untuk RDL-->
+		<systemId>EFORM</systemId>
+		<systemId>DIGISALES</systemId>
+		<systemCode>062000</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="InitCreateILAAccount">
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemId>DIGISALES</systemId>
+		<systemCode>062000</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="InitCreateVirtualAccount">
+		<systemId>SMS</systemId>
+		<systemCode>31992</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.VA.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="InitDeLinkCardAccount">
+		<systemId>KIOSK</systemId> <!-- CR24697 -->
+		<systemId>VCN</systemId> <!-- CR24485 -->
+		<systemId>EFORM</systemId>
+		<systemCode>037620</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="InitLinkCardAccount">
+		<systemId>KIOSK</systemId>
+		<systemId>VCN</systemId> <!-- CR24485 -->
+		<systemId>SYARIAH</systemId>
+		<systemId>EFORM</systemId>
+		<systemCode>037600</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="InquiryUserDefinedCode">
+		<systemId>AGREGATOR</systemId>
+		<systemId>H2HSERVICE</systemId>
+		<systemId>KSEI</systemId> <!--kiss : untuk KSEI -->
+		<systemId>API</systemId>	<!-- ryan : CR23774 -->
+		<systemId>DIGISALES</systemId>
+		<systemCode>007094</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<!-- CR23973 Update Nomor Handphone (InquiryUser) -->
+	<Routing_Record TransactionType="InquiryUserDefinedCodeV2">
+		<systemId>AGREGATOR</systemId>
+		<systemId>ATM</systemId>
+		<systemCode>067094</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	<!-- end of CR23973 Update Nomor Handphone (InquiryUser) -->
+	
+	<Routing_Record TransactionType="InquiryVARetail">
+		<systemId>API</systemId>	<!-- ryan : CR24510 -->
+		<systemCode>31992</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.VA.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="InquiryVirtualAccount">
+		<systemId>H2HSERVICE</systemId>
+		<systemId>BNIDIRECT</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemId>DOCOTEL</systemId>
+		<systemId>ATM</systemId>
+		<systemId>API</systemId>	<!-- ryan : CR23774 -->
+		<systemId>AGENT</systemId>	<!-- CR24342 -->
+		<systemId>CARDLESSCASHVA</systemId> <!-- CR24367 -->
+		<systemCode>31992</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.VA.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<!-- CR15149-->
+	<Routing_Record TransactionType="InquiryChequeDetail">
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemCode>052217</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<!-- CR15150-->
+	<Routing_Record TransactionType="InquiryCheque">
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemCode>052211</systemCode>
+		<specialHandling>Y</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.LIST.REQ;ReplyQueue=QA.CORE.HANDLER.LIST.RES;ParseHeaders=true;TimeOut=150000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="InquiryNotionalPooling">
+		<systemId>BNIDIRECT</systemId>
+		<systemCode>060428</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="InquirySMSNotification">
+		<systemId>SERVICE_MAPPER</systemId>
+		<systemId>SMS</systemId>
+		<systemId>NEWIBANK</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemCode>031930</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="InquiryTrxVirtualAccount"> <!--Rana -->
+		<systemId>BNIDIRECT</systemId> <!-- CR22765 -->
+		<systemId>SOA</systemId>
+		<systemId>IBANK</systemId>
+		<systemId>BCC_BCO</systemId>
+		<systemId>RAISECALL</systemId>	<!-- syaiful : CR21806-->
+		<systemId>BCC_IVR</systemId>
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>IREM</systemId>
+		<systemId>EWALLET</systemId>
+		<systemId>AUTO-SPAN</systemId>
+		<systemId>DOCOTEL</systemId>
+		<systemId>KIOSK</systemId>
+        <systemId>H2HSERVICE</systemId>
+		<systemId>NEWMOBILE-CORE</systemId> 
+		<systemId>EXT-AXWAY</systemId>
+		<systemId>EXT-IBM</systemId>
+		<systemId>EXT-REDHAT</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemId>AGENT</systemId> <!-- Inquiry VA BPJS Keagenan -->
+		<systemId>API</systemId>	<!-- ryan : CR23774 -->
+		<systemCode>031997</systemCode>
+		<specialHandling>Y</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.LIST.REQ;ReplyQueue=QA.CORE.HANDLER.LIST.RES;ParseHeaders=true;TimeOut=150000</Routing_URL>
+	</Routing_Record>
+		
+	<Routing_Record TransactionType="KliringOutward">
+		<systemId>BNIDIRECT</systemId>
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>H2HSERVICE</systemId>
+		<systemId>IBOC</systemId>
+		<systemId>IMS</systemId>
+		<systemId>GLOBS</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemId>GOWEALTH</systemId>
+		<systemId>API</systemId>	<!-- ryan : CR23774 -->
+		<systemCode>055645</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="KliringOutwardv2">
+		<systemId>BNIDIRECT</systemId>
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>H2HSERVICE</systemId>
+		<systemId>IBOC</systemId>
+		<systemId>IMS</systemId>
+		<systemId>GLOBS</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemId>GOWEALTH</systemId>
+		<systemId>API</systemId>	<!-- ryan : CR23774 -->
+		<systemCode>055645</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="LinkCardAccount">
+		<systemId>KIOSK</systemId>
+		<systemId>VCN</systemId> <!-- CR24485 -->
+		<systemId>SYARIAH</systemId>
+		<systemId>EFORM</systemId>
+		<systemCode>037601</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="LoanBalanceBreakdown">
+		<systemId>BNIDIRECT</systemId>
+		<systemId>FSCM</systemId>	<!-- Syaiful: FSCM-->
+		<systemId>ELO</systemId> <!-- dinaham: CR27980 -->
+		<systemCode>010400</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="LoanInterest">
+		<systemId>BNIDIRECT</systemId>
+		<systemId>FSCM</systemId>	<!-- Syaiful: FSCM-->
+		<systemCode>010455</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="LoanProcessInquiry">
+		<systemId>FSCM</systemId>
+		<systemCode>017051</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="LoanShortInquiry">
+		<systemId>FSCM</systemId>
+		<systemCode>010400</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="LoanTransfer">
+		<systemId>BNIDIRECT</systemId>
+		<systemId>FSCM</systemId>	<!-- Syaiful: FSCM-->
+		<systemId>ELO</systemId>
+		<systemId>SYARIAH</systemId> <!-- Dina : hasanah syariah -->
+		<systemId>BULOG</systemId>
+		<systemCode>011055</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="MultiTransfer">
+		<systemId>BNIDIRECT</systemId>
+		<systemId>SOA</systemId>
+		<systemId>KSEI</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemId>IBOC</systemId>
+		<systemId>TIPLUS</systemId>
+		<systemId>DPLK</systemId>
+		<systemId>ETRADE</systemId>
+		<systemId>GLOBS</systemId>
+		<systemId>GOWEALTH</systemId>
+		<systemCode>029000</systemCode>
+		<specialHandling>Y</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.MULTITRANSFER.REQ;ReplyQueue=QA.CORE.HANDLER.MULTITRANSFER.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="OwnedAccountList">
+		<systemId>KSEI</systemId>
+		<systemId>ECHANNEL</systemId>
+		<systemId>SYARIAH</systemId> <!-- Dina : hasanah syariah -->
+		<systemId>API</systemId> <!-- Ryan : open banking -->
+		<systemCode>060450</systemCode>
+		<specialHandling>Y</specialHandling>
+		<responseLength>110</responseLength>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.LIST.REQ;ReplyQueue=QA.CORE.HANDLER.LIST.RES;ParseHeaders=true;TimeOut=150000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="OpenAccountList">
+		<systemId>BNIDIRECT</systemId>
+		<systemId>FSCM</systemId>	<!-- Syaiful: FSCM-->
+		<systemId>PHONEBANKING</systemId>
+		<systemId>IBANK</systemId>
+		<systemId>ECHANNEL</systemId>
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>NEWMOBILE-CORE</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemId>BCC_IVR</systemId> <!--Gilang:Virtual Assistant -->
+		<systemId>GOWEALTH</systemId> <!-- mas naray -->
+		<systemId>ETRADE</systemId>
+		<systemId>GLOBS</systemId>
+		<systemId>EFORM</systemId>
+		<systemId>SYARIAH</systemId>  <!-- Banu -->
+		<systemCode>060583</systemCode>
+		<specialHandling>Y</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.LIST.REQ;ReplyQueue=QA.CORE.HANDLER.LIST.RES;ParseHeaders=true;TimeOut=150000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="OpenDepositAccountList">
+		<systemId>ECHANNEL</systemId>
+		<systemId>IBANK</systemId>
+		<systemId>PHONEBANKING</systemId>
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>KSEI_AKSES</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemId>EFORM</systemId>
+		<systemId>SYARIAH</systemId>  <!-- Banu -->
+		<systemCode>060583</systemCode>
+		<specialHandling>Y</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.LIST.REQ;ReplyQueue=QA.CORE.HANDLER.LIST.RES;ParseHeaders=true;TimeOut=150000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="OpenDepositAccListByBalance">
+		<systemId>SMS</systemId>
+		<systemId>KIOSK</systemId>
+		<systemId>SYARIAH</systemId>  <!-- Banu -->
+		<systemCode>060583</systemCode>
+		<specialHandling>Y</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.LIST.REQ;ReplyQueue=QA.CORE.HANDLER.LIST.RES;ParseHeaders=true;TimeOut=150000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="OpenLoanAccountList">
+		<systemId>ECHANNEL</systemId>
+		<systemId>IBANK</systemId>
+		<systemId>PHONEBANKING</systemId>
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemId>SYARIAH</systemId>  <!-- Banu -->
+		<systemCode>060583</systemCode>
+		<specialHandling>Y</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.LIST.REQ;ReplyQueue=QA.CORE.HANDLER.LIST.RES;ParseHeaders=true;TimeOut=150000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="PassbookPrint">
+		<systemId>ECHANNEL</systemId>
+		<systemCode>000600</systemCode>
+		<specialHandling>Y</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.LIST.REQ;ReplyQueue=QA.CORE.HANDLER.LIST.RES;ParseHeaders=true;TimeOut=150000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="Ping">
+		<systemId>SOA</systemId>
+		<systemCode>009602</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="ProductRateInquiry">
+		<systemId>_DISABLED_</systemId>
+		<systemCode>999999</systemCode>
+		<specialHandling>Y</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.PRDRATEINQ.REQ;ReplyQueue=QA.CORE.HANDLER.PRDRATEINQ.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="ProductBaseRate">
+		<systemId>_DISABLED_</systemId>
+		<systemCode>031786</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="ProductBaseRateN">
+		<systemId>_DISABLED_</systemId>
+		<systemCode>031791</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="ProductTierRate">
+		<systemId>_DISABLED_</systemId>
+		<systemCode>031788</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="RemittanceMasterIn">
+		<systemId>IBOC</systemId>
+		<systemId>GLOBS</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemId>GOWEALTH</systemId>
+		<systemCode>029001</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="RenewDepositAccount">
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemCode>007085</systemCode>
+		<specialHandling>N</specialHandling>
+		<responseLength>80</responseLength>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="RtgsOutward">
+		<systemId>BNIDIRECT</systemId>
+		<systemId>KSEI</systemId>
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>H2HSERVICE</systemId>
+		<systemId>IBOC</systemId>
+		<systemId>IMS</systemId>
+		<systemId>GLOBS</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemId>GOWEALTH</systemId>
+		<systemId>API</systemId>	<!-- ryan : CR23774 -->
+		<systemCode>055675</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="S06Inquiry">
+		<systemId>CASHPICKUP</systemId>
+		<systemId>IREM</systemId>
+		<systemId>SMS</systemId>
+		<systemId>AGENT</systemId> <!--CR20560-->
+		<systemCode>057301</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="S06Payment">
+		<systemId>CASHPICKUP</systemId>
+		<systemId>IREM</systemId>
+		<systemId>SMS</systemId>
+		<systemId>AGENT</systemId> <!--CR20560-->
+		<systemCode>057302</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="S06Search">
+		<systemId>CASHPICKUP</systemId>
+		<systemId>IREM</systemId>
+		<systemId>SMS</systemId>
+		<systemId>AGENT</systemId> <!--CR20560-->
+		<systemCode>057005</systemCode>
+		<specialHandling>Y</specialHandling>
+		<responseLength>155</responseLength>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.LIST.REQ;ReplyQueue=QA.CORE.HANDLER.LIST.RES;ParseHeaders=true;TimeOut=150000</Routing_URL>
+	</Routing_Record>
+	
+	<!-- Asrul : CR26316 -->
+	<Routing_Record TransactionType="StopRollover">
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>NEWMOBILE-CORE</systemId>
+		<systemCode>2071</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="SweepAccount">
+		<systemId>NEWIBANK</systemId>
+		<systemCode>060422</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="TaxFileNum">
+		<systemId>BNIDIRECT</systemId>
+		<systemCode>060050</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record> 
+	
+	<Routing_Record TransactionType="TermDepositRateInquiry">
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemCode>000415</systemCode>
+		<specialHandling>Y</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.LIST.REQ;ReplyQueue=QA.CORE.HANDLER.LIST.RES;ParseHeaders=true;TimeOut=150000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="UpdateCifDetails">
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>AGREGATOR</systemId>
+		<systemId>NEWMOBILE-CORE</systemId>
+		<systemId>ELO</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemCode>067000</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="UpdatePersonalInfo">
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>NEWMOBILE-CORE</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemCode>067108</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="UpdateUserDefinedCode">
+		<systemId>AGREGATOR</systemId>
+		<systemId>KSEI</systemId> <!--kiss : untuk KSEI -->
+		<systemId>DIGISALES</systemId>
+		<systemCode>007044</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="UpdateVARetail">
+		<systemId>API</systemId>	<!-- ryan : CR24510 -->
+		<systemCode>31993</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.VA.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="UpdateVirtualAccount">
+		<systemId>H2HSERVICE</systemId>
+		<systemId>BNIDIRECT</systemId>
+		<systemId>DOCOTEL</systemId>
+		<systemId>SYARIAH</systemId>
+		<systemId>API</systemId>	<!-- ryan : CR23774 -->
+		<systemCode>31993</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.VA.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="XRateInquiry">
+		<systemId>IREM</systemId>
+		<systemId>H2HSERVICE</systemId>
+		<systemId>CASHPICKUP</systemId>
+		<systemId>BCC_IVR</systemId>
+		<systemId>NEWIBANK-CORE</systemId>
+		<systemId>NEWMOBILE</systemId>
+		<systemId>FSCM</systemId>	<!-- Syaiful: FSCM-->
+		<systemId>API</systemId>	<!-- ryan : CR23774 -->
+		<systemCode>000000</systemCode>
+		<specialHandling>Y</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.XRATEINQ.REQ;ReplyQueue=QA.CORE.HANDLER.XRATEINQ.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="XRateParamInquiry">
+		<systemId>XRATE</systemId>
+		<systemCode>031700</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+	<Routing_Record TransactionType="XRateParamUpdate">
+		<systemId>XRATE</systemId>
+		<systemCode>031703</systemCode>
+		<specialHandling>N</specialHandling>
+		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
+	</Routing_Record>
+	
+</CoreServiceRouting>
