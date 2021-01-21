@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties [ 
+<!ELEMENT properties ( comment?, entry* ) >
+<!ATTLIST properties version CDATA #FIXED "1.0">
+<!ELEMENT comment (#PCDATA) >
+<!ELEMENT entry (#PCDATA) >
+<!ATTLIST entry key CDATA #REQUIRED>
+]>
+
+<properties>
+	<comment>Mapping BO to iCons TxCode</comment>
+
+	<!-- BO Mapping. Urut abjad, please -->
+	<entry key="AccountDetails">069440</entry>
+	<entry key="AccountShortDetails">069400</entry>
+	<entry key="AccountShortInquiry">069400</entry>
+	<entry key="ActivationCard">037241</entry>
+	<entry key="AtmBillPayment">004050</entry>
+	<entry key="AtmBillPaymentReversal">004150</entry>
+	<entry key="AtmCardlessDepositTransfer">004010</entry>
+	<!--Tinor CR16960 20151110-->
+	<entry key="BalanceInfo">069440</entry>
+	<entry key="BillingPayment">095045</entry>
+	<!--MHP CR14936-Tinor-->
+	<entry key="BillingPaymentReversal">095046</entry>
+	<!--MHP CR14936-Tinor-->
+	<entry key="BillingPaymentBigAmount">095050</entry>
+	<!--MHP CR18490-Femi-->
+	<entry key="BillingPaymentBigAmountReversal">095051</entry>
+	<!--MHP CR18490-Femi-->
+	<entry key="BillPayment">095043</entry>
+	<entry key="BillPaymentReversal">095044</entry>
+	<entry key="BreakDepositAccount">003045</entry>
+	<entry key="CashWithdrawal">001060</entry>
+	<!-- CR17684 + CR20512-->
+	<entry key="CashDepositIDR">001010</entry>
+	<!-- CR17684 + CR20512-->
+	<!--Tinor: ASABRI-->
+	<entry key="ChangeOwnershipCard">037207</entry>
+	<entry key="CheckDigit">009022</entry>
+	<!--CR 21096-->
+	<entry key="CifAdditionalDetailsInq">060408</entry>
+	<entry key="CifAdditionalDetailsFlag">060409</entry>
+	<!--CR 21096-->
+	<entry key="CifDetails">067050</entry>
+	<!--CR 27695-->
+	<entry key="CifPersonalDetails">067050</entry> 
+	<entry key="CreateCIF">063001</entry>
+	<!--laku pandai-Tinor-->
+	<entry key="CreateDepositAccount">002000</entry>
+	<!--entry key="CreateNotionalPooling">060425</entry-->	
+	<entry key="CreateTopUpAccount">002085</entry>			
+	<entry key="CreateUpdateSMSNotification">031931</entry>
+	<entry key="CreateCIDVirtualAccount">31991</entry>	<!-- Ryan CR24510-->
+	<entry key="CreateVARetail">31993</entry>	<!-- Ryan CR24510-->
+	<!--Wildan CR19111 -->		
+	<entry key="CreateVirtualAccount">31993</entry>	
+	<entry key="CustomerDetail">069490</entry> 
+	<entry key="CustomerDetailV2">069490</entry>
+	<!-- SISKOHAT Wildan -->
+	<entry key="CustomerSearch">060480</entry> 
+	<entry key="CustomerSearchById">060465</entry>  
+	<entry key="DebitCardDetails">037440</entry>
+	<entry key="DeLinkCardAccount">037621</entry> <!-- CR24697 -->
+	<entry key="DepositChangeDetails">007050</entry>	
+	<entry key="DepositDetails">007050</entry>
+	<entry key="DepositTransfer">001045</entry>
+	<entry key="DepositOverdraftInquiry">007050</entry> 		
+	<entry key="DepositOverdraftUpdate">007010</entry> 		
+	<entry key="DepositTransferReversal">001145</entry>
+	<entry key="DepTransferCross">001045</entry>
+	<entry key="DepTrxInquiry">000450</entry>
+	<entry key="ExchangeRate">009599</entry>
+	<!-- CRXXXXX Foregin Exchange Machine-->
+	<entry key="ForeignExchangeTrx">021046</entry>
+	<!-- CRXXXXX Foregin Exchange Machine-->
+	<entry key="GetCardByAccount">037450</entry>
+	<entry key="GetLinkedDebitCard">037460</entry>			
+	<entry key="GetPersonalInfo">067050</entry>
+	<entry key="GetVirtualAccountName">009024</entry>			
+	<entry key="GLInquiry">020400</entry>
+	<entry key="GLReversalSimpanan">021131</entry> <!--CR24697 -->
+	<entry key="GLReversalTarikTunai">020160</entry>
+	<entry key="GLSetoranTunai">020010</entry>
+	<entry key="GLTarikTunai">020060</entry>
+	<entry key="GLTransfer">021031</entry>
+	<!--CR15312 -->
+	<entry key="GLTransferDeposit">021051</entry>
+	<!-- Wildan CR16165 20160226 -->
+	<entry key="GLTransferGL">020045</entry>
+	<!--Fany CR15874 20151203-->
+	<!-- entry key="GLTransferGL">020047</entry -->
+	<!--WILDAN-->
+	<entry key="HistoricalTransactions">069447</entry>
+	<entry key="HoldAmount">009093</entry>
+	<entry key="HoldAmountBerjangka">009093</entry><!-- Banu CR27984 -->
+	<entry key="HoldAmountRelease">009095</entry>
+	<entry key="HoldDebitCard">037273</entry>
+	<entry key="InitActivationCard">037240</entry>
+	<entry key="InitChangeOwnershipCard">037206</entry>
+	<entry key="InitCreateDEPAccount">062000</entry>			
+	<entry key="InitCreateILAAccount">062000</entry>		
+	<entry key="InitCreateVirtualAccount">31992</entry>
+	<entry key="InitDeLinkCardAccount">037620</entry> <!-- CR24697  -->
+	<entry key="InitLinkCardAccount">037600</entry>	
+	<entry key="InquiryVARetail">31992</entry>	<!-- Ryan CR24510-->
+	<entry key="InquiryVirtualAccount">31992</entry>
+	<!-- Rey - 20130927 -->
+	<entry key="InquiryCheque">052211</entry>
+	<!--Femi CR15150 20141118-->
+	<entry key="InquirySMSNotification">031930</entry>
+	<!--Wildan CR19111 -->
+	<entry key="InquiryChequeDetail">052217</entry>
+	<!--Femi CR15149 20141118-->
+	<entry key="InquiryNotionalPooling">060428</entry>
+	<!--Rana-->
+	<entry key="InquiryTrxVirtualAccount">031997</entry>
+	<!--Rana-->
+	<!--Hans-->
+	<entry key="InquiryUserDefinedCode">007094</entry>
+	<!--Hans-->
+	<!--Adit CR23973 12122018-->
+	<entry key="InquiryUserDefinedCodeV2">067094</entry>
+	<entry key="CreateUserDefinedCode">067044</entry>
+	<!--Adit-->
+	<entry key="KliringOutward">055645</entry>
+	<entry key="KliringOutwardv2">055645</entry>
+	<!--Tinor CR16712 20151027-->
+	<entry key="LinkCardAccount">037601</entry>	
+	<entry key="LoanBalanceBreakdown">010400</entry>    
+	<entry key="LoanInterest">010455</entry>  
+	<entry key="LoanProcessInquiry">017051</entry> <!--26337-->
+	<entry key="LoanShortInquiry">010400</entry> <!-- dinahamidah -->
+	<entry key="LoanTransfer">011055</entry>      
+	<entry key="MultiTransfer">029000</entry>
+	<entry key="OwnedAccountList">060450</entry> 
+	<entry key="OpenAccountList">060583</entry> 
+	<entry key="OpenDepositAccountList">060583</entry>
+	<entry key="OpenDepositAccListByBalance">060583</entry>
+	<!--Tinor CR16509 20150714-->
+	<entry key="OpenLoanAccountList">060583</entry>
+	<!--passbook print-->
+	<entry key="PassbookPrint">000600</entry>
+	<entry key="Ping">009602</entry>
+	<entry key="RemittanceMasterIn">029001</entry>
+	<entry key="RenewDepositAccount">007085</entry>		
+	<entry key="RtgsOutward">055675</entry>
+	<entry key="S06Inquiry">057301</entry>
+	<entry key="S06Payment">057302</entry>
+	<entry key="S06Search">057005</entry>
+	<!--Asrul CR26316-->
+	<entry key="StopRollover">002071</entry>
+	<entry key="SweepAccount">060422</entry>
+	<entry key="TaxFileNum">060050</entry>
+	<entry key="TermDepositRateInquiry">000415</entry>
+	<entry key="UpdateCifDetails">067000</entry>
+	<entry key="UpdatePersonalInfo">067108</entry>
+	<entry key="UpdateUserDefinedCode">007044</entry> <!--Hans-->
+	<entry key="UpdateVARetail">31993</entry>	<!-- Ryan CR24510-->
+	<entry key="UpdateVirtualAccount">31993</entry>
+	<!-- Rey - 20130927 -->
+	<entry key="XRateParamInquiry">031700</entry>
+	<entry key="XRateParamUpdate">031703</entry>
+	
+	
+</properties>

@@ -1,0 +1,602 @@
+<clientParam>
+	<AGENT slm-group="10TPS">
+		<branch>0996</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</AGENT>
+	<AGENT-CORE slm-group="10TPS">
+		<branch>0996</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</AGENT-CORE>
+	<API slm-group="100TPS">
+		<branch>0986</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</API>
+	<AGREGATOR slm-group="5TPS">
+		<branch>0992</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag/>
+		<supervisorId/>
+	</AGREGATOR>
+	<ANTIATTRITION slm-group="5TPS">
+		<branch>0</branch>
+		<terminal>0</terminal>
+		<teller>0</teller>
+		<overrideFlag></overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</ANTIATTRITION>
+	<ASABRI slm-group="5TPS">
+		<branch>0760</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</ASABRI>
+	<ATM slm-group="50TPS">
+		<branch>0997</branch>
+		<terminal>002</terminal>
+		<teller>00004</teller>
+		<overrideFlag>4</overrideFlag>
+		<tandemFlag>E</tandemFlag>
+		<supervisorId></supervisorId>
+	</ATM>
+	<AUTO-SPAN slm-group="20TPS">
+		<branch>0989</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</AUTO-SPAN>
+	<AUTOPAY-ADM slm-group="5TPS">
+		<branch>0992</branch>
+		<terminal>999</terminal>
+		<teller>01001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag/>
+		<supervisorId/>
+	</AUTOPAY-ADM>
+	<AUTODB slm-group="5TPS">
+		<branch>0992</branch>
+		<terminal>999</terminal>
+		<teller>01001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag/>
+		<supervisorId/>
+	</AUTODB>
+	<BCC_BCO slm-group="20TPS">
+		<branch>0768</branch>
+		<terminal>999</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</BCC_BCO>
+	<BCC_IVR slm-group="20TPS">
+		<branch>0768</branch>
+		<terminal>999</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</BCC_IVR>
+	<BNIDIRECT slm-group="NOTPS">
+		<branch>0989</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</BNIDIRECT> 
+	<BNIWEB slm-group="50TPS">
+		<branch>0992</branch>
+		<terminal>999</terminal>
+		<teller>01001</teller>
+		<overrideFlag></overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</BNIWEB>
+	<BULOG slm-group="10TPS">
+		<branch>0992</branch>
+		<terminal>999</terminal>
+		<teller>01001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag/>
+		<supervisorId/>
+	</BULOG>
+	<CASHPICKUP slm-group="10TPS">
+		<branch>0990</branch>
+		<terminal>001</terminal>
+		<teller>00002</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</CASHPICKUP>   
+	<CMS slm-group="20TPS">
+		<branch>0989</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</CMS>
+	<CUSTODY slm-group="10TPS">
+		<branch>0987</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag />
+		<supervisorId />
+	</CUSTODY>
+	<DPLK slm-group="20TPS">
+		<branch>0</branch>
+		<terminal>0</terminal>
+		<teller>0</teller>
+		<overrideFlag></overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</DPLK>
+	<ECHANNEL slm-group="10TPS">
+		<branch>0768</branch>
+		<terminal>999</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag/>
+		<supervisorId/>
+	</ECHANNEL>
+	<ELO slm-group="10TPS">
+		<branch>0996</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</ELO>
+	<ETRADE slm-group="10TPS">
+		<branch>0</branch>
+		<terminal>0</terminal>
+		<teller>0</teller>
+		<overrideFlag></overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</ETRADE>
+   <EWALLET slm-group="10TPS">
+        <branch>0992</branch>
+        <terminal>999</terminal>
+        <teller>01001</teller>
+        <overrideFlag>I</overrideFlag>
+        <tandemFlag></tandemFlag>
+        <supervisorId></supervisorId>
+   </EWALLET>
+   <GLOBS slm-group="100TPS">
+        <branch>0766</branch>
+        <terminal>001</terminal>
+        <teller>00777</teller>
+        <overrideFlag>I</overrideFlag>
+        <tandemFlag/>
+        <supervisorId/>
+   </GLOBS>
+   <IBOC slm-group="20TPS">
+        <branch>0766</branch>
+		<terminal>001</terminal>
+		<teller>00777</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+   </IBOC>
+   <GOWEALTH slm-group="10TPS">
+        <branch>0957</branch>
+		<terminal>001</terminal>
+		<teller>99</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+   </GOWEALTH>
+   <H2HSERVICE slm-group="10TPS">
+		<branch>0987</branch>
+		<terminal>003</terminal>
+		<teller>00002</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+   </H2HSERVICE>
+	<IBANK slm-group="50TPS">
+		<branch>0996</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</IBANK>
+	<IBOC slm-group="10TPS">
+		<branch>0</branch>
+		<terminal>0</terminal>
+		<teller>0</teller>
+		<overrideFlag></overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</IBOC>
+   <IMS slm-group="10TPS">
+		<branch>0987</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+   </IMS>
+   <INTERBANK slm-group="50TPS">
+        <branch>0996</branch>
+        <terminal>999</terminal>
+        <teller>00021</teller>
+        <overrideFlag>I</overrideFlag>
+        <tandemFlag></tandemFlag>
+        <supervisorId></supervisorId>
+   </INTERBANK>
+	<IREM slm-group="20TPS">
+		<branch>0990</branch>
+		<terminal>001</terminal>
+		<teller>00555</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</IREM>
+	<IVR slm-group="5TPS">
+		<branch>0993</branch>
+		<terminal>999</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</IVR>
+	<JAMSOSTEK slm-group="5TPS">
+		<branch>0</branch>
+		<terminal>0</terminal>
+		<teller>0</teller>
+		<overrideFlag></overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</JAMSOSTEK>
+	<KAS slm-group="5TPS">
+		<branch>0</branch>
+		<terminal>0</terminal>
+		<teller>0</teller>
+		<overrideFlag></overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</KAS>
+	<KAS_VALAS slm-group="5TPS">
+		<branch>0</branch>
+		<terminal>0</terminal>
+		<teller>0</teller>
+		<overrideFlag></overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</KAS_VALAS>
+	<KIOSK slm-group="10TPS">
+		<branch>0996</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</KIOSK>
+	<KSEI slm-group="20TPS">
+		<branch>0987</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag />
+		<supervisorId />
+	</KSEI>
+	<KSEI_AKSES slm-group="20TPS">
+		<branch>0987</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag />
+		<supervisorId />
+	</KSEI_AKSES>
+	<MHP slm-group="50TPS">
+		<branch>0992</branch>
+		<terminal>999</terminal>
+		<teller>01001</teller>
+		<overrideFlag></overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</MHP>
+	<NEWMOBILE slm-group="100TPS">
+		<branch>0991</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</NEWMOBILE>
+	<NEWIBANK slm-group="100TPS">
+		<branch>0996</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</NEWIBANK>
+	<NEWIBANK-CORE slm-group="100TPS">
+		<branch>0996</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</NEWIBANK-CORE>
+	<NEWMOBILE-CORE slm-group="100TPS">
+		<branch>0996</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</NEWMOBILE-CORE>
+	<OPBG slm-group="100TPS">
+		<branch>0996</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</OPBG>
+	<OPBK slm-group="100TPS">
+		<branch>0996</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</OPBK>
+	<ORM slm-group="100TPS">
+		<branch>0996</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</ORM>
+	<PERSEKOT slm-group="100TPS">
+		<branch>0996</branch>
+		<terminal>009</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</PERSEKOT>
+	<TAXINF slm-group="100TPS">
+		<branch>0996</branch>
+		<terminal>009</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</TAXINF>
+	<PHONEBANKING slm-group="10TPS">
+		<branch>0768</branch>
+		<terminal>999</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag/>
+		<supervisorId/>
+	</PHONEBANKING>
+	<POSINDO slm-group="10TPS">
+		<branch>0990</branch>
+		<terminal>001</terminal>
+		<teller>00002</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</POSINDO>
+	<SABH slm-group="10TPS">
+		<branch>0992</branch>
+		<terminal>999</terminal>
+		<teller>01001</teller>
+		<overrideFlag></overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</SABH>
+	<SERVICE_MAPPER slm-group="50TPS">
+		<branch>0</branch>
+		<terminal>0</terminal>
+		<teller>0</teller>
+		<overrideFlag></overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</SERVICE_MAPPER>
+	<SISKOHAT slm-group="10TPS">
+		<branch>0992</branch>
+		<terminal>999</terminal>
+		<teller>01001</teller>
+		<overrideFlag></overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</SISKOHAT>
+	<SMART-REMITTANCE slm-group="20TPS">
+		<branch>0766</branch>
+		<terminal>001</terminal>
+		<teller>00777</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</SMART-REMITTANCE>
+	<SMS slm-group="100TPS">
+		<branch>0992</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</SMS>
+	<SOA slm-group="20TPS">
+		<branch>0992</branch>
+		<terminal>999</terminal>
+		<teller>01001</teller>
+		<overrideFlag></overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</SOA>
+	<SPCH2H slm-group="50TPS">
+		<branch>0992</branch>
+		<terminal>999</terminal>
+		<teller>01001</teller>
+		<overrideFlag></overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</SPCH2H>
+	<SPMB slm-group="10TPS">
+		<branch>0</branch>
+		<terminal>0</terminal>
+		<teller>0</teller>
+		<overrideFlag></overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</SPMB>
+	<SYARIAH slm-group="10TPS">
+		<branch>0992</branch>
+		<terminal>999</terminal>
+		<teller>01001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</SYARIAH>
+   <TIPLUS slm-group="20TPS">
+       <branch>0766</branch>
+        <terminal>087</terminal>
+        <teller>00889</teller>
+        <overrideFlag>I</overrideFlag>
+        <tandemFlag></tandemFlag>
+        <supervisorId></supervisorId>
+   </TIPLUS>  
+	<WIC slm-group="50TPS">
+		<branch>0992</branch>
+		<terminal>999</terminal>
+		<teller>01001</teller>
+		<overrideFlag></overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</WIC>
+	<XRATE slm-group="10TPS">
+		<branch>0766</branch>
+		<terminal>028</terminal>
+		<teller>00777</teller>
+		<overrideFlag></overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</XRATE>
+	<KIOSK-A slm-group="10TPS">
+		<branch>0996</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag>A</tandemFlag>
+		<supervisorId/>
+	</KIOSK-A>
+	<PUSHPAYMENT slm-group="10TPS">
+		<branch>0996</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</PUSHPAYMENT>
+	<EXT-AXWAY slm-group="10TPS">
+		<branch>0996</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</EXT-AXWAY>
+	<EXT-IBM slm-group="10TPS">
+		<branch>0996</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</EXT-IBM>	
+	<EXT-REDHAT slm-group="10TPS">
+		<branch>0996</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</EXT-REDHAT>
+	<RAISECALL slm-group="100TPS">
+		<branch>0996</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</RAISECALL>
+	<FSCM  slm-group="NOTPS" >
+		<branch>0989</branch>
+		<terminal>001</terminal>
+		<teller>00099</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag/>
+		<supervisorId/>
+	</FSCM>
+	<NEWTASPEN slm-group="NOTPS">
+		<branch>0999</branch>
+		<terminal>099</terminal>
+		<teller>00099</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</NEWTASPEN>
+	<VCN slm-group="10TPS">
+		<branch>0996</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</VCN>
+	<EFORM slm-group="10TPS">
+		<branch>0996</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</EFORM>
+	<SPRINT slm-group="NOTPS">
+		<branch>0986</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</SPRINT>
+	<BCC_VA slm-group="20TPS">
+		<branch>0968</branch>
+		<terminal>999</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</BCC_VA>
+</clientParam>
