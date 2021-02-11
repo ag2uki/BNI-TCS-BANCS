@@ -1,0 +1,19 @@
+<StopRollover>
+	<Req>
+		<content>
+			<Field id="accountNum" padding="left" padString="0" length="17" />
+			<Field id="dummy" length="30" value="    0000     00000000000000000" />
+			<Field id="trfValue"    type="flatMoney" intLength="14" decLength="3" signLocation="after" padding="left" padString="0" />
+			<Field id="toFromCallAcc" padding="right" padString=" " length="2" />
+			<Field id="mainCode" padding="right" padString=" " length="1" />
+			<Field id="dummy" length="2" value="  " />
+			<Field id="trfAccountNum" padding="left" padString="0" length="17" />
+			<Field id="dummy" length="16" value="0000000000000000" />
+		</content>
+	</Req>
+	<Res>
+		<content>
+			<Field id="message" startIndex="95" length="69" padding="right" padString=" " />
+		</content>
+	</Res>
+</StopRollover>
