@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="LoanShortInquiryRes">
+		<xsd:all>
+
+			<xsd:element minOccurs="0" name="accountNum"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="currency"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="status"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="noCab"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="jenisRekening"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="accountTypeCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="accountSubcatCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="jkWkt"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="unitPengelola"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="refDischarge"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="remRepay"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="namaRekening"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="namaNasabah"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="kodeKlasifikasiGL"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="aplikasi"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="saldo"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="apprvd"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="advd"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="commi"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="unearn"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="earn"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="angsrn"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tgkDispbl"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="npb"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="bngAkum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="excsAkum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ciac"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="bngHrn"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="excsHrn"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ciin"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="addLoan"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tktSukuBng"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="noBunga"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="lstArrDte"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="insu"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="repaymentRate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="arin"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tglPersetujuan"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tglTransFinansialAkhir"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tglMaintainAkhir"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tglAdvTerakhir"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tglMulaiJthTmp"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="jenisRepayment"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tglTundaJthTmp"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tundaJthTmp"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="badDebtIndic"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="intax"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="dwnBayar"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="theo"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="bungaPrepayStrt"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="bungaPrepayExp"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="iPAmt"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="frekRekKoran"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="siklus"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="minCEVLinked"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="indktrRedraw"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="dndAkum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="dndHrn"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="noBooking"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="optPolicyDate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="optPolicy"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tanggalJatuhTempo"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="bankShare"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="sisaGP"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="minReqCevLinked"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="perbhnJenisRek"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="redraw"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="rekArr"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="dasarPerhitungan"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="payday"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

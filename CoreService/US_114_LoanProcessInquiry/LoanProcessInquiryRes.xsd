@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="LoanProcessInquiryRes">
+		<xsd:all>
+
+			<xsd:element minOccurs="0" name="accountNum"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="customerNum"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="idNumber"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="idType"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="customerName"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="borrowingType"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="borrowerGroup"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="borrowerSubGroup"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="interestRate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="repIntConc"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="repConcMov"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="repConcAdj"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="intIncrMov"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="intIncrAdj"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="duesStartDate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="intStartDate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="intMethod"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="pendRate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="pendDueDate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="pendDuesAmt"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="addLoanCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="addDuesAmt"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="intCap"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="interestTaxYTD"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="dischargePenaltyMths"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="fixedRateDate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="instlNotDays"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="referralCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="reasonArrCde"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="sourceCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="settleFeeCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="misDebit1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ledgerCode1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="subLedgerCode1"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="misDebit2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ledgerCode2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="subLedgerCode2"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="misDebit3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ledgerCode3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="subLedgerCode3"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="duesRecalcInd"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="baseRateRecalcInd"
+				type="xsd:string">
+			</xsd:element> 
+			<xsd:element minOccurs="0" name="repayMeth"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="serialInterestRepay"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="serialInterestDay"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="fixedRateExpiryProduct"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ApprAvail"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="WDLimit"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tglPkAkhir"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="tglPkAwal"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="noPkAkhir"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="noPkAwal"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="namaAgent"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="namaProyek"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="nilaiProyek"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="refRateType"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="refRateTenor"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="refRateMargin"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

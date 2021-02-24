@@ -1,0 +1,99 @@
+<LoanProcessInquiry>
+   <Req>
+       <content> 
+        <Field id="accountNum" padding="left" padString="0" length="17" />
+       </content>
+   </Req>
+   <Res>
+     <content>              
+        <Field id="accountNum" 			padding="left" padString="0" startIndex="90" length="17" />
+
+        <Field id="customerNum" 		padding="right" padString=" " startIndex="107" length="17" />
+        <Field id="idNumber" 			padding="right" padString=" " startIndex="124" length="24" />
+
+        <Field id="idType" 				padding="right" padString=" " startIndex="148" length="4" />
+        <Field id="customerName" 		padding="right" padString=" " startIndex="152" length="60" />
+
+        <Field id="borrowingType" 		padding="right" padString=" " startIndex="212" length="4" />
+		<Field id="borrowerGroup" 		padding="right" padString=" " startIndex="216" length="2" />
+		<Field id="borrowerSubGroup"  	padding="right" padString=" " startIndex="218" length="2" />
+
+        <Field id="interestRate" 		type="flatMoney" startIndex="220" length="8"    intLength="3" decLength="4" signLocation="after"/>
+        <Field id="repIntConc" 			type="flatMoney" startIndex="228" length="8"    intLength="3" decLength="4" signLocation="after"/>
+
+        <Field id="repConcMov" 			type="flatMoney" startIndex="236" length="8"    intLength="3" decLength="4" signLocation="after"/>
+        <Field id="repConcAdj" 			type="flatMoney" startIndex="244" length="8"    intLength="3" decLength="4" signLocation="after"/>
+
+        <Field id="intIncrMov" 			type="flatMoney" startIndex="252" length="8"    intLength="3" decLength="4" signLocation="after"/>
+		<Field id="intIncrAdj" 			type="flatMoney" startIndex="260" length="8"    intLength="3" decLength="4" signLocation="after"/>
+
+        <Field id="duesStartDate" 		type="date"	padding="right" padString=" " startIndex="268" length="8" />
+        <Field id="intStartDate" 		type="date"	padding="right" padString=" " startIndex="276" length="8" />
+
+        <Field id="intMethod" 			padding="right" padString=" " startIndex="284" length="1" />
+        <Field id="pendRate" 			type="flatMoney" startIndex="285" length="8"    intLength="3" decLength="4" signLocation="after"/>
+
+        <Field id="pendDueDate" 		type="date"	padding="right" padString=" " startIndex="293" length="8" />
+		<Field id="pendDuesAmt" 		type="flatMoney" startIndex="301" length="18"    intLength="14" decLength="3" signLocation="after"/>
+
+        <Field id="addLoanCode" 		padding="right" padString=" " startIndex="319" length="1" />
+
+        <Field id="addDuesAmt" 			type="flatMoney" startIndex="320" length="18"    intLength="14" decLength="3" signLocation="after"/>
+		<Field id="intCap" 				type="flatMoney" startIndex="338" length="4"    intLength="2" decLength="2" signLocation="none"/>
+		<Field id="interestTaxYTD" 		type="flatMoney" startIndex="342" length="18"    intLength="14" decLength="3" signLocation="after"/>
+
+        <Field id="dischargePenaltyMths" padding="right" padString=" " startIndex="360" length="4" />
+
+        <Field id="fixedRateDate" 		type="date"	padding="right" padString=" " startIndex="364" length="8" />
+		<Field id="instlNotDays" 		padding="right" padString=" " startIndex="372" length="4" />
+		<Field id="referralCode" 		padding="right" padString=" " startIndex="376" length="1" />
+
+        <Field id="reasonArrCde" 		padding="right" padString=" " startIndex="377" length="2" />
+
+        <Field id="sourceCode" 			padding="right" padString=" " startIndex="379" length="2" />
+		<Field id="settleFeeCode" 		padding="right" padString=" " startIndex="381" length="1" />
+		<Field id="dummy" 				startIndex="382"  length="1" value=" " />
+		<Field id="misDebit1" 			type="flatMoney" startIndex="383" length="10"    intLength="6" decLength="3" signLocation="after"/>
+
+        <Field id="ledgerCode1" 		padding="right" padString=" " startIndex="393" length="1" />
+
+        <Field id="subLedgerCode1"  	padding="right" padString=" " startIndex="394" length="2" />
+		<Field id="misDebit2" 			type="flatMoney" startIndex="396" length="10"    intLength="6" decLength="3" signLocation="after"/>
+		<Field id="ledgerCode2" 		padding="right" padString=" " startIndex="406" length="1" />
+
+        <Field id="subLedgerCode2" 		padding="right" padString=" " startIndex="407" length="2" />
+
+        <Field id="misDebit3" 			type="flatMoney" startIndex="409" length="10"    intLength="6" decLength="3" signLocation="after"/>
+		<Field id="ledgerCode3" 		padding="right" padString=" " startIndex="419" length="1" />
+		<Field id="subLedgerCode3" 		padding="right" padString=" " startIndex="420" length="2" />
+
+        <Field id="duesRecalcInd"  		padding="right" padString=" " startIndex="422" length="1" />
+
+        <Field id="baseRateRecalcInd" 	padding="right" padString=" " startIndex="423" length="1" />
+		<Field id="repayMeth" 			padding="right" padString=" " startIndex="424" length="1" />
+		<Field id="serialInterestRepay" padding="right" padString=" " startIndex="425" length="2" />
+
+        <Field id="serialInterestDay" 	padding="right" padString=" " startIndex="427" length="2" />
+
+        <Field id="fixedRateExpiryProduct" padding="right" padString=" " startIndex="429" length="4" />
+		<Field id="ApprAvail" 			type="flatMoney" startIndex="433" length="18"    intLength="14" decLength="3" signLocation="after"/>
+		<Field id="WDLimit" 			padding="right" padString=" " startIndex="451" length="3" />
+
+        <Field id="tglPkAkhir" 			type="date"	padding="right" padString=" " startIndex="454" length="8" />
+
+        <Field id="tglPkAwal" 			type="date" padding="right" padString=" " startIndex="462" length="8" />
+		<Field id="noPkAkhir"  			padding="right" padString=" " startIndex="470" length="30" />
+
+        <Field id="noPkAwal" 			padding="right" padString=" " startIndex="500" length="30" />
+		<Field id="namaAgent" 			padding="right" padString=" " startIndex="530" length="80" />
+		<Field id="namaProyek" 			padding="right" padString=" " startIndex="610" length="80" />
+
+        <Field id="nilaiProyek" 		type="flatMoney" startIndex="690" length="18"    intLength="14" decLength="3" signLocation="after"/>
+
+        <Field id="refRateType" 		padding="right" padString=" " startIndex="708" length="2" />
+		<Field id="refRateTenor" 		padding="right" padString=" " startIndex="710" length="2" />
+
+        <Field id="refRateMargin" type="flatMoney" startIndex="712" length="8"    intLength="3" decLength="4" signLocation="after"/>
+     </content>
+   </Res>
+</LoanProcessInquiry>

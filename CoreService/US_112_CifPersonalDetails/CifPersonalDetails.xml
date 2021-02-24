@@ -1,0 +1,27 @@
+<CifPersonalDetails>
+   <Req>
+       <content> 
+        <Field id="cifNum" padding="left" padString="0" length="17" />
+        <Field id="dummy"  length="2" value="05"/>
+       </content>
+   </Req>
+   <Res>        
+        <content>
+            <Field id="cifNum" padding="left" padString="0" startIndex="90" length="17" />
+            <Field id="customerName" padding="right" padString=" " startIndex="107" length="60" />
+            <Field id="birthDate" padding="right" padString=" " startIndex="167" length="8" />
+            <Field id="gender" padding="right" padString=" " startIndex="175" length="1" />
+            <Field id="marriageStatus" padding="right" padString=" " startIndex="176" length="1" />
+            <Field id="dependents" padding="right" padString=" " startIndex="177" length="2" />
+            <Field id="nationality" padding="right" padString=" " startIndex="179" length="2" />
+            <Field id="employer" padding="right" padString=" " startIndex="181" length="60" />
+            <Field id="startWorkDate" padding="right" padString=" " startIndex="241" length="8" />
+            <Field id="workAddress1" padding="right" padString=" " startIndex="249" length="30" />
+            <Field id="occupationInfo" padding="right" padString=" " startIndex="279" length="30" />
+            <Field id="occupationCode" padding="left" padString="0" startIndex="309" length="4" />
+            <Field id="birthPlace" padding="right" padString=" " startIndex="313" length="30" />
+            <Field id="workAddress2" padding="right" padString=" " startIndex="343" length="30" />
+            <Field id="postalCode" padding="right" padString=" " startIndex="373" length="5" />
+        </content>       
+   </Res>
+</CifPersonalDetails>

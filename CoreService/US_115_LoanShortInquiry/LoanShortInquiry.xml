@@ -1,0 +1,119 @@
+<LoanShortInquiry>
+   <Req>
+       <content> 
+        <Field id="accountNum" padding="left" padString="0" length="17" />
+        <Field id="dummy"  length="1" value="1"/>
+       </content>
+   </Req>
+   <Res>
+     <content>              
+        <Field id="accountNum" padding="left" padString="0" startIndex="90" length="20" />
+
+        <Field id="currency" padding="right" padString=" " startIndex="110" length="3" />
+        <Field id="status" padding="right" padString=" " startIndex="113" length="18" />
+
+        <Field id="noCab" padding="right" padString=" " startIndex="131" length="4" />
+        <Field id="jenisRekening" padding="right" padString=" " startIndex="135" length="30" />
+
+        <Field id="accountTypeCode" padding="right" padString=" " startIndex="165" length="4" />
+		<Field id="accountSubcatCode" padding="right" padString=" " startIndex="169" length="4" />
+		<Field id="jkWkt" type="numeric" padding="right" padString=" " startIndex="173" length="3" />
+
+        <Field id="unitPengelola" padding="right" padString=" " startIndex="176" length="4" />
+        <Field id="refDischarge" padding="right" padString=" " startIndex="180" length="4" />
+
+        <Field id="remRepay" padding="right" padString=" " startIndex="184" length="3" />
+        <Field id="namaRekening" padding="right" padString=" " startIndex="187" length="60" />
+
+        <Field id="namaNasabah" padding="right" padString=" " startIndex="247" length="60" />
+		<Field id="kodeKlasifikasiGL" padding="right" padString=" " startIndex="307" length="25" />
+
+        <Field id="aplikasi" padding="right" padString=" " startIndex="332" length="19" />
+        <Field id="saldo" padding="right" padString=" " startIndex="351" length="19" />
+
+        <Field id="apprvd" padding="right" padString=" " startIndex="370" length="19" />
+        <Field id="advd" padding="right" padString=" " startIndex="389" length="19" />
+
+        <Field id="commi" padding="right" padString=" " startIndex="408" length="19" />
+		<Field id="unearn" padding="right" padString=" " startIndex="427" length="19" />
+
+        <Field id="earn" padding="right" padString=" " startIndex="446" length="19" />
+
+        <Field id="angsrn" padding="right" padString=" " startIndex="465" length="19" />
+		<Field id="tgkOrDispbl" padding="right" padString=" " startIndex="484" length="19" />
+		<Field id="npb" padding="right" padString=" " startIndex="503" length="19" />
+
+        <Field id="bngAkum" padding="right" padString=" " startIndex="522" length="19" />
+
+        <Field id="excsAkum" padding="right" padString=" " startIndex="541" length="19" />
+		<Field id="ciac" padding="right" padString=" " startIndex="560" length="19" />
+		<Field id="bngHrn" padding="right" padString=" " startIndex="579" length="19" />
+
+        <Field id="excsHrn" padding="right" padString=" " startIndex="598" length="19" />
+
+        <Field id="ciin" padding="right" padString=" " startIndex="617" length="19" />
+		<Field id="addLoan" padding="right" padString=" " startIndex="636" length="1" />
+		<Field id="tktSukuBng" padding="right" padString=" " startIndex="637" length="8" />
+
+        <Field id="noBunga" padding="right" padString=" " startIndex="645" length="19" />
+
+        <Field id="lstArrDte" type="date" padding="right" padString=" " startIndex="664" length="8" />
+		<Field id="insu" padding="right" padString=" " startIndex="672" length="19" />
+		<Field id="repaymentRate" padding="right" padString=" " startIndex="691" length="7" />
+
+        <Field id="arin" padding="right" padString=" " startIndex="698" length="19" />
+
+        <Field id="tglPersetujuan" type="date" padding="right" padString=" " startIndex="717" length="8" />
+		<Field id="tglTransFinansialAkhir" type="date" padding="right" padString=" " startIndex="725" length="8" />
+		<Field id="tglMaintainAkhir" type="date" padding="right" padString=" " startIndex="733" length="8" />
+
+        <Field id="tglAdvTerakhir" type="date" padding="right" padString=" " startIndex="741" length="8" />
+
+        <Field id="tglMulaiJthTmp" type="date" padding="right" padString=" " startIndex="749" length="8" />
+		<Field id="jenisRepayment" padding="right" padString=" " startIndex="757" length="6" />
+		<Field id="tglTundaJthTmp" type="date" padding="right" padString=" " startIndex="763" length="8" />
+
+        <Field id="tundaJthTmp" padding="right" padString=" " startIndex="771" length="19" />
+
+        <Field id="badDebtIndic" padding="right" padString=" " startIndex="790" length="2" />
+		<Field id="intax" padding="right" padString=" " startIndex="792" length="19" />
+		<Field id="dwnBayar" padding="right" padString=" " startIndex="811" length="19" />
+
+        <Field id="theo" padding="right" padString=" " startIndex="830" length="19" />
+
+        <Field id="bungaPrepayStrt" type="date" padding="right" padString=" " startIndex="849" length="8" />
+		<Field id="bungaPrepayExp" type="date" padding="right" padString=" " startIndex="857" length="8" />
+
+        <Field id="iPAmt" padding="right" padString=" " startIndex="865" length="16" />
+		<Field id="frekRekKoran" padding="right" padString=" " startIndex="881" length="1" />
+		<Field id="siklus" padding="right" padString=" " startIndex="882" length="2" />
+
+        <Field id="minCEVLinked" padding="right" padString=" " startIndex="884" length="2" />
+
+        <Field id="indktrRedraw" padding="right" padString=" " startIndex="886" length="1" />
+		<Field id="dndAkum" padding="right" padString=" " startIndex="887" length="19" />
+
+        <Field id="dndHrn" padding="right" padString=" " startIndex="906" length="19" />
+		<Field id="noBooking" padding="right" padString=" " startIndex="925" length="7" />
+		<Field id="optPolicyDate" type="date" padding="right" padString=" " startIndex="932" length="8" />
+
+        <Field id="optPolicy" padding="right" padString=" " startIndex="940" length="1" />
+
+        <Field id="tanggalJatuhTempo" type="date" padding="right" padString=" " startIndex="941" length="8" />
+		<Field id="bankShare" padding="right" padString=" " startIndex="949" length="19" />
+
+        <Field id="sisaGP" type="numeric" padding="right" padString=" " startIndex="968" length="3" />
+		<Field id="minReqCevLinked" padding="right" padString=" " startIndex="971" length="1" />
+		
+		<Field id="dummy"  startIndex="972"  length="54" value="                                                      " />
+		<Field id="perbhnJenisRek" type="date" padding="right" padString=" " startIndex="1026" length="8" />
+
+        <Field id="redraw" padding="right" padString=" " startIndex="1034" length="19" />
+
+        <Field id="rekArr" padding="right" padString=" " startIndex="1053" length="19" />
+		<Field id="dasarPerhitungan" padding="right" padString=" " startIndex="1072" length="1" />
+
+        <Field id="payday" padding="right" padString=" " startIndex="1073" length="2" />
+     </content>
+   </Res>
+</LoanShortInquiry>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.bni.co.id/core/bo">
+	<xsd:complexType name="CifPersonalDetailsRes">
+		<xsd:all>
+			<xsd:element minOccurs="0" name="cifNum" type="xsd:string"/>
+	    	<xsd:element minOccurs="0" name="customerName" type="xsd:string"/>
+	    	<xsd:element minOccurs="0" name="birthDate" type="xsd:string"/>
+	    	<xsd:element minOccurs="0" name="gender" type="xsd:string"/>
+	    	<xsd:element minOccurs="0" name="marriageStatus" type="xsd:string"/>
+	    	<xsd:element minOccurs="0" name="dependents" type="xsd:string"/>
+	    	<xsd:element minOccurs="0" name="nationality" type="xsd:string"/>
+	    	<xsd:element minOccurs="0" name="employer" type="xsd:string"/>
+	    	<xsd:element minOccurs="0" name="startWorkDate" type="xsd:string"/>
+	    	<xsd:element minOccurs="0" name="workAddress1" type="xsd:string"/>
+	    	<xsd:element minOccurs="0" name="occupationInfo" type="xsd:string"/>
+	    	<xsd:element minOccurs="0" name="occupationCode" type="xsd:string"/>
+	    	<xsd:element minOccurs="0" name="birthPlace" type="xsd:string"/>
+	    	<xsd:element minOccurs="0" name="workAddress2" type="xsd:string"/>
+	    	<xsd:element minOccurs="0" name="postalCode" type="xsd:string"/>
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>
