@@ -1,0 +1,98 @@
+BROKER SCHEMA id.co.bni.mf.core.handler.overdraft
+/*
+ *
+ * File name: DepositOverdraftLimitUpdate.esql
+ *
+ * Purpose  : Set overdraft inquiry and overdraft limit update parameters
+ *
+ * Authors  : Topik Hidayat
+ *			   
+ *            
+ * Date     : June 2013
+ * Version  : 1.0
+ *
+ * @copyright  PT Bank Negara Indonesia. 2011.  All rights reserved.
+ *
+ */
+
+
+/*
+ * Set inquiry parameters before calling SF_DepositOverdraftInquiry Subflow. 
+ * - set accountNumber as the only parameter
+ */
+CREATE COMPUTE MODULE DepositOverdraftLimitUpdate_setInquiryParams
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+
+		SET OutputRoot.XMLNSC.request.content.accountNumber = InputRoot.XMLNSC.request.content.accountNumber;
+		
+		RETURN TRUE;
+	END;
+
+END MODULE;
+
+
+/*
+ * Set inquiry parameters before calling SF_DepositOverdraftUpdate Subflow. 
+ * - set namepaces
+ * - change bo to DepositOverdraftLimitUpdate
+ * - restore systemId
+ * - set accountNumber, overdraftLimit1, effectiveDate2 and dueDate1 as parameters
+ * - set value4 parameter to NULL
+ */
+CREATE COMPUTE MODULE DepositOverdraftLimitUpdate_setLimitUpdateInput
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		
+		/*
+		 * Copy Inquiry result as default paramters for deposit overdraft update
+		 */
+		DECLARE core NAMESPACE 'http://service.bni.co.id/core';
+		DECLARE refResponse REFERENCE TO InputRoot.XMLNSC.core:Response;
+		
+		SET OutputRoot.XMLNSC.request.content  = refResponse.content;
+		
+		
+		/*
+		 * Repalace parameters to be updated from original request
+		 */				
+		DECLARE refContentOut REFERENCE TO OutputRoot.XMLNSC.request.content;
+		DECLARE  refEnvReq REFERENCE TO Environment.DepositOverdraftLimitUpdate.Request;
+		
+		SET refContentOut.accountNumber = refEnvReq.accountNumber;	
+		SET refContentOut.overDraftLimit1 = refEnvReq.overDraftLimit1;	
+		SET refContentOut.effectiveDate1 = refEnvReq.effectiveDate1;	
+		SET refContentOut.dueDate1 = refEnvReq.dueDate1;	
+			
+		-- set value4 always to NULL
+		SET refContentOut.value4 = NULL;		
+
+		
+		RETURN TRUE;
+	END;
+
+END MODULE;
+
+/*
+ * Save original OverdraftLimitUpdate input parameters to Environment Var
+ * - save accountNumber, overdraftLimit1, effectiveDate2 and dueDate1 as parameters
+ *
+ */
+CREATE COMPUTE MODULE DepositOverdraftLimitUpdate_saveUpdateLimitRequest
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		DECLARE refContent REFERENCE TO InputRoot.XMLNSC.request.content;
+		
+		SET Environment.DepositOverdraftLimitUpdate.Request.accountNumber = refContent.accountNumber;
+		DECLARE  refEnvReq REFERENCE TO Environment.DepositOverdraftLimitUpdate.Request;
+		
+		SET refEnvReq.overDraftLimit1 = refContent.overDraftLimit1;
+		SET refEnvReq.effectiveDate1 = refContent.effectiveDate1;
+		SET refEnvReq.dueDate1 = refContent.dueDate1;
+		
+		
+	END;
+
+END MODULE;

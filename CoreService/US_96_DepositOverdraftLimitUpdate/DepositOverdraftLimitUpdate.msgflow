@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ComIbmCompute.msgnode="ComIbmCompute.msgnode" xmlns:ComIbmMQInput.msgnode="ComIbmMQInput.msgnode" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eflow="http://www.ibm.com/wbi/2005/eflow" xmlns:id_co_bni_mf_common_core_SF_ReceiveInput.msgflow="id/co/bni/mf/common/core/SF_ReceiveInput.msgflow" xmlns:id_co_bni_mf_common_core_SF_SendOutput.msgflow="id/co/bni/mf/common/core/SF_SendOutput.msgflow" xmlns:id_co_bni_mf_core_handler_overdraft_SF_DepositOverdraftInquiry.msgflow="id/co/bni/mf/core/handler/overdraft/SF_DepositOverdraftInquiry.msgflow"
+    xmlns:id_co_bni_mf_core_handler_overdraft_SF_DepositOverdraftUpdate.msgflow="id/co/bni/mf/core/handler/overdraft/SF_DepositOverdraftUpdate.msgflow" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility" nsURI="id/co/bni/mf/core/handler/overdraft/DepositOverdraftLimitUpdate.msgflow"
+    nsPrefix="id_co_bni_mf_core_handler_overdraft_DepositOverdraftLimitUpdate.msgflow">
+  <eClassifiers xmi:type="eflow:FCMComposite" name="FCMComposite_1">
+    <eSuperTypes href="http://www.ibm.com/wbi/2005/eflow#//FCMBlock"/>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.LoggerConfig" name="LoggerConfig" lowerBound="1" defaultValueLiteral="C:/On work/BNI SOA/log/logger.xml">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.ReplyQ" name="ReplyQ" defaultValueLiteral="QA.CORE.HANDLER.DEPOSITOVERDRAFTLIMITUPDATE.RES">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <translation xmi:type="utility:TranslatableString" key="DepositOverdraftLimitUpdate" bundleName="id/co/bni/mf/core/handler/overdraft/DepositOverdraftLimitUpdate" pluginId="MF_CoreService"/>
+    <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/MF_CoreService/icons/full/obj16/DepositOverdraftLimitUpdate.gif"/>
+    <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/MF_CoreService/icons/full/obj30/DepositOverdraftLimitUpdate.gif"/>
+    <shortDescription xmi:type="utility:ConstantString" string="Service to update Overdraft Limit of an account in ICONS"/>
+    <longDescription xmi:type="utility:ConstantString" string="Service to update Overdraft Limit of an account in ICONS. This service receives only 4 input parameters :&#xD;&#xA;- accountNumber&#xD;&#xA;- overdraftLimit1&#xD;&#xA;- effectiveDate1&#xD;&#xA;- dueDate1&#xD;&#xA;&#xD;&#xA;Updating Overdraft data in ICONS requires so many paramters, since this service only updates few parameters as listed above, hence to get those paramaters we should retrieve the current paramters first from ICONS calling DepositOverdraftInquiry subflow.&#xD;&#xA;After got those parameters, then service will replace the above parameters with the new value an then callinging Deposit"/>
+    <version xmi:type="utility:ConstantString" string="1.0"/>
+    <composition>
+      <nodes xmi:type="ComIbmMQInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="-149,183" queueName="QA.CORE.HANDLER.DEPOSITOVERDRAFTLIMITUPDATE.REQ" messageDomainProperty="XMLNSC">
+        <translation xmi:type="utility:ConstantString" string="OverdraftUpdate.REQ"/>
+        <shortDescription xmi:type="utility:ConstantString" string="Receive input message for the service"/>
+        <longDescription xmi:type="utility:ConstantString" string="Receive input message from queue QA.CORE.HANDLER.DEPOSITOVERDRAFTLIMITUPDATE.REQ (default). Message are in XML + RFH2 format"/>
+      </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="187,184" computeExpression="esql://routine/id.co.bni.mf.core.handler.overdraft#DepositOverdraftLimitUpdate_setInquiryParams.Main" computeMode="destinationAndMessage">
+        <translation xmi:type="utility:ConstantString" string="setInquiryParams"/>
+        <shortDescription xmi:type="utility:ConstantString" string="Set parameters for Overdarft Inquiry"/>
+        <longDescription xmi:type="utility:ConstantString" string="Set parameters for overdraft inquiry:&#xD;&#xA;- accountNumber"/>
+      </nodes>
+      <nodes xmi:type="id_co_bni_mf_common_core_SF_ReceiveInput.msgflow:FCMComposite_1" xmi:id="FCMComposite_1_3" location="-31,183">
+        <translation xmi:type="utility:ConstantString" string="SF_ReceiveInput"/>
+        <shortDescription xmi:type="utility:ConstantString" string="Save headers information to environment variable and perform minimal loggin "/>
+        <longDescription xmi:type="utility:ConstantString" string="Save headers(MQMD, MQRFH2, and systemId) information which later will be used during processing or sending response. In addition this suflow will perform standard logging for notifying this flow is receiving input message."/>
+      </nodes>
+      <nodes xmi:type="id_co_bni_mf_core_handler_overdraft_SF_DepositOverdraftInquiry.msgflow:FCMComposite_1" xmi:id="FCMComposite_1_4" location="281,185">
+        <translation xmi:type="utility:ConstantString" string="SF_DepositOverdraftInquiry"/>
+        <shortDescription xmi:type="utility:ConstantString" string="Call SF_DepositOverdraftInquiry to get current overdraft parameters from ICONS"/>
+        <longDescription xmi:type="utility:ConstantString" string="Call SF_DepositOverdraftInquiry to get current overdraft parameters from ICONS"/>
+      </nodes>
+      <nodes xmi:type="id_co_bni_mf_core_handler_overdraft_SF_DepositOverdraftUpdate.msgflow:FCMComposite_1" xmi:id="FCMComposite_1_6" location="534,182">
+        <translation xmi:type="utility:ConstantString" string="SF_DepositOverdraftUpdate"/>
+        <shortDescription xmi:type="utility:ConstantString" string="Update Overdraft parameters on icons"/>
+        <longDescription xmi:type="utility:ConstantString" string="Update Overdraft parameters on icons, updated params are:&#xD;&#xA;- accountNumber&#xD;&#xA;- overdraftLimit1&#xD;&#xA;- effectiveDate1&#xD;&#xA;- dueDate1&#xD;&#xA;"/>
+      </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_7" location="428,181" computeExpression="esql://routine/id.co.bni.mf.core.handler.overdraft#DepositOverdraftLimitUpdate_setLimitUpdateInput.Main" computeMode="destinationAndMessage">
+        <translation xmi:type="utility:ConstantString" string="setLimitUpdateInput"/>
+        <shortDescription xmi:type="utility:ConstantString" string="Set paramters related to Limit update only"/>
+        <longDescription xmi:type="utility:ConstantString" string="Restore saved paramters from environment variable :&#xD;&#xA;- accountNumber&#xD;&#xA;- overdraftLimit1&#xD;&#xA;- effectiveDate1&#xD;&#xA;- dueDate1&#xD;&#xA;"/>
+      </nodes>
+      <nodes xmi:type="id_co_bni_mf_common_core_SF_SendOutput.msgflow:FCMComposite_1" xmi:id="FCMComposite_1_8" location="729,178">
+        <translation xmi:type="utility:ConstantString" string="SF_SendOutput"/>
+        <shortDescription xmi:type="utility:ConstantString" string="Sending response through queue"/>
+        <longDescription xmi:type="utility:ConstantString" string="Restore replyToQ and replyToQManager and set as destination Queue information. Write standard logging to notify that this flow has sent the response."/>
+      </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_9" location="59,183" computeExpression="esql://routine/id.co.bni.mf.core.handler.overdraft#DepositOverdraftLimitUpdate_saveUpdateLimitRequest.Main" computeMode="destination">
+        <translation xmi:type="utility:ConstantString" string="saveUpdateLimitRequest"/>
+        <shortDescription xmi:type="utility:ConstantString" string="Save original request to Environment variables"/>
+        <longDescription xmi:type="utility:ConstantString" string="Save update limit parameters to Environment.DepositOverdraftLimitUpdate.Request which will be used later when before calling SF_DepositOverdraftUpdate.&#xD;&#xA;Saved parameters :&#xD;&#xA;- accountNumber&#xD;&#xA;- overdraftLimit1&#xD;&#xA;- effectiveDate1&#xD;&#xA;- dueDate1&#xD;&#xA;"/>
+      </nodes>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_2" targetNode="FCMComposite_1_3" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.Input1"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_3" targetNode="FCMComposite_1_3" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.failure" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_5" targetNode="FCMComposite_1_3" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.catch" targetTerminalName="InTerminal.Input2"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_7" targetNode="FCMComposite_1_4" sourceNode="FCMComposite_1_2" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_10" targetNode="FCMComposite_1_7" sourceNode="FCMComposite_1_4" sourceTerminalName="OutTerminal.Output" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_6" sourceNode="FCMComposite_1_7" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_4" targetNode="FCMComposite_1_8" sourceNode="FCMComposite_1_6" sourceTerminalName="OutTerminal.Output" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_8" targetNode="FCMComposite_1_8" sourceNode="FCMComposite_1_6" sourceTerminalName="OutTerminal.Output1" targetTerminalName="InTerminal.Input">
+        <bendPoints>82,-5,-134,-1</bendPoints>
+        <bendPoints>108,-13,-108,-9</bendPoints>
+      </connections>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_9" targetNode="FCMComposite_1_8" sourceNode="FCMComposite_1_4" sourceTerminalName="OutTerminal.Output1" targetTerminalName="InTerminal.Input">
+        <bendPoints>137,64,-292,71</bendPoints>
+        <bendPoints>265,64,-164,71</bendPoints>
+      </connections>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_11" targetNode="FCMComposite_1_9" sourceNode="FCMComposite_1_3" sourceTerminalName="OutTerminal.Output1" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_12" targetNode="FCMComposite_1_2" sourceNode="FCMComposite_1_9" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+    </composition>
+    <propertyOrganizer>
+      <propertyDescriptor groupName="Group.Basic" configurable="true" userDefined="true" describedAttribute="Property.LoggerConfig">
+        <propertyName xmi:type="utility:TranslatableString" key="Property.LoggerConfig" bundleName="id/co/bni/mf/common/core/SF_ReceiveInput" pluginId="MF_CommonFlow"/>
+        <propertyDescriptor groupName="Group.Basic" configurable="true" userDefined="true" describedAttribute="Property.ReplyQ">
+          <propertyName xmi:type="utility:TranslatableString" key="Property.ReplyQ" bundleName="id/co/bni/mf/common/core/SF_ReceiveInput" pluginId="MF_CommonFlow"/>
+        </propertyDescriptor>
+      </propertyDescriptor>
+    </propertyOrganizer>
+    <attributeLinks promotedAttribute="Property.LoggerConfig" overriddenNodes="FCMComposite_1_3">
+      <overriddenAttribute href="id/co/bni/mf/common/core/SF_ReceiveInput.msgflow#Property.LoggerConfig"/>
+    </attributeLinks>
+    <attributeLinks promotedAttribute="Property.ReplyQ" overriddenNodes="FCMComposite_1_3">
+      <overriddenAttribute href="id/co/bni/mf/common/core/SF_ReceiveInput.msgflow#Property.ReplyQ"/>
+    </attributeLinks>
+    <stickyBoard/>
+  </eClassifiers>
+</ecore:EPackage>
