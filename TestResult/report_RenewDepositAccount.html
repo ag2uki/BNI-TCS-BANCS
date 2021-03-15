@@ -426,7 +426,7 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report_RenewDepositAccount.html</h1>
-    <p>Report generated on 19-Feb-2021 at 12:10:02 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.0</p>
+    <p>Report generated on 15-Mar-2021 at 14:33:55 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -442,8 +442,8 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.7.0</td></tr></table>
     <h2>Summary</h2>
-    <p>3 tests ran in 0.23 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">3 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>3 tests ran in 0.30 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">3 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">1 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -454,17 +454,26 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="error results-table-row">
+        <tr>
+          <td class="col-result">Error</td>
+          <td class="col-name">Core-Service-TCS/test/test_RenewDepositAccount.py::test_branch_header[expectedBranch0]::setup</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">file /home/soadev/core-service-test/Core-Service-TCS/test/test_RenewDepositAccount.py, line 345<br/>  @pytest.mark.parametrize(&#x27;expectedBranch&#x27;, [(&#x27;NEWIBANK-CORE&#x27;, &#x27;0996&#x27;)])<br/>  def test_branch_header(systemId, expectedBranch):<br/><span class="error">E       fixture &#x27;systemId&#x27; not found</span><br/>&gt;       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, extra, include_metadata_in_junit_xml, metadata, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory<br/>&gt;       use &#x27;pytest --fixtures [testpath]&#x27; for help on them.<br/><br/>/home/soadev/core-service-test/Core-Service-TCS/test/test_RenewDepositAccount.py:345<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_RenewDepositAccount.py::test_normal[NEWIBANK-CORE]</td>
-          <td class="col-duration">0.08</td>
+          <td class="col-duration">0.07</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 696
-DEBUG    root:test_RenewDepositAccount.py:119 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode xmlns:ns0=&quot;http://service.bni.co.id/core&quot;&gt;ns0:AppFault&lt;/faultcode&gt;&lt;faultstring xml:lang=&quot;en&quot;&gt;0155&lt;/faultstring&gt;&lt;detail encodingStyle=&quot;&quot;&gt;&lt;core:transaction_appFault xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;errorNum&gt;0155&lt;/errorNum&gt;&lt;errorDescription&gt;HUBUNGI COMPUTER CENTER     SORD&lt;/errorDescription&gt;&lt;/core:transaction_appFault&gt;&lt;/detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
+DEBUG    root:test_RenewDepositAccount.py:120 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode xmlns:ns0=&quot;http://service.bni.co.id/core&quot;&gt;ns0:AppFault&lt;/faultcode&gt;&lt;faultstring xml:lang=&quot;en&quot;&gt;0155&lt;/faultstring&gt;&lt;detail encodingStyle=&quot;&quot;&gt;&lt;core:transaction_appFault xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;errorNum&gt;0155&lt;/errorNum&gt;&lt;errorDescription&gt;HUBUNGI COMPUTER CENTER     SORD&lt;/errorDescription&gt;&lt;/core:transaction_appFault&gt;&lt;/detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
@@ -475,15 +484,15 @@ DEBUG    root:test_RenewDepositAccount.py:119 &lt;soapenv:Envelope xmlns:dpss0=&
           <td class="extra" colspan="4">
             <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 696
-DEBUG    root:test_RenewDepositAccount.py:230 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode xmlns:ns0=&quot;http://service.bni.co.id/core&quot;&gt;ns0:AppFault&lt;/faultcode&gt;&lt;faultstring xml:lang=&quot;en&quot;&gt;0155&lt;/faultstring&gt;&lt;detail encodingStyle=&quot;&quot;&gt;&lt;core:transaction_appFault xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;errorNum&gt;0155&lt;/errorNum&gt;&lt;errorDescription&gt;HUBUNGI COMPUTER CENTER     SORD&lt;/errorDescription&gt;&lt;/core:transaction_appFault&gt;&lt;/detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
+DEBUG    root:test_RenewDepositAccount.py:231 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode xmlns:ns0=&quot;http://service.bni.co.id/core&quot;&gt;ns0:AppFault&lt;/faultcode&gt;&lt;faultstring xml:lang=&quot;en&quot;&gt;0155&lt;/faultstring&gt;&lt;detail encodingStyle=&quot;&quot;&gt;&lt;core:transaction_appFault xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;errorNum&gt;0155&lt;/errorNum&gt;&lt;errorDescription&gt;HUBUNGI COMPUTER CENTER     SORD&lt;/errorDescription&gt;&lt;/core:transaction_appFault&gt;&lt;/detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_RenewDepositAccount.py::test_abnormal[NEWIBANK-CORE]</td>
-          <td class="col-duration">0.03</td>
+          <td class="col-duration">0.02</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 679
-DEBUG    root:test_RenewDepositAccount.py:341 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode xmlns:ns0=&quot;http://service.bni.co.id/core&quot;&gt;ns0:AppFault&lt;/faultcode&gt;&lt;faultstring xml:lang=&quot;en&quot;&gt;0108&lt;/faultstring&gt;&lt;detail encodingStyle=&quot;&quot;&gt;&lt;core:transaction_appFault xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;errorNum&gt;0108&lt;/errorNum&gt;&lt;errorDescription&gt;NO SUCH ACCOUNT&lt;/errorDescription&gt;&lt;/core:transaction_appFault&gt;&lt;/detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody></table></body></html>
+DEBUG    root:test_RenewDepositAccount.py:342 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode xmlns:ns0=&quot;http://service.bni.co.id/core&quot;&gt;ns0:AppFault&lt;/faultcode&gt;&lt;faultstring xml:lang=&quot;en&quot;&gt;0108&lt;/faultstring&gt;&lt;detail encodingStyle=&quot;&quot;&gt;&lt;core:transaction_appFault xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;errorNum&gt;0108&lt;/errorNum&gt;&lt;errorDescription&gt;NO SUCH ACCOUNT&lt;/errorDescription&gt;&lt;/core:transaction_appFault&gt;&lt;/detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody></table></body></html>
