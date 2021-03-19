@@ -426,7 +426,7 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report_KliringOutward.html</h1>
-    <p>Report generated on 15-Mar-2021 at 14:40:15 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.0</p>
+    <p>Report generated on 18-Mar-2021 at 11:51:28 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -442,8 +442,8 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.7.0</td></tr></table>
     <h2>Summary</h2>
-    <p>40 tests ran in 30.25 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">39 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>40 tests ran in 22.59 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">40 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -454,150 +454,108 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_branch_header[GLOBS-0766]</td>
-          <td class="col-duration">2.14</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">systemId = &#x27;GLOBS&#x27;, expectedBranch = &#x27;0766&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;systemId, expectedBranch&#x27;, [(&#x27;BNIDIRECT&#x27;, &#x27;0989&#x27;),<br/>                                                            (&#x27;NEWIBANK-CORE&#x27;, &#x27;0996&#x27;),<br/>                                                              (&#x27;IMS&#x27;, &#x27;0987&#x27;),<br/>                                                                (&#x27;IBOC&#x27;, &#x27;0766&#x27;),<br/>                                                              (&#x27;H2HSERVICE&#x27;, &#x27;0987&#x27;),<br/>                                                                (&#x27;GLOBS&#x27;, &#x27;0766&#x27;),<br/>                                                                  (&#x27;SYARIAH&#x27;, &#x27;0992&#x27;),<br/>                                                                    (&#x27;NEWMOBILE&#x27;, &#x27;0991&#x27;),<br/>                                                                    (&#x27;GOWEALTH&#x27;, &#x27;0957&#x27;),<br/>                                                           (&#x27;API&#x27;, &#x27;0986&#x27;)])<br/>    def test_branch_header(systemId, expectedBranch):<br/>        post_data = &quot;&quot;&quot;&lt;soapenv:Envelope xmlns:q0=&quot;http://service.bni.co.id/core&quot; xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;<br/>       &lt;soapenv:Body&gt;<br/>          &lt;q0:transaction&gt;<br/>             &lt;request&gt;<br/>                &lt;systemId&gt;${systemId}&lt;/systemId&gt;<br/>                &lt;content xsi:type=&quot;bo:KliringOutwardReq&quot;&gt;<br/>                   &lt;accountNum&gt;1231&lt;/accountNum&gt;<br/>                   &lt;nominalPenarikan&gt;355000&lt;/nominalPenarikan&gt;<br/>                   &lt;nominalDikirim&gt;350000&lt;/nominalDikirim&gt;<br/>                   &lt;biaya&gt;5000&lt;/biaya&gt;<br/>                   &lt;pesan1Pengirim&gt;pembayaran cicilan&lt;/pesan1Pengirim&gt;<br/>                   &lt;pesan2Pengirim&gt;&lt;/pesan2Pengirim&gt;<br/>                   &lt;namaPenerima&gt;Dian Amalia&lt;/namaPenerima&gt;<br/>                   &lt;alamat1Penerima&gt;Jl. Mawar no 10&lt;/alamat1Penerima&gt;<br/>                   &lt;alamat2Penerima&gt;&lt;/alamat2Penerima&gt;<br/>                   &lt;nomorTelponPenerima&gt;&lt;/nomorTelponPenerima&gt;<br/>                   &lt;kodePosPenerima&gt;&lt;/kodePosPenerima&gt;<br/>                   &lt;idPenerima&gt;&lt;/idPenerima&gt;<br/>                   &lt;tipeIdPenerima&gt;0001&lt;/tipeIdPenerima&gt;<br/>                   &lt;namaPengirim&gt;Diana&lt;/namaPengirim&gt;<br/>                   &lt;alamatPengirim&gt;Jl. Melati no 10&lt;/alamatPengirim&gt;<br/>                   &lt;nomorTelponPengirim&gt;&lt;/nomorTelponPengirim&gt;<br/>                   &lt;tipeResidensiPengirim&gt;0&lt;/tipeResidensiPengirim&gt;<br/>                   &lt;tipeResidensiPenerima&gt;0&lt;/tipeResidensiPenerima&gt;<br/>                   &lt;sandiBankPenerima&gt;0010016&lt;/sandiBankPenerima&gt;<br/>                   &lt;accountPenerima&gt;888123456789&lt;/accountPenerima&gt;<br/>                   &lt;intermediaryBranch&gt;760&lt;/intermediaryBranch&gt;<br/>                   &lt;sandiTransaksi&gt;50&lt;/sandiTransaksi&gt;<br/>                &lt;/content&gt;<br/>             &lt;/request&gt;<br/>          &lt;/q0:transaction&gt;<br/>       &lt;/soapenv:Body&gt;<br/>    &lt;/soapenv:Envelope&gt;<br/>    &quot;&quot;&quot;<br/>        s = Template(post_data)<br/>        req = s.safe_substitute(systemId=systemId)<br/>    <br/>        # SSH to Server [&#x27;ssh&#x27;, &#x27;-i&#x27;, &#x27;ssh-key.txt&#x27;, &#x27;root@192.168.231.23&#x27;, &#x27;tail&#x27;, &#x27;-f&#x27;, &#x27;/opt/jboss-eap/standalone/log/server.log&#x27;]<br/>        client = paramiko.SSHClient()<br/>        client.load_system_host_keys()<br/>        client.connect (&#x27;192.168.231.23&#x27;, key_filename=&#x27;ssh-key.txt&#x27;, username=&#x27;soadev&#x27;)<br/>        stdin, stdout, stderr = client.exec_command(&#x27;truncate --size 0 /opt/jboss-eap/standalone/log/server.log&#x27;)<br/>    <br/>        # POST DATA to core service<br/>        headers = {&#x27;Content-type&#x27;: &#x27;application/xml&#x27;}<br/>        r = requests.post(url_coreservice_baru, data=req, headers=headers)<br/>        logger.debug(str(r.status_code) + &#x27;---------&#x27; + r.text)<br/>    <br/>        # get The f log!<br/>        stdin, stdout, stderr = client.exec_command(&#x27;tail -1048576 /opt/jboss-eap/standalone/log/server.log | grep &quot;Input ByteStream&quot;&#x27;)<br/>    <br/>        log = &quot;&quot;<br/>    <br/>        for line in stdout:<br/>            log = line.strip(&#x27;\n&#x27;)<br/>    <br/>        logger.debug(log)<br/>        i = log.find(&#x27;003&#x27; + expectedBranch)<br/>    <br/>&gt;       assert(i != -1)<br/><span class="error">E       assert -1 != -1</span><br/><br/>Core-Service-TCS/test/test_KliringOutward.py:227: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0x125b128
-DEBUG    paramiko.transport:transport.py:1819 Local version/idstring: SSH-2.0-paramiko_2.7.2
-DEBUG    paramiko.transport:transport.py:1819 Remote version/idstring: SSH-2.0-OpenSSH_7.4
-INFO     paramiko.transport:transport.py:1819 Connected (version 2.0, client OpenSSH_7.4)
-DEBUG    paramiko.transport:transport.py:1819 kex algos:[&#x27;curve25519-sha256&#x27;, &#x27;curve25519-sha256@libssh.org&#x27;, &#x27;ecdh-sha2-nistp256&#x27;, &#x27;ecdh-sha2-nistp384&#x27;, &#x27;ecdh-sha2-nistp521&#x27;, &#x27;diffie-hellman-group-exchange-sha256&#x27;, &#x27;diffie-hellman-group16-sha512&#x27;, &#x27;diffie-hellman-group18-sha512&#x27;, &#x27;diffie-hellman-group-exchange-sha1&#x27;, &#x27;diffie-hellman-group14-sha256&#x27;, &#x27;diffie-hellman-group14-sha1&#x27;, &#x27;diffie-hellman-group1-sha1&#x27;] server key:[&#x27;ssh-rsa&#x27;, &#x27;rsa-sha2-512&#x27;, &#x27;rsa-sha2-256&#x27;, &#x27;ecdsa-sha2-nistp256&#x27;, &#x27;ssh-ed25519&#x27;] client encrypt:[&#x27;chacha20-poly1305@openssh.com&#x27;, &#x27;aes128-ctr&#x27;, &#x27;aes192-ctr&#x27;, &#x27;aes256-ctr&#x27;, &#x27;aes128-gcm@openssh.com&#x27;, &#x27;aes256-gcm@openssh.com&#x27;, &#x27;aes128-cbc&#x27;, &#x27;aes192-cbc&#x27;, &#x27;aes256-cbc&#x27;, &#x27;blowfish-cbc&#x27;, &#x27;cast128-cbc&#x27;, &#x27;3des-cbc&#x27;] server encrypt:[&#x27;chacha20-poly1305@openssh.com&#x27;, &#x27;aes128-ctr&#x27;, &#x27;aes192-ctr&#x27;, &#x27;aes256-ctr&#x27;, &#x27;aes128-gcm@openssh.com&#x27;, &#x27;aes256-gcm@openssh.com&#x27;, &#x27;aes128-cbc&#x27;, &#x27;aes192-cbc&#x27;, &#x27;aes256-cbc&#x27;, &#x27;blowfish-cbc&#x27;, &#x27;cast128-cbc&#x27;, &#x27;3des-cbc&#x27;] client mac:[&#x27;umac-64-etm@openssh.com&#x27;, &#x27;umac-128-etm@openssh.com&#x27;, &#x27;hmac-sha2-256-etm@openssh.com&#x27;, &#x27;hmac-sha2-512-etm@openssh.com&#x27;, &#x27;hmac-sha1-etm@openssh.com&#x27;, &#x27;umac-64@openssh.com&#x27;, &#x27;umac-128@openssh.com&#x27;, &#x27;hmac-sha2-256&#x27;, &#x27;hmac-sha2-512&#x27;, &#x27;hmac-sha1&#x27;] server mac:[&#x27;umac-64-etm@openssh.com&#x27;, &#x27;umac-128-etm@openssh.com&#x27;, &#x27;hmac-sha2-256-etm@openssh.com&#x27;, &#x27;hmac-sha2-512-etm@openssh.com&#x27;, &#x27;hmac-sha1-etm@openssh.com&#x27;, &#x27;umac-64@openssh.com&#x27;, &#x27;umac-128@openssh.com&#x27;, &#x27;hmac-sha2-256&#x27;, &#x27;hmac-sha2-512&#x27;, &#x27;hmac-sha1&#x27;] client compress:[&#x27;none&#x27;, &#x27;zlib@openssh.com&#x27;] server compress:[&#x27;none&#x27;, &#x27;zlib@openssh.com&#x27;] client lang:[&#x27;&#x27;] server lang:[&#x27;&#x27;] kex follows?False
-DEBUG    paramiko.transport:transport.py:1819 Kex agreed: curve25519-sha256@libssh.org
-DEBUG    paramiko.transport:transport.py:1819 HostKey agreed: ecdsa-sha2-nistp256
-DEBUG    paramiko.transport:transport.py:1819 Cipher agreed: aes128-ctr
-DEBUG    paramiko.transport:transport.py:1819 MAC agreed: hmac-sha2-256
-DEBUG    paramiko.transport:transport.py:1819 Compression agreed: none
-DEBUG    paramiko.transport:transport.py:1819 kex engine KexCurve25519 specified hash_algo &lt;built-in function openssl_sha256&gt;
-DEBUG    paramiko.transport:transport.py:1819 Switch to new keys ...
-DEBUG    paramiko.transport:transport.py:1819 Trying discovered key b&#x27;39a28802372b24a5e84125168fa3e87d&#x27; in ssh-key.txt
-DEBUG    paramiko.transport:transport.py:1819 userauth is OK
-INFO     paramiko.transport:transport.py:1819 Authentication (publickey) successful!
-DEBUG    paramiko.transport:channel.py:1212 [chan 0] Max packet in: 32768 bytes
-DEBUG    paramiko.transport:transport.py:1819 Received global request &quot;hostkeys-00@openssh.com&quot;
-DEBUG    paramiko.transport:transport.py:1819 Rejecting &quot;hostkeys-00@openssh.com&quot; global request from server.
-DEBUG    paramiko.transport:channel.py:1212 [chan 0] Max packet out: 32768 bytes
-DEBUG    paramiko.transport:transport.py:1819 Secsh channel 0 opened.
-DEBUG    paramiko.transport:channel.py:1212 [chan 0] Sesch channel 0 request ok
-DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
-DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF received (0)
-DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF sent (0)
-DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:214 200---------&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024052&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
-         &lt;message/&gt;
-      &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;
-DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet in: 32768 bytes
-DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet out: 32768 bytes
-DEBUG    paramiko.transport:transport.py:1819 Secsh channel 1 opened.
-DEBUG    paramiko.transport:channel.py:1212 [chan 1] Sesch channel 1 request ok
-DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF received (1)
-DEBUG    root:test_KliringOutward.py:224<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_normal[BNIDIRECT]</td>
-          <td class="col-duration">0.87</td>
+          <td class="col-duration">1.23</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:58 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024016&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
+DEBUG    root:test_KliringOutward.py:58 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;028145&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
          &lt;message/&gt;
       &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_normal[NEWIBANK-CORE]</td>
-          <td class="col-duration">0.88</td>
+          <td class="col-duration">1.18</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:58 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024017&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
+DEBUG    root:test_KliringOutward.py:58 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;028146&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
          &lt;message/&gt;
       &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_normal[IMS]</td>
-          <td class="col-duration">0.84</td>
+          <td class="col-duration">0.83</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:58 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024018&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
+DEBUG    root:test_KliringOutward.py:58 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;028147&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
          &lt;message/&gt;
       &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_normal[IBOC]</td>
-          <td class="col-duration">0.82</td>
+          <td class="col-duration">0.84</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:58 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024019&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
+DEBUG    root:test_KliringOutward.py:58 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;028148&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
          &lt;message/&gt;
       &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_normal[H2HSERVICE]</td>
-          <td class="col-duration">0.82</td>
+          <td class="col-duration">1.03</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:58 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024020&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
+DEBUG    root:test_KliringOutward.py:58 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;028149&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
          &lt;message/&gt;
       &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_normal[GLOBS]</td>
-          <td class="col-duration">0.88</td>
+          <td class="col-duration">0.84</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:58 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024021&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
+DEBUG    root:test_KliringOutward.py:58 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;028150&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
          &lt;message/&gt;
       &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_normal[SYARIAH]</td>
-          <td class="col-duration">1.02</td>
+          <td class="col-duration">0.83</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:58 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024022&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
+DEBUG    root:test_KliringOutward.py:58 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;028151&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
          &lt;message/&gt;
       &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_normal[NEWMOBILE]</td>
-          <td class="col-duration">0.82</td>
+          <td class="col-duration">0.84</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:58 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024023&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
+DEBUG    root:test_KliringOutward.py:58 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;028152&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
          &lt;message/&gt;
       &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
@@ -610,46 +568,46 @@ DEBUG    root:test_KliringOutward.py:58 &lt;soapenv:Envelope xmlns:dpss0=&quot;b
           <td class="extra" colspan="4">
             <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:58 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024024&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
+DEBUG    root:test_KliringOutward.py:58 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;028153&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
          &lt;message/&gt;
       &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_normal[API]</td>
-          <td class="col-duration">0.82</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
-DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:58 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024025&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
-         &lt;message/&gt;
-      &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_normal_content_type_applicationxml[BNIDIRECT]</td>
           <td class="col-duration">0.86</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:106 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024026&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
+DEBUG    root:test_KliringOutward.py:58 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;028154&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
          &lt;message/&gt;
       &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_normal_content_type_applicationxml[NEWIBANK-CORE]</td>
+          <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_normal_content_type_applicationxml[BNIDIRECT]</td>
           <td class="col-duration">0.82</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:106 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024027&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
+DEBUG    root:test_KliringOutward.py:106 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;028155&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
+         &lt;message/&gt;
+      &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_normal_content_type_applicationxml[NEWIBANK-CORE]</td>
+          <td class="col-duration">0.83</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
+DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
+DEBUG    root:test_KliringOutward.py:106 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;028156&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
          &lt;message/&gt;
       &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
@@ -662,105 +620,105 @@ DEBUG    root:test_KliringOutward.py:106 &lt;soapenv:Envelope xmlns:dpss0=&quot;
           <td class="extra" colspan="4">
             <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:106 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024028&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
+DEBUG    root:test_KliringOutward.py:106 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;028157&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
          &lt;message/&gt;
       &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_normal_content_type_applicationxml[IBOC]</td>
-          <td class="col-duration">0.82</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
-DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:106 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024029&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
-         &lt;message/&gt;
-      &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_normal_content_type_applicationxml[H2HSERVICE]</td>
-          <td class="col-duration">0.84</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
-DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:106 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024030&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
-         &lt;message/&gt;
-      &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_normal_content_type_applicationxml[GLOBS]</td>
-          <td class="col-duration">0.81</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
-DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:106 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024031&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
-         &lt;message/&gt;
-      &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_normal_content_type_applicationxml[SYARIAH]</td>
-          <td class="col-duration">0.82</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
-DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:106 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024032&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
-         &lt;message/&gt;
-      &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_normal_content_type_applicationxml[NEWMOBILE]</td>
           <td class="col-duration">0.89</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:106 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024033&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
+DEBUG    root:test_KliringOutward.py:106 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;028158&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
+         &lt;message/&gt;
+      &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_normal_content_type_applicationxml[H2HSERVICE]</td>
+          <td class="col-duration">0.83</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
+DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
+DEBUG    root:test_KliringOutward.py:106 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;028159&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
+         &lt;message/&gt;
+      &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_normal_content_type_applicationxml[GLOBS]</td>
+          <td class="col-duration">0.83</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
+DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
+DEBUG    root:test_KliringOutward.py:106 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;028160&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
+         &lt;message/&gt;
+      &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_normal_content_type_applicationxml[SYARIAH]</td>
+          <td class="col-duration">0.83</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
+DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
+DEBUG    root:test_KliringOutward.py:106 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;028161&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
+         &lt;message/&gt;
+      &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_normal_content_type_applicationxml[NEWMOBILE]</td>
+          <td class="col-duration">0.84</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
+DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
+DEBUG    root:test_KliringOutward.py:106 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;028162&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
          &lt;message/&gt;
       &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_normal_content_type_applicationxml[GOWEALTH]</td>
-          <td class="col-duration">0.81</td>
+          <td class="col-duration">2.71</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:106 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024034&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
+DEBUG    root:test_KliringOutward.py:106 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;028163&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
          &lt;message/&gt;
       &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_normal_content_type_applicationxml[API]</td>
-          <td class="col-duration">2.86</td>
+          <td class="col-duration">0.84</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:106 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024035&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
+DEBUG    root:test_KliringOutward.py:106 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;028164&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
          &lt;message/&gt;
       &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_abnormal[BNIDIRECT]</td>
-          <td class="col-duration">0.03</td>
+          <td class="col-duration">0.02</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -793,7 +751,7 @@ DEBUG    root:test_KliringOutward.py:154 &lt;soapenv:Envelope xmlns:dpss0=&quot;
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_abnormal[IBOC]</td>
-          <td class="col-duration">0.02</td>
+          <td class="col-duration">0.01</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -804,7 +762,7 @@ DEBUG    root:test_KliringOutward.py:154 &lt;soapenv:Envelope xmlns:dpss0=&quot;
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_abnormal[H2HSERVICE]</td>
-          <td class="col-duration">0.02</td>
+          <td class="col-duration">0.01</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -826,7 +784,7 @@ DEBUG    root:test_KliringOutward.py:154 &lt;soapenv:Envelope xmlns:dpss0=&quot;
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_abnormal[SYARIAH]</td>
-          <td class="col-duration">0.02</td>
+          <td class="col-duration">0.01</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -837,7 +795,7 @@ DEBUG    root:test_KliringOutward.py:154 &lt;soapenv:Envelope xmlns:dpss0=&quot;
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_abnormal[NEWMOBILE]</td>
-          <td class="col-duration">0.02</td>
+          <td class="col-duration">0.01</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -848,7 +806,7 @@ DEBUG    root:test_KliringOutward.py:154 &lt;soapenv:Envelope xmlns:dpss0=&quot;
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_abnormal[GOWEALTH]</td>
-          <td class="col-duration">0.02</td>
+          <td class="col-duration">0.01</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -870,11 +828,11 @@ DEBUG    root:test_KliringOutward.py:154 &lt;soapenv:Envelope xmlns:dpss0=&quot;
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_branch_header[BNIDIRECT-0989]</td>
-          <td class="col-duration">0.95</td>
+          <td class="col-duration">1.02</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0x12c8128
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0xdb356198
 DEBUG    paramiko.transport:transport.py:1819 Local version/idstring: SSH-2.0-paramiko_2.7.2
 DEBUG    paramiko.transport:transport.py:1819 Remote version/idstring: SSH-2.0-OpenSSH_7.4
 INFO     paramiko.transport:transport.py:1819 Connected (version 2.0, client OpenSSH_7.4)
@@ -898,28 +856,26 @@ DEBUG    paramiko.transport:channel.py:1212 [chan 0] Sesch channel 0 request ok
 DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF received (0)
 DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF sent (0)
-DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:214 200---------&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024047&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
-         &lt;message/&gt;
-      &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;
+DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 677
+DEBUG    root:test_KliringOutward.py:221 200---------&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode xmlns:ns0=&quot;http://service.bni.co.id/core&quot;&gt;ns0:SysFault&lt;/faultcode&gt;&lt;faultstring xml:lang=&quot;en&quot;&gt;9603&lt;/faultstring&gt;&lt;detail encodingStyle=&quot;&quot;&gt;&lt;core:transaction_sysFault xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;errorNum&gt;9603&lt;/errorNum&gt;&lt;errorDescription&gt;Unknown Error&lt;/errorDescription&gt;&lt;/core:transaction_sysFault&gt;&lt;/detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet in: 32768 bytes
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet out: 32768 bytes
 DEBUG    paramiko.transport:transport.py:1819 Secsh channel 1 opened.
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Sesch channel 1 request ok
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF received (1)
-DEBUG    root:test_KliringOutward.py:224 2021-03-15 14:40:03,287 ERROR [bc.util.AdaptorLogging] (default task-1) Comm Id:[578245297]-&gt;The Input ByteStream :  100400                  **            003098900100001055645000000     0  I  0 000000  0000000000000123100000000000000000+00000000355000000+ 00000000                                                       888123456789                      IDR00000000350000000+IDR00000000350000000+00000000000000000+00000000000000000+02pembayaran cicilan                                                                                                                          Dian Amalia                                                                     Jl. Mawar no 10                                                                                                                     0001                          Diana                                                                           Jl. Melati no 10                                            00                                                                 0010016                      076000000000005000000+0                                                50
+DEBUG    root:test_KliringOutward.py:231 2021-03-18 11:51:24,331 ERROR [bc.util.AdaptorLogging] (default task-1) Comm Id:[578245297]-&gt;The Input ByteStream :  100400                  **            003098921030011055645000000     0     0 000000  0000000000000123100000000000000000+00000000355000000+ 00000000                                                       888123456789                      IDR00000000350000000+IDR00000000350000000+00000000000000000+00000000000000000+02pembayaran cicilan                                                                                                                          Dian Amalia                                                                     Jl. Mawar no 10                                                                                                                     0001                          Diana                                                                           Jl. Melati no 10                                            00                                                                 0010016                      076000000000005000000+0                                                50
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF sent (1)
-DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.
-DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.<br/></div></td></tr></tbody>
+DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.<br/> ----------------------------Captured stdout teardown---------------------------- <br/>PASSED                                                                   [ 77%]<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_branch_header[NEWIBANK-CORE-0996]</td>
-          <td class="col-duration">0.95</td>
+          <td class="col-duration">0.17</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0x125b7b8
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.
+DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0xdb2f67f0
 DEBUG    paramiko.transport:transport.py:1819 Local version/idstring: SSH-2.0-paramiko_2.7.2
 DEBUG    paramiko.transport:transport.py:1819 Remote version/idstring: SSH-2.0-OpenSSH_7.4
 INFO     paramiko.transport:transport.py:1819 Connected (version 2.0, client OpenSSH_7.4)
@@ -943,26 +899,24 @@ DEBUG    paramiko.transport:channel.py:1212 [chan 0] Sesch channel 0 request ok
 DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF received (0)
 DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF sent (0)
-DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:214 200---------&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024048&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
-         &lt;message/&gt;
-      &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;
+DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 687
+DEBUG    root:test_KliringOutward.py:221 200---------&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode xmlns:ns0=&quot;http://service.bni.co.id/core&quot;&gt;ns0:AppFault&lt;/faultcode&gt;&lt;faultstring xml:lang=&quot;en&quot;&gt;2810&lt;/faultstring&gt;&lt;detail encodingStyle=&quot;&quot;&gt;&lt;core:SupFault_element xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;errorNum&gt;2810&lt;/errorNum&gt;&lt;errorDescription&gt;Kemungkinan Duplikasi Transaksi&lt;/errorDescription&gt;&lt;/core:SupFault_element&gt;&lt;/detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet in: 32768 bytes
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet out: 32768 bytes
 DEBUG    paramiko.transport:transport.py:1819 Secsh channel 1 opened.
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Sesch channel 1 request ok
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF received (1)
-DEBUG    root:test_KliringOutward.py:224 2021-03-15 14:40:04,245 ERROR [bc.util.AdaptorLogging] (default task-1) Comm Id:[578245297]-&gt;The Input ByteStream :  100400                  **            003099600100001055645000000     0  I  0 000000  0000000000000123100000000000000000+00000000355000000+ 00000000                                                       888123456789                      IDR00000000350000000+IDR00000000350000000+00000000000000000+00000000000000000+02pembayaran cicilan                                                                                                                          Dian Amalia                                                                     Jl. Mawar no 10                                                                                                                     0001                          Diana                                                                           Jl. Melati no 10                                            00                                                                 0010016                      076000000000005000000+0                                                50
+DEBUG    root:test_KliringOutward.py:231 2021-03-18 11:51:25,350 ERROR [bc.util.AdaptorLogging] (default task-1) Comm Id:[578245297]-&gt;The Input ByteStream :  100400                  **            003099621030011055645000000     0     0 000000  0000000000000123100000000000000000+00000000355000000+ 00000000                                                       888123456789                      IDR00000000350000000+IDR00000000350000000+00000000000000000+00000000000000000+02pembayaran cicilan                                                                                                                          Dian Amalia                                                                     Jl. Mawar no 10                                                                                                                     0001                          Diana                                                                           Jl. Melati no 10                                            00                                                                 0010016                      076000000000005000000+0                                                50
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF sent (1)<br/> ----------------------------Captured stdout teardown---------------------------- <br/>PASSED                                                                                                                            [ 80%]<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_branch_header[IMS-0987]</td>
-          <td class="col-duration">0.94</td>
+          <td class="col-duration">0.17</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0x12c8630
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0xdb3568d0
 DEBUG    paramiko.transport:transport.py:1819 Local version/idstring: SSH-2.0-paramiko_2.7.2
 DEBUG    paramiko.transport:transport.py:1819 Remote version/idstring: SSH-2.0-OpenSSH_7.4
 INFO     paramiko.transport:transport.py:1819 Connected (version 2.0, client OpenSSH_7.4)
@@ -986,28 +940,26 @@ DEBUG    paramiko.transport:channel.py:1212 [chan 0] Sesch channel 0 request ok
 DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF received (0)
 DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF sent (0)
-DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:214 200---------&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024049&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
-         &lt;message/&gt;
-      &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;
+DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 687
+DEBUG    root:test_KliringOutward.py:221 200---------&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode xmlns:ns0=&quot;http://service.bni.co.id/core&quot;&gt;ns0:AppFault&lt;/faultcode&gt;&lt;faultstring xml:lang=&quot;en&quot;&gt;2810&lt;/faultstring&gt;&lt;detail encodingStyle=&quot;&quot;&gt;&lt;core:SupFault_element xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;errorNum&gt;2810&lt;/errorNum&gt;&lt;errorDescription&gt;Kemungkinan Duplikasi Transaksi&lt;/errorDescription&gt;&lt;/core:SupFault_element&gt;&lt;/detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet in: 32768 bytes
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet out: 32768 bytes
 DEBUG    paramiko.transport:transport.py:1819 Secsh channel 1 opened.
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Sesch channel 1 request ok
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF received (1)
-DEBUG    root:test_KliringOutward.py:224 2021-03-15 14:40:05,198 ERROR [bc.util.AdaptorLogging] (default task-1) Comm Id:[578245297]-&gt;The Input ByteStream :  100400                  **            003098700100001055645000000     0  I  0 000000  0000000000000123100000000000000000+00000000355000000+ 00000000                                                       888123456789                      IDR00000000350000000+IDR00000000350000000+00000000000000000+00000000000000000+02pembayaran cicilan                                                                                                                          Dian Amalia                                                                     Jl. Mawar no 10                                                                                                                     0001                          Diana                                                                           Jl. Melati no 10                                            00                                                                 0010016                      076000000000005000000+0                                                50
+DEBUG    root:test_KliringOutward.py:231 2021-03-18 11:51:25,521 ERROR [bc.util.AdaptorLogging] (default task-1) Comm Id:[578245297]-&gt;The Input ByteStream :  100400                  **            003098721030011055645000000     0     0 000000  0000000000000123100000000000000000+00000000355000000+ 00000000                                                       888123456789                      IDR00000000350000000+IDR00000000350000000+00000000000000000+00000000000000000+02pembayaran cicilan                                                                                                                          Dian Amalia                                                                     Jl. Mawar no 10                                                                                                                     0001                          Diana                                                                           Jl. Melati no 10                                            00                                                                 0010016                      076000000000005000000+0                                                50
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF sent (1)
 DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.
-DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.<br/></div></td></tr></tbody>
+DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.<br/> ----------------------------Captured stdout teardown---------------------------- <br/>PASSED                                                                   [ 82%]<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_branch_header[IBOC-0766]</td>
-          <td class="col-duration">0.95</td>
+          <td class="col-duration">0.17</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0x12c8048
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0xdb356b70
 DEBUG    paramiko.transport:transport.py:1819 Local version/idstring: SSH-2.0-paramiko_2.7.2
 DEBUG    paramiko.transport:transport.py:1819 Remote version/idstring: SSH-2.0-OpenSSH_7.4
 INFO     paramiko.transport:transport.py:1819 Connected (version 2.0, client OpenSSH_7.4)
@@ -1031,28 +983,25 @@ DEBUG    paramiko.transport:channel.py:1212 [chan 0] Sesch channel 0 request ok
 DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF received (0)
 DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF sent (0)
-DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:214 200---------&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024050&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
-         &lt;message/&gt;
-      &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;
+DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 687
+DEBUG    root:test_KliringOutward.py:221 200---------&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode xmlns:ns0=&quot;http://service.bni.co.id/core&quot;&gt;ns0:AppFault&lt;/faultcode&gt;&lt;faultstring xml:lang=&quot;en&quot;&gt;2810&lt;/faultstring&gt;&lt;detail encodingStyle=&quot;&quot;&gt;&lt;core:SupFault_element xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;errorNum&gt;2810&lt;/errorNum&gt;&lt;errorDescription&gt;Kemungkinan Duplikasi Transaksi&lt;/errorDescription&gt;&lt;/core:SupFault_element&gt;&lt;/detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet in: 32768 bytes
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet out: 32768 bytes
 DEBUG    paramiko.transport:transport.py:1819 Secsh channel 1 opened.
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Sesch channel 1 request ok
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF received (1)
-DEBUG    root:test_KliringOutward.py:224 2021-03-15 14:40:06,146 ERROR [bc.util.AdaptorLogging] (default task-1) Comm Id:[578245297]-&gt;The Input ByteStream :  100400                  **            003076600100777055645000000     0  I  0 000000  0000000000000123100000000000000000+00000000355000000+ 00000000                                                       888123456789                      IDR00000000350000000+IDR00000000350000000+00000000000000000+00000000000000000+02pembayaran cicilan                                                                                                                          Dian Amalia                                                                     Jl. Mawar no 10                                                                                                                     0001                          Diana                                                                           Jl. Melati no 10                                            00                                                                 0010016                      076000000000005000000+0                                                50
+DEBUG    root:test_KliringOutward.py:231 2021-03-18 11:51:25,698 ERROR [bc.util.AdaptorLogging] (default task-1) Comm Id:[578245297]-&gt;The Input ByteStream :  100400                  **            003076621030011055645000000     0     0 000000  0000000000000123100000000000000000+00000000355000000+ 00000000                                                       888123456789                      IDR00000000350000000+IDR00000000350000000+00000000000000000+00000000000000000+02pembayaran cicilan                                                                                                                          Dian Amalia                                                                     Jl. Mawar no 10                                                                                                                     0001                          Diana                                                                           Jl. Melati no 10                                            00                                                                 0010016                      076000000000005000000+0                                                50
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF sent (1)
-DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.
-DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.<br/></div></td></tr></tbody>
+DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.<br/> ----------------------------Captured stdout teardown---------------------------- <br/>PASSED                                                                   [ 85%]<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_branch_header[H2HSERVICE-0987]</td>
-          <td class="col-duration">0.97</td>
+          <td class="col-duration">0.17</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0x12c8d68
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0xdb2f67b8
 DEBUG    paramiko.transport:transport.py:1819 Local version/idstring: SSH-2.0-paramiko_2.7.2
 DEBUG    paramiko.transport:transport.py:1819 Remote version/idstring: SSH-2.0-OpenSSH_7.4
 INFO     paramiko.transport:transport.py:1819 Connected (version 2.0, client OpenSSH_7.4)
@@ -1076,27 +1025,67 @@ DEBUG    paramiko.transport:channel.py:1212 [chan 0] Sesch channel 0 request ok
 DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF received (0)
 DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF sent (0)
-DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:214 200---------&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024051&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
-         &lt;message/&gt;
-      &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;
+DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 687
+DEBUG    root:test_KliringOutward.py:221 200---------&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode xmlns:ns0=&quot;http://service.bni.co.id/core&quot;&gt;ns0:AppFault&lt;/faultcode&gt;&lt;faultstring xml:lang=&quot;en&quot;&gt;2810&lt;/faultstring&gt;&lt;detail encodingStyle=&quot;&quot;&gt;&lt;core:SupFault_element xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;errorNum&gt;2810&lt;/errorNum&gt;&lt;errorDescription&gt;Kemungkinan Duplikasi Transaksi&lt;/errorDescription&gt;&lt;/core:SupFault_element&gt;&lt;/detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet in: 32768 bytes
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet out: 32768 bytes
 DEBUG    paramiko.transport:transport.py:1819 Secsh channel 1 opened.
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Sesch channel 1 request ok
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF received (1)
-DEBUG    root:test_KliringOutward.py:224 2021-03-15 14:40:07,105 ERROR [bc.util.AdaptorLogging] (default task-1) Comm Id:[578245297]-&gt;The Input ByteStream :  100400                  **            003098700300002055645000000     0  I  0 000000  0000000000000123100000000000000000+00000000355000000+ 00000000                                                       888123456789                      IDR00000000350000000+IDR00000000350000000+00000000000000000+00000000000000000+02pembayaran cicilan                                                                                                                          Dian Amalia                                                                     Jl. Mawar no 10                                                                                                                     0001                          Diana                                                                           Jl. Melati no 10                                            00                                                                 0010016                      076000000000005000000+0                                                50
+DEBUG    root:test_KliringOutward.py:231 2021-03-18 11:51:25,873 ERROR [bc.util.AdaptorLogging] (default task-1) Comm Id:[578245297]-&gt;The Input ByteStream :  100400                  **            003098721030011055645000000     0     0 000000  0000000000000123100000000000000000+00000000355000000+ 00000000                                                       888123456789                      IDR00000000350000000+IDR00000000350000000+00000000000000000+00000000000000000+02pembayaran cicilan                                                                                                                          Dian Amalia                                                                     Jl. Mawar no 10                                                                                                                     0001                          Diana                                                                           Jl. Melati no 10                                            00                                                                 0010016                      076000000000005000000+0                                                50
+DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF sent (1)<br/> ----------------------------Captured stdout teardown---------------------------- <br/>PASSED                                                                                                                            [ 87%]<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_branch_header[GLOBS-0766]</td>
+          <td class="col-duration">0.17</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0xdb320898
+DEBUG    paramiko.transport:transport.py:1819 Local version/idstring: SSH-2.0-paramiko_2.7.2
+DEBUG    paramiko.transport:transport.py:1819 Remote version/idstring: SSH-2.0-OpenSSH_7.4
+INFO     paramiko.transport:transport.py:1819 Connected (version 2.0, client OpenSSH_7.4)
+DEBUG    paramiko.transport:transport.py:1819 kex algos:[&#x27;curve25519-sha256&#x27;, &#x27;curve25519-sha256@libssh.org&#x27;, &#x27;ecdh-sha2-nistp256&#x27;, &#x27;ecdh-sha2-nistp384&#x27;, &#x27;ecdh-sha2-nistp521&#x27;, &#x27;diffie-hellman-group-exchange-sha256&#x27;, &#x27;diffie-hellman-group16-sha512&#x27;, &#x27;diffie-hellman-group18-sha512&#x27;, &#x27;diffie-hellman-group-exchange-sha1&#x27;, &#x27;diffie-hellman-group14-sha256&#x27;, &#x27;diffie-hellman-group14-sha1&#x27;, &#x27;diffie-hellman-group1-sha1&#x27;] server key:[&#x27;ssh-rsa&#x27;, &#x27;rsa-sha2-512&#x27;, &#x27;rsa-sha2-256&#x27;, &#x27;ecdsa-sha2-nistp256&#x27;, &#x27;ssh-ed25519&#x27;] client encrypt:[&#x27;chacha20-poly1305@openssh.com&#x27;, &#x27;aes128-ctr&#x27;, &#x27;aes192-ctr&#x27;, &#x27;aes256-ctr&#x27;, &#x27;aes128-gcm@openssh.com&#x27;, &#x27;aes256-gcm@openssh.com&#x27;, &#x27;aes128-cbc&#x27;, &#x27;aes192-cbc&#x27;, &#x27;aes256-cbc&#x27;, &#x27;blowfish-cbc&#x27;, &#x27;cast128-cbc&#x27;, &#x27;3des-cbc&#x27;] server encrypt:[&#x27;chacha20-poly1305@openssh.com&#x27;, &#x27;aes128-ctr&#x27;, &#x27;aes192-ctr&#x27;, &#x27;aes256-ctr&#x27;, &#x27;aes128-gcm@openssh.com&#x27;, &#x27;aes256-gcm@openssh.com&#x27;, &#x27;aes128-cbc&#x27;, &#x27;aes192-cbc&#x27;, &#x27;aes256-cbc&#x27;, &#x27;blowfish-cbc&#x27;, &#x27;cast128-cbc&#x27;, &#x27;3des-cbc&#x27;] client mac:[&#x27;umac-64-etm@openssh.com&#x27;, &#x27;umac-128-etm@openssh.com&#x27;, &#x27;hmac-sha2-256-etm@openssh.com&#x27;, &#x27;hmac-sha2-512-etm@openssh.com&#x27;, &#x27;hmac-sha1-etm@openssh.com&#x27;, &#x27;umac-64@openssh.com&#x27;, &#x27;umac-128@openssh.com&#x27;, &#x27;hmac-sha2-256&#x27;, &#x27;hmac-sha2-512&#x27;, &#x27;hmac-sha1&#x27;] server mac:[&#x27;umac-64-etm@openssh.com&#x27;, &#x27;umac-128-etm@openssh.com&#x27;, &#x27;hmac-sha2-256-etm@openssh.com&#x27;, &#x27;hmac-sha2-512-etm@openssh.com&#x27;, &#x27;hmac-sha1-etm@openssh.com&#x27;, &#x27;umac-64@openssh.com&#x27;, &#x27;umac-128@openssh.com&#x27;, &#x27;hmac-sha2-256&#x27;, &#x27;hmac-sha2-512&#x27;, &#x27;hmac-sha1&#x27;] client compress:[&#x27;none&#x27;, &#x27;zlib@openssh.com&#x27;] server compress:[&#x27;none&#x27;, &#x27;zlib@openssh.com&#x27;] client lang:[&#x27;&#x27;] server lang:[&#x27;&#x27;] kex follows?False
+DEBUG    paramiko.transport:transport.py:1819 Kex agreed: curve25519-sha256@libssh.org
+DEBUG    paramiko.transport:transport.py:1819 HostKey agreed: ecdsa-sha2-nistp256
+DEBUG    paramiko.transport:transport.py:1819 Cipher agreed: aes128-ctr
+DEBUG    paramiko.transport:transport.py:1819 MAC agreed: hmac-sha2-256
+DEBUG    paramiko.transport:transport.py:1819 Compression agreed: none
+DEBUG    paramiko.transport:transport.py:1819 kex engine KexCurve25519 specified hash_algo &lt;built-in function openssl_sha256&gt;
+DEBUG    paramiko.transport:transport.py:1819 Switch to new keys ...
+DEBUG    paramiko.transport:transport.py:1819 Trying discovered key b&#x27;39a28802372b24a5e84125168fa3e87d&#x27; in ssh-key.txt
+DEBUG    paramiko.transport:transport.py:1819 userauth is OK
+INFO     paramiko.transport:transport.py:1819 Authentication (publickey) successful!
+DEBUG    paramiko.transport:channel.py:1212 [chan 0] Max packet in: 32768 bytes
+DEBUG    paramiko.transport:transport.py:1819 Received global request &quot;hostkeys-00@openssh.com&quot;
+DEBUG    paramiko.transport:transport.py:1819 Rejecting &quot;hostkeys-00@openssh.com&quot; global request from server.
+DEBUG    paramiko.transport:channel.py:1212 [chan 0] Max packet out: 32768 bytes
+DEBUG    paramiko.transport:transport.py:1819 Secsh channel 0 opened.
+DEBUG    paramiko.transport:channel.py:1212 [chan 0] Sesch channel 0 request ok
+DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
+DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF received (0)
+DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF sent (0)
+DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 687
+DEBUG    root:test_KliringOutward.py:221 200---------&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode xmlns:ns0=&quot;http://service.bni.co.id/core&quot;&gt;ns0:AppFault&lt;/faultcode&gt;&lt;faultstring xml:lang=&quot;en&quot;&gt;2810&lt;/faultstring&gt;&lt;detail encodingStyle=&quot;&quot;&gt;&lt;core:SupFault_element xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;errorNum&gt;2810&lt;/errorNum&gt;&lt;errorDescription&gt;Kemungkinan Duplikasi Transaksi&lt;/errorDescription&gt;&lt;/core:SupFault_element&gt;&lt;/detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;
+DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet in: 32768 bytes
+DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet out: 32768 bytes
+DEBUG    paramiko.transport:transport.py:1819 Secsh channel 1 opened.
+DEBUG    paramiko.transport:channel.py:1212 [chan 1] Sesch channel 1 request ok
+DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF received (1)
+DEBUG    root:test_KliringOutward.py:231 2021-03-18 11:51:26,045 ERROR [bc.util.AdaptorLogging] (default task-1) Comm Id:[578245297]-&gt;The Input ByteStream :  100400                  **            003076621030011055645000000     0     0 000000  0000000000000123100000000000000000+00000000355000000+ 00000000                                                       888123456789                      IDR00000000350000000+IDR00000000350000000+00000000000000000+00000000000000000+02pembayaran cicilan                                                                                                                          Dian Amalia                                                                     Jl. Mawar no 10                                                                                                                     0001                          Diana                                                                           Jl. Melati no 10                                            00                                                                 0010016                      076000000000005000000+0                                                50
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF sent (1)
-DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.<br/> ----------------------------Captured stdout teardown---------------------------- <br/>PASSED                                                                                                                            [ 87%]<br/></div></td></tr></tbody>
+DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.
+DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.<br/> ----------------------------Captured stdout teardown---------------------------- <br/>PASSED                                                                   [ 90%]<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_branch_header[SYARIAH-0992]</td>
-          <td class="col-duration">0.96</td>
+          <td class="col-duration">0.17</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0xfbfebf28
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0xdb3563c8
 DEBUG    paramiko.transport:transport.py:1819 Local version/idstring: SSH-2.0-paramiko_2.7.2
 DEBUG    paramiko.transport:transport.py:1819 Remote version/idstring: SSH-2.0-OpenSSH_7.4
 INFO     paramiko.transport:transport.py:1819 Connected (version 2.0, client OpenSSH_7.4)
@@ -1120,26 +1109,26 @@ DEBUG    paramiko.transport:channel.py:1212 [chan 0] Sesch channel 0 request ok
 DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF received (0)
 DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF sent (0)
-DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:214 200---------&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024053&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
-         &lt;message/&gt;
-      &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;
+DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 687
+DEBUG    root:test_KliringOutward.py:221 200---------&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode xmlns:ns0=&quot;http://service.bni.co.id/core&quot;&gt;ns0:AppFault&lt;/faultcode&gt;&lt;faultstring xml:lang=&quot;en&quot;&gt;2810&lt;/faultstring&gt;&lt;detail encodingStyle=&quot;&quot;&gt;&lt;core:SupFault_element xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;errorNum&gt;2810&lt;/errorNum&gt;&lt;errorDescription&gt;Kemungkinan Duplikasi Transaksi&lt;/errorDescription&gt;&lt;/core:SupFault_element&gt;&lt;/detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet in: 32768 bytes
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet out: 32768 bytes
 DEBUG    paramiko.transport:transport.py:1819 Secsh channel 1 opened.
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Sesch channel 1 request ok
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF received (1)
-DEBUG    root:test_KliringOutward.py:224 2021-03-15 14:40:10,263 ERROR [bc.util.AdaptorLogging] (default task-1) Comm Id:[578245297]-&gt;The Input ByteStream :  100400                  **            003099299901001055645000000     0  I  0 000000  0000000000000123100000000000000000+00000000355000000+ 00000000                                                       888123456789                      IDR00000000350000000+IDR00000000350000000+00000000000000000+00000000000000000+02pembayaran cicilan                                                                                                                          Dian Amalia                                                                     Jl. Mawar no 10                                                                                                                     0001                          Diana                                                                           Jl. Melati no 10                                            00                                                                 0010016                      076000000000005000000+0                                                50
-DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF sent (1)<br/> ----------------------------Captured stdout teardown---------------------------- <br/>PASSED                                                                                                                            [ 92%]<br/></div></td></tr></tbody>
+DEBUG    root:test_KliringOutward.py:231 2021-03-18 11:51:26,220 ERROR [bc.util.AdaptorLogging] (default task-1) Comm Id:[578245297]-&gt;The Input ByteStream :  100400                  **            003099221030011055645000000     0     0 000000  0000000000000123100000000000000000+00000000355000000+ 00000000                                                       888123456789                      IDR00000000350000000+IDR00000000350000000+00000000000000000+00000000000000000+02pembayaran cicilan                                                                                                                          Dian Amalia                                                                     Jl. Mawar no 10                                                                                                                     0001                          Diana                                                                           Jl. Melati no 10                                            00                                                                 0010016                      076000000000005000000+0                                                50
+DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF sent (1)
+DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.
+DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.<br/> ----------------------------Captured stdout teardown---------------------------- <br/>PASSED                                                                   [ 92%]<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_branch_header[NEWMOBILE-0991]</td>
-          <td class="col-duration">0.96</td>
+          <td class="col-duration">0.17</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0xfbfed9b0
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0xdb2f6940
 DEBUG    paramiko.transport:transport.py:1819 Local version/idstring: SSH-2.0-paramiko_2.7.2
 DEBUG    paramiko.transport:transport.py:1819 Remote version/idstring: SSH-2.0-OpenSSH_7.4
 INFO     paramiko.transport:transport.py:1819 Connected (version 2.0, client OpenSSH_7.4)
@@ -1163,27 +1152,26 @@ DEBUG    paramiko.transport:channel.py:1212 [chan 0] Sesch channel 0 request ok
 DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF received (0)
 DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF sent (0)
-DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:214 200---------&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024054&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
-         &lt;message/&gt;
-      &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;
+DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 687
+DEBUG    root:test_KliringOutward.py:221 200---------&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode xmlns:ns0=&quot;http://service.bni.co.id/core&quot;&gt;ns0:AppFault&lt;/faultcode&gt;&lt;faultstring xml:lang=&quot;en&quot;&gt;2810&lt;/faultstring&gt;&lt;detail encodingStyle=&quot;&quot;&gt;&lt;core:SupFault_element xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;errorNum&gt;2810&lt;/errorNum&gt;&lt;errorDescription&gt;Kemungkinan Duplikasi Transaksi&lt;/errorDescription&gt;&lt;/core:SupFault_element&gt;&lt;/detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet in: 32768 bytes
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet out: 32768 bytes
 DEBUG    paramiko.transport:transport.py:1819 Secsh channel 1 opened.
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Sesch channel 1 request ok
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF received (1)
-DEBUG    root:test_KliringOutward.py:224 2021-03-15 14:40:11,230 ERROR [bc.util.AdaptorLogging] (default task-1) Comm Id:[578245297]-&gt;The Input ByteStream :  100400                  **            003099100100001055645000000     0  I  0 000000  0000000000000123100000000000000000+00000000355000000+ 00000000                                                       888123456789                      IDR00000000350000000+IDR00000000350000000+00000000000000000+00000000000000000+02pembayaran cicilan                                                                                                                          Dian Amalia                                                                     Jl. Mawar no 10                                                                                                                     0001                          Diana                                                                           Jl. Melati no 10                                            00                                                                 0010016                      076000000000005000000+0                                                50
+DEBUG    root:test_KliringOutward.py:231 2021-03-18 11:51:26,394 ERROR [bc.util.AdaptorLogging] (default task-1) Comm Id:[578245297]-&gt;The Input ByteStream :  100400                  **            003099121030011055645000000     0     0 000000  0000000000000123100000000000000000+00000000355000000+ 00000000                                                       888123456789                      IDR00000000350000000+IDR00000000350000000+00000000000000000+00000000000000000+02pembayaran cicilan                                                                                                                          Dian Amalia                                                                     Jl. Mawar no 10                                                                                                                     0001                          Diana                                                                           Jl. Melati no 10                                            00                                                                 0010016                      076000000000005000000+0                                                50
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF sent (1)
-DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.<br/> -----------------------------Captured log teardown------------------------------ <br/>DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.<br/></div></td></tr></tbody>
+DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.
+DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.<br/> ----------------------------Captured stdout teardown---------------------------- <br/>PASSED                                                                   [ 95%]<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_branch_header[GOWEALTH-0957]</td>
-          <td class="col-duration">0.96</td>
+          <td class="col-duration">0.17</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0xfbfeb6a0
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0xdb320780
 DEBUG    paramiko.transport:transport.py:1819 Local version/idstring: SSH-2.0-paramiko_2.7.2
 DEBUG    paramiko.transport:transport.py:1819 Remote version/idstring: SSH-2.0-OpenSSH_7.4
 INFO     paramiko.transport:transport.py:1819 Connected (version 2.0, client OpenSSH_7.4)
@@ -1207,28 +1195,26 @@ DEBUG    paramiko.transport:channel.py:1212 [chan 0] Sesch channel 0 request ok
 DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF received (0)
 DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF sent (0)
-DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:214 200---------&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024055&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
-         &lt;message/&gt;
-      &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;
+DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 687
+DEBUG    root:test_KliringOutward.py:221 200---------&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode xmlns:ns0=&quot;http://service.bni.co.id/core&quot;&gt;ns0:AppFault&lt;/faultcode&gt;&lt;faultstring xml:lang=&quot;en&quot;&gt;2810&lt;/faultstring&gt;&lt;detail encodingStyle=&quot;&quot;&gt;&lt;core:SupFault_element xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;errorNum&gt;2810&lt;/errorNum&gt;&lt;errorDescription&gt;Kemungkinan Duplikasi Transaksi&lt;/errorDescription&gt;&lt;/core:SupFault_element&gt;&lt;/detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet in: 32768 bytes
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet out: 32768 bytes
 DEBUG    paramiko.transport:transport.py:1819 Secsh channel 1 opened.
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Sesch channel 1 request ok
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF received (1)
-DEBUG    root:test_KliringOutward.py:224 2021-03-15 14:40:12,198 ERROR [bc.util.AdaptorLogging] (default task-1) Comm Id:[578245297]-&gt;The Input ByteStream :  100400                  **            003095700100099055645000000     0  I  0 000000  0000000000000123100000000000000000+00000000355000000+ 00000000                                                       888123456789                      IDR00000000350000000+IDR00000000350000000+00000000000000000+00000000000000000+02pembayaran cicilan                                                                                                                          Dian Amalia                                                                     Jl. Mawar no 10                                                                                                                     0001                          Diana                                                                           Jl. Melati no 10                                            00                                                                 0010016                      076000000000005000000+0                                                50
+DEBUG    root:test_KliringOutward.py:231 2021-03-18 11:51:26,568 ERROR [bc.util.AdaptorLogging] (default task-1) Comm Id:[578245297]-&gt;The Input ByteStream :  100400                  **            003095721030011055645000000     0     0 000000  0000000000000123100000000000000000+00000000355000000+ 00000000                                                       888123456789                      IDR00000000350000000+IDR00000000350000000+00000000000000000+00000000000000000+02pembayaran cicilan                                                                                                                          Dian Amalia                                                                     Jl. Mawar no 10                                                                                                                     0001                          Diana                                                                           Jl. Melati no 10                                            00                                                                 0010016                      076000000000005000000+0                                                50
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF sent (1)
 DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.
-DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.<br/></div></td></tr></tbody>
+DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.<br/> ----------------------------Captured stdout teardown---------------------------- <br/>PASSED                                                                   [ 97%]<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_KliringOutward.py::test_branch_header[API-0986]</td>
-          <td class="col-duration">0.95</td>
+          <td class="col-duration">0.17</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0xfbfed7f0
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0xda091c18
 DEBUG    paramiko.transport:transport.py:1819 Local version/idstring: SSH-2.0-paramiko_2.7.2
 DEBUG    paramiko.transport:transport.py:1819 Remote version/idstring: SSH-2.0-OpenSSH_7.4
 INFO     paramiko.transport:transport.py:1819 Connected (version 2.0, client OpenSSH_7.4)
@@ -1252,16 +1238,14 @@ DEBUG    paramiko.transport:channel.py:1212 [chan 0] Sesch channel 0 request ok
 DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF received (0)
 DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF sent (0)
-DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 606
-DEBUG    root:test_KliringOutward.py:214 200---------&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;024056&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:KliringOutwardRes&quot;&gt;
-         &lt;message/&gt;
-      &lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;
+DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 687
+DEBUG    root:test_KliringOutward.py:221 200---------&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode xmlns:ns0=&quot;http://service.bni.co.id/core&quot;&gt;ns0:AppFault&lt;/faultcode&gt;&lt;faultstring xml:lang=&quot;en&quot;&gt;2810&lt;/faultstring&gt;&lt;detail encodingStyle=&quot;&quot;&gt;&lt;core:SupFault_element xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;errorNum&gt;2810&lt;/errorNum&gt;&lt;errorDescription&gt;Kemungkinan Duplikasi Transaksi&lt;/errorDescription&gt;&lt;/core:SupFault_element&gt;&lt;/detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet in: 32768 bytes
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet out: 32768 bytes
 DEBUG    paramiko.transport:transport.py:1819 Secsh channel 1 opened.
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Sesch channel 1 request ok
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF received (1)
-DEBUG    root:test_KliringOutward.py:224 2021-03-15 14:40:13,160 ERROR [bc.util.AdaptorLogging] (default task-1) Comm Id:[578245297]-&gt;The Input ByteStream :  100400                  **            003098600100001055645000000     0  I  0 000000  0000000000000123100000000000000000+00000000355000000+ 00000000                                                       888123456789                      IDR00000000350000000+IDR00000000350000000+00000000000000000+00000000000000000+02pembayaran cicilan                                                                                                                          Dian Amalia                                                                     Jl. Mawar no 10                                                                                                                     0001                          Diana                                                                           Jl. Melati no 10                                            00                                                                 0010016                      076000000000005000000+0                                                50
+DEBUG    root:test_KliringOutward.py:231 2021-03-18 11:51:26,743 ERROR [bc.util.AdaptorLogging] (default task-1) Comm Id:[578245297]-&gt;The Input ByteStream :  100400                  **            003098621030011055645000000     0     0 000000  0000000000000123100000000000000000+00000000355000000+ 00000000                                                       888123456789                      IDR00000000350000000+IDR00000000350000000+00000000000000000+00000000000000000+02pembayaran cicilan                                                                                                                          Dian Amalia                                                                     Jl. Mawar no 10                                                                                                                     0001                          Diana                                                                           Jl. Melati no 10                                            00                                                                 0010016                      076000000000005000000+0                                                50
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF sent (1)
 DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.
-DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.<br/></div></td></tr></tbody></table></body></html>
+DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.<br/> ----------------------------Captured stdout teardown---------------------------- <br/>PASSED                                                                   [100%]<br/></div></td></tr></tbody></table></body></html>
