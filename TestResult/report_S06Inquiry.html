@@ -426,7 +426,7 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report_S06Inquiry.html</h1>
-    <p>Report generated on 18-Mar-2021 at 21:07:18 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.0</p>
+    <p>Report generated on 29-Mar-2021 at 15:44:07 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -442,7 +442,7 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.7.0</td></tr></table>
     <h2>Summary</h2>
-    <p>4 tests ran in 1.08 seconds. </p>
+    <p>4 tests ran in 0.50 seconds. </p>
     <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">4 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
@@ -458,7 +458,7 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_S06Inquiry.py::test_normal[IREM]</td>
-          <td class="col-duration">0.36</td>
+          <td class="col-duration">0.10</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -469,7 +469,7 @@ DEBUG    root:test_S06Inquiry.py:36 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_S06Inquiry.py::test_normal_content_type_application_xml[IREM]</td>
-          <td class="col-duration">0.36</td>
+          <td class="col-duration">0.03</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -480,7 +480,7 @@ DEBUG    root:test_S06Inquiry.py:63 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_S06Inquiry.py::test_abnormal[IREM]</td>
-          <td class="col-duration">0.02</td>
+          <td class="col-duration">0.01</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -495,7 +495,7 @@ DEBUG    root:test_S06Inquiry.py:90 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0xbf1bbac8
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0x2164ba90
 DEBUG    paramiko.transport:transport.py:1819 Local version/idstring: SSH-2.0-paramiko_2.7.2
 DEBUG    paramiko.transport:transport.py:1819 Remote version/idstring: SSH-2.0-OpenSSH_7.4
 INFO     paramiko.transport:transport.py:1819 Connected (version 2.0, client OpenSSH_7.4)
@@ -526,6 +526,6 @@ DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet out: 32768 bytes
 DEBUG    paramiko.transport:transport.py:1819 Secsh channel 1 opened.
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Sesch channel 1 request ok
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF received (1)
-DEBUG    root:test_S06Inquiry.py:138 2021-03-18 21:07:17,271 ERROR [bc.util.AdaptorLogging] (default task-2) Comm Id:[1185206963]-&gt;The Input ByteStream :  073600                  **            003099021030011057301000000     0     0 000000      0000000000000000   000000000000000000S06IOC271433388 IOC026072       00000000   000000000000000000                                00000000   000000000000000000                                00000000   000000000000000000                                00000000   000000000000000000                                00000000   000000000000000000                                00000000   000000000000000000                                00000000   000000000000000000                                00000000   000000000000000000                                00000000   000000000000000000                                H01                         0000
+DEBUG    root:test_S06Inquiry.py:138 15:44:06,716 INFO  [stdout] (default task-1) ADAPTER BYTESTREAM ========&gt; 00                  **            003099021030011057301000000     0     0 000000      0000000000000000   000000000000000000S06IOC271433388 IOC026072       00000000   000000000000000000                                00000000   000000000000000000                                00000000   000000000000000000                                00000000   000000000000000000                                00000000   000000000000000000                                00000000   000000000000000000                                00000000   000000000000000000                                00000000   000000000000000000                                00000000   000000000000000000                                H01                         0000
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF sent (1)
-DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.<br/> -----------------------------Captured log teardown------------------------------ <br/>DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.<br/></div></td></tr></tbody></table></body></html>
+DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.<br/> ----------------------------Captured stdout teardown---------------------------- <br/>PASSED                                                                                                                                               [100%]<br/></div></td></tr></tbody></table></body></html>

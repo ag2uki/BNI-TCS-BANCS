@@ -426,7 +426,7 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report_GetPersonalInfo.html</h1>
-    <p>Report generated on 18-Mar-2021 at 10:49:10 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.0</p>
+    <p>Report generated on 29-Mar-2021 at 15:30:33 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -442,8 +442,8 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.7.0</td></tr></table>
     <h2>Summary</h2>
-    <p>16 tests ran in 1.24 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">15 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>16 tests ran in 1.21 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">16 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -454,47 +454,6 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">Core-Service-TCS/test/test_GetPersonalInfo.py::test_branch_header[NEWMOBILE-CORE-0996]</td>
-          <td class="col-duration">0.17</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">systemId = &#x27;NEWMOBILE-CORE&#x27;, expectedBranch = &#x27;0996&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;systemId, expectedBranch&#x27;, [(&#x27;NEWIBANK-CORE&#x27;, &#x27;0996&#x27;),<br/>                                                            (&#x27;NEWMOBILE-CORE&#x27;, &#x27;0996&#x27;),<br/>                                                             (&#x27;AGENT&#x27;, &#x27;0996&#x27;),<br/>                                                            (&#x27;NEWMOBILE&#x27;, &#x27;0991&#x27;)])<br/>    def test_branch_header(systemId, expectedBranch):<br/>        post_data = &quot;&quot;&quot;&lt;soapenv:Envelope xmlns:q0=&quot;http://service.bni.co.id/core&quot; xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;<br/>       &lt;soapenv:Body&gt;<br/>          &lt;q0:transaction&gt;<br/>             &lt;request&gt;<br/>                &lt;systemId&gt;${systemId}&lt;/systemId&gt;<br/>                &lt;customHeader&gt;<br/>                   &lt;branch&gt;${branch}&lt;/branch&gt;<br/>                   &lt;terminal&gt;210&lt;/terminal&gt;<br/>                   &lt;teller&gt;30011&lt;/teller&gt;<br/>                   &lt;overrideFlag&gt;&lt;/overrideFlag&gt;<br/>                   &lt;supervisorId/&gt;<br/>                &lt;/customHeader&gt;<br/>                &lt;content xsi:type=&quot;bo:GetPersonalInfoReq&quot;&gt;<br/>                   &lt;cifNum&gt;9007944334&lt;/cifNum&gt;<br/>                &lt;/content&gt;<br/>             &lt;/request&gt;<br/>          &lt;/q0:transaction&gt;<br/>       &lt;/soapenv:Body&gt;<br/>    &lt;/soapenv:Envelope&gt;<br/>    &quot;&quot;&quot;<br/>        s = Template(post_data)<br/>        req = s.safe_substitute(systemId=systemId, branch=expectedBranch)<br/>    <br/>        # SSH to Server [&#x27;ssh&#x27;, &#x27;-i&#x27;, &#x27;ssh-key.txt&#x27;, &#x27;root@192.168.231.23&#x27;, &#x27;tail&#x27;, &#x27;-f&#x27;, &#x27;/opt/jboss-eap/standalone/log/server.log&#x27;]<br/>        client = paramiko.SSHClient()<br/>        client.load_system_host_keys()<br/>        client.connect (&#x27;192.168.231.23&#x27;, key_filename=&#x27;ssh-key.txt&#x27;, username=&#x27;soadev&#x27;)<br/>        stdin, stdout, stderr = client.exec_command(&#x27;truncate --size 0 /opt/jboss-eap/standalone/log/server.log&#x27;)<br/>    <br/>        # POST DATA to core service<br/>        headers = {&#x27;Content-type&#x27;: &#x27;application/xml&#x27;}<br/>        r = requests.post(url_coreservice_baru, data=req, headers=headers)<br/>        logger.debug(str(r.status_code) + &#x27;---------&#x27; + r.text)<br/>    <br/>        # get The f log!<br/>        stdin, stdout, stderr = client.exec_command(&#x27;tail -1048576 /opt/jboss-eap/standalone/log/server.log | grep &quot;Input ByteStream&quot;&#x27;)<br/>    <br/>        log = &quot;&quot;<br/>    <br/>        for line in stdout:<br/>            log = line.strip(&#x27;\n&#x27;)<br/>    <br/>        logger.debug(log)<br/>        i = log.find(&#x27;003&#x27; + expectedBranch)<br/>    <br/>&gt;       assert(i != -1)<br/><span class="error">E       assert -1 != -1</span><br/><br/>Core-Service-TCS/test/test_GetPersonalInfo.py:133: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0x4e7f6358
-DEBUG    paramiko.transport:transport.py:1819 Local version/idstring: SSH-2.0-paramiko_2.7.2
-DEBUG    paramiko.transport:transport.py:1819 Remote version/idstring: SSH-2.0-OpenSSH_7.4
-INFO     paramiko.transport:transport.py:1819 Connected (version 2.0, client OpenSSH_7.4)
-DEBUG    paramiko.transport:transport.py:1819 kex algos:[&#x27;curve25519-sha256&#x27;, &#x27;curve25519-sha256@libssh.org&#x27;, &#x27;ecdh-sha2-nistp256&#x27;, &#x27;ecdh-sha2-nistp384&#x27;, &#x27;ecdh-sha2-nistp521&#x27;, &#x27;diffie-hellman-group-exchange-sha256&#x27;, &#x27;diffie-hellman-group16-sha512&#x27;, &#x27;diffie-hellman-group18-sha512&#x27;, &#x27;diffie-hellman-group-exchange-sha1&#x27;, &#x27;diffie-hellman-group14-sha256&#x27;, &#x27;diffie-hellman-group14-sha1&#x27;, &#x27;diffie-hellman-group1-sha1&#x27;] server key:[&#x27;ssh-rsa&#x27;, &#x27;rsa-sha2-512&#x27;, &#x27;rsa-sha2-256&#x27;, &#x27;ecdsa-sha2-nistp256&#x27;, &#x27;ssh-ed25519&#x27;] client encrypt:[&#x27;chacha20-poly1305@openssh.com&#x27;, &#x27;aes128-ctr&#x27;, &#x27;aes192-ctr&#x27;, &#x27;aes256-ctr&#x27;, &#x27;aes128-gcm@openssh.com&#x27;, &#x27;aes256-gcm@openssh.com&#x27;, &#x27;aes128-cbc&#x27;, &#x27;aes192-cbc&#x27;, &#x27;aes256-cbc&#x27;, &#x27;blowfish-cbc&#x27;, &#x27;cast128-cbc&#x27;, &#x27;3des-cbc&#x27;] server encrypt:[&#x27;chacha20-poly1305@openssh.com&#x27;, &#x27;aes128-ctr&#x27;, &#x27;aes192-ctr&#x27;, &#x27;aes256-ctr&#x27;, &#x27;aes128-gcm@openssh.com&#x27;, &#x27;aes256-gcm@openssh.com&#x27;, &#x27;aes128-cbc&#x27;, &#x27;aes192-cbc&#x27;, &#x27;aes256-cbc&#x27;, &#x27;blowfish-cbc&#x27;, &#x27;cast128-cbc&#x27;, &#x27;3des-cbc&#x27;] client mac:[&#x27;umac-64-etm@openssh.com&#x27;, &#x27;umac-128-etm@openssh.com&#x27;, &#x27;hmac-sha2-256-etm@openssh.com&#x27;, &#x27;hmac-sha2-512-etm@openssh.com&#x27;, &#x27;hmac-sha1-etm@openssh.com&#x27;, &#x27;umac-64@openssh.com&#x27;, &#x27;umac-128@openssh.com&#x27;, &#x27;hmac-sha2-256&#x27;, &#x27;hmac-sha2-512&#x27;, &#x27;hmac-sha1&#x27;] server mac:[&#x27;umac-64-etm@openssh.com&#x27;, &#x27;umac-128-etm@openssh.com&#x27;, &#x27;hmac-sha2-256-etm@openssh.com&#x27;, &#x27;hmac-sha2-512-etm@openssh.com&#x27;, &#x27;hmac-sha1-etm@openssh.com&#x27;, &#x27;umac-64@openssh.com&#x27;, &#x27;umac-128@openssh.com&#x27;, &#x27;hmac-sha2-256&#x27;, &#x27;hmac-sha2-512&#x27;, &#x27;hmac-sha1&#x27;] client compress:[&#x27;none&#x27;, &#x27;zlib@openssh.com&#x27;] server compress:[&#x27;none&#x27;, &#x27;zlib@openssh.com&#x27;] client lang:[&#x27;&#x27;] server lang:[&#x27;&#x27;] kex follows?False
-DEBUG    paramiko.transport:transport.py:1819 Kex agreed: curve25519-sha256@libssh.org
-DEBUG    paramiko.transport:transport.py:1819 HostKey agreed: ecdsa-sha2-nistp256
-DEBUG    paramiko.transport:transport.py:1819 Cipher agreed: aes128-ctr
-DEBUG    paramiko.transport:transport.py:1819 MAC agreed: hmac-sha2-256
-DEBUG    paramiko.transport:transport.py:1819 Compression agreed: none
-DEBUG    paramiko.transport:transport.py:1819 kex engine KexCurve25519 specified hash_algo &lt;built-in function openssl_sha256&gt;
-DEBUG    paramiko.transport:transport.py:1819 Switch to new keys ...
-DEBUG    paramiko.transport:transport.py:1819 Trying discovered key b&#x27;39a28802372b24a5e84125168fa3e87d&#x27; in ssh-key.txt
-DEBUG    paramiko.transport:transport.py:1819 userauth is OK
-INFO     paramiko.transport:transport.py:1819 Authentication (publickey) successful!
-DEBUG    paramiko.transport:channel.py:1212 [chan 0] Max packet in: 32768 bytes
-DEBUG    paramiko.transport:transport.py:1819 Received global request &quot;hostkeys-00@openssh.com&quot;
-DEBUG    paramiko.transport:transport.py:1819 Rejecting &quot;hostkeys-00@openssh.com&quot; global request from server.
-DEBUG    paramiko.transport:channel.py:1212 [chan 0] Max packet out: 32768 bytes
-DEBUG    paramiko.transport:transport.py:1819 Secsh channel 0 opened.
-DEBUG    paramiko.transport:channel.py:1212 [chan 0] Sesch channel 0 request ok
-DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
-DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF received (0)
-DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF sent (0)
-DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 1524
-DEBUG    root:test_GetPersonalInfo.py:120 200---------&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;000000&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:GetPersonalInfoRes&quot;&gt;&lt;cifNum&gt;00000009007944334&lt;/cifNum&gt;&lt;name&gt;Ibu 9007944334 9007944334 9007944334&lt;/name&gt;&lt;nameAlias/&gt;&lt;berdasarPPH&gt;1&lt;/berdasarPPH&gt;&lt;cabangPbyrPajak&gt;00000&lt;/cabangPbyrPajak&gt;&lt;agama&gt;0001&lt;/agama&gt;&lt;lingkupPerusahaan/&gt;&lt;email1&gt;aluyah222.teguh@yahoo.com&lt;/email1&gt;&lt;email2&gt;aluyah.teguh2@yahoo.com&lt;/email2&gt;&lt;kreditur&gt;0000000&lt;/kreditur&gt;&lt;kdPendidikan&gt;03&lt;/kdPendidikan&gt;&lt;Channel1&gt;00&lt;/Channel1&gt;&lt;Channel2&gt;00&lt;/Channel2&gt;&lt;Channel3&gt;00&lt;/Channel3&gt;&lt;Channel4&gt;00&lt;/Channel4&gt;&lt;Channel5&gt;00&lt;/Channel5&gt;&lt;Channel6&gt;00&lt;/Channel6&gt;&lt;Channel7&gt;00&lt;/Channel7&gt;&lt;Channel8&gt;00&lt;/Channel8&gt;&lt;Channel9&gt;00&lt;/Channel9&gt;&lt;Channel10&gt;00&lt;/Channel10&gt;&lt;Channel11&gt;01&lt;/Channel11&gt;&lt;Channel12&gt;05&lt;/Channel12&gt;&lt;Channel13&gt;00&lt;/Channel13&gt;&lt;Channel14&gt;00&lt;/Channel14&gt;&lt;Channel15&gt;00&lt;/Channel15&gt;&lt;Channel16&gt;00&lt;/Channel16&gt;&lt;Channel17&gt;00&lt;/Channel17&gt;&lt;Channel18&gt;00&lt;/Channel18&gt;&lt;Channel19&gt;00&lt;/Channel19&gt;&lt;Channel20&gt;00&lt;/Channel20&gt;&lt;freq&gt;M&lt;/freq&gt;&lt;siklus&gt;00&lt;/siklus&gt;&lt;hari&gt;00&lt;/hari&gt;&lt;Mom_Maiden_Name&gt;ALUYAH&lt;/Mom_Maiden_Name&gt;&lt;cdHobby&gt;00&lt;/cdHobby&gt;&lt;Filler/&gt;&lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;
-DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet in: 32768 bytes
-DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet out: 32768 bytes
-DEBUG    paramiko.transport:transport.py:1819 Secsh channel 1 opened.
-DEBUG    paramiko.transport:channel.py:1212 [chan 1] Sesch channel 1 request ok
-DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF received (1)
-DEBUG    root:test_GetPersonalInfo.py:130 
-DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF sent (1)<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
@@ -620,7 +579,7 @@ DEBUG    root:test_GetPersonalInfo.py:80 &lt;soapenv:Envelope xmlns:dpss0=&quot;
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">Core-Service-TCS/test/test_GetPersonalInfo.py::test_abnormal[NEWMOBILE]</td>
-          <td class="col-duration">0.10</td>
+          <td class="col-duration">0.02</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -635,7 +594,7 @@ DEBUG    root:test_GetPersonalInfo.py:80 &lt;soapenv:Envelope xmlns:dpss0=&quot;
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0x4e7f6470
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0x8ddd0438
 DEBUG    paramiko.transport:transport.py:1819 Local version/idstring: SSH-2.0-paramiko_2.7.2
 DEBUG    paramiko.transport:transport.py:1819 Remote version/idstring: SSH-2.0-OpenSSH_7.4
 INFO     paramiko.transport:transport.py:1819 Connected (version 2.0, client OpenSSH_7.4)
@@ -666,19 +625,19 @@ DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet out: 32768 bytes
 DEBUG    paramiko.transport:transport.py:1819 Secsh channel 1 opened.
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Sesch channel 1 request ok
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF received (1)
-DEBUG    root:test_GetPersonalInfo.py:130 2021-03-18 10:49:08,358 ERROR [bc.util.AdaptorLogging] (default task-1) Comm Id:[578245297]-&gt;The Input ByteStream :  010100                  **            003099621030011067050000000     0     0 000000  0000000900794433409
+DEBUG    root:test_GetPersonalInfo.py:130 15:30:31,992 INFO  [stdout] (default task-2) ADAPTER BYTESTREAM ========&gt; 00                  **            003099621030011067050000000     0     0 000000  0000000900794433409
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF sent (1)
 DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.
 DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.<br/> ----------------------------Captured stdout teardown---------------------------- <br/>PASSED                                                                   [ 81%]<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">Core-Service-TCS/test/test_GetPersonalInfo.py::test_branch_header[AGENT-0996]</td>
-          <td class="col-duration">0.17</td>
+          <td class="col-name">Core-Service-TCS/test/test_GetPersonalInfo.py::test_branch_header[NEWMOBILE-CORE-0996]</td>
+          <td class="col-duration">0.19</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0x4d53cf60
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0x8ddd09e8
 DEBUG    paramiko.transport:transport.py:1819 Local version/idstring: SSH-2.0-paramiko_2.7.2
 DEBUG    paramiko.transport:transport.py:1819 Remote version/idstring: SSH-2.0-OpenSSH_7.4
 INFO     paramiko.transport:transport.py:1819 Connected (version 2.0, client OpenSSH_7.4)
@@ -709,8 +668,52 @@ DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet out: 32768 bytes
 DEBUG    paramiko.transport:transport.py:1819 Secsh channel 1 opened.
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Sesch channel 1 request ok
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF received (1)
-DEBUG    root:test_GetPersonalInfo.py:130 2021-03-18 10:49:08,740 ERROR [bc.util.AdaptorLogging] (default task-1) Comm Id:[578245297]-&gt;The Input ByteStream :  010100                  **            003099621030011067050000000     0     0 000000  0000000900794433409
+DEBUG    root:test_GetPersonalInfo.py:130 15:30:32,201 INFO  [stdout] (default task-2) ADAPTER BYTESTREAM ========&gt; 00                  **            003099621030011067050000000     0     0 000000  0000000900794433409
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF sent (1)
+DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.
+DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Core-Service-TCS/test/test_GetPersonalInfo.py::test_branch_header[AGENT-0996]</td>
+          <td class="col-duration">0.20</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0x8ddd09b0
+DEBUG    paramiko.transport:transport.py:1819 Local version/idstring: SSH-2.0-paramiko_2.7.2
+DEBUG    paramiko.transport:transport.py:1819 Remote version/idstring: SSH-2.0-OpenSSH_7.4
+INFO     paramiko.transport:transport.py:1819 Connected (version 2.0, client OpenSSH_7.4)
+DEBUG    paramiko.transport:transport.py:1819 kex algos:[&#x27;curve25519-sha256&#x27;, &#x27;curve25519-sha256@libssh.org&#x27;, &#x27;ecdh-sha2-nistp256&#x27;, &#x27;ecdh-sha2-nistp384&#x27;, &#x27;ecdh-sha2-nistp521&#x27;, &#x27;diffie-hellman-group-exchange-sha256&#x27;, &#x27;diffie-hellman-group16-sha512&#x27;, &#x27;diffie-hellman-group18-sha512&#x27;, &#x27;diffie-hellman-group-exchange-sha1&#x27;, &#x27;diffie-hellman-group14-sha256&#x27;, &#x27;diffie-hellman-group14-sha1&#x27;, &#x27;diffie-hellman-group1-sha1&#x27;] server key:[&#x27;ssh-rsa&#x27;, &#x27;rsa-sha2-512&#x27;, &#x27;rsa-sha2-256&#x27;, &#x27;ecdsa-sha2-nistp256&#x27;, &#x27;ssh-ed25519&#x27;] client encrypt:[&#x27;chacha20-poly1305@openssh.com&#x27;, &#x27;aes128-ctr&#x27;, &#x27;aes192-ctr&#x27;, &#x27;aes256-ctr&#x27;, &#x27;aes128-gcm@openssh.com&#x27;, &#x27;aes256-gcm@openssh.com&#x27;, &#x27;aes128-cbc&#x27;, &#x27;aes192-cbc&#x27;, &#x27;aes256-cbc&#x27;, &#x27;blowfish-cbc&#x27;, &#x27;cast128-cbc&#x27;, &#x27;3des-cbc&#x27;] server encrypt:[&#x27;chacha20-poly1305@openssh.com&#x27;, &#x27;aes128-ctr&#x27;, &#x27;aes192-ctr&#x27;, &#x27;aes256-ctr&#x27;, &#x27;aes128-gcm@openssh.com&#x27;, &#x27;aes256-gcm@openssh.com&#x27;, &#x27;aes128-cbc&#x27;, &#x27;aes192-cbc&#x27;, &#x27;aes256-cbc&#x27;, &#x27;blowfish-cbc&#x27;, &#x27;cast128-cbc&#x27;, &#x27;3des-cbc&#x27;] client mac:[&#x27;umac-64-etm@openssh.com&#x27;, &#x27;umac-128-etm@openssh.com&#x27;, &#x27;hmac-sha2-256-etm@openssh.com&#x27;, &#x27;hmac-sha2-512-etm@openssh.com&#x27;, &#x27;hmac-sha1-etm@openssh.com&#x27;, &#x27;umac-64@openssh.com&#x27;, &#x27;umac-128@openssh.com&#x27;, &#x27;hmac-sha2-256&#x27;, &#x27;hmac-sha2-512&#x27;, &#x27;hmac-sha1&#x27;] server mac:[&#x27;umac-64-etm@openssh.com&#x27;, &#x27;umac-128-etm@openssh.com&#x27;, &#x27;hmac-sha2-256-etm@openssh.com&#x27;, &#x27;hmac-sha2-512-etm@openssh.com&#x27;, &#x27;hmac-sha1-etm@openssh.com&#x27;, &#x27;umac-64@openssh.com&#x27;, &#x27;umac-128@openssh.com&#x27;, &#x27;hmac-sha2-256&#x27;, &#x27;hmac-sha2-512&#x27;, &#x27;hmac-sha1&#x27;] client compress:[&#x27;none&#x27;, &#x27;zlib@openssh.com&#x27;] server compress:[&#x27;none&#x27;, &#x27;zlib@openssh.com&#x27;] client lang:[&#x27;&#x27;] server lang:[&#x27;&#x27;] kex follows?False
+DEBUG    paramiko.transport:transport.py:1819 Kex agreed: curve25519-sha256@libssh.org
+DEBUG    paramiko.transport:transport.py:1819 HostKey agreed: ecdsa-sha2-nistp256
+DEBUG    paramiko.transport:transport.py:1819 Cipher agreed: aes128-ctr
+DEBUG    paramiko.transport:transport.py:1819 MAC agreed: hmac-sha2-256
+DEBUG    paramiko.transport:transport.py:1819 Compression agreed: none
+DEBUG    paramiko.transport:transport.py:1819 kex engine KexCurve25519 specified hash_algo &lt;built-in function openssl_sha256&gt;
+DEBUG    paramiko.transport:transport.py:1819 Switch to new keys ...
+DEBUG    paramiko.transport:transport.py:1819 Trying discovered key b&#x27;39a28802372b24a5e84125168fa3e87d&#x27; in ssh-key.txt
+DEBUG    paramiko.transport:transport.py:1819 userauth is OK
+INFO     paramiko.transport:transport.py:1819 Authentication (publickey) successful!
+DEBUG    paramiko.transport:channel.py:1212 [chan 0] Max packet in: 32768 bytes
+DEBUG    paramiko.transport:transport.py:1819 Received global request &quot;hostkeys-00@openssh.com&quot;
+DEBUG    paramiko.transport:transport.py:1819 Rejecting &quot;hostkeys-00@openssh.com&quot; global request from server.
+DEBUG    paramiko.transport:channel.py:1212 [chan 0] Max packet out: 32768 bytes
+DEBUG    paramiko.transport:transport.py:1819 Secsh channel 0 opened.
+DEBUG    paramiko.transport:channel.py:1212 [chan 0] Sesch channel 0 request ok
+DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
+DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF received (0)
+DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF sent (0)
+DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 1524
+DEBUG    root:test_GetPersonalInfo.py:120 200---------&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;000000&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:GetPersonalInfoRes&quot;&gt;&lt;cifNum&gt;00000009007944334&lt;/cifNum&gt;&lt;name&gt;Ibu 9007944334 9007944334 9007944334&lt;/name&gt;&lt;nameAlias/&gt;&lt;berdasarPPH&gt;1&lt;/berdasarPPH&gt;&lt;cabangPbyrPajak&gt;00000&lt;/cabangPbyrPajak&gt;&lt;agama&gt;0001&lt;/agama&gt;&lt;lingkupPerusahaan/&gt;&lt;email1&gt;aluyah222.teguh@yahoo.com&lt;/email1&gt;&lt;email2&gt;aluyah.teguh2@yahoo.com&lt;/email2&gt;&lt;kreditur&gt;0000000&lt;/kreditur&gt;&lt;kdPendidikan&gt;03&lt;/kdPendidikan&gt;&lt;Channel1&gt;00&lt;/Channel1&gt;&lt;Channel2&gt;00&lt;/Channel2&gt;&lt;Channel3&gt;00&lt;/Channel3&gt;&lt;Channel4&gt;00&lt;/Channel4&gt;&lt;Channel5&gt;00&lt;/Channel5&gt;&lt;Channel6&gt;00&lt;/Channel6&gt;&lt;Channel7&gt;00&lt;/Channel7&gt;&lt;Channel8&gt;00&lt;/Channel8&gt;&lt;Channel9&gt;00&lt;/Channel9&gt;&lt;Channel10&gt;00&lt;/Channel10&gt;&lt;Channel11&gt;01&lt;/Channel11&gt;&lt;Channel12&gt;05&lt;/Channel12&gt;&lt;Channel13&gt;00&lt;/Channel13&gt;&lt;Channel14&gt;00&lt;/Channel14&gt;&lt;Channel15&gt;00&lt;/Channel15&gt;&lt;Channel16&gt;00&lt;/Channel16&gt;&lt;Channel17&gt;00&lt;/Channel17&gt;&lt;Channel18&gt;00&lt;/Channel18&gt;&lt;Channel19&gt;00&lt;/Channel19&gt;&lt;Channel20&gt;00&lt;/Channel20&gt;&lt;freq&gt;M&lt;/freq&gt;&lt;siklus&gt;00&lt;/siklus&gt;&lt;hari&gt;00&lt;/hari&gt;&lt;Mom_Maiden_Name&gt;ALUYAH&lt;/Mom_Maiden_Name&gt;&lt;cdHobby&gt;00&lt;/cdHobby&gt;&lt;Filler/&gt;&lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;
+DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet in: 32768 bytes
+DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet out: 32768 bytes
+DEBUG    paramiko.transport:transport.py:1819 Secsh channel 1 opened.
+DEBUG    paramiko.transport:channel.py:1212 [chan 1] Sesch channel 1 request ok
+DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF received (1)
+DEBUG    root:test_GetPersonalInfo.py:130 15:30:32,406 INFO  [stdout] (default task-2) ADAPTER BYTESTREAM ========&gt; 00                  **            003099621030011067050000000     0     0 000000  0000000900794433409
+DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF sent (1)
+DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.
 DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
@@ -720,8 +723,7 @@ DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because conne
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>
-Core-Service-TCS/test/test_GetPersonalInfo.py::test_branch_header[NEWMOBILE-0991] <br/> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0x4d543d68
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0x8ddd0b70
 DEBUG    paramiko.transport:transport.py:1819 Local version/idstring: SSH-2.0-paramiko_2.7.2
 DEBUG    paramiko.transport:transport.py:1819 Remote version/idstring: SSH-2.0-OpenSSH_7.4
 INFO     paramiko.transport:transport.py:1819 Connected (version 2.0, client OpenSSH_7.4)
@@ -752,7 +754,5 @@ DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet out: 32768 bytes
 DEBUG    paramiko.transport:transport.py:1819 Secsh channel 1 opened.
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Sesch channel 1 request ok
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF received (1)
-DEBUG    root:test_GetPersonalInfo.py:130 2021-03-18 10:49:08,916 ERROR [bc.util.AdaptorLogging] (default task-1) Comm Id:[578245297]-&gt;The Input ByteStream :  010100                  **            003099121030011067050000000     0     0 000000  0000000900794433409
-DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF sent (1)
-DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.
-DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.<br/></div></td></tr></tbody></table></body></html>
+DEBUG    root:test_GetPersonalInfo.py:130 15:30:32,580 INFO  [stdout] (default task-2) ADAPTER BYTESTREAM ========&gt; 00                  **            003099121030011067050000000     0     0 000000  0000000900794433409
+DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF sent (1)<br/> -----------------------------Captured log teardown------------------------------ <br/>DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.<br/></div></td></tr></tbody></table></body></html>
