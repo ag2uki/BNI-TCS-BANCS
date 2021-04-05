@@ -426,7 +426,7 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report_UpdateVARetail.html</h1>
-    <p>Report generated on 29-Mar-2021 at 15:45:08 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.0</p>
+    <p>Report generated on 05-Apr-2021 at 11:27:09 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -442,8 +442,8 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.7.0</td></tr></table>
     <h2>Summary</h2>
-    <p>4 tests ran in 0.44 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">3 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>4 tests ran in 2.36 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">4 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -454,15 +454,48 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="failed results-table-row">
+      <tbody class="passed results-table-row">
         <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">Core-Service-TCS/test/test_UpdateVARetail.py::test_branch_header[0986]</td>
-          <td class="col-duration">0.18</td>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Core-Service-TCS/test/test_UpdateVARetail.py::test_normal</td>
+          <td class="col-duration">0.03</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">expectedBranch = &#x27;0986&#x27;<br/><br/>    @pytest.mark.parametrize(&#x27;expectedBranch&#x27;, (&#x27;0986&#x27;, ))<br/>    def test_branch_header(expectedBranch):<br/>        post_data = &quot;&quot;&quot;&lt;soapenv:Envelope xmlns:q0=&quot;http://service.bni.co.id/core&quot; xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;<br/>       &lt;soapenv:Body&gt;<br/>          &lt;q0:transaction&gt;<br/>             &lt;request&gt;<br/>                &lt;systemId&gt;API&lt;/systemId&gt;<br/>                &lt;customHeader&gt;<br/>                   &lt;branch&gt;${branch}&lt;/branch&gt;<br/>                   &lt;terminal&gt;210&lt;/terminal&gt;<br/>                   &lt;teller&gt;30011&lt;/teller&gt;<br/>                   &lt;overrideFlag&gt;&lt;/overrideFlag&gt;<br/>                   &lt;supervisorId/&gt;<br/>                &lt;/customHeader&gt;<br/>                &lt;content xsi:type=&quot;bo:UpdateVARetailReq&quot;&gt;<br/>                   &lt;virtualAccountType&gt;987&lt;/virtualAccountType&gt;<br/>                   &lt;companyCode&gt;22222222220&lt;/companyCode&gt;<br/>                   &lt;virtualAccountNum&gt;9872222222222001&lt;/virtualAccountNum&gt;<br/>                   &lt;virtualAccountName&gt;Toped&lt;/virtualAccountName&gt;<br/>                   &lt;virtualAccountStatus&gt;1&lt;/virtualAccountStatus&gt;<br/>                   &lt;billAmount&gt;1000&lt;/billAmount &gt;<br/>                   &lt;var1Amount&gt;2000&lt;/var1Amount&gt;<br/>                &lt;/content&gt;<br/>             &lt;/request&gt;<br/>          &lt;/q0:transaction&gt;<br/>       &lt;/soapenv:Body&gt;<br/>    &lt;/soapenv:Envelope&gt;<br/>    &quot;&quot;&quot;<br/>        s = Template(post_data)<br/>        req = s.safe_substitute(branch=expectedBranch)<br/>    <br/>        # SSH to Server [&#x27;ssh&#x27;, &#x27;-i&#x27;, &#x27;ssh-key.txt&#x27;, &#x27;root@192.168.231.23&#x27;, &#x27;tail&#x27;, &#x27;-f&#x27;, &#x27;/opt/jboss-eap/bin/nohup.out&#x27;]<br/>        client = paramiko.SSHClient()<br/>        client.load_system_host_keys()<br/>        client.connect (&#x27;192.168.231.23&#x27;, key_filename=&#x27;ssh-key.txt&#x27;, username=&#x27;soadev&#x27;)<br/>        stdin, stdout, stderr = client.exec_command(&#x27;truncate --size 0 /opt/jboss-eap/bin/nohup.out&#x27;)<br/>    <br/>        # POST DATA to core service<br/>        headers = {&#x27;Content-type&#x27;: &#x27;application/xml&#x27;}<br/>        r = requests.post(url_coreservice_baru, data=req, headers=headers)<br/>        logger.debug(str(r.status_code) + &#x27;---------&#x27; + r.text)<br/>    <br/>        # get The f log!<br/>        stdin, stdout, stderr = client.exec_command(&#x27;tail -1048576 /opt/jboss-eap/bin/nohup.out | grep &quot;ADAPTER BYTESTREAM&quot;&#x27;)<br/>    <br/>        log = &quot;&quot;<br/>    <br/>        for line in stdout:<br/>            log = line.strip(&#x27;\n&#x27;)<br/>    <br/>        logger.debug(log)<br/>        i = log.find(&#x27;003&#x27; + expectedBranch)<br/>    <br/>&gt;       assert(i != -1)<br/><span class="error">E       assert -1 != -1</span><br/><br/>Core-Service-TCS/test/test_UpdateVARetail.py:151: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0x3ad7cbe0
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
+DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 581
+DEBUG    root:test_UpdateVARetail.py:40 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;042389&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:OKMessage&quot;&gt;&lt;message/&gt;&lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Core-Service-TCS/test/test_UpdateVARetail.py::test_abnormal</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
+DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 685
+DEBUG    root:test_UpdateVARetail.py:68 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode xmlns:ns0=&quot;http://service.bni.co.id/core&quot;&gt;ns0:SysFault&lt;/faultcode&gt;&lt;faultstring xml:lang=&quot;en&quot;&gt;9604&lt;/faultstring&gt;&lt;detail encodingStyle=&quot;&quot;&gt;&lt;core:transaction_sysFault xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;errorNum&gt;9604&lt;/errorNum&gt;&lt;errorDescription&gt;Data Cannot Be Parsed&lt;/errorDescription&gt;&lt;/core:transaction_sysFault&gt;&lt;/detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Core-Service-TCS/test/test_UpdateVARetail.py::test_normal_content_type_applicationxml</td>
+          <td class="col-duration">0.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
+DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 581
+DEBUG    root:test_UpdateVARetail.py:96 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;042390&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:OKMessage&quot;&gt;&lt;message/&gt;&lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Core-Service-TCS/test/test_UpdateVARetail.py::test_branch_header[0986]</td>
+          <td class="col-duration">2.15</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    paramiko.transport:transport.py:1819 starting thread (client mode): 0x7873fb38
 DEBUG    paramiko.transport:transport.py:1819 Local version/idstring: SSH-2.0-paramiko_2.7.2
 DEBUG    paramiko.transport:transport.py:1819 Remote version/idstring: SSH-2.0-OpenSSH_7.4
 INFO     paramiko.transport:transport.py:1819 Connected (version 2.0, client OpenSSH_7.4)
@@ -483,48 +516,17 @@ DEBUG    paramiko.transport:transport.py:1819 Rejecting &quot;hostkeys-00@openss
 DEBUG    paramiko.transport:channel.py:1212 [chan 0] Max packet out: 32768 bytes
 DEBUG    paramiko.transport:transport.py:1819 Secsh channel 0 opened.
 DEBUG    paramiko.transport:channel.py:1212 [chan 0] Sesch channel 0 request ok
-DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF received (0)
 DEBUG    paramiko.transport:channel.py:1212 [chan 0] EOF sent (0)
+DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
 DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 688
-DEBUG    root:test_UpdateVARetail.py:138 200---------&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode xmlns:ns0=&quot;http://service.bni.co.id/core&quot;&gt;ns0:AppFault&lt;/faultcode&gt;&lt;faultstring xml:lang=&quot;en&quot;&gt;0103&lt;/faultstring&gt;&lt;detail encodingStyle=&quot;&quot;&gt;&lt;core:SupFault_element xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;errorNum&gt;0103&lt;/errorNum&gt;&lt;errorDescription&gt;LEVEL KAPABILITAS TERLALU RENDAH&lt;/errorDescription&gt;&lt;/core:SupFault_element&gt;&lt;/detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;
+DEBUG    root:test_UpdateVARetail.py:140 200---------&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode xmlns:ns0=&quot;http://service.bni.co.id/core&quot;&gt;ns0:AppFault&lt;/faultcode&gt;&lt;faultstring xml:lang=&quot;en&quot;&gt;0103&lt;/faultstring&gt;&lt;detail encodingStyle=&quot;&quot;&gt;&lt;core:SupFault_element xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;errorNum&gt;0103&lt;/errorNum&gt;&lt;errorDescription&gt;LEVEL KAPABILITAS TERLALU RENDAH&lt;/errorDescription&gt;&lt;/core:SupFault_element&gt;&lt;/detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet in: 32768 bytes
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Max packet out: 32768 bytes
 DEBUG    paramiko.transport:transport.py:1819 Secsh channel 1 opened.
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] Sesch channel 1 request ok
 DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF received (1)
-DEBUG    root:test_UpdateVARetail.py:148 
-DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF sent (1)<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">Core-Service-TCS/test/test_UpdateVARetail.py::test_normal</td>
-          <td class="col-duration">0.03</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
-DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 581
-DEBUG    root:test_UpdateVARetail.py:39 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;036297&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:OKMessage&quot;&gt;&lt;message/&gt;&lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">Core-Service-TCS/test/test_UpdateVARetail.py::test_abnormal</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
-DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 685
-DEBUG    root:test_UpdateVARetail.py:67 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode xmlns:ns0=&quot;http://service.bni.co.id/core&quot;&gt;ns0:SysFault&lt;/faultcode&gt;&lt;faultstring xml:lang=&quot;en&quot;&gt;9604&lt;/faultstring&gt;&lt;detail encodingStyle=&quot;&quot;&gt;&lt;core:transaction_sysFault xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;errorNum&gt;9604&lt;/errorNum&gt;&lt;errorDescription&gt;Data Cannot Be Parsed&lt;/errorDescription&gt;&lt;/core:transaction_sysFault&gt;&lt;/detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">Core-Service-TCS/test/test_UpdateVARetail.py::test_normal_content_type_applicationxml</td>
-          <td class="col-duration">0.02</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
-DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 581
-DEBUG    root:test_UpdateVARetail.py:95 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;response&gt;&lt;header&gt;&lt;coreJournal&gt;036298&lt;/coreJournal&gt;&lt;/header&gt;&lt;content xsi:type=&quot;bo:OKMessage&quot;&gt;&lt;message/&gt;&lt;/content&gt;&lt;/response&gt;&lt;/core:transactionResponse&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody></table></body></html>
+DEBUG    root:test_UpdateVARetail.py:150 11:27:08,739 INFO  [stdout] (default task-1) ADAPTER BYTESTREAM ========&gt; 00                  **            003098621030011031993000000     0     0 000000  A        987222222222200987222222222200100000000000000000                                         Toped                                                                           1000000000001000000+                    00000000000000000+00000000002000000+00000000000000000+00000000        
+DEBUG    paramiko.transport:channel.py:1212 [chan 1] EOF sent (1)
+DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.
+DEBUG    paramiko.transport:transport.py:1819 Dropping user packet because connection is dead.<br/></div></td></tr></tbody></table></body></html>
