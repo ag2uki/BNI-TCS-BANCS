@@ -1,6 +1,6 @@
 <clientParam>
 	<AGENT slm-group="10TPS">
-		<branch>0996</branch>
+		<branch>0985</branch>
 		<terminal>001</terminal>
 		<teller>00001</teller>
 		<overrideFlag>I</overrideFlag>
@@ -8,7 +8,7 @@
 		<supervisorId></supervisorId>
 	</AGENT>
 	<AGENT-CORE slm-group="10TPS">
-		<branch>0996</branch>
+		<branch>0985</branch>
 		<terminal>001</terminal>
 		<teller>00001</teller>
 		<overrideFlag>I</overrideFlag>
@@ -591,12 +591,28 @@
 		<tandemFlag></tandemFlag>
 		<supervisorId></supervisorId>
 	</SPRINT>
-	<BCC_VA slm-group="20TPS">
+	<BCCVA slm-group="20TPS">
 		<branch>0968</branch>
 		<terminal>999</terminal>
 		<teller>00001</teller>
 		<overrideFlag>I</overrideFlag>
 		<tandemFlag></tandemFlag>
 		<supervisorId></supervisorId>
-	</BCC_VA>
+	</BCCVA>
+	<ECMS slm-group="10TPS">
+		<branch>0984</branch>
+		<terminal>009</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag/>
+		<supervisorId/>
+	</ECMS>
+	<PSAK73 slm-group="100TPS">
+		<branch>0996</branch>
+		<terminal>001</terminal>
+		<teller>00001</teller>
+		<overrideFlag>I</overrideFlag>
+		<tandemFlag></tandemFlag>
+		<supervisorId></supervisorId>
+	</PSAK73>
 </clientParam>

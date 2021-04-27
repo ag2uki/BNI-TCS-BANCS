@@ -29,6 +29,7 @@
 		<systemId>RAISECALL</systemId>	<!-- syaiful : CR21806-->
 		<systemId>GOWEALTH</systemId>
 		<systemId>API</systemId>	<!-- ryan : CR23774 -->
+		<systemId>BCCVA</systemId>	<!-- dinahamidah : CR27701 -->
 		<systemCode>069440</systemCode>
 		<specialHandling>N</specialHandling>
 		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
@@ -96,6 +97,7 @@
 		<systemId>SPRINT</systemId>	<!--Asrul: Sprint kemenkeu-->
 		<systemId>PERSEKOT</systemId>
 		<systemId>DIGISALES</systemId>
+		<systemId>BCCVA</systemId>	<!-- dinahamidah : CR27701 -->
 		<systemCode>069400</systemCode>
 		<specialHandling>Y</specialHandling>
 		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ACCOUNTSHORTINQUIRY.REQ;ReplyQueue=QA.CORE.ACCOUNTSHORTINQUIRY.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
@@ -169,6 +171,7 @@
 		<systemId>NEWMOBILE</systemId>
 		<systemId>GOWEALTH</systemId>
 		<systemId>API</systemId>	<!-- ryan : CR23774 -->
+		<systemId>BCCVA</systemId>	<!-- dinahamidah : CR27701 -->
 		<systemCode>069440</systemCode>
 		<specialHandling>N</specialHandling>
 		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
@@ -233,6 +236,7 @@
 		<Routing_Record TransactionType="BreakDepositAccount">
 		<systemId>NEWIBANK-CORE</systemId>
 		<systemId>NEWMOBILE</systemId>
+		<systemId>SYARIAH</systemId> <!-- dinahamidah : CR28240 -->
 		<systemCode>003045</systemCode>
 		<specialHandling>N</specialHandling>
 		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
@@ -315,6 +319,7 @@
 		<systemId>AGENT-CORE</systemId> <!-- ayu: CR26024-->
 		<systemId>SERVICE_MAPPER</systemId> <!-- ghina: CR25455-->
 		<systemId>DIGISALES</systemId>
+		<systemId>BCCVA</systemId>	<!-- dinahamidah : CR27701 -->
 		<systemCode>067050</systemCode>
 		<specialHandling>N</specialHandling>
 		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
@@ -448,6 +453,7 @@
 		<systemId>SERVICE_MAPPER</systemId> <!-- hilmi: CR23036 RDF -->
 		<systemId>API</systemId> <!-- ryan: CR25279 OpenBanking -->
 		<systemId>GOWEALTH</systemId> <!-- CR26109 Gowealth Fase 2 -->
+		<systemId>BCCVA</systemId>	<!-- dinahamidah : CR27701 -->
 		<systemCode>069490</systemCode>
 		<specialHandling>Y</specialHandling>
 		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.CUSTOMERDETAILS.REQ;ReplyQueue=QA.CORE.HANDLER.CUSTOMERDETAILS.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
@@ -499,6 +505,7 @@
 		<systemId>API</systemId> <!--directdebit-->
 		<systemId>DIGISALES</systemId>
 		<systemId>PERSEKOT</systemId> <!-- dinahamidah : CR27990-->
+		<systemId>BCCVA</systemId>	<!-- dinahamidah : CR27701 -->
 		<systemCode>037440</systemCode>
 		<specialHandling>N</specialHandling>
 		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
@@ -575,6 +582,7 @@
 		<systemId>ELO</systemId> <!-- Dina api: CR25061-->
 		<systemId>NEWTASPEN</systemId> <!-- Hans api: CR24794-->
 		<systemId>ECMS</systemId>	<!--hans: CR25106-->
+		<systemId>BCCVA</systemId>	<!-- dinahamidah : CR27701 -->
 		<systemCode>001045</systemCode>
 		<specialHandling>Y</specialHandling>
 		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.FIN.REQ;ReplyQueue=QA.CORE.HANDLER.FIN.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
@@ -634,6 +642,7 @@
 		<systemId>BNIWEB</systemId>
 		<systemId>FSCM</systemId>
 		<systemId>GLOBS</systemId>
+		<systemId>BCCVA</systemId>	<!-- dinahamidah : CR27701 -->
 		<systemCode>999999</systemCode>
 		<specialHandling>Y</specialHandling>
 		<responseLength>390</responseLength>
@@ -668,6 +677,7 @@
 		<systemId>API</systemId> <!--HANS ONEPUSH-->
 		<systemId>AUTODB</systemId> <!--HANS autodebet bpjsks-->
 		<systemId>KIOSK</systemId>
+		<systemId>BCCVA</systemId>	<!-- dinahamidah : CR27701 -->
 		<systemCode>037450</systemCode>
 		<specialHandling>N</specialHandling>
 		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
@@ -808,6 +818,7 @@
 		<systemId>API</systemId>	<!-- ryan : CR23774 -->
 		<systemId>ECHANNEL</systemId>	<!-- hans : CR25362 -->
 		<systemId>SYARIAH</systemId>	<!-- dina api : CR25248 -->
+		<systemId>BCCVA</systemId>	<!-- dinahamidah : CR27701 -->
 		<systemCode>069447</systemCode>
 		<specialHandling>Y</specialHandling>
 		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.LIST.REQ;ReplyQueue=QA.CORE.HANDLER.LIST.RES;ParseHeaders=true;TimeOut=150000</Routing_URL>
@@ -859,6 +870,7 @@
 		<systemId>NEWMOBILE</systemId>
 		<systemId>OPBG</systemId>
 		<systemId>SYARIAH</systemId>
+		<systemId>BCCVA</systemId>	<!-- dinahamidah : CR27701 -->
 		<systemCode>037273</systemCode>
 		<specialHandling>N</specialHandling>
 		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.ICONS.REQ;ReplyQueue=QA.CORE.ICONS.DP.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
@@ -1167,6 +1179,7 @@
 		<systemId>GLOBS</systemId>
 		<systemId>EFORM</systemId>
 		<systemId>SYARIAH</systemId>  <!-- Banu -->
+		<systemId>BCCVA</systemId>	<!-- dinahamidah : CR27701 -->
 		<systemCode>060583</systemCode>
 		<specialHandling>Y</specialHandling>
 		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.LIST.REQ;ReplyQueue=QA.CORE.HANDLER.LIST.RES;ParseHeaders=true;TimeOut=150000</Routing_URL>
@@ -1209,6 +1222,7 @@
 	
 	<Routing_Record TransactionType="PassbookPrint">
 		<systemId>ECHANNEL</systemId>
+		<systemId>SYARIAH</systemId> <!-- dinahamidah : CR28240 -->
 		<systemCode>000600</systemCode>
 		<specialHandling>Y</specialHandling>
 		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.LIST.REQ;ReplyQueue=QA.CORE.HANDLER.LIST.RES;ParseHeaders=true;TimeOut=150000</Routing_URL>
@@ -1403,6 +1417,7 @@
 		<systemId>NEWMOBILE</systemId>
 		<systemId>FSCM</systemId>	<!-- Syaiful: FSCM-->
 		<systemId>API</systemId>	<!-- ryan : CR23774 -->
+		<systemId>PERSEKOT</systemId>	<!-- Akmal: CR28596 -->
 		<systemCode>000000</systemCode>
 		<specialHandling>Y</specialHandling>
 		<Routing_URL>dpmq://QM.CORESERVICE/?RequestQueue=QA.CORE.HANDLER.XRATEINQ.REQ;ReplyQueue=QA.CORE.HANDLER.XRATEINQ.RES;ParseHeaders=true;TimeOut=60000</Routing_URL>
