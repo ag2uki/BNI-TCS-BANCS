@@ -91,7 +91,8 @@
 			<Field id="princArrears" type="flatMoney" signLocation="after" intLength="14" decLength="3" padding="left" padString="0"/>
 			<Field id="premcArrears" type="flatMoney" signLocation="after" intLength="14" decLength="3" padding="left" padString="0"/>
 			<Field id="addSkim" padding="right" padString=" " length="1"/>
-			<Field  id="filler"  padding="right"  padString=" "  length="18" />
+			<Field id="promotionFee" type="flatMoney" signLocation="after" decLength="3" padding="left" padString="0" intLength="14"/>
+			<!-- <Field  id="filler"  padding="right"  padString=" "  length="18" /> -->
 			<Field  id="monthlyDebitingDate"  padding="left"  padString="0"  length="2" />
 			<Field  id="filler"  padding="right"  padString=" "  length="79" />
 			<Field id="sourceAccount" padding="left" padString="0" length="17"/>

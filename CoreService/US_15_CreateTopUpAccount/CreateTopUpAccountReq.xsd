@@ -84,6 +84,7 @@
 			<xsd:element minOccurs="0" type="xsd:string" name="princArrears"/>
 			<xsd:element minOccurs="0" type="xsd:string" name="premcArrears"/>
 			<xsd:element minOccurs="0" type="xsd:string" name="addSkim"/>
+			<xsd:element minOccurs="0" type="xsd:string" name="promotionFee"/>
 			<xsd:element minOccurs="0" type="xsd:string" name="monthlyDebitingDate" />
 			<xsd:element minOccurs="0" type="xsd:string" name="sourceAccount"/>
 		</xsd:all>
