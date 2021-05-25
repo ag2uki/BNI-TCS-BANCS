@@ -10,7 +10,7 @@
 | 6 | AtmBillPaymentReversal | Passed |
 | 7 | BillingPaymentBigAmount | Passed |
 | 8 | BillingPaymentBigAmountReversal | Passed |
-| 9 | BillingPayment | Failed |
+| 9 | BillingPayment | Passed |
 | 10 | BillingPaymentReversal | Passed |
 | 11 | BillPayment | Passed |
 | 12 | BillPaymentReversal | Failed |
@@ -29,7 +29,7 @@
 | 25 | CreateVirtualAccount | Failed |
 | 26 | CustomerDetail | Failed |
 | 27 | DebitCardDetails | Failed |
-| 28 | DeLinkCardAccount | Failed |
+| 28 | DeLinkCardAccount | Passed |
 | 29 | DepositChangeDetails | Passed |
 | 30 | DepositTransferReversal | Passed |
 | 31 | DepTrxInquiry | Passed |
@@ -49,7 +49,7 @@
 | 45 | HoldDebitCard | Passed |
 | 46 | InitActivationCard | Passed |
 | 47 | InitChangeOwnershipCard | Passed |
-| 48 | InitCreateDEPAccount | Failed |
+| 48 | InitCreateDEPAccount | Passed |
 | 49 | InitCreateILAAccount | Passed |
 | 50 | InitCreateVirtualAccount | Passed |
 | 51 | InitDeLinkCardAccount | Passed |
