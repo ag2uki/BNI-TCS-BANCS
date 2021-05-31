@@ -70,7 +70,7 @@
 | 66 | LoanInterest | Passed |
 | 67 | LoanTransfer | Passed |
 | 68 | MultiTransfer | Passed |
-| 69 | OpenDepositAccListByBalance | Failed |
+| 69 | OpenDepositAccListByBalance | Passed |
 | 70 | OpenDepositAccountList | Passed |
 | 71 | OpenLoanAccountList | Passed |
 | 72 | RenewDepositAccount | Passed |
