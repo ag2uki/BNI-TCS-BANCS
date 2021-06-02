@@ -426,7 +426,7 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report_CustomerDetail.html</h1>
-    <p>Report generated on 21-Apr-2021 at 11:48:25 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.0</p>
+    <p>Report generated on 31-May-2021 at 16:35:04 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -442,7 +442,7 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.7.0</td></tr></table>
     <h2>Summary</h2>
-    <p>1 tests ran in 0.36 seconds. </p>
+    <p>1 tests ran in 0.51 seconds. </p>
     <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
@@ -458,26 +458,76 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">Core-Service-TCS/test2/test_CustomerDetail.py::test_by_compare_soa_existing</td>
-          <td class="col-duration">0.15</td>
+          <td class="col-duration">0.31</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">def test_by_compare_soa_existing():<br/>        post_data = &quot;&quot;&quot;&lt;soapenv:Envelope xmlns:q0=&quot;http://service.bni.co.id/core&quot; xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;<br/>       &lt;soapenv:Body&gt;<br/>          &lt;q0:transaction&gt;<br/>             &lt;request&gt;<br/>                &lt;systemId&gt;NEWMOBILE&lt;/systemId&gt;<br/>                &lt;content xsi:type=&quot;bo:CustomerDetailReq&quot;&gt;<br/>                   &lt;accountNum&gt;0115471119&lt;/accountNum&gt;<br/>                &lt;/content&gt;<br/>             &lt;/request&gt;<br/>          &lt;/q0:transaction&gt;<br/>       &lt;/soapenv:Body&gt;<br/>    &lt;/soapenv:Envelope&gt;<br/>    &quot;&quot;&quot;<br/>        headers = {&#x27;Content-type&#x27;: &#x27;application/xml&#x27;}<br/>        r1 = requests.post(url_coreservice_baru, data=post_data, headers=headers)<br/>        result1 = xml.dom.minidom.parseString(r1.text).toprettyxml()<br/>        logger.debug(str(r1.status_code) + &#x27;---------&#x27; + result1)<br/>    <br/>        r2 = requests.post(url_coreservice_soa, data=post_data, headers=headers)<br/>        result2 = xml.dom.minidom.parseString(r2.text).toprettyxml()<br/>        logger.debug(str(r2.status_code) + &#x27;---------&#x27; + result2)<br/>    <br/>        status1 = True<br/>        rf = ET.fromstring(result1)<br/>        if rf[1][0].find(&quot;faultcode&quot;)!=None: status1 = False<br/>    <br/>        status2 = True<br/>        rf = ET.fromstring(result2)<br/>        if rf[1][0].find(&quot;faultcode&quot;)!=None: status2 = False<br/>    <br/>        status = status1 and status2<br/>        h = 0<br/>        if status == True:<br/>            v = main.diff_texts(result1, result2)<br/>    <br/>            for i in range(len(v)):<br/>                if isinstance(v[i], actions.UpdateTextIn):<br/>                    if str(v[i][0]).find(&quot;content&quot;) == -1: continue<br/>                    node = str(v[i][0]).split(&quot;content/&quot;)<br/>                    dname = node[1].replace(&quot;[1]&quot;,&quot;&quot;)<br/>                    res1 = ET.fromstring(result1)<br/>                    r1text = res1[1][0][0][1].find(dname).text<br/>                    res2 = ET.fromstring(result2)<br/>                    r2text = res2[1][0][0][1].find(dname).text<br/>                    if r1text.strip() != r2text.strip():<br/>                       h = h+1<br/>                       logger.debug(&quot;Differences: v[&quot; + str(h) + &quot;]: &quot; + str(v[i]))<br/>                elif isinstance(v[i], actions.MoveNode): continue<br/>                else:<br/>                    h = h+1<br/>                    logger.debug(&quot;Differences: v[&quot; + str(h) + &quot;]: &quot; + str(v[i]))<br/>        else:<br/>            h = 1<br/>&gt;       assert(h==0)<br/><span class="error">E       assert 1 == 0</span><br/><span class="error">E         +1</span><br/><span class="error">E         -0</span><br/><br/>Core-Service-TCS/test2/test_CustomerDetail.py:72: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
-DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 677
+            <div class="log">def test_by_compare_soa_existing():<br/>        post_data = &quot;&quot;&quot;&lt;soapenv:Envelope xmlns:q0=&quot;http://service.bni.co.id/core&quot; xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;<br/>       &lt;soapenv:Body&gt;<br/>          &lt;q0:transaction&gt;<br/>             &lt;request&gt;<br/>                &lt;systemId&gt;NEWMOBILE&lt;/systemId&gt;<br/>                &lt;content xsi:type=&quot;bo:CustomerDetailReq&quot;&gt;<br/>                   &lt;accountNum&gt;0115471119&lt;/accountNum&gt;<br/>                &lt;/content&gt;<br/>             &lt;/request&gt;<br/>          &lt;/q0:transaction&gt;<br/>       &lt;/soapenv:Body&gt;<br/>    &lt;/soapenv:Envelope&gt;<br/>    &quot;&quot;&quot;<br/>        headers = {&#x27;Content-type&#x27;: &#x27;application/xml&#x27;}<br/>        r1 = requests.post(url_coreservice_baru, data=post_data, headers=headers)<br/>        result1 = xml.dom.minidom.parseString(r1.text).toprettyxml()<br/>        logger.debug(str(r1.status_code) + &#x27;---------&#x27; + result1)<br/>    <br/>        r2 = requests.post(url_coreservice_soa, data=post_data, headers=headers)<br/>        result2 = xml.dom.minidom.parseString(r2.text).toprettyxml()<br/>        logger.debug(str(r2.status_code) + &#x27;---------&#x27; + result2)<br/>    <br/>        status1 = True<br/>        rf = ET.fromstring(result1)<br/>        if rf[1][0].find(&quot;faultcode&quot;)!=None: status1 = False<br/>    <br/>        status2 = True<br/>        rf = ET.fromstring(result2)<br/>        if rf[1][0].find(&quot;faultcode&quot;)!=None: status2 = False<br/>    <br/>        status = status1 and status2<br/>        h = 0<br/>        if status == True:<br/>            v = main.diff_texts(result1, result2)<br/>    <br/>            for i in range(len(v)):<br/>                if isinstance(v[i], actions.UpdateTextIn):<br/>                    if str(v[i][0]).find(&quot;content&quot;) == -1: continue<br/>                    node = str(v[i][0]).split(&quot;content/&quot;)<br/>                    dname = node[1].replace(&quot;[1]&quot;,&quot;&quot;)<br/>                    res1 = ET.fromstring(result1)<br/>                    r1text = res1[1][0][0][1].find(dname).text<br/>                    res2 = ET.fromstring(result2)<br/>                    r2text = res2[1][0][0][1].find(dname).text<br/>&gt;                   if r1text.strip() != r2text.strip():<br/><span class="error">E                   AttributeError: &#x27;NoneType&#x27; object has no attribute &#x27;strip&#x27;</span><br/><br/>Core-Service-TCS/test2/test_CustomerDetail.py:63: AttributeError<br/> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
+DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 1886
 DEBUG    root:test_CustomerDetail.py:35 200---------&lt;?xml version=&quot;1.0&quot; ?&gt;
 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
 	&lt;soapenv:Header/&gt;
 	&lt;soapenv:Body&gt;
-		&lt;soapenv:Fault&gt;
-			&lt;faultcode xmlns:ns0=&quot;http://service.bni.co.id/core&quot;&gt;ns0:SysFault&lt;/faultcode&gt;
-			&lt;faultstring xml:lang=&quot;en&quot;&gt;9603&lt;/faultstring&gt;
-			&lt;detail encodingStyle=&quot;&quot;&gt;
-				&lt;core:transaction_sysFault xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;
-					&lt;errorNum&gt;9603&lt;/errorNum&gt;
-					&lt;errorDescription&gt;Unknown Error&lt;/errorDescription&gt;
-				&lt;/core:transaction_sysFault&gt;
-			&lt;/detail&gt;
-		&lt;/soapenv:Fault&gt;
+		&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;
+			&lt;response&gt;
+				&lt;header&gt;
+					&lt;coreJournal&gt;441731&lt;/coreJournal&gt;
+				&lt;/header&gt;
+				&lt;content xsi:type=&quot;bo:CustomerDetailRes&quot;&gt;
+					&lt;flag&gt;A1&lt;/flag&gt;
+					&lt;jenisNasabah&gt;01&lt;/jenisNasabah&gt;
+					&lt;namaNasabah&gt;JONOMADE MADEMADEMADEMADE IMAMADE&lt;/namaNasabah&gt;
+					&lt;gelar&gt;S.KOM&lt;/gelar&gt;
+					&lt;titleCode&gt;01&lt;/titleCode&gt;
+					&lt;accountCurrency&gt;IDR&lt;/accountCurrency&gt;
+					&lt;tempatLahir&gt;erwrwrwerewr&lt;/tempatLahir&gt;
+					&lt;tglLahir&gt;27051985&lt;/tglLahir&gt;
+					&lt;alamatId&gt;BENDI VII NO 14&lt;/alamatId&gt;
+					&lt;rt/&gt;
+					&lt;rw/&gt;
+					&lt;perum/&gt;
+					&lt;kelurahan&gt;kebayoran&lt;/kelurahan&gt;
+					&lt;kecamatan&gt;Kebayoran&lt;/kecamatan&gt;
+					&lt;kodePos&gt;12120&lt;/kodePos&gt;
+					&lt;jalan2&gt;BENDI VII NO 14&lt;/jalan2&gt;
+					&lt;rt2/&gt;
+					&lt;rw2/&gt;
+					&lt;perum2/&gt;
+					&lt;kelurahan2&gt;kebayoran&lt;/kelurahan2&gt;
+					&lt;kecamatan2&gt;Kebayoran&lt;/kecamatan2&gt;
+					&lt;kodePos2&gt;12120&lt;/kodePos2&gt;
+					&lt;telpRumah/&gt;
+					&lt;telpKantor/&gt;
+					&lt;handPhone&gt;081221560234&lt;/handPhone&gt;
+					&lt;fax/&gt;
+					&lt;email/&gt;
+					&lt;npwp&gt;123456789012345&lt;/npwp&gt;
+					&lt;wargaCode&gt;ID&lt;/wargaCode&gt;
+					&lt;jenisId&gt;0001&lt;/jenisId&gt;
+					&lt;tempatId&gt;JAKARTA&lt;/tempatId&gt;
+					&lt;noId&gt;3205040810881234&lt;/noId&gt;
+					&lt;tglTerbit/&gt;
+					&lt;tglHabis&gt;05112026&lt;/tglHabis&gt;
+					&lt;sumberInfo/&gt;
+					&lt;maidenName&gt;raika&lt;/maidenName&gt;
+					&lt;maritalIndikator&gt;S&lt;/maritalIndikator&gt;
+					&lt;jumlahAnak&gt;00&lt;/jumlahAnak&gt;
+					&lt;religiCode&gt;0&lt;/religiCode&gt;
+					&lt;educationCode&gt;00&lt;/educationCode&gt;
+					&lt;jobCode&gt;01&lt;/jobCode&gt;
+					&lt;namaPerusahaan&gt;ewrew&lt;/namaPerusahaan&gt;
+					&lt;alamatPerusahaan&gt;wrerwer                       werwer&lt;/alamatPerusahaan&gt;
+					&lt;postCodePerusahaan/&gt;
+					&lt;startJobDate/&gt;
+					&lt;gaji&gt;02&lt;/gaji&gt;
+					&lt;namaAlias&gt;IMAMADE&lt;/namaAlias&gt;
+					&lt;frekuensiGaji&gt;M&lt;/frekuensiGaji&gt;
+					&lt;gajiLain&gt;000000000000000&lt;/gajiLain&gt;
+					&lt;Filler&gt;000000001154&lt;/Filler&gt;
+					&lt;handPhone&gt;0812215602342&lt;/handPhone&gt;
+				&lt;/content&gt;
+			&lt;/response&gt;
+		&lt;/core:transactionResponse&gt;
 	&lt;/soapenv:Body&gt;
 &lt;/soapenv:Envelope&gt;
 
@@ -490,7 +540,7 @@ DEBUG    root:test_CustomerDetail.py:39 200---------&lt;?xml version=&quot;1.0&q
 		&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;
 			&lt;response&gt;
 				&lt;header&gt;
-					&lt;coreJournal&gt;260210&lt;/coreJournal&gt;
+					&lt;coreJournal&gt;441732&lt;/coreJournal&gt;
 				&lt;/header&gt;
 				&lt;content xsi:type=&quot;bo:CustomerDetailRes&quot;&gt;
 					&lt;flag&gt;A1&lt;/flag&gt;
@@ -541,9 +591,16 @@ DEBUG    root:test_CustomerDetail.py:39 200---------&lt;?xml version=&quot;1.0&q
 					&lt;namaAlias&gt;IMAMADE&lt;/namaAlias&gt;
 					&lt;frekuensiGaji&gt;M&lt;/frekuensiGaji&gt;
 					&lt;gajiLain&gt;000000000000000&lt;/gajiLain&gt;
-					&lt;handPhone&gt;081221560095&lt;/handPhone&gt;
+					&lt;handPhone&gt;0812215602342&lt;/handPhone&gt;
 				&lt;/content&gt;
 			&lt;/response&gt;
 		&lt;/core:transactionResponse&gt;
 	&lt;/soapenv:Body&gt;
-&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody></table></body></html>
+&lt;/soapenv:Envelope&gt;
+
+DEBUG    root:test_CustomerDetail.py:69 Differences: v[1]: RenameNode(node=&#x27;/soapenv:Envelope/core:transactionResponse[1]&#x27;, tag=&#x27;{http://schemas.xmlsoap.org/soap/envelope/}Body&#x27;)
+DEBUG    root:test_CustomerDetail.py:69 Differences: v[2]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/response[1]&#x27;, tag=&#x27;{http://service.bni.co.id/core}transactionResponse&#x27;)
+DEBUG    root:test_CustomerDetail.py:69 Differences: v[3]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/core:transactionResponse/startJobDate[1]&#x27;, tag=&#x27;response&#x27;)
+DEBUG    root:test_CustomerDetail.py:65 Differences: v[4]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/core:transactionResponse/response/content/tglLahir[1]&#x27;, text=&#x27;1985-05-27&#x27;)
+DEBUG    root:test_CustomerDetail.py:65 Differences: v[5]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/core:transactionResponse/response/content/tglHabis[1]&#x27;, text=&#x27;2026-11-05&#x27;)
+DEBUG    root:test_CustomerDetail.py:69 Differences: v[6]: InsertNode(target=&#x27;/soapenv:Envelope/soapenv:Body[1]/core:transactionResponse/response/content[1]&#x27;, tag=&#x27;startJobDate&#x27;, position=43)<br/></div></td></tr></tbody></table></body></html>

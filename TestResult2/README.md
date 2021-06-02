@@ -18,7 +18,7 @@
 | 14 | CashWithdrawal | Success | Success | Yes |
 | 15 | ChangeOwnershipCard | Failed | Success | - |
 | 16 | CifAdditionalDetailsFlag | Success | Success | Yes |
-| 17 | CifAdditionalDetailsInq | Success | Success | Yes |
+| 17 | CifAdditionalDetailsInq | Success | Success | No |
 | 18 | CifDetails | Success | Success | Yes |
 | 19 | CreateCIDVirtualAccount | Success | Success | No |
 | 20 | CreateCif | Failed | Success | - |
@@ -61,7 +61,7 @@
 | 57 | InquiryTrxVirtualAccount | Success | Success | Yes |
 | 58 | InquiryUserDefinedCode | Success | Success | Yes |
 | 59 | InquiryUserDefinedCodeV2 | Success | Success | Yes |
-| 60 | InquiryVARetail | Success | Success | Yes |
+| 60 | InquiryVARetail | Success | Success | No |
 | 61 | InquiryVirtualAccount | Failed | Success | - |
 | 62 | KliringOutward | Success | Success | Yes |
 | 63 | KliringOutwardv2 | Failed | Success | - |
