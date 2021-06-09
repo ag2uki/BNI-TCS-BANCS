@@ -38,14 +38,14 @@
 | 34 | GetVirtualAccountName | Success | Success | No |
 | 35 | GLInquiry | Success | Success | No |
 | 36 | GLReversalSimpanan | Success | Success | Yes |
-| 37 | GLReversalTarikTunai | Failed | Success | - |
+| 37 | GLReversalTarikTunai | Success | Success | No |
 | 38 | GLSetoranTunai | Success | Success | Yes |
 | 39 | GLTarikTunai | Success | Success | No |
 | 40 | GLTransferGL | Success | Success | No |
 | 41 | GLTransfer | Success | Success | Yes |
 | 42 | HistoricalTransactions | Success | Success | Yes |
-| 43 | HoldAmount | Failed | Success | - |
-| 44 | HoldAmountRelease | Failed | Success | - |
+| 43 | HoldAmount | Success | Success | No |
+| 44 | HoldAmountRelease | Success | Success | No |
 | 45 | HoldDebitCard | Failed | Success | - |
 | 46 | InitActivationCard | Failed | Success | - |
 | 47 | InitChangeOwnershipCard | Failed | Success | - |
