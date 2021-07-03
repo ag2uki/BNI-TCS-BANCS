@@ -1,0 +1,97 @@
+<?xml version="1.0" standalone="yes"?>
+<GROUP ID="067101" Name="Create/amend Cust Personal Det">
+  <TX>
+    <FIELD Format="9(17)" ID="accntNumber1" />
+    <FIELD Format="X(60)" ID="DefaultString1" />
+    <FIELD Format="ddMMyyyy" ID="date1" />
+    <FIELD Format="X" ID="DefaultString2" />
+    <FIELD Format="X" ID="DefaultString3" />
+    <FIELD Format="99" ID="DefInteger1" />
+    <FIELD Format="XX" ID="DefaultString4" />
+    <FIELD Format="X(60)" ID="DefaultString5" /> 
+    <FIELD Format="ddMMyyyy" ID="date2" />
+    <FIELD Format="X(30)" ID="DefaultString6" />
+    <FIELD Format="X(30)" ID="DefaultString7" />
+    <FIELD Format="9(4)" ID="ocpn-code1" />
+    <FIELD Format="X(30)" ID="DefaultString8" />
+    <FIELD Format="X(30)" ID="DefaultString9" />
+    <FIELD Format="X(8)" ID="postcode1" />
+    <FIELD Format="9(15)" ID="npwp_bo" />
+	<FIELD Format="X(1)" ID="idType" />
+	<FIELD Format="9(20)" ID="nomorID" />
+	<FIELD Format="X(30)" ID="Perum" />
+	<FIELD Format="X(40)" ID="employe4" />
+	<FIELD Format="X(60)" ID="employe5" />
+	<FIELD Format="X(30)" ID="dress" />
+	<FIELD Format="X(30)" ID="Perum2" />
+	<FIELD Format="X(40)" ID="employe8" />
+	<FIELD Format="X(30)" ID="kabupaten1" />
+	<FIELD Format="X(60)" ID="employe10" />
+	<FIELD Format="X(8)" ID="kodepos2" />
+	<FIELD Format="X(30)" ID="bornplace" />
+	<FIELD Format="ddMMyyyy" ID="dateborn" />
+	<FIELD Format="X(1)" ID="gender" />
+	<FIELD Format="X(1)" ID="married" />
+	<FIELD Format="X(2)" ID="negara" />
+	<FIELD Format="X(30)" ID="addreswork" />
+	<FIELD Format="X(30)" ID="komplek" />
+	<FIELD Format="X(40)" ID="employe13" />
+	<FIELD Format="X(30)" ID="kabupaten3" />
+	<FIELD Format="X(60)" ID="employe15" />
+	<FIELD Format="X(8)" ID="kodeposX" />
+	<FIELD Format="X(15)" ID="tlpkantor" />
+	<FIELD Format="X(1)" ID="sumberDana" />
+	<FIELD Format="X(1)" ID="adaNPWP" />
+	<FIELD Format="X(1)" ID="Pertahun" />
+	<FIELD Format="X(1)" ID="TransaksiUsaha" />
+
+	<!-- CR24603 - START -->
+	<FIELD Format="X" ID="option21" /> <!-- Fungsi -->
+	<!-- CR24603 - END -->
+</TX>
+  <RX>
+    <FIELD Format="9(17)" ID="accntNumber1" />
+    <FIELD Format="X(60)" ID="DefaultString1" />
+    <FIELD Format="ddMMyyyy" ID="date1" />
+    <FIELD Format="X" ID="DefaultString2" />
+    <FIELD Format="X" ID="DefaultString3" />
+    <FIELD Format="99" ID="DefInteger1" />
+    <FIELD Format="XX" ID="DefaultString4" />
+    <FIELD Format="X(60)" ID="DefaultString5" />
+    <FIELD Format="ddMMyyyy" ID="date2" />
+    <FIELD Format="X(30)" ID="DefaultString6" />
+    <FIELD Format="X(30)" ID="DefaultString7" />
+    <FIELD Format="9(4)" ID="ocpn-code1" />
+    <FIELD Format="X(30)" ID="DefaultString8" />
+    <FIELD Format="X(30)" ID="DefaultString9" />
+    <FIELD Format="X(8)" ID="postcode1" />
+    <FIELD Format="X(15)" ID="npwp_bo" />
+	<FIELD Format="X(1)" ID="idType" />
+	<FIELD Format="9(20)" ID="nomorID" />
+	<FIELD Format="X(30)" ID="Perum" />
+	<FIELD Format="X(40)" ID="employe4" />
+	<FIELD Format="X(60)" ID="employe5" />
+	<FIELD Format="X(30)" ID="dress" />
+	<FIELD Format="X(30)" ID="Perum2" />
+	<FIELD Format="X(40)" ID="employe8" />
+	<FIELD Format="X(30)" ID="kabupaten1" />
+	<FIELD Format="X(60)" ID="employe10" />
+	<FIELD Format="X(8)" ID="kodepos2" />
+	<FIELD Format="X(30)" ID="bornplace" />
+	<FIELD Format="ddMMyyyy" ID="dateborn" />
+	<FIELD Format="X(1)" ID="gender" />
+	<FIELD Format="X(1)" ID="married" />
+	<FIELD Format="X(2)" ID="negara" />
+	<FIELD Format="X(30)" ID="addreswork" />
+	<FIELD Format="X(30)" ID="komplek" />
+	<FIELD Format="X(40)" ID="employe13" />
+	<FIELD Format="X(30)" ID="kabupaten3" />
+	<FIELD Format="X(60)" ID="employe15" />
+	<FIELD Format="X(8)" ID="kodeposX" />
+	<FIELD Format="9(15)" ID="tlpkantor" />
+	<FIELD Format="X(1)" ID="sumberDana" />
+	<FIELD Format="X(1)" ID="adaNPWP" />
+	<FIELD Format="X(1)" ID="Pertahun" />
+	<FIELD Format="X(1)" ID="TransaksiUsaha" />
+  </RX>
+</GROUP>

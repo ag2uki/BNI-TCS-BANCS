@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="yes"?>
+<GROUP ID="021046" Name="G/L: Npb Currency Trans.">
+  <TX>
+    <FIELD Format="9(14)V999S" ID="txnAmount1" Offset="34" />
+    <FIELD Format="XX" ID="DefaultString1" Offset="9" />
+    <FIELD Format="9(4)"  ID="benIDTypeWIC" Offset="14" />
+    <FIELD Format="X(24)" ID="senderDtls5" Offset="44" />
+    <FIELD Format="XXX" ID="txnCurrCode1" Offset="1" />
+    <FIELD Format="9(14)V999S" ID="Amount1" />
+    <FIELD Format="XXX" ID="accCurrCode1" />
+    <FIELD Format="9(14)V999S" ID="baseAmount1" />
+    <FIELD Format="9(14)V999S" ID="Commission1" />
+    <FIELD Format="9(14)V999S" ID="Change1" />
+    <FIELD Format="99" ID="RateType1" />
+    <FIELD Format="X(4)" ID="CurrVersion1" />
+    <FIELD Format="XX" ID="DefaultString2" Offset="369" />
+    <FIELD Format="X(50)" ID="DefaultString3" />
+    <FIELD Format="X(7)" ID="BookingNumber1" Offset="191" />
+  </TX>
+</GROUP>

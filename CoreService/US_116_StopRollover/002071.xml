@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="yes"?>
+<GROUP ID="002071" Name="Deposits: Npb Term Rollover Details">
+  <TX>
+    <FIELD Format="9(17)" ID="accntNumber1" />
+    <FIELD Format="X(4)" ID="freq_n1" />
+    <FIELD Format="9(4)" ID="DefInteger1" />
+    <FIELD Format="X" ID="intpcode1" />
+    <FIELD Format="X" ID="DefaultString1" />
+    <FIELD Format="9(17)" ID="accntNumber2" Offset="3" />
+    <FIELD Format="9(14)V999S" ID="Signed35" />
+    <FIELD Format="XX" ID="DefaultString2" />
+    <FIELD Format="X" ID="DefaultString3" />
+    <FIELD Format="9(17)" ID="accntNumber3" Offset="2" />
+    <FIELD Format="ddMMyyyy" ID="date1" />
+    <FIELD Format="9(4)" ID="DefInteger2" />
+    <FIELD Format="9(4)" ID="DefInteger3" />
+  </TX>
+</GROUP>

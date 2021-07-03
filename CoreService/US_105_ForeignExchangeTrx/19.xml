@@ -1,0 +1,25 @@
+<?xml version="1.0" standalone="yes" ?>
+<GROUP ID="19" Name="Output code 19 Voucher Print">
+	<RX>
+		<FIELD Format="X(20)" ID="TranDesc" />
+		<FIELD Format="9(14)V999S" ID="FXAmt" />
+		<FIELD Format="XXX" ID="FXCur" />
+		<FIELD Format="9(14)V999S" ID="LocAmt" />
+		<FIELD Format="XXX" ID="LocCur" />
+		<FIELD Format="X(11)" ID="LocCurRate" />
+		<FIELD Format="9(14)V999S" ID="CommAmt" />
+		<FIELD Format="9(14)V999S" ID="ChangeAmt" />
+		<FIELD Format="ddMMyyyy" ID="TranDate" />
+		<FIELD Format="XX" ID="TranHour" />
+		<FIELD Format="XX" ID="TranMinute" />
+		<FIELD Format="XX" ID="TranSecond" />
+		<FIELD Format="9(5)" ID="Teller" />
+		<FIELD Format="9(6)" ID="JrnlNo" />
+		<FIELD Format="9(6)" ID="TranCode" />
+		<FIELD Format="ddMMyyyy" ID="PostDate" />
+		<FIELD Format="9(6)" ID="SupOvrrdID" />
+		<FIELD Format="X(17)" ID="CusmNo" />
+		<FIELD Format="X(60)" ID="Name" />
+		<FIELD Format="X" ID="TranType" />
+	</RX>
+</GROUP>
