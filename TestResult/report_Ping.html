@@ -425,8 +425,8 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
     not_found_message.hidden = !all_rows_hidden;
 }
 </script>
-    <h1>report_UpdateCifDetails.html</h1>
-    <p>Report generated on 08-Jul-2021 at 14:08:00 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.0</p>
+    <h1>report_Ping.html</h1>
+    <p>Report generated on 08-Jul-2021 at 13:59:07 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -442,8 +442,8 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.7.0</td></tr></table>
     <h2>Summary</h2>
-    <p>1 tests ran in 0.41 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>3 tests ran in 0.18 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">3 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">1 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -454,48 +454,45 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="error results-table-row">
+        <tr>
+          <td class="col-result">Error</td>
+          <td class="col-name">Core-Service-TCS/test/test_Ping.py::test_branch_header[0992]::setup</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">file /home/soadev/core-service-test/Core-Service-TCS/test/test_Ping.py, line 83<br/>  @pytest.mark.parametrize(&#x27;expectedBranch&#x27;, (&#x27;0992&#x27;, ))<br/>  def test_branch_header(systemId, expectedBranch):<br/><span class="error">E       fixture &#x27;systemId&#x27; not found</span><br/>&gt;       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, extra, include_metadata_in_junit_xml, metadata, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory<br/>&gt;       use &#x27;pytest --fixtures [testpath]&#x27; for help on them.<br/><br/>/home/soadev/core-service-test/Core-Service-TCS/test/test_Ping.py:83<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">Core-Service-TCS/test2/test_UpdateCifDetails.py::test_by_compare_soa_existing</td>
-          <td class="col-duration">0.24</td>
+          <td class="col-name">Core-Service-TCS/test/test_Ping.py::test_normal[SOA]</td>
+          <td class="col-duration">0.00</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
-DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 594
-DEBUG    root:test_UpdateCifDetails.py:88 200---------&lt;?xml version=&quot;1.0&quot; ?&gt;
-&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
-	&lt;soapenv:Header/&gt;
-	&lt;soapenv:Body&gt;
-		&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;
-			&lt;response&gt;
-				&lt;header&gt;
-					&lt;coreJournal&gt;312288&lt;/coreJournal&gt;
-				&lt;/header&gt;
-				&lt;content xsi:type=&quot;bo:OKMessage&quot;&gt;
-					&lt;message&gt;O.K.&lt;/message&gt;
-				&lt;/content&gt;
-			&lt;/response&gt;
-		&lt;/core:transactionResponse&gt;
-	&lt;/soapenv:Body&gt;
-&lt;/soapenv:Envelope&gt;
-
-DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.143.61:57004
-DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.143.61:57004 &quot;POST /CoreService HTTP/1.1&quot; 200 None
-DEBUG    root:test_UpdateCifDetails.py:92 200---------&lt;?xml version=&quot;1.0&quot; ?&gt;
-&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
-	&lt;soapenv:Header/&gt;
-	&lt;soapenv:Body&gt;
-		&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;
-			&lt;response&gt;
-				&lt;header&gt;
-					&lt;coreJournal&gt;312289&lt;/coreJournal&gt;
-				&lt;/header&gt;
-				&lt;content xsi:type=&quot;bo:OKMessage&quot;&gt;
-					&lt;message&gt;O.K.&lt;/message&gt;
-				&lt;/content&gt;
-			&lt;/response&gt;
-		&lt;/core:transactionResponse&gt;
-	&lt;/soapenv:Body&gt;
-&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody></table></body></html>
+DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 679
+DEBUG    root:test_Ping.py:34 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode xmlns:ns0=&quot;http://service.bni.co.id/core&quot;&gt;ns0:SysFault&lt;/faultcode&gt;&lt;faultstring xml:lang=&quot;en&quot;&gt;9602&lt;/faultstring&gt;&lt;detail encodingStyle=&quot;&quot;&gt;&lt;core:transaction_sysFault xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;errorNum&gt;9602&lt;/errorNum&gt;&lt;errorDescription&gt;Invalid Request&lt;/errorDescription&gt;&lt;/core:transaction_sysFault&gt;&lt;/detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Core-Service-TCS/test/test_Ping.py::test_normal_content_type_applicationxml[SOA]</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
+DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 679
+DEBUG    root:test_Ping.py:57 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode xmlns:ns0=&quot;http://service.bni.co.id/core&quot;&gt;ns0:SysFault&lt;/faultcode&gt;&lt;faultstring xml:lang=&quot;en&quot;&gt;9602&lt;/faultstring&gt;&lt;detail encodingStyle=&quot;&quot;&gt;&lt;core:transaction_sysFault xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;errorNum&gt;9602&lt;/errorNum&gt;&lt;errorDescription&gt;Invalid Request&lt;/errorDescription&gt;&lt;/core:transaction_sysFault&gt;&lt;/detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">Core-Service-TCS/test/test_Ping.py::test_abnormal[SOA]</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
+DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 679
+DEBUG    root:test_Ping.py:80 &lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;soapenv:Fault&gt;&lt;faultcode xmlns:ns0=&quot;http://service.bni.co.id/core&quot;&gt;ns0:SysFault&lt;/faultcode&gt;&lt;faultstring xml:lang=&quot;en&quot;&gt;9602&lt;/faultstring&gt;&lt;detail encodingStyle=&quot;&quot;&gt;&lt;core:transaction_sysFault xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;&lt;errorNum&gt;9602&lt;/errorNum&gt;&lt;errorDescription&gt;Invalid Request&lt;/errorDescription&gt;&lt;/core:transaction_sysFault&gt;&lt;/detail&gt;&lt;/soapenv:Fault&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;<br/></div></td></tr></tbody></table></body></html>
