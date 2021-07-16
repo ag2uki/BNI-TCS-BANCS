@@ -39,12 +39,12 @@
 | 35 | DepositChangeDetails | Passed |
 | 36 | DepositOverdraftInquiry | Passed |
 | 37 | DepositOverdraftLimitUpdate |  |
-| 38 | DepositTransfer |  |
+| 38 | DepositTransfer | Failed |
 | 39 | DepositTransferReversal | Passed |
-| 40 | DepTransferCross |  |
+| 40 | DepTransferCross | Passed |
 | 41 | DepTrxInquiry | Passed |
 | 42 | ExchangeRate |  |
-| 43 | ForeignExchangeTrx |  |
+| 43 | ForeignExchangeTrx | Passed |
 | 44 | GetCardByAccount | Passed |
 | 45 | GetLinkedDebitCard |  |
 | 46 | GetPersonalInfo | Passed |

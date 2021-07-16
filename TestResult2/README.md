@@ -39,12 +39,12 @@
 | 35 | DepositChangeDetails | Success | Success | Yes | 
 | 36 | DepositOverdraftInquiry | Failed | Success | - | 
 | 37 | DepositOverdraftLimitUpdate |  |  |  | 
-| 38 | DepositTransfer |  |  |  | 
+| 38 | DepositTransfer | Failed | Success | - | 
 | 39 | DepositTransferReversal | Failed | Success | - | 
-| 40 | DepTransferCross |  |  |  | 
+| 40 | DepTransferCross | Success | Success | No | 
 | 41 | DepTrxInquiry | Failed | Success | - | 
 | 42 | ExchangeRate |  |  |  | 
-| 43 | ForeignExchangeTrx |  |  |  | 
+| 43 | ForeignExchangeTrx | Success | Success | No | 
 | 44 | GetCardByAccount | Success | Success | Yes | 
 | 45 | GetLinkedDebitCard |  |  |  | 
 | 46 | GetPersonalInfo | Success | Success | Yes | 
