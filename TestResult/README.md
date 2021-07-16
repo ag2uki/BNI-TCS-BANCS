@@ -26,7 +26,7 @@
 | 22 | CreateCIDVirtualAccount | Passed |
 | 23 | CreateCif | Passed |
 | 24 | CreateDepositAccount | Passed |
-| 25 | CreateTopUpAccount |  |
+| 25 | CreateTopUpAccount | Passed |
 | 26 | CreateUpdateSMSNotification | Passed |
 | 27 | CreateUserDefinedCode | Passed |
 | 28 | CreateVARetail | Passed |
@@ -70,7 +70,7 @@
 | 66 | InitDeLinkCardAccount | Passed |
 | 67 | InitLinkCardAccount | Passed |
 | 68 | InquiryCheque | Passed |
-| 69 | InquiryChequeDetail |  |
+| 69 | InquiryChequeDetail | Passed |
 | 70 | InquiryNotionalPooling | Passed |
 | 71 | InquirySMSNotification | Passed |
 | 72 | InquiryTrxVARetail | Passed |
@@ -85,14 +85,14 @@
 | 81 | LoadBalanceBreakdown | Passed |
 | 82 | LoanInterest | Passed |
 | 83 | LoanProcessInquiry |  |
-| 84 | LoanShortInquiry |  |
+| 84 | LoanShortInquiry | Passed |
 | 85 | LoanTransfer | Passed |
 | 86 | MultiTransfer | Passed |
 | 87 | OpenAccountList | Passed |
 | 88 | OpenDepositAccListByBalance | Passed |
 | 89 | OpenDepositAccountList | Passed |
 | 90 | OpenLoanAccountList | Passed |
-| 91 | OwnedAccountList |  |
+| 91 | OwnedAccountList | Passed |
 | 92 | PassbookPrint | Passed |
 | 93 | Ping | Passed |
 | 94 | RemittanceMasterIn |  |

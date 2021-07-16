@@ -26,7 +26,7 @@
 | 22 | CreateCIDVirtualAccount | Success | Success | No | 
 | 23 | CreateCif | Failed | Success | - | 
 | 24 | CreateDepositAccount | Failed | Success | - | 
-| 25 | CreateTopUpAccount |  |  |  | 
+| 25 | CreateTopUpAccount | Failed | Success | - | 
 | 26 | CreateUpdateSMSNotification | Success | Success | No | 
 | 27 | CreateUserDefinedCode | Success | Success | Yes | 
 | 28 | CreateVARetail | Success | Success | No | 
@@ -70,7 +70,7 @@
 | 66 | InitDeLinkCardAccount | Success | Success | No | 
 | 67 | InitLinkCardAccount | Failed | Success | - | 
 | 68 | InquiryCheque | Success | Success | Yes | 
-| 69 | InquiryChequeDetail |  |  |  | 
+| 69 | InquiryChequeDetail | Success | Success | Yes | 
 | 70 | InquiryNotionalPooling | Success | Success | No | 
 | 71 | InquirySMSNotification | Success | Success | No | 
 | 72 | InquiryTrxVARetail | Success | Success | No | 
@@ -85,14 +85,14 @@
 | 81 | LoadBalanceBreakdown | Success | Success | No | 
 | 82 | LoanInterest | Success | Success | Yes | 
 | 83 | LoanProcessInquiry |  |  |  | 
-| 84 | LoanShortInquiry |  |  |  | 
+| 84 | LoanShortInquiry | Success | Success | Yes | 
 | 85 | LoanTransfer | Failed | Success | - | 
 | 86 | MultiTransfer | Success | Success | No | 
 | 87 | OpenAccountList | Success | Success | No | 
 | 88 | OpenDepositAccListByBalance | Success | Success | Yes | 
 | 89 | OpenDepositAccountList | Success | Success | Yes | 
 | 90 | OpenLoanAccountList | Success | Success | No | 
-| 91 | OwnedAccountList |  |  |  | 
+| 91 | OwnedAccountList | Success | Success | Yes | 
 | 92 | PassbookPrint | Failed | Success | - | 
 | 93 | Ping | Success | Success | No | 
 | 94 | RemittanceMasterIn |  |  |  | 

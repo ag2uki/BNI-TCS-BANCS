@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Test Report</title>
+    <style>body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  /* do not increase min-width as some may use split screens */
+  min-width: 800px;
+  color: #999;
+}
+
+h1 {
+  font-size: 24px;
+  color: black;
+}
+
+h2 {
+  font-size: 16px;
+  color: black;
+}
+
+p {
+  color: black;
+}
+
+a {
+  color: #999;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/******************************
+ * SUMMARY INFORMATION
+ ******************************/
+#environment td {
+  padding: 5px;
+  border: 1px solid #E6E6E6;
+}
+
+#environment tr:nth-child(odd) {
+  background-color: #f6f6f6;
+}
+
+/******************************
+ * TEST RESULT COLORS
+ ******************************/
+span.passed, .passed .col-result {
+  color: green;
+}
+
+span.skipped, span.xfailed, span.rerun, .skipped .col-result, .xfailed .col-result, .rerun .col-result {
+  color: orange;
+}
+
+span.error, span.failed, span.xpassed, .error .col-result, .failed .col-result, .xpassed .col-result {
+  color: red;
+}
+
+/******************************
+ * RESULTS TABLE
+ *
+ * 1. Table Layout
+ * 2. Extra
+ * 3. Sorting items
+ *
+ ******************************/
+/*------------------
+ * 1. Table Layout
+ *------------------*/
+#results-table {
+  border: 1px solid #e6e6e6;
+  color: #999;
+  font-size: 12px;
+  width: 100%;
+}
+
+#results-table th, #results-table td {
+  padding: 5px;
+  border: 1px solid #E6E6E6;
+  text-align: left;
+}
+
+#results-table th {
+  font-weight: bold;
+}
+
+/*------------------
+ * 2. Extra
+ *------------------*/
+.log:only-child {
+  height: inherit;
+}
+
+.log {
+  background-color: #e6e6e6;
+  border: 1px solid #e6e6e6;
+  color: black;
+  display: block;
+  font-family: "Courier New", Courier, monospace;
+  height: 230px;
+  overflow-y: scroll;
+  padding: 5px;
+  white-space: pre-wrap;
+}
+
+div.image {
+  border: 1px solid #e6e6e6;
+  float: right;
+  height: 240px;
+  margin-left: 5px;
+  overflow: hidden;
+  width: 320px;
+}
+
+div.image img {
+  width: 320px;
+}
+
+div.video {
+  border: 1px solid #e6e6e6;
+  float: right;
+  height: 240px;
+  margin-left: 5px;
+  overflow: hidden;
+  width: 320px;
+}
+
+div.video video {
+  overflow: hidden;
+  width: 320px;
+  height: 240px;
+}
+
+.collapsed {
+  display: none;
+}
+
+.expander::after {
+  content: " (show details)";
+  color: #BBB;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.collapser::after {
+  content: " (hide details)";
+  color: #BBB;
+  font-style: italic;
+  cursor: pointer;
+}
+
+/*------------------
+ * 3. Sorting items
+ *------------------*/
+.sortable {
+  cursor: pointer;
+}
+
+.sort-icon {
+  font-size: 0px;
+  float: left;
+  margin-right: 5px;
+  margin-top: 5px;
+  /*triangle*/
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+
+.inactive .sort-icon {
+  /*finish triangle*/
+  border-top: 8px solid #E6E6E6;
+}
+
+.asc.active .sort-icon {
+  /*finish triangle*/
+  border-bottom: 8px solid #999;
+}
+
+.desc.active .sort-icon {
+  /*finish triangle*/
+  border-top: 8px solid #999;
+}
+</style></head>
+  <body onLoad="init()">
+    <script>/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+function toArray(iter) {
+    if (iter === null) {
+        return null;
+    }
+    return Array.prototype.slice.call(iter);
+}
+
+function find(selector, elem) { // eslint-disable-line no-redeclare
+    if (!elem) {
+        elem = document;
+    }
+    return elem.querySelector(selector);
+}
+
+function find_all(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return toArray(elem.querySelectorAll(selector));
+}
+
+function sort_column(elem) {
+    toggle_sort_states(elem);
+    const colIndex = toArray(elem.parentNode.childNodes).indexOf(elem);
+    let key;
+    if (elem.classList.contains('result')) {
+        key = key_result;
+    } else if (elem.classList.contains('links')) {
+        key = key_link;
+    } else {
+        key = key_alpha;
+    }
+    sort_table(elem, key(colIndex));
+}
+
+function show_all_extras() { // eslint-disable-line no-unused-vars
+    find_all('.col-result').forEach(show_extras);
+}
+
+function hide_all_extras() { // eslint-disable-line no-unused-vars
+    find_all('.col-result').forEach(hide_extras);
+}
+
+function show_extras(colresult_elem) {
+    const extras = colresult_elem.parentNode.nextElementSibling;
+    const expandcollapse = colresult_elem.firstElementChild;
+    extras.classList.remove('collapsed');
+    expandcollapse.classList.remove('expander');
+    expandcollapse.classList.add('collapser');
+}
+
+function hide_extras(colresult_elem) {
+    const extras = colresult_elem.parentNode.nextElementSibling;
+    const expandcollapse = colresult_elem.firstElementChild;
+    extras.classList.add('collapsed');
+    expandcollapse.classList.remove('collapser');
+    expandcollapse.classList.add('expander');
+}
+
+function show_filters() {
+    const filter_items = document.getElementsByClassName('filter');
+    for (let i = 0; i < filter_items.length; i++)
+        filter_items[i].hidden = false;
+}
+
+function add_collapse() {
+    // Add links for show/hide all
+    const resulttable = find('table#results-table');
+    const showhideall = document.createElement('p');
+    showhideall.innerHTML = '<a href="javascript:show_all_extras()">Show all details</a> / ' +
+                            '<a href="javascript:hide_all_extras()">Hide all details</a>';
+    resulttable.parentElement.insertBefore(showhideall, resulttable);
+
+    // Add show/hide link to each result
+    find_all('.col-result').forEach(function(elem) {
+        const collapsed = get_query_parameter('collapsed') || 'Passed';
+        const extras = elem.parentNode.nextElementSibling;
+        const expandcollapse = document.createElement('span');
+        if (extras.classList.contains('collapsed')) {
+            expandcollapse.classList.add('expander');
+        } else if (collapsed.includes(elem.innerHTML)) {
+            extras.classList.add('collapsed');
+            expandcollapse.classList.add('expander');
+        } else {
+            expandcollapse.classList.add('collapser');
+        }
+        elem.appendChild(expandcollapse);
+
+        elem.addEventListener('click', function(event) {
+            if (event.currentTarget.parentNode.nextElementSibling.classList.contains('collapsed')) {
+                show_extras(event.currentTarget);
+            } else {
+                hide_extras(event.currentTarget);
+            }
+        });
+    });
+}
+
+function get_query_parameter(name) {
+    const match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
+function init () { // eslint-disable-line no-unused-vars
+    reset_sort_headers();
+
+    add_collapse();
+
+    show_filters();
+
+    sort_column(find('.initial-sort'));
+
+    find_all('.sortable').forEach(function(elem) {
+        elem.addEventListener('click',
+            function() {
+                sort_column(elem);
+            }, false);
+    });
+}
+
+function sort_table(clicked, key_func) {
+    const rows = find_all('.results-table-row');
+    const reversed = !clicked.classList.contains('asc');
+    const sorted_rows = sort(rows, key_func, reversed);
+    /* Whole table is removed here because browsers acts much slower
+     * when appending existing elements.
+     */
+    const thead = document.getElementById('results-table-head');
+    document.getElementById('results-table').remove();
+    const parent = document.createElement('table');
+    parent.id = 'results-table';
+    parent.appendChild(thead);
+    sorted_rows.forEach(function(elem) {
+        parent.appendChild(elem);
+    });
+    document.getElementsByTagName('BODY')[0].appendChild(parent);
+}
+
+function sort(items, key_func, reversed) {
+    const sort_array = items.map(function(item, i) {
+        return [key_func(item), i];
+    });
+
+    sort_array.sort(function(a, b) {
+        const key_a = a[0];
+        const key_b = b[0];
+
+        if (key_a == key_b) return 0;
+
+        if (reversed) {
+            return key_a < key_b ? 1 : -1;
+        } else {
+            return key_a > key_b ? 1 : -1;
+        }
+    });
+
+    return sort_array.map(function(item) {
+        const index = item[1];
+        return items[index];
+    });
+}
+
+function key_alpha(col_index) {
+    return function(elem) {
+        return elem.childNodes[1].childNodes[col_index].firstChild.data.toLowerCase();
+    };
+}
+
+function key_link(col_index) {
+    return function(elem) {
+        const dataCell = elem.childNodes[1].childNodes[col_index].firstChild;
+        return dataCell == null ? '' : dataCell.innerText.toLowerCase();
+    };
+}
+
+function key_result(col_index) {
+    return function(elem) {
+        const strings = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed',
+            'Skipped', 'Passed'];
+        return strings.indexOf(elem.childNodes[1].childNodes[col_index].firstChild.data);
+    };
+}
+
+function reset_sort_headers() {
+    find_all('.sort-icon').forEach(function(elem) {
+        elem.parentNode.removeChild(elem);
+    });
+    find_all('.sortable').forEach(function(elem) {
+        const icon = document.createElement('div');
+        icon.className = 'sort-icon';
+        icon.textContent = 'vvv';
+        elem.insertBefore(icon, elem.firstChild);
+        elem.classList.remove('desc', 'active');
+        elem.classList.add('asc', 'inactive');
+    });
+}
+
+function toggle_sort_states(elem) {
+    //if active, toggle between asc and desc
+    if (elem.classList.contains('active')) {
+        elem.classList.toggle('asc');
+        elem.classList.toggle('desc');
+    }
+
+    //if inactive, reset all other functions and add ascending active
+    if (elem.classList.contains('inactive')) {
+        reset_sort_headers();
+        elem.classList.remove('inactive');
+        elem.classList.add('active');
+    }
+}
+
+function is_all_rows_hidden(value) {
+    return value.hidden == false;
+}
+
+function filter_table(elem) { // eslint-disable-line no-unused-vars
+    const outcome_att = 'data-test-result';
+    const outcome = elem.getAttribute(outcome_att);
+    const class_outcome = outcome + ' results-table-row';
+    const outcome_rows = document.getElementsByClassName(class_outcome);
+
+    for(let i = 0; i < outcome_rows.length; i++){
+        outcome_rows[i].hidden = !elem.checked;
+    }
+
+    const rows = find_all('.results-table-row').filter(is_all_rows_hidden);
+    const all_rows_hidden = rows.length == 0 ? true : false;
+    const not_found_message = document.getElementById('not-found-message');
+    not_found_message.hidden = !all_rows_hidden;
+}
+</script>
+    <h1>report_OwnedAccountList.html</h1>
+    <p>Report generated on 15-Jul-2021 at 09:42:55 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.0</p>
+    <h2>Environment</h2>
+    <table id="environment">
+      <tr>
+        <td>Packages</td>
+        <td>{"pluggy": "0.13.1", "py": "1.9.0", "pytest": "6.1.2"}</td></tr>
+      <tr>
+        <td>Platform</td>
+        <td>Linux-3.10.0-957.21.2.el7.x86_64-x86_64-with-centos-7.6.1810-Core</td></tr>
+      <tr>
+        <td>Plugins</td>
+        <td>{"html": "3.1.0", "metadata": "1.11.0"}</td></tr>
+      <tr>
+        <td>Python</td>
+        <td>3.7.0</td></tr></table>
+    <h2>Summary</h2>
+    <p>1 tests ran in 4.15 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <h2>Results</h2>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable result initial-sort" col="result">Result</th>
+          <th class="sortable" col="name">Test</th>
+          <th class="sortable" col="duration">Duration</th>
+          <th class="sortable links" col="links">Links</th></tr>
+        <tr hidden="true" id="not-found-message">
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Core-Service-TCS/test2/test_OwnedAccountList.py::test_by_compare_soa_existing</td>
+          <td class="col-duration">3.91</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">def test_by_compare_soa_existing():<br/>        post_data = &quot;&quot;&quot;&lt;soapenv:Envelope xmlns:q0=&quot;http://service.bni.co.id/core&quot; xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;<br/>       &lt;soapenv:Body&gt;<br/>          &lt;q0:transaction&gt;<br/>             &lt;request&gt;<br/>                &lt;systemId&gt;KSEI&lt;/systemId&gt;<br/>                &lt;content xsi:type=&quot;bo:OwnedAccountListReq&quot;&gt;<br/>                   &lt;cif_or_accountNum&gt;9144751232&lt;/cif_or_accountNum&gt;<br/>                &lt;/content&gt;<br/>             &lt;/request&gt;<br/>          &lt;/q0:transaction&gt;<br/>       &lt;/soapenv:Body&gt;<br/>    &lt;/soapenv:Envelope&gt;<br/>    &quot;&quot;&quot;<br/>        headers = {&#x27;Content-type&#x27;: &#x27;application/xml&#x27;}<br/>        r1 = requests.post(url_coreservice_baru, data=post_data, headers=headers)<br/>        result1 = xml.dom.minidom.parseString(r1.text).toprettyxml()<br/>        logger.debug(str(r1.status_code) + &#x27;---------&#x27; + result1)<br/>    <br/>        r2 = requests.post(url_coreservice_soa, data=post_data, headers=headers)<br/>        result2 = xml.dom.minidom.parseString(r2.text).toprettyxml()<br/>        logger.debug(str(r2.status_code) + &#x27;---------&#x27; + result2)<br/>    <br/>        status1 = True<br/>        rf = ET.fromstring(result1)<br/>        if rf[1][0].find(&quot;faultcode&quot;)!=None: status1 = False<br/>    <br/>        status2 = True<br/>        rf = ET.fromstring(result2)<br/>        if rf[1][0].find(&quot;faultcode&quot;)!=None: status2 = False<br/>    <br/>        status = status1 and status2<br/>        h = 0<br/>        if status == True:<br/>            v = main.diff_texts(result1, result2)<br/>    <br/>            for i in range(len(v)):<br/>                if isinstance(v[i], actions.UpdateTextIn):<br/>                    if str(v[i][0]).find(&quot;content&quot;) == -1: continue<br/>                    node = str(v[i][0]).split(&quot;content/&quot;)<br/>                    dname = node[1].replace(&quot;[1]&quot;,&quot;&quot;)<br/>                    res1 = ET.fromstring(result1)<br/>                    res2 = ET.fromstring(result2)<br/>                    try:<br/>                      if res1[1][0][0][1].find(dname) == None or res2[1][0][0][1].find(dname) == None:<br/>                         raise Exception(&quot;Get fault&quot;)<br/>                      r1text = res1[1][0][0][1].find(dname).text.strip()<br/>                      r2text = res2[1][0][0][1].find(dname).text.strip()<br/>                      if r1text.isdigit() and r2text.isdigit():<br/>                         if int(r1text) != int(r2text):<br/>                            raise Exception(&quot;Get fault&quot;)<br/>                      elif r1text != r2text:<br/>                            raise Exception(&quot;Get fault&quot;)<br/>                    except:<br/>                       h = h+1<br/>                       logger.debug(&quot;Differences: v[&quot; + str(h) + &quot;]: &quot; + str(v[i]))<br/>                elif isinstance(v[i], actions.MoveNode): continue<br/>                elif isinstance(v[i], actions.InsertNode):<br/>                   if str(v[i][1]) != &quot;coreJournal&quot;:<br/>                      h = h+1<br/>                      logger.debug(&quot;Differences: v[&quot; + str(h) + &quot;]: &quot; + str(v[i]))<br/>                elif isinstance(v[i], actions.DeleteNode):<br/>                   if str(v[i][0]).find(&quot;coreJournal&quot;) == -1:<br/>                      h = h+1<br/>                      logger.debug(&quot;Differences: v[&quot; + str(h) + &quot;]: &quot; + str(v[i]))<br/>                else:<br/>                    h = h+1<br/>                    logger.debug(&quot;Differences: v[&quot; + str(h) + &quot;]: &quot; + str(v[i]))<br/>        else:<br/>            h = 1<br/>&gt;       assert(h==0)<br/><span class="error">E       assert 203 == 0</span><br/><span class="error">E         +203</span><br/><span class="error">E         -0</span><br/><br/>Core-Service-TCS/test2/test_OwnedAccountList.py:88: AssertionError<br/> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.231.23:8080
+DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.231.23:8080 &quot;POST /TCSBaNCSCoreServices-0.0.1-SNAPSHOT/CoreService HTTP/1.1&quot; 200 13005
+DEBUG    root:test_OwnedAccountList.py:35 200---------&lt;?xml version=&quot;1.0&quot; ?&gt;
+&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+	&lt;soapenv:Header/&gt;
+	&lt;soapenv:Body&gt;
+		&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;
+			&lt;response&gt;
+				&lt;header&gt;
+					&lt;coreJournal&gt;000000&lt;/coreJournal&gt;
+				&lt;/header&gt;
+				&lt;content xsi:type=&quot;bo:CompiledOwnedAccountListRes&quot;&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115387410&lt;/accountNum&gt;
+						&lt;status&gt;DRMT&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;BNI TAPLUS&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;4369379026886&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;2000&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115409515&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;EMERALD SAVING&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;940.613.787,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;2301&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115409649&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;BNI TAPLUS&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;35501383455032&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;2000&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115409650&lt;/accountNum&gt;
+						&lt;status&gt;DRMT&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;BNI TAPLUS&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;40.491.765,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;2000&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115409694&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;TAB BNI DOLLAR PERORANGAN SGD&lt;/productName&gt;
+						&lt;currency&gt;SGD&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;0,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;2004&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0003&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115409707&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;TAB BNI DOLLAR PERORANGAN SGD&lt;/productName&gt;
+						&lt;currency&gt;SGD&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;0,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;2004&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0003&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115409718&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;TAB BNI DOLLAR PERORANGAN SGD&lt;/productName&gt;
+						&lt;currency&gt;SGD&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;0,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;2004&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0003&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115409729&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;TAB BNI DOLLAR PERORANGAN SGD&lt;/productName&gt;
+						&lt;currency&gt;SGD&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;0,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;2004&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0003&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115427035&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;TAB BNI DOLLAR PERORANGAN USD&lt;/productName&gt;
+						&lt;currency&gt;USD&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;3.003.707.559,77&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;2004&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0002&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115428812&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;BNI TAPLUS&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;2073052483580&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;2000&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115428823&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;TAB BNI DOLLAR PERORANGAN USD&lt;/productName&gt;
+						&lt;currency&gt;USD&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;3.938.331,61&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;2004&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0002&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115446092&lt;/accountNum&gt;
+						&lt;status&gt;DRMT&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;TAPLUS BISNIS PERORANGAN&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;21.711.300.611,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;2300&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115446105&lt;/accountNum&gt;
+						&lt;status&gt;DRMT&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;TAPLUS BISNIS PERORANGAN&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;88396269248362&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;2300&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000002196112751&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;GIRO TDK HIT BBB PERORANGAN&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;9.139.762.272,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;1010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000219611275&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;GIRO TDK HIT BBB PERORANGAN&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;10.112.829.604,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;1010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115475216&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;C&lt;/accountSystem&gt;
+						&lt;productName&gt;LC Import Sight IDR&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;0,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;1600&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000116911843&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;GIRO OVERDRAFT BB PERORANGAN&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;0,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;1410&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;5001&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000116911854&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;GIRO CORP SPECIAL YIELD PERSH&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;11.819.396,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;1811&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;6001&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114449651&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;BNI TAPLUS&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;97.473.000,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;2000&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114454297&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;BNI TAPLUS&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;693.801.705,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;2000&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114454333&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;TAPLUS BISNIS PERORANGAN&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;209.376.993,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;2300&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114455439&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KMK BNI MIDDLE&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;100.000.000,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;1010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114455451&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KMK BNI SMALL&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;100.000.000,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;1020&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114455609&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KI BNI KORPORASI IDR&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;0,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;2010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114455814&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KI BNI KORPORASI IDR&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;100.000.000,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;2010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114455949&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KMK BNI MIDDLE&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;100.000.000,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;1010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114456238&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KMK BNI MIDDLE&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;100.000.000,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;1010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114456793&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KMK BNI MIDDLE&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;434.146,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;1010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114459943&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KMK BNI MIDDLE&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;0,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;1010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114459954&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KMK BNI MIDDLE&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;0,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;1010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114459965&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KMK BNI MIDDLE&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;0,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;1010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114459976&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KMK BNI MIDDLE&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;0,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;1010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114460164&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KI BNI KORPORASI IDR&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;100.000.000,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;2010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114460175&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;BNI GRIYA IND IDR&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;100.000.000,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;3010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0201&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114460618&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KMK BNI MIDDLE&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;0,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;1010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;ShortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114487733&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;BNI TAPLUS&lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;21.455.299,00&lt;/balance&gt;
+						&lt;limit/&gt;
+						&lt;accountTypeCode&gt;2000&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+						&lt;Filler/&gt;
+					&lt;/ShortAccountInfo&gt;
+					&lt;cifNum&gt;00000009144751232&lt;/cifNum&gt;
+					&lt;cifName&gt;Ibu SHERLOCK HOLMES&lt;/cifName&gt;
+					&lt;DefaultString25/&gt;
+				&lt;/content&gt;
+			&lt;/response&gt;
+		&lt;/core:transactionResponse&gt;
+	&lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+DEBUG    urllib3.connectionpool:connectionpool.py:231 Starting new HTTP connection (1): 192.168.143.61:57004
+DEBUG    urllib3.connectionpool:connectionpool.py:461 http://192.168.143.61:57004 &quot;POST /CoreService HTTP/1.1&quot; 200 None
+DEBUG    root:test_OwnedAccountList.py:39 200---------&lt;?xml version=&quot;1.0&quot; ?&gt;
+&lt;soapenv:Envelope xmlns:dpss0=&quot;bons&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+	&lt;soapenv:Header/&gt;
+	&lt;soapenv:Body&gt;
+		&lt;core:transactionResponse xmlns:bo=&quot;http://service.bni.co.id/core/bo&quot; xmlns:core=&quot;http://service.bni.co.id/core&quot;&gt;
+			&lt;response&gt;
+				&lt;header&gt;
+					&lt;coreJournal&gt;000000&lt;/coreJournal&gt;
+				&lt;/header&gt;
+				&lt;content xmlns:NS_BO=&quot;http://service.bni.co.id/core/bo&quot; xsi:type=&quot;NS_BO:CompiledOwnedAccountListRes&quot;&gt;
+					&lt;cifNum&gt;00000009144751232&lt;/cifNum&gt;
+					&lt;cifName&gt;Ibu SHERLOCK HOLMES                                         &lt;/cifName&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115387410&lt;/accountNum&gt;
+						&lt;status&gt;DRMT&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;BNI TAPLUS                    &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;       4369379026886&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;2000&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115409515&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;EMERALD SAVING                &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;      940.613.787,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;2301&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115409649&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;BNI TAPLUS                    &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;      35501383455032&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;2000&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115409650&lt;/accountNum&gt;
+						&lt;status&gt;DRMT&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;BNI TAPLUS                    &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;       40.491.765,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;2000&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115409694&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;TAB BNI DOLLAR PERORANGAN SGD &lt;/productName&gt;
+						&lt;currency&gt;SGD&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;                0,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;2004&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0003&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115409707&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;TAB BNI DOLLAR PERORANGAN SGD &lt;/productName&gt;
+						&lt;currency&gt;SGD&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;                0,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;2004&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0003&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115409718&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;TAB BNI DOLLAR PERORANGAN SGD &lt;/productName&gt;
+						&lt;currency&gt;SGD&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;                0,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;2004&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0003&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115409729&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;TAB BNI DOLLAR PERORANGAN SGD &lt;/productName&gt;
+						&lt;currency&gt;SGD&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;                0,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;2004&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0003&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115427035&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;TAB BNI DOLLAR PERORANGAN USD &lt;/productName&gt;
+						&lt;currency&gt;USD&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;    3.003.707.559,77&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;2004&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0002&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115428812&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;BNI TAPLUS                    &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;       2073052483580&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;2000&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115428823&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;TAB BNI DOLLAR PERORANGAN USD &lt;/productName&gt;
+						&lt;currency&gt;USD&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;        3.938.331,61&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;2004&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0002&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115446092&lt;/accountNum&gt;
+						&lt;status&gt;DRMT&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;TAPLUS BISNIS PERORANGAN      &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;   21.711.300.611,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;2300&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115446105&lt;/accountNum&gt;
+						&lt;status&gt;DRMT&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;TAPLUS BISNIS PERORANGAN      &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;      88396269248362&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;2300&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000002196112751&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;GIRO TDK HIT BBB PERORANGAN   &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;    9.139.762.272,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;1010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000219611275&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;GIRO TDK HIT BBB PERORANGAN   &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;   10.112.829.604,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;1010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000115475216&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;C&lt;/accountSystem&gt;
+						&lt;productName&gt;LC Import Sight IDR           &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;                0,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;1600&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000116911843&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;GIRO OVERDRAFT BB PERORANGAN  &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;                0,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;1410&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;5001&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000116911854&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;GIRO CORP SPECIAL YIELD PERSH &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;       11.819.396,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;1811&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;6001&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114449651&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;BNI TAPLUS                    &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;       97.473.000,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;2000&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114454297&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;BNI TAPLUS                    &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;      693.801.705,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;2000&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114454333&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;TAPLUS BISNIS PERORANGAN      &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;      209.376.993,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;2300&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114455439&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KMK BNI MIDDLE                &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;      100.000.000,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;1010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114455451&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KMK BNI SMALL                 &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;      100.000.000,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;1020&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114455609&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KI BNI KORPORASI IDR          &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;                0,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;2010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114455814&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KI BNI KORPORASI IDR          &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;      100.000.000,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;2010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114455949&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KMK BNI MIDDLE                &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;      100.000.000,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;1010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114456238&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KMK BNI MIDDLE                &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;      100.000.000,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;1010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114456793&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KMK BNI MIDDLE                &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;          434.146,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;1010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114459943&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KMK BNI MIDDLE                &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;                0,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;1010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114459954&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KMK BNI MIDDLE                &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;                0,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;1010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114459965&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KMK BNI MIDDLE                &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;                0,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;1010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114459976&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KMK BNI MIDDLE                &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;                0,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;1010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114460164&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KI BNI KORPORASI IDR          &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;      100.000.000,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;2010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114460175&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;BNI GRIYA IND IDR             &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;      100.000.000,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;3010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0201&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114460618&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;L&lt;/accountSystem&gt;
+						&lt;productName&gt;KMK BNI MIDDLE                &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;                0,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;1010&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0701&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+					&lt;shortAccountInfo&gt;
+						&lt;accountNum&gt;00000000114487733&lt;/accountNum&gt;
+						&lt;status&gt;OPEN&lt;/status&gt;
+						&lt;accountSystem&gt;D&lt;/accountSystem&gt;
+						&lt;productName&gt;BNI TAPLUS                    &lt;/productName&gt;
+						&lt;currency&gt;IDR&lt;/currency&gt;
+						&lt;ownership&gt;OWN&lt;/ownership&gt;
+						&lt;balance&gt;       21.455.299,00&lt;/balance&gt;
+						&lt;limit&gt;                    &lt;/limit&gt;
+						&lt;accountTypeCode&gt;2000&lt;/accountTypeCode&gt;
+						&lt;subCatCode&gt;0001&lt;/subCatCode&gt;
+					&lt;/shortAccountInfo&gt;
+				&lt;/content&gt;
+			&lt;/response&gt;
+		&lt;/core:transactionResponse&gt;
+	&lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[1]: RenameNode(node=&#x27;/soapenv:Envelope/ShortAccountInfo[1]&#x27;, tag=&#x27;{http://schemas.xmlsoap.org/soap/envelope/}Body&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[2]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/Filler[1]&#x27;, tag=&#x27;{http://service.bni.co.id/core}transactionResponse&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[3]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/limit[1]&#x27;, tag=&#x27;response&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[4]: UpdateAttrib(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content[1]&#x27;, name=&#x27;{http://www.w3.org/2001/XMLSchema-instance}type&#x27;, value=&#x27;NS_BO:CompiledOwnedAccountListRes&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[5]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/ShortAccountInfo[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[6]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/ShortAccountInfo[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[7]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/ShortAccountInfo[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[8]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/ShortAccountInfo[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[9]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/ShortAccountInfo[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[10]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/ShortAccountInfo[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[11]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/ShortAccountInfo[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[12]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/ShortAccountInfo[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[13]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/ShortAccountInfo[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[14]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/ShortAccountInfo[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[15]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/ShortAccountInfo[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[16]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/ShortAccountInfo[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[17]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/ShortAccountInfo[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[18]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/ShortAccountInfo[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[19]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/ShortAccountInfo[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[20]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/ShortAccountInfo[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[21]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/ShortAccountInfo[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[22]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/ShortAccountInfo[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[23]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/limit[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[24]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/Filler[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[25]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/ShortAccountInfo[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[26]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/limit[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[27]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/Filler[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[28]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/ShortAccountInfo[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[29]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/limit[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[30]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/Filler[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[31]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/ShortAccountInfo[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[32]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/limit[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[33]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/Filler[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[34]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/ShortAccountInfo[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[35]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/limit[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[36]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/Filler[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[37]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/ShortAccountInfo[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[38]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/limit[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[39]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/Filler[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[40]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/ShortAccountInfo[1]&#x27;, tag=&#x27;shortAccountInfo&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[41]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[1]/productName[1]&#x27;, text=&#x27;BNI TAPLUS                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[42]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[1]/balance[1]&#x27;, text=&#x27;       4369379026886&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[43]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[1]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[44]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[2]/productName[1]&#x27;, text=&#x27;EMERALD SAVING                &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[45]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[2]/balance[1]&#x27;, text=&#x27;      940.613.787,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[46]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[2]/Filler[1]&#x27;, tag=&#x27;limit&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[47]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[2]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[48]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[3]/productName[1]&#x27;, text=&#x27;BNI TAPLUS                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[49]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[3]/balance[1]&#x27;, text=&#x27;      35501383455032&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[50]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[3]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[51]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[4]/productName[1]&#x27;, text=&#x27;BNI TAPLUS                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[52]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[4]/balance[1]&#x27;, text=&#x27;       40.491.765,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[53]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[4]/Filler[1]&#x27;, tag=&#x27;limit&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[54]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[4]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[55]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[5]/productName[1]&#x27;, text=&#x27;TAB BNI DOLLAR PERORANGAN SGD &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[56]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[5]/balance[1]&#x27;, text=&#x27;                0,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[57]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[5]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[58]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[6]/productName[1]&#x27;, text=&#x27;TAB BNI DOLLAR PERORANGAN SGD &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[59]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[6]/balance[1]&#x27;, text=&#x27;                0,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[60]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[6]/Filler[1]&#x27;, tag=&#x27;limit&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[61]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[6]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[62]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[7]/productName[1]&#x27;, text=&#x27;TAB BNI DOLLAR PERORANGAN SGD &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[63]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[7]/balance[1]&#x27;, text=&#x27;                0,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[64]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[7]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[65]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[8]/productName[1]&#x27;, text=&#x27;TAB BNI DOLLAR PERORANGAN SGD &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[66]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[8]/balance[1]&#x27;, text=&#x27;                0,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[67]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[8]/Filler[1]&#x27;, tag=&#x27;limit&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[68]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[8]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[69]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[9]/productName[1]&#x27;, text=&#x27;TAB BNI DOLLAR PERORANGAN USD &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[70]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[9]/balance[1]&#x27;, text=&#x27;    3.003.707.559,77&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[71]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[9]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[72]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[10]/productName[1]&#x27;, text=&#x27;BNI TAPLUS                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[73]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[10]/balance[1]&#x27;, text=&#x27;       2073052483580&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[74]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[10]/Filler[1]&#x27;, tag=&#x27;limit&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[75]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[10]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[76]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[11]/productName[1]&#x27;, text=&#x27;TAB BNI DOLLAR PERORANGAN USD &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[77]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[11]/balance[1]&#x27;, text=&#x27;        3.938.331,61&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[78]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[11]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[79]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[12]/productName[1]&#x27;, text=&#x27;TAPLUS BISNIS PERORANGAN      &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[80]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[12]/balance[1]&#x27;, text=&#x27;   21.711.300.611,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[81]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[12]/Filler[1]&#x27;, tag=&#x27;limit&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[82]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[12]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[83]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[13]/productName[1]&#x27;, text=&#x27;TAPLUS BISNIS PERORANGAN      &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[84]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[13]/balance[1]&#x27;, text=&#x27;      88396269248362&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[85]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[13]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[86]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[14]/productName[1]&#x27;, text=&#x27;GIRO TDK HIT BBB PERORANGAN   &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[87]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[14]/balance[1]&#x27;, text=&#x27;    9.139.762.272,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[88]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[14]/Filler[1]&#x27;, tag=&#x27;limit&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[89]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[14]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[90]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[15]/productName[1]&#x27;, text=&#x27;GIRO TDK HIT BBB PERORANGAN   &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[91]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[15]/balance[1]&#x27;, text=&#x27;   10.112.829.604,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[92]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[15]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[93]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[16]/productName[1]&#x27;, text=&#x27;LC Import Sight IDR           &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[94]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[16]/balance[1]&#x27;, text=&#x27;                0,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[95]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[16]/Filler[1]&#x27;, tag=&#x27;limit&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[96]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[16]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[97]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[17]/productName[1]&#x27;, text=&#x27;GIRO OVERDRAFT BB PERORANGAN  &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[98]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[17]/balance[1]&#x27;, text=&#x27;                0,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[99]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[17]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[100]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[18]/productName[1]&#x27;, text=&#x27;GIRO CORP SPECIAL YIELD PERSH &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[101]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[18]/balance[1]&#x27;, text=&#x27;       11.819.396,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[102]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[18]/Filler[1]&#x27;, tag=&#x27;limit&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[103]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[18]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[104]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[19]/productName[1]&#x27;, text=&#x27;BNI TAPLUS                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[105]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[19]/balance[1]&#x27;, text=&#x27;       97.473.000,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[106]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[19]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[107]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[20]/productName[1]&#x27;, text=&#x27;BNI TAPLUS                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[108]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[20]/balance[1]&#x27;, text=&#x27;      693.801.705,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[109]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[20]/Filler[1]&#x27;, tag=&#x27;limit&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[110]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[20]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[111]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[21]/productName[1]&#x27;, text=&#x27;TAPLUS BISNIS PERORANGAN      &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[112]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[21]/balance[1]&#x27;, text=&#x27;      209.376.993,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[113]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[21]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[114]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[22]/productName[1]&#x27;, text=&#x27;KMK BNI MIDDLE                &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[115]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[22]/balance[1]&#x27;, text=&#x27;      100.000.000,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[116]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[22]/Filler[1]&#x27;, tag=&#x27;limit&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[117]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[22]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[118]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[23]/productName[1]&#x27;, text=&#x27;KMK BNI SMALL                 &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[119]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[23]/balance[1]&#x27;, text=&#x27;      100.000.000,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[120]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[23]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[121]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[24]/productName[1]&#x27;, text=&#x27;KI BNI KORPORASI IDR          &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[122]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[24]/balance[1]&#x27;, text=&#x27;                0,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[123]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[24]/Filler[1]&#x27;, tag=&#x27;limit&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[124]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[24]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[125]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[25]/productName[1]&#x27;, text=&#x27;KI BNI KORPORASI IDR          &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[126]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[25]/balance[1]&#x27;, text=&#x27;      100.000.000,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[127]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[25]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[128]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[26]/productName[1]&#x27;, text=&#x27;KMK BNI MIDDLE                &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[129]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[26]/balance[1]&#x27;, text=&#x27;      100.000.000,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[130]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[26]/Filler[1]&#x27;, tag=&#x27;limit&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[131]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[26]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[132]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[27]/productName[1]&#x27;, text=&#x27;KMK BNI MIDDLE                &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[133]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[27]/balance[1]&#x27;, text=&#x27;      100.000.000,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[134]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[27]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[135]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[28]/productName[1]&#x27;, text=&#x27;KMK BNI MIDDLE                &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[136]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[28]/balance[1]&#x27;, text=&#x27;          434.146,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[137]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[28]/Filler[1]&#x27;, tag=&#x27;limit&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[138]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[28]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[139]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[29]/productName[1]&#x27;, text=&#x27;KMK BNI MIDDLE                &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[140]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[29]/balance[1]&#x27;, text=&#x27;                0,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[141]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[29]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[142]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[30]/productName[1]&#x27;, text=&#x27;KMK BNI MIDDLE                &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[143]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[30]/balance[1]&#x27;, text=&#x27;                0,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[144]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[30]/Filler[1]&#x27;, tag=&#x27;limit&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[145]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[30]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[146]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[31]/productName[1]&#x27;, text=&#x27;KMK BNI MIDDLE                &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[147]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[31]/balance[1]&#x27;, text=&#x27;                0,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[148]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[31]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[149]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[32]/productName[1]&#x27;, text=&#x27;KMK BNI MIDDLE                &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[150]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[32]/balance[1]&#x27;, text=&#x27;                0,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[151]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[32]/Filler[1]&#x27;, tag=&#x27;limit&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[152]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[32]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[153]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[33]/productName[1]&#x27;, text=&#x27;KI BNI KORPORASI IDR          &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[154]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[33]/balance[1]&#x27;, text=&#x27;      100.000.000,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[155]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[33]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[156]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[34]/productName[1]&#x27;, text=&#x27;BNI GRIYA IND IDR             &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[157]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[34]/balance[1]&#x27;, text=&#x27;      100.000.000,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[158]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[34]/Filler[1]&#x27;, tag=&#x27;limit&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[159]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[34]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[160]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[35]/productName[1]&#x27;, text=&#x27;KMK BNI MIDDLE                &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[161]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[35]/balance[1]&#x27;, text=&#x27;                0,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[162]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[35]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[163]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[36]/productName[1]&#x27;, text=&#x27;BNI TAPLUS                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[164]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[36]/balance[1]&#x27;, text=&#x27;       21.455.299,00&#x27;)
+DEBUG    root:test_OwnedAccountList.py:85 Differences: v[165]: RenameNode(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[36]/Filler[1]&#x27;, tag=&#x27;limit&#x27;)
+DEBUG    root:test_OwnedAccountList.py:73 Differences: v[166]: UpdateTextIn(node=&#x27;/soapenv:Envelope/soapenv:Body[1]/ns0:transactionResponse/response/content/shortAccountInfo[36]/limit[1]&#x27;, text=&#x27;                    &#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[167]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body[2]/core:transactionResponse/response[1]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[168]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body[2]/core:transactionResponse[1]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[169]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body[2]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[170]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/DefaultString25[1]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[171]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[11]/Filler[1]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[172]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[11]/limit[1]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[173]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[11]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[174]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[10]/Filler[1]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[175]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[10]/limit[1]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[176]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[10]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[177]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[9]/Filler[1]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[178]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[9]/limit[1]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[179]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[9]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[180]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[8]/Filler[1]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[181]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[8]/limit[1]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[182]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[8]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[183]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[7]/Filler[1]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[184]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[7]/limit[1]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[185]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[7]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[186]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[6]/Filler[1]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[187]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[6]/limit[1]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[188]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[6]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[189]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[5]/Filler[1]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[190]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[5]/limit[1]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[191]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[5]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[192]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[4]/Filler[1]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[193]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[4]/limit[1]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[194]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[4]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[195]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[3]/Filler[1]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[196]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[3]/limit[1]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[197]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[3]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[198]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[2]/Filler[1]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[199]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[2]/limit[1]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[200]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[2]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[201]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo/Filler[1]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[202]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo/limit[1]&#x27;)
+DEBUG    root:test_OwnedAccountList.py:82 Differences: v[203]: DeleteNode(node=&#x27;/soapenv:Envelope/soapenv:Body/ns0:transactionResponse/response/content/ShortAccountInfo[1]&#x27;)<br/></div></td></tr></tbody></table></body></html>
