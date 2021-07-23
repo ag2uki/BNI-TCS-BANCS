@@ -2,7 +2,7 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	targetNamespace="http://service.bni.co.id/core/list">
 	<xsd:complexType name="ShortHistorical">
-		<xsd:all>
+		<xsd:sequence>
 			<xsd:element minOccurs="0" name="transactionDate"
 				type="xsd:date" />
 			<xsd:element minOccurs="0" name="branchNum"
@@ -35,6 +35,6 @@
 			<xsd:element minOccurs="0" name="promoCode"
 				type="xsd:string">
 			</xsd:element>
-		</xsd:all>
+		</xsd:sequence>
 	</xsd:complexType>
 </xsd:schema>
